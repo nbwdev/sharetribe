@@ -83,8 +83,8 @@
     - else
       = content_for(:page_content)
 
-    - if @custom_footer.try(:display?)
-      = render 'layouts/footer'
+    -# if @custom_footer.try(:display?)
+    = render 'layouts/footer'
 
     -# Most of the JavaScript should be for performance reasons at the end of the body
 
