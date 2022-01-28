@@ -4,6 +4,9 @@
   - else
     %footer{:class => "footer__container--#{@custom_footer.theme}"}
       .footer__content
+        %p.footer__marketplace-description
+          %strong
+            =community_description.html_safe
         %div{:class => "footer__links-container#{@custom_footer.container_modifier}"}
           - if @custom_footer.links?
             %ul.footer__link-list
