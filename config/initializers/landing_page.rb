@@ -87,7 +87,7 @@ module CustomLandingPage
         {
           "title": "2",
           "icon": "shipment-upload",
-          "paragraph": "send it to its new home"
+          "paragraph": "sell it and send it to its new home"
         },
         {
           "title": "3",
