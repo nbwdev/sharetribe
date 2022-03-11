@@ -2127,6 +2127,8 @@ pt-PT:
       news: Notícia(s)
       register_details: Privacidade
       terms: "Termos de utilização"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Perfil

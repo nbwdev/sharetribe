@@ -2159,6 +2159,8 @@ pl:
       news: Nowości
       register_details: "Polityka Prywatności"
       terms: Regulamin
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrator
       go_to_your_profile_page: Profil

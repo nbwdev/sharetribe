@@ -2162,6 +2162,8 @@ ru:
       news: Новости
       register_details: Конфиденциальность
       terms: Условия
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Администрирование
       go_to_your_profile_page: Профиль

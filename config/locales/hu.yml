@@ -2144,6 +2144,8 @@ hu:
       news: Újdonságok
       register_details: "Adatkezelési szabályzat"
       terms: "Felhasználási feltételek"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Adminisztrátor
       go_to_your_profile_page: Profil

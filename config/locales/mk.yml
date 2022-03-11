@@ -2106,6 +2106,8 @@ mk:
       news: ~
       register_details: ~
       terms: ~
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: ~
       go_to_your_profile_page: ~

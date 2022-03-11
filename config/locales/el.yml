@@ -2144,6 +2144,8 @@ el:
       news: Νέα
       register_details: "Πολιτική απορρήτου "
       terms: "Όροι χρήσης"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Προφίλ

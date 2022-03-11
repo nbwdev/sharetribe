@@ -2131,6 +2131,8 @@ ar:
       news: أخبار
       register_details: "سياسة الخصوصية"
       terms: "شروط الاستخدام"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: المشرف
       go_to_your_profile_page: "الملف الشخصي"

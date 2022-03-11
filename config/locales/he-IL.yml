@@ -2149,6 +2149,8 @@ he-IL:
       news: חדשות
       register_details: "הגדרות פרטיות"
       terms: "תנאי שימוש"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: מנהל
       go_to_your_profile_page: פרופיל

@@ -2128,6 +2128,8 @@ zh-TW:
       news: 新闻
       register_details: 隱私條款
       terms: 使用條款
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: 後台管理
       go_to_your_profile_page: 個人主頁

@@ -2147,6 +2147,8 @@ nl:
       news: Nieuws
       register_details: Privacybeleid
       terms: Gebruiksvoorwaarden
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Beheerder
       go_to_your_profile_page: Profiel

@@ -2154,6 +2154,8 @@ sk-SK:
       news: Novinky
       register_details: "Osobné údaje"
       terms: "Podmienky používania"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrátor
       go_to_your_profile_page: Profil

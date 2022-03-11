@@ -2135,6 +2135,8 @@ nb:
       news: Nyheter
       register_details: Personvern
       terms: "Betingelser for bruk"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrator
       go_to_your_profile_page: Profil

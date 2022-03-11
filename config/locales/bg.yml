@@ -2146,6 +2146,8 @@ bg:
       news: Новини
       register_details: Поверителност
       terms: "Условия за ползване"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Админ
       go_to_your_profile_page: Профил

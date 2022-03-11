@@ -2114,6 +2114,8 @@ lv:
       news: Jaunumi
       register_details: "Privātuma politika"
       terms: "Lietošanas noteikumi"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrators
       go_to_your_profile_page: Profils

@@ -2132,6 +2132,8 @@ ko:
       news: 소식들
       register_details: 개인정보정책
       terms: 이용약관
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: 관리자
       go_to_your_profile_page: 프로필

@@ -2126,6 +2126,8 @@ ka:
       news: სიახლე
       register_details: კონფიდენციალურობა
       terms: "მოხმარების პირობები"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: ადმინი
       go_to_your_profile_page: პროფილი

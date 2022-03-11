@@ -2122,6 +2122,8 @@ tr-TR:
       news: Yenilikler
       register_details: "Gizlilik politikası"
       terms: "Kullanım koşulları"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Yönetici
       go_to_your_profile_page: Profil

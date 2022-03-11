@@ -2144,6 +2144,8 @@ pt-BR:
       news: Notícia
       register_details: "Política de privacidade"
       terms: "Termos de uso"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrador
       go_to_your_profile_page: Perfil

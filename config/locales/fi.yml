@@ -2144,6 +2144,8 @@ fi:
       news: Uutiset
       register_details: Tietosuojakäytäntö
       terms: Käyttöehdot
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Ylläpito
       go_to_your_profile_page: Profiili

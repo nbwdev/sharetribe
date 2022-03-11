@@ -2152,6 +2152,8 @@ cs:
       news: Novinky
       register_details: "Osobní údaje"
       terms: "Podmínky použití"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Správce
       go_to_your_profile_page: Profil

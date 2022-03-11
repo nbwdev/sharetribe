@@ -2144,6 +2144,8 @@ de:
       news: News
       register_details: "Impressum und Datenschutz"
       terms: Nutzungsbedingungen
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrator
       go_to_your_profile_page: Profil

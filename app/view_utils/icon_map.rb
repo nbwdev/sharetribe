@@ -35,6 +35,7 @@ ICON_MAP = {
       "how_to_use" => "ss-signpost",
       "privacy" => "ss-lockfile",
       "terms" => "ss-textfile",
+      "cookies" => "ss-settings",
       "testimonial" => "ss-star",
       "star" => "ss-star",
       "like" => "ss-like",
@@ -214,6 +215,7 @@ ICON_MAP = {
       "how_to_use" => "icon-book",
       "privacy" => "icon-lock",
       "terms" => "icon-file-alt",
+      "cookies" => "icon-tag",
 
       "offer" => "icon-share",
       "request" => "icon-lightbulb",

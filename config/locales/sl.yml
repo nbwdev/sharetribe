@@ -2106,6 +2106,8 @@ sl:
       news: ~
       register_details: "Politika zasebnosti"
       terms: "Pogoji uporabe"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrator
       go_to_your_profile_page: Profil

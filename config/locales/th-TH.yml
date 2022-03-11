@@ -2126,6 +2126,8 @@ th-TH:
       news: ข่าว
       register_details: ความเป็นส่วนตัว
       terms: ข้อกำหนดการใช้งาน
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: ผู้ดูแล
       go_to_your_profile_page: โปร์ไฟล์

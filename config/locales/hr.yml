@@ -2152,6 +2152,8 @@ hr:
       news: Novosti
       register_details: Privatnost
       terms: "Uvjeti korištenja"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrator
       go_to_your_profile_page: Profil

@@ -2124,6 +2124,8 @@ zh-HK:
       news: 最新資訊
       register_details: 私隱
       terms: 使用條款
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: 管理員
       go_to_your_profile_page: 個人專頁

@@ -319,6 +319,12 @@ module ApplicationHelper
       :path => terms_infos_path,
       :name => "terms"
     }
+    links << {
+      :text => t('layouts.infos.cookie_policy'),
+      :icon_class => icon_class("cookies"),
+      :path => cookie_policy_infos_path,
+      :name => "cookie_policy"
+    }
   end
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize

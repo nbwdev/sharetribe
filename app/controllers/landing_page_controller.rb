@@ -207,7 +207,9 @@ class LandingPageController < ActionController::Metal
       "how_to_use" => how_to_use_infos_path(locale: locale_param),
       "terms" => terms_infos_path(locale: locale_param),
       "new_invitation" => new_invitation_path(locale: locale_param),
-      "privacy" => privacy_infos_path(locale: locale_param)
+      "privacy" => privacy_infos_path(locale: locale_param),
+      "cookie_policy" => cookie_policy_infos_path(locale: locale_param),
+      "cookies" => cookies_infos_path(locale: locale_param)
     }
   end
 

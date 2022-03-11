@@ -2106,6 +2106,8 @@ id:
       news: Berita
       register_details: Privasi
       terms: "Syarat Penggunaan"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Profil

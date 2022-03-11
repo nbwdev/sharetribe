@@ -2119,6 +2119,8 @@ it:
       news: News
       register_details: Privacy
       terms: "Termini e Condizioni"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Amministratore
       go_to_your_profile_page: Profilo

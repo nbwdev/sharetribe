@@ -2154,6 +2154,8 @@ ro:
       news: Noutăți
       register_details: "Politica de Confidențialitate"
       terms: "Termeni de utilizare"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Profil

@@ -2106,6 +2106,8 @@ is:
       news: ~
       register_details: Öryggi
       terms: Notendaskilmálar
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Stjórnandi
       go_to_your_profile_page: "Síðan mín"

@@ -2145,6 +2145,8 @@ lt:
       news: Naujienos
       register_details: "Privatumo politika"
       terms: "Naudojimo sąlygos"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administratorius
       go_to_your_profile_page: Profilis

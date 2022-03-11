@@ -29,6 +29,16 @@ class InfosController < ApplicationController
     @selected_left_navi_link = "privacy"
   end
 
+  def cookie_policy
+    @selected_tribe_navi_tab = "about"
+    @selected_left_navi_link = "cookie_policy"
+  end
+
+  def cookies
+    @selected_tribe_navi_tab = "about"
+    @selected_left_navi_link = "cookies"
+  end
+
   private
 
   def how_to_use_content?

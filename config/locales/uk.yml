@@ -2164,6 +2164,8 @@ uk:
       news: Новини
       register_details: "Політика конфіденційності"
       terms: "Умови користування"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Адміністрування
       go_to_your_profile_page: Профіль

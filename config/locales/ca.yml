@@ -2144,6 +2144,8 @@ ca:
       news: Novetats
       register_details: "Política de privacitat"
       terms: "Termes d'ús"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Perfil

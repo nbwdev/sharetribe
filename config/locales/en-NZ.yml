@@ -2141,6 +2141,8 @@ en-NZ:
       news: News
       register_details: Privacy
       terms: "Terms of use"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Profile

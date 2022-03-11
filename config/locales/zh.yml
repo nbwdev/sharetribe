@@ -2124,6 +2124,8 @@ zh:
       news: 新闻
       register_details: 隐私条款
       terms: 使用条款
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: 后台管理
       go_to_your_profile_page: 个人主页

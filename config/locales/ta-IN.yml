@@ -2106,6 +2106,8 @@ ta-IN:
       news: செய்தி
       register_details: "தனியுரிமை கொள்கை"
       terms: "உபயோகத்திற்கான விதிமுறைகள்"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: அட்மின்
       go_to_your_profile_page: சுயவிவரம்

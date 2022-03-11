@@ -2123,6 +2123,8 @@ fr-CA:
       news: Actualités
       register_details: "Vie privée"
       terms: "Conditions d'utilisation"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Profil

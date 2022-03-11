@@ -2144,6 +2144,8 @@ es:
       news: Novedades
       register_details: "Política de Privacidad"
       terms: "Términos y Condiciones de Uso"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Administrador
       go_to_your_profile_page: Perfil

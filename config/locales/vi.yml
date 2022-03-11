@@ -2130,6 +2130,8 @@ vi:
       news: "Tin tức"
       register_details: "Chính sách bảo mật"
       terms: "Điều khoản sử dụng"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: "Quản trị"
       go_to_your_profile_page: "Hồ Sơ"

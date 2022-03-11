@@ -2135,6 +2135,8 @@ da-DK:
       news: Nyheder
       register_details: Privatliv
       terms: Brugervilkår
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: "Min profil"

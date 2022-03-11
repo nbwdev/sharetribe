@@ -2106,6 +2106,8 @@ az-AZ:
       news: Xəbərlər
       register_details: "Məxfilik siyasəti"
       terms: "İstifadə şərtləri"
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Profil

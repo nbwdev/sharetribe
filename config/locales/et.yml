@@ -2144,6 +2144,8 @@ et:
       news: Uudised
       register_details: Privaatsuspoliitika
       terms: Kasutustingimused
+      cookies: ~
+      cookie_policy: ~
     logged_in:
       admin: Admin
       go_to_your_profile_page: Profiil
