@@ -788,6 +788,7 @@ Rails.application.routes.draw do
         get :news
         get :cookie_policy
         get :cookies
+        get :code_of_conduct
       end
     end
     resource :terms do
