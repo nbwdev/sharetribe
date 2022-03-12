@@ -2124,6 +2124,7 @@ tr-TR:
       terms: "Kullanım koşulları"
       cookies: ~
       cookie_policy: ~
+      code_of_conduct: ~
     logged_in:
       admin: Yönetici
       go_to_your_profile_page: Profil

@@ -209,7 +209,8 @@ class LandingPageController < ActionController::Metal
       "new_invitation" => new_invitation_path(locale: locale_param),
       "privacy" => privacy_infos_path(locale: locale_param),
       "cookie_policy" => cookie_policy_infos_path(locale: locale_param),
-      "cookies" => cookies_infos_path(locale: locale_param)
+      "cookies" => cookies_infos_path(locale: locale_param),
+      "code_of_conduct" => code_of_conduct_infos_path(locale: locale_param)
     }
   end
 

@@ -39,6 +39,11 @@ class InfosController < ApplicationController
     @selected_left_navi_link = "cookies"
   end
 
+  def code_of_conduct
+    @selected_tribe_navi_tab = "about"
+    @selected_left_navi_link = "code_of_conduct"
+  end
+
   private
 
   def how_to_use_content?

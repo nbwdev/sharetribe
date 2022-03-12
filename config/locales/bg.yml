@@ -2148,6 +2148,7 @@ bg:
       terms: "Условия за ползване"
       cookies: ~
       cookie_policy: ~
+      code_of_conduct: ~
     logged_in:
       admin: Админ
       go_to_your_profile_page: Профил

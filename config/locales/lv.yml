@@ -2116,6 +2116,7 @@ lv:
       terms: "Lietošanas noteikumi"
       cookies: ~
       cookie_policy: ~
+      code_of_conduct: ~
     logged_in:
       admin: Administrators
       go_to_your_profile_page: Profils

@@ -2130,6 +2130,7 @@ sr:
       terms: "Uslovi korišćenja"
       cookies: ~
       cookie_policy: ~
+      code_of_conduct: ~
     logged_in:
       admin: Administrator
       go_to_your_profile_page: Profil

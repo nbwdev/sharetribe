@@ -2154,6 +2154,7 @@ cs:
       terms: "Podmínky použití"
       cookies: ~
       cookie_policy: ~
+      code_of_conduct: ~
     logged_in:
       admin: Správce
       go_to_your_profile_page: Profil

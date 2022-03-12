@@ -2146,6 +2146,7 @@ es:
       terms: "Términos y Condiciones de Uso"
       cookies: ~
       cookie_policy: ~
+      code_of_conduct: ~
     logged_in:
       admin: Administrador
       go_to_your_profile_page: Perfil

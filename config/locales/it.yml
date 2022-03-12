@@ -2121,6 +2121,7 @@ it:
       terms: "Termini e Condizioni"
       cookies: ~
       cookie_policy: ~
+      code_of_conduct: ~
     logged_in:
       admin: Amministratore
       go_to_your_profile_page: Profilo
