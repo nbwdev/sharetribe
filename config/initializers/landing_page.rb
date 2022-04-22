@@ -39,15 +39,15 @@ module CustomLandingPage
         "locations": [
             {
                 "location": { "type": "path", "id": "signup" },
-                "background_image": {"type": "assets", "id": "choosing_clothes_pink"}
+                "background_image": {"type": "assets", "id": "choosing-clothes-pink"}
             },
             {
                 "location": { "type": "path", "id": "signup" },
-                "background_image": {"type": "assets", "id": "choosing_clothes_sunny_window"}
+                "background_image": {"type": "assets", "id": "choosing-clothes-sunny-window"}
             },
             {
                 "location": { "type": "path", "id": "signup" },
-                "background_image": {"type": "assets", "id": "choosing_clothes_stripy_top"}
+                "background_image": {"type": "assets", "id": "choosing-clothes-stripy-top"}
             }
         ]
     },
@@ -122,15 +122,15 @@ module CustomLandingPage
         "locations": [
             {
                 "location": { "type": "path", "id": "signup" },
-                "background_image": {"type": "assets", "id": "choosing_clothes_pink"}
+                "background_image": {"type": "assets", "id": "choosing-clothes-pink"}
             },
             {
                 "location": { "type": "path", "id": "signup" },
-                "background_image": {"type": "assets", "id": "choosing_clothes_sunny_window"}
+                "background_image": {"type": "assets", "id": "choosing-clothes-sunny-window"}
             },
             {
                 "location": { "type": "path", "id": "signup" },
-                "background_image": {"type": "assets", "id": "choosing_clothes_stripy_top"}
+                "background_image": {"type": "assets", "id": "choosing-clothes-stripy-top"}
             }
         ]
     },
@@ -1207,9 +1207,9 @@ module CustomLandingPage
 
   "assets": [
     { "id": "default_hero_background", "src": "default_hero_background.jpg", "content_type": "image/jpeg" },
-    { "id": "choosing_clothes_pink", "src": "choosing_clothes_pink.jpg", "content_type": "image/jpeg" },
-    { "id": "choosing_clothes_sunny_window", "src": "choosing_clothes_sunny_window.jpg", "content_type": "image/jpeg" },
-    { "id": "choosing_clothes_stripy_top", "src": "choosing_clothes_stripy_top.jpg", "content_type": "image/jpeg" }
+    { "id": "choosing-clothes-pink", "src": "choosing-clothes-pink.jpg", "content_type": "image/jpeg" },
+    { "id": "choosing-clothes-sunny-window", "src": "choosing-clothes-sunny-window.jpg", "content_type": "image/jpeg" },
+    { "id": "choosing-clothes-stripy-top", "src": "choosing-clothes-stripy-top.jpg", "content_type": "image/jpeg" }
   ]
 }
 JSON
