@@ -296,7 +296,7 @@ en:
         search_by_name_email: "Search for a name, email or display name"
         reset_search: "Show all"
         for_search_terms: "for: %{terms}"
-        this_makes_the_user_an_admin: "This makes the user an admin. You should notify the user about their responsibilities and that they should review the Sharetribe terms of use. Are you sure you want to proceed?"
+        this_makes_the_user_an_admin: "This makes the user an admin. They will have full control over the website. Are you sure you want to proceed?"
         status_filter:
           all: "All statuses"
           selected: "Selected statuses: %{count}"
@@ -1406,7 +1406,7 @@ en:
       total: "Total: %{total}"
     status:
       payment_errored: "Payment failed. Please try again."
-      payment_errored_starter: "Payment failed. Please try again. If the problem continues, please contact Sharetribe support."
+      payment_errored_starter: "Payment failed. Please try again. If the problem continues, please contact us."
       payment_errored_author: "Payment failed. Please contact %{starter_name} and ask them to try the payment again."
       cancel_payed_transaction: Cancel
       feedback_given: "Feedback given"
@@ -2862,7 +2862,7 @@ en:
       before_confirmation_only_access_admin_dashboard: "Before confirmation you can only access the %{admin_dashboard_link}."
       admin_dashboard_link_text: "Admin panel"
       account_confirmation_instructions_admin: "You should have received an email at %{email_address} with a confirmation link. If you don't see it, check your spam folder or click the button below to resend the email. Once it arrives, open the included link to confirm your address, after which you'll get full access to your marketplace. If you need any help, don't hesitate to %{support_link}."
-      contact_support_link_text: "contact Sharetribe support"
+      contact_support_link_text: "contact support"
   settings:
     account:
       change: Change
