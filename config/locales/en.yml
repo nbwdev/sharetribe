@@ -2388,7 +2388,7 @@ en:
       description:
         detailed_description: "Detailed description"
         youtube_info: "If your description contains YouTube links, the videos will be shown below the description."
-        youtube_info_markdown: "You can %{link}. If your description contains YouTube links, the videos will be shown below the description."
+        youtube_info_markdown: "You can %{link}."
       destination:
         destination: Destination
       form_content:
