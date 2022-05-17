@@ -36,14 +36,15 @@ class ListingImage < ApplicationRecord
   # see paperclip (for image_processing column)
   has_attached_file :image,
     :styles => {
-      :small_3x2 => "240x160#",
-      :medium => "360x270#",
-      :thumb => "120x120#",
-      :original => "#{APP_CONFIG.original_image_width}x#{APP_CONFIG.original_image_height}>",
-      :big => Proc.new { |instance| instance.crop_big },
-      :email => "150x100#",
-      :square => "408x408#",
-      :square_2x => "816x816#"}
+      :small_3x2 => ["240x160#", animated:false],
+      :medium => ["360x270#", animated:false],
+      :thumb => ["120x120#", animated:false],
+      :original => ["#{APP_CONFIG.original_image_width}x#{APP_CONFIG.original_image_height}>", animated:false],
+      :big => [Proc.new { |instance| instance.crop_big }, animated:false],
+      :email => ["150x100#", animated:false],
+      :square => ["408x408#", animated:false],
+      :square_2x => ["816x816#", animated:false]
+    }
 
   before_image_post_process :set_dimensions
 
