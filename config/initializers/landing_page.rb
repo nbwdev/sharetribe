@@ -217,7 +217,7 @@ module CustomLandingPage
         {"service": "instagram", "url": "https://www.instagram.com/neverbeenworn"},
         {"service": "pinterest", "url": "https://www.pinterest.com/neverbeenworn"}
       ],
-      "copyright": "Copyright neverbeenworn 2022"
+      "copyright": "Copyright neverbeenworn 2022\\nKVK: 86100904"
     },
     {
       "id": "intentionally_blank",
