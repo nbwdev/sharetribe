@@ -573,7 +573,6 @@ class ApplicationController < ActionController::Base
       current_locale_code: I18n.locale.upcase,
       sign_up_path: sign_up_path,
       login_path: login_path,
-      shop_path: shop_path,
       new_listing_path: new_listing_path,
       locale_change_links: locale_change_links,
       icons: pick_icons(
