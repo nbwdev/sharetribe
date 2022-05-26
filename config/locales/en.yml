@@ -2412,11 +2412,11 @@ en:
         select_file: "Select file"
         add_more: "+ Add more"
         removing: Removing...
-        processing: Processing...
+        processing: Processing now...
         loading_image: Loading...
         image_uploading_in_progress: "Image upload in progress..."
-        processing_takes_a_while: "All images uploaded! Processing them will take a bit of time, but it's ok to save the listing and move on."
-        this_may_take_a_while: "this only takes a second"
+        processing_takes_a_while: "Your images are being uploaded. Larger images take a bit longer, but it's ok to save the listing and move on."
+        this_may_take_a_while: ""
         percentage_loaded: "%{percentage}%"
         uploading_failed: "Image uploading failed"
         image_processing_failed: "Image processing failed"
