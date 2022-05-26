@@ -2415,7 +2415,7 @@ en:
         processing: Processing now...
         loading_image: Loading...
         image_uploading_in_progress: "Image upload in progress..."
-        processing_takes_a_while: "Your images are being uploaded. Larger images take a bit longer, but it's ok to save the listing and move on."
+        processing_takes_a_while: "Your images are being uploaded. Larger images take a bit longer, but it's ok to post your listing and move on."
         this_may_take_a_while: ""
         percentage_loaded: "%{percentage}%"
         uploading_failed: "Image uploading failed"
