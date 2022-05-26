@@ -135,6 +135,19 @@
   font-weight: 400;
 }
 
+.offScreenHeaderShopButton span {
+  height: var(--MobileMenu_offscreenHeaderItemHeight);
+  line-height: var(--MobileMenu_offscreenHeaderItemHeight);
+  padding: 0 0 0 0.5em;
+}
+
+.offScreenHeaderShopButtonMobile span {
+  height: var(--MobileMenu_offscreenHeaderItemHeight);
+  line-height: var(--MobileMenu_offscreenHeaderItemHeight);
+  padding: 0;
+  font-weight: 400;
+}
+
 .offScreenMain {
   flex-grow: 1;
   flex-shrink: 0;

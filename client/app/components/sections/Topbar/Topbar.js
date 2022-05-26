@@ -11,6 +11,7 @@ import styleVariables from '../../../assets/styles/variables';
 
 // elements
 import AddNewListingButton from '../../elements/AddNewListingButton/AddNewListingButton';
+import ShopButton from '../../elements/ShopButton/ShopButton';
 import Logo from '../../elements/Logo/Logo';
 import NotificationBadge from '../../elements/NotificationBadge/NotificationBadge';
 
@@ -133,12 +134,16 @@ class Topbar extends Component {
     const { loggedInUsername } = this.props.user || {};
     const isAdmin = !!(this.props.user && this.props.user.isAdmin && loggedInUsername);
 
-    // new listing, login and sign up routes
+    // shop, new listing, login and sign up routes
     const newListingRoute = this.props.routes && this.props.routes.new_listing_path ?
             this.props.routes.new_listing_path() :
             '#';
     const loginRoute = this.props.routes.login_path ? this.props.routes.login_path() : '#';
     const signupRoute = this.props.routes.sign_up_path ? this.props.routes.sign_up_path() : '#';
+    const shopRoute = this.props.routes && this.props.routes.shop_path ?
+            this.props.routes.shop_path() :
+            '/s';
+    // TODO don't think I should hard code /s here but cannot find where to define the proper shop_path
 
     // language menu props
     const availableLocales = this.props.locales ? this.props.locales.available_locales : null;
@@ -225,6 +230,9 @@ class Topbar extends Component {
         newListingButton: this.props.newListingButton ?
           { ...this.props.newListingButton, url: newListingRoute, mobileLayoutOnly: true } :
           null,
+        shopButton: this.props.shopButton ?
+        { ...this.props.shopButton, url: shopRoute, mobileLayoutOnly: true } :
+        null,
         loginLinks: {
           loginUrl: loginRoute,
           signupUrl: signupRoute,
@@ -272,6 +280,14 @@ class Topbar extends Component {
         className: {
           [css.topbarMenu]: true,
         } }) : null,
+      this.props.shopButton ?
+        r(ShopButton, {
+          ...this.props.shopButton,
+          className: css.topbarListingButton,
+          url: shopRoute,
+          customColor: marketplaceColor1,
+        }) :
+      null,
       this.props.avatarDropdown && loggedInUsername ?
         r(AvatarDropdown, {
           ...avatarDropdownProps(this.props.avatarDropdown, marketplaceColor1,
@@ -323,6 +339,7 @@ Topbar.propTypes = {
     })),
   }),
   newListingButton: object,
+  shopButton: object,
   routes: routesProp,
   marketplace: PropTypes.shape({
     marketplaceColor1: string,

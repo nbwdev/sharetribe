@@ -295,6 +295,15 @@ module.exports = {
   '--AddNewListingButton_maxTextWidth': '15em',
   '--AddNewListingButton_textPadding': '1.5em',
 
+  '--ShopButton_height': topbarItemHeight,
+  '--ShopButton_tabletHeight': topbarMediumItemHeight,
+  '--ShopButton_defaultColor': '#43A5CC',
+  '--ShopButton_textSize': fontSize,
+  '--ShopButton_textSizeTablet': fontSizeSmall,
+  '--ShopButton_textColor': '#fff',
+  '--ShopButton_maxTextWidth': '15em',
+  '--ShopButton_textPadding': '1.5em',
+
   // SEARCH PAGE
   '--SearchPage_backgroundColor': backgroundColorGrey,
 

@@ -119,6 +119,11 @@ storiesOf('Top bar')
               url: 'www.example.com/post',
               mobileLayoutOnly: true,
             },
+            shopButton: {
+              text: 'Shop',
+              url: 'www.example.com/s',
+              mobileLayoutOnly: true,
+            },
           }
         ),
         containerStyle

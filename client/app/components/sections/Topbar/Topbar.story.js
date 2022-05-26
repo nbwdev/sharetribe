@@ -84,6 +84,9 @@ const baseProps = {
       },
     ],
   },
+  shopButton: {
+    text: 'Shop',
+  },
   avatarDropdown: {
     actions: {
       inboxAction: action('clicked inbox'),

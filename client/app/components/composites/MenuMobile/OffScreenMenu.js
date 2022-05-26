@@ -8,6 +8,7 @@ import MenuSection from './MenuSection';
 import LanguagesMobile from './LanguagesMobile';
 import Avatar from '../../elements/Avatar/Avatar';
 import AddNewListingButton from '../../elements/AddNewListingButton/AddNewListingButton';
+import ShopButton from '../../elements/ShopButton/ShopButton';
 import LoginLinks from '../../composites/LoginLinks/LoginLinks';
 
 class OffScreenMenu extends Component {
@@ -17,12 +18,14 @@ class OffScreenMenu extends Component {
 
     const avatarExtras = { imageHeight: headerItemHeight };
     const buttonExtrasNewPost = { className: css.offScreenHeaderNewListingButtonMobile, customColor: this.props.color };
+    const buttonExtrasShop = { className: css.offScreenHeaderShopButtonMobile, customColor: this.props.color };
     const header = this.props.avatar ? [
       this.props.avatar ? div({ className: css.avatarSpacer }, r(Avatar, { ...this.props.avatar, ...avatarExtras })) : null,
     ] : [
       r(LoginLinks, this.props.loginLinks),
     ];
     const newButton = this.props.newListingButton ? r(AddNewListingButton, { ...this.props.newListingButton, ...buttonExtrasNewPost }) : null;
+    const shopButton = this.props.shopButton ? r(ShopButton, { ...this.props.shopButton, ...buttonExtrasShop }) : null;
     const languagesMobile = this.props.languages ?
       r(LanguagesMobile, this.props.languages) : null;
 
@@ -36,7 +39,10 @@ class OffScreenMenu extends Component {
       }, header),
       div({
         className: classNames('OffScreenMenu_header', css.offScreenHeader),
-      }, newButton),
+      }, newButton, shopButton),
+      div({
+        className: classNames('OffScreenMenu_header', css.offScreenHeader),
+      }, shopButton),
       div({
         className: classNames('OffScreenMenu_main', css.offScreenMain),
       }, [
@@ -100,6 +106,7 @@ OffScreenMenu.propTypes = {
   }),
   avatar: object, // eslint-disable-line react/forbid-prop-types
   newListingButton: object, // eslint-disable-line react/forbid-prop-types
+  shopButton: object, // eslint-disable-line react/forbid-prop-types
   loginLinks: object, // eslint-disable-line react/forbid-prop-types
 };
 
