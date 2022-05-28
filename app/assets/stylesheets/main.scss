@@ -1507,9 +1507,9 @@ input[type=text].delivery-price-field {
   .accept, .confirm, .accept_preauthorized {
     @include button(lighten($green, 40%));
     margin-right: lines(0.5);
-    color: $green;
+    color: darken($green, 10%);
     &:hover {
-      color: lighten($green, 10%);
+      color: $green;
       background: lighten($green, 50%);
       border-color: lighten($green, 10%);
     }

@@ -236,7 +236,12 @@ module TransactionHelper
     statuses = if conversation.listing && !conversation.status.eql?("free")
       status_hash = {
         paid: -> { {
-          both: [
+          author: [
+            status_info(t("conversations.status.request_paid"), icon_classes: icon_for("paid")),
+            delivery_status(conversation),
+            payment_will_arrive(conversation)
+          ],
+          starter: [
             status_info(t("conversations.status.request_paid"), icon_classes: icon_for("paid")),
             delivery_status(conversation),
             paid_status(conversation)
@@ -393,7 +398,8 @@ module TransactionHelper
     if current_user?(conversation.author)
       status_info(
         t("conversations.status.waiting_for_current_user_to_deliver_listing",
-          :listing_title => link_to(conversation.listing.title, conversation.listing)
+          :listing_title => link_to(conversation.listing.title, conversation.listing),
+          :requester_name => PersonViewUtils.person_display_name(conversation.author, conversation.community)
         ).html_safe,
         icon_classes: "ss-clockwise"
       )
@@ -402,6 +408,18 @@ module TransactionHelper
         t("conversations.status.waiting_for_listing_author_to_deliver_listing",
           :listing_title => link_to(conversation.listing.title, conversation.listing),
           :listing_author_name => link_to(PersonViewUtils.person_display_name(conversation.author, conversation.community))
+        ).html_safe,
+        icon_classes: "ss-clockwise"
+      )
+    end
+  end
+
+  def payment_will_arrive(conversation)
+    if current_user?(conversation.author)
+      status_info(
+        t("conversations.status.waiting_for_current_user_to_deliver_listing_2",
+          :listing_title => link_to(conversation.listing.title, conversation.listing),
+          :requester_name => PersonViewUtils.person_display_name(conversation.author, conversation.community)
         ).html_safe,
         icon_classes: "ss-clockwise"
       )

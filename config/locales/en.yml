@@ -1300,10 +1300,10 @@ en:
       details: "Order details"
       order_by: "Order by %{orderer_link}"
       accept_offer: "Accept the offer"
-      accept_request: "Accept the request and keep the listing open"
-      accept_request_and_close: "Accept the request and close the listing"
+      accept_request: "Accept the sale and keep the listing open"
+      accept_request_and_close: "Accept the sale and close the listing"
       reject_offer: "Not this time"
-      reject_request: "Not this time"
+      reject_request: "Reject this sale"
       close_listing: "Close the listing %{listing_title_link}"
       update_later: "Leave the listing open"
       optional_message: "Optional message"
@@ -1324,11 +1324,11 @@ en:
       shipping_price_label: "Shipping:"
       stripe-fee_label: "Payment processing fee"
     confirm:
-      confirm_description: "If your order has been fulfilled you should confirm it as done. Then you can give feedback to the other party."
+      confirm_description: "If your order has arrived you should confirm it as done. Then you can give feedback to the seller."
       cancel_description_team: "If your order was not fulfilled, you can mark it as 'disputed'. The %{service_name} team will review the situation and will decide to refund or dismiss your dispute request."
       cancel_payed_description: "If your request was accepted but you're having second thoughts, you can still cancel the request before the payment."
       canceling_payed_transaction: "Cancel transaction"
-      confirm: "Mark completed"
+      confirm: "Mark the order completed"
       cancel: Dispute
       continue: Continue
       give_feedback_to: "Give feedback to %{person_link}"
@@ -1427,8 +1427,9 @@ en:
           multicurrency: "We couldn't process the PayPal payment because your PayPal account has not been set up to receive money in %{currency}. Go to %{paypal_url} and log in to your account to manually accept or reject the payment."
           verify: "You cannot accept this transaction because you haven't verified your PayPal account. Go to %{paypal_url} to verify your account."
           intl: "We couldn't process the PayPal payment because your PayPal account does not have a withdrawal mechanism. Go to %{paypal_url} and log in to your account to manually accept or reject the payment."
-      waiting_for_current_user_to_deliver_listing: "Waiting for you to fulfill the order for %{listing_title}"
-      waiting_for_listing_author_to_deliver_listing: "Waiting for %{listing_author_name} to fulfill the order for %{listing_title}"
+      waiting_for_current_user_to_deliver_listing: "Please send %{listing_title} to %{requester_name} at the address above. You can use your preferred method, but we recommend you use recorded delivery and send the tracking number to %{requester_name} on the day you send the order. Use the \"Send Reply\" button below to do this."
+      waiting_for_current_user_to_deliver_listing_2: "The money will be released to your account when %{requester_name} confirms they have received %{listing_title}."
+      waiting_for_listing_author_to_deliver_listing: "%{listing_author_name} has confirmed the purchase. We are now waiting for them to send %{listing_title} to you. Please confirm when you receive the order."
       request_accepted: Accepted
       request_rejected: Rejected
       request_confirmed: Completed
@@ -1441,8 +1442,8 @@ en:
       waiting_for_listing_author_to_accept_offer: "Waiting for %{listing_author_name} to accept the offer"
       waiting_for_listing_author_to_accept_request: "We are now waiting for %{listing_author_name} to accept the request. You will be charged as soon as they accept."
       waiting_for_you_to_accept_request: "We have authorised the buyer's payment and we are now waiting for you to accept the sale"
-      waiting_confirmation_from_requester: "Waiting for %{requester_name} to mark the order completed"
-      waiting_confirmation_from_you: "Waiting for you to mark the order completed"
+      waiting_confirmation_from_requester: "Waiting for you to send the item and %{requester_name} to confirm receipt"
+      waiting_confirmation_from_you: "Waiting for you to receive the order"
       waiting_payment_from_requester: "Waiting for %{requester_name} to pay"
       waiting_payment_from_you: "Waiting for you to pay"
       waiting_feedback_from_you: "Waiting for you to give feedback"
@@ -1474,8 +1475,8 @@ en:
       accept_preauthorized_offer: "Accept offer"
       accept_preauthorized_request: "Accept sale"
       reject_preauthorized_offer: "Not this time"
-      reject_preauthorized_request: "Cancel this sale"
-      confirm: "Mark completed"
+      reject_preauthorized_request: "Reject this sale"
+      confirm: "Mark received"
       cancel: Dispute
       mark_as_refunded: "Mark as refunded"
       dismiss: "Dismiss and payout"

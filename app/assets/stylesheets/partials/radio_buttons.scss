@@ -28,7 +28,7 @@
   @extend .radio-button;
 
   &.radio-button-selected {
-    color: $green;
+    color: darken($green, 20%);
     background: lighten($green, 40%);
     &:hover { background: lighten($green, 40%); }
   }
