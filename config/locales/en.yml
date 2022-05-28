@@ -2309,7 +2309,7 @@ en:
       user_does_not_have_email_to_delete: "You don't have the email address you're trying to remove"
       email_deleted: "Email removed"
       listing_author_payment_details_missing: "Please contact the author by pressing the 'Contact' button below. They need to update their payment details to receive payments."
-      listing_author_payment_details_missing_no_free: "Please contact the %{service_name} team to ask them to contact and advise the listing author to update their payment details to receive payments."
+      listing_author_payment_details_missing_no_free: "The seller needs to set up their payment information before you can buy this. We have sent them a message to remind them to do this. Please check again later."
       images_are_processing: "We are processing your images. Give us a minute or two and they'll be visible."
       maintenance_mode:
         zero: "The website will now go offline for maintenance"
@@ -2717,7 +2717,7 @@ en:
     paypal_account_connected_title: "PayPal account connected"
     paypal_account_connected: "The PayPal account <%{email}> has been connected with %{service_name}."
     change_account: "Change PayPal account"
-    missing: "You have open listings but your Paypal account is not set up to receive payments. Connect your Paypal account and grant %{service_name} permission to charge a transaction fee from your %{settings_link}."
+    missing: "You have listed items for sale but they cannot be sold until you set up your Paypal account to receive payments. Connect your Paypal account and grant %{service_name} permission to charge a transaction fee from your %{settings_link}."
     from_your_payment_settings_link_text: "payment settings"
     redirect_message: "Redirecting you to PayPal. If nothing happens, click %{redirect_link}."
     redirect_link_text: here
@@ -3228,7 +3228,7 @@ en:
     pay_with_stripe: "Pay with Stripe using %{card}"
     add_and_pay: "Confirm payment"
     card_not_stored: "Your payment is securely processed by Stripe. %{service_name} does not store your credit/debit card information."
-    missing_payment: "You have open listings but your account is not set up to receive money. To configure your payment preferences, visit %{settings_link}"
+    missing_payment: "You have listed items for sale but they cannot be sold until you set up your account to receive money. To configure your payment preferences, visit %{settings_link}"
     stripe_bank_connected: "Bank account details configured successfully!"
     stripe_can_accept: "You are now all set to receive money to your bank account"
     stripe_credit_card: "Credit card"

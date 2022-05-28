@@ -382,7 +382,7 @@ class ApplicationController < ActionController::Base
         payment_settings_link = view_context.link_to(t("paypal_accounts.from_your_payment_settings_link_text"),
           person_payment_settings_path(@current_user), target: "_blank", rel: "noopener")
 
-        flash.now[:warning] = t("stripe_accounts.missing_payment", settings_link: payment_settings_link).html_safe
+        flash.now[:error] = t("stripe_accounts.missing_payment", settings_link: payment_settings_link).html_safe
       end
     end
   end
