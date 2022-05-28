@@ -2990,7 +2990,7 @@ en:
       this_will_be_shown_in_profile: "The feedback you give will be visible to other members in the profile page of %{person}. It helps them to evaluate whether %{person} is a trustworthy person."
       positive: Positive
       negative: Negative
-      default_textual_feedback: "Everything went smoothly, thanks a lot!"
+      default_textual_feedback: "Write your feedback here"
     testimonial:
       about_listing: "about listing"
   date:

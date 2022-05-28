@@ -1,4 +1,4 @@
-- if role == :participant
+- if role == :participant && !hide_form
   - content_for :javascript do
     initialize_reply_form('#{I18n.locale}');
 
