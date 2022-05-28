@@ -1434,10 +1434,10 @@ en-NZ:
       request_confirmed: Completed
       request_canceled: Cancelled
       request_paid: "Payment successful"
-      request_preauthorized: "Payment authorized"
+      request_preauthorized: ~
       skip_feedback: "Skip feedback"
       waiting_for_listing_author_to_accept_offer: "Waiting for %{listing_author_name} to accept the offer"
-      waiting_for_listing_author_to_accept_request: "Waiting for %{listing_author_name} to accept the request. As soon as %{listing_author_name} accepts, you will be charged."
+      waiting_for_listing_author_to_accept_request: ~
       waiting_for_you_to_accept_request: "Waiting for you to accept the request"
       waiting_confirmation_from_requester: "Waiting for %{requester_name} to mark the order completed"
       waiting_confirmation_from_you: "Waiting for you to mark the order completed"

@@ -2075,6 +2075,14 @@ figure.fluidratio {
         @include large-type;
       }
     }
+
+    a {
+      color: $slogancolor;
+      @include normal-type;
+      font-weight: bold;
+      line-height: lines(0.8);
+      &:hover { color: darken($light-body, 15%); }
+    }
   }
 
   p {

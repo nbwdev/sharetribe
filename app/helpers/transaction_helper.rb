@@ -244,8 +244,12 @@ module TransactionHelper
         }
               },
         preauthorized: -> { {
-          both: [
-            status_info(t("conversations.status.request_preauthorized"), icon_classes: icon_for("preauthorized")),
+          author: [
+            status_info(t("conversations.status.seller_request_preauthorized"), icon_classes: icon_for("preauthorized")),
+            preauthorized_status(conversation)
+          ],
+          starter: [
+            status_info(t("conversations.status.buyer_request_preauthorized"), icon_classes: icon_for("preauthorized")),
             preauthorized_status(conversation)
           ]
         }
@@ -264,7 +268,7 @@ module TransactionHelper
                 status_info(t("conversations.status.pending_external.paypal.multicurrency", currency: paypal_payment[:payment_total].currency, paypal_url: link_to("https://www.paypal.com", "https://www.paypal.com")).html_safe, icon_classes: icon_for("pending_ext"))
               ],
               starter: [
-                status_info(t("conversations.status.request_preauthorized"), icon_classes: icon_for("preauthorized")),
+                status_info(t("conversations.status.buyer_request_preauthorized"), icon_classes: icon_for("preauthorized")),
                 preauthorized_status(conversation)
               ]
             }
@@ -274,7 +278,7 @@ module TransactionHelper
                 status_info(t("conversations.status.pending_external.paypal.intl", paypal_url: link_to("https://www.paypal.com", "https://www.paypal.com")).html_safe, icon_classes: icon_for("pending_ext"))
               ],
               starter: [
-                status_info(t("conversations.status.request_preauthorized"), icon_classes: icon_for("preauthorized")),
+                status_info(t("conversations.status.buyer_request_preauthorized"), icon_classes: icon_for("preauthorized")),
                 preauthorized_status(conversation)
               ]
             }
@@ -284,7 +288,7 @@ module TransactionHelper
                 status_info(t("conversations.status.pending_external.paypal.verify", paypal_url: link_to("https://www.paypal.com", "https://www.paypal.com")).html_safe, icon_classes: icon_for("pending_ext"))
               ],
               starter: [
-                status_info(t("conversations.status.request_preauthorized"), icon_classes: icon_for("preauthorized")),
+                status_info(t("conversations.status.buyer_request_preauthorized"), icon_classes: icon_for("preauthorized")),
                 preauthorized_status(conversation)
               ]
             }
