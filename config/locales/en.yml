@@ -1309,7 +1309,7 @@ en:
       optional_message: "Optional message"
       price_to_pay: "Total price to be paid"
       accept: Accept
-      decline: Decline
+      decline: Reject
       quantity_label: "Quantity:"
       sum_label: "Subtotal:"
       service_fee_label: "%{service_name} fee:"
@@ -1357,9 +1357,9 @@ en:
       free_message: "Direct message"
       message_content_not_available: "Message content not available"
     message:
-      accepted_request: "accepted the request"
-      received_payment: "accepted the request, received payment"
-      received_payment_wo_sum: "accepted the request, received payment"
+      accepted_request: "Seller has accepted the request"
+      received_payment: "Seller has accepted the request and received payment"
+      received_payment_wo_sum: "Seller has accepted the request and received payment"
       accepted_offer: "accepted the offer"
       rejected_request: "rejected the request, canceled the payment"
       rejected_offer: "rejected the offer"
@@ -1371,8 +1371,8 @@ en:
       payment_preauthorized: "Payment authorized"
       payment_preauthorized_wo_sum: "Payment authorized"
       stripe:
-        held_payment: "Accepted the request. Payment is being held by %{service_name} until the order is marked as completed."
-        held_payment_wo_sum: "Accepted the request. Payment is being held by %{service_name} until the order is marked as completed."
+        held_payment: "Seller has accepted the request. Payment is being held by %{service_name} until the order is marked as completed."
+        held_payment_wo_sum: "Seller has accepted the request. Payment is being held by %{service_name} until the order is marked as completed."
         confirmed_request: "Marked the order as completed. The payment has now been transferred to %{author_name} bank account or will be transferred soon."
       canceled_the_order: "Disputed the order. The %{service_name} team has been notified."
       marked_as_refunded: "Marked as refunded"
@@ -2720,7 +2720,7 @@ en:
     paypal_account_connected_title: "PayPal account connected"
     paypal_account_connected: "The PayPal account <%{email}> has been connected with %{service_name}."
     change_account: "Change PayPal account"
-    missing: "You have listed items for sale but they cannot be sold until you set up your Paypal account to receive payments. Connect your Paypal account and grant %{service_name} permission to charge a transaction fee from your %{settings_link}."
+    missing: "You have listed items for sale but they cannot be sold until you set up your Paypal account to receive payments. Visit %{settings_link} to connect your Paypal account to %{service_name}."
     from_your_payment_settings_link_text: "payment settings"
     redirect_message: "Redirecting you to PayPal. If nothing happens, click %{redirect_link}."
     redirect_link_text: here
@@ -3231,7 +3231,7 @@ en:
     pay_with_stripe: "Pay with Stripe using %{card}"
     add_and_pay: "Confirm payment"
     card_not_stored: "Your payment is securely processed by Stripe. %{service_name} does not store your credit/debit card information."
-    missing_payment: "You have listed items for sale but they cannot be sold until you set up your account to receive money. To configure your payment preferences, visit %{settings_link}"
+    missing_payment: "You have listed items for sale but they cannot be sold until you set up your account to receive money. Go to %{settings_link} to add your account."
     stripe_bank_connected: "Bank account details configured successfully!"
     stripe_can_accept: "You are now all set to receive money to your bank account"
     stripe_credit_card: "Credit card"

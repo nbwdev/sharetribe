@@ -1309,7 +1309,7 @@ en-NZ:
       optional_message: "Optional message"
       price_to_pay: "Total price to be paid"
       accept: Accept
-      decline: Decline
+      decline: ~
       quantity_label: "Quantity:"
       sum_label: "Subtotal:"
       service_fee_label: "%{service_name} fee:"
@@ -1357,7 +1357,7 @@ en-NZ:
       free_message: "Direct message"
       message_content_not_available: "Message content not available"
     message:
-      accepted_request: "accepted the request"
+      accepted_request: ~
       received_payment: ~
       received_payment_wo_sum: ~
       accepted_offer: "accepted the offer"
@@ -2274,7 +2274,7 @@ en-NZ:
       you_are_not_allowed_to_give_feedback_on_this_transaction: "You are not authorized to give feedback on this event"
       you_are_not_authorized_to_do_this: "You are not authorized to do this"
       you_are_not_authorized_to_view_this_content: "You are not authorized to view this content"
-      listing_closed: "This listing has been closed"
+      listing_closed: ~
       send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
       you_cannot_reply_to_a_closed_offer: "You cannot reply to a closed offer"
       you_cannot_send_message_to_yourself: "You cannot send a message to yourself"
