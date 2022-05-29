@@ -380,7 +380,7 @@ class ApplicationController < ActionController::Base
 
       if has_paid_listings && accept_payments.blank? && !admin_controller?
         payment_settings_link = view_context.link_to(t("paypal_accounts.from_your_payment_settings_link_text"),
-          person_payment_settings_path(@current_user), target: "_blank", rel: "noopener")
+          person_payment_settings_path(@current_user))
 
         flash.now[:error] = t("stripe_accounts.missing_payment", settings_link: payment_settings_link).html_safe
       end
