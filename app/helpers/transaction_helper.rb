@@ -399,7 +399,7 @@ module TransactionHelper
       status_info(
         t("conversations.status.waiting_for_current_user_to_deliver_listing",
           :listing_title => link_to(conversation.listing.title, conversation.listing),
-          :requester_name => PersonViewUtils.person_display_name(conversation.author, conversation.community)
+          :requester_name => PersonViewUtils.person_display_name(conversation.other_party(@current_user), conversation.community)
         ).html_safe,
         icon_classes: "ss-clockwise"
       )
@@ -419,7 +419,7 @@ module TransactionHelper
       status_info(
         t("conversations.status.waiting_for_current_user_to_deliver_listing_2",
           :listing_title => link_to(conversation.listing.title, conversation.listing),
-          :requester_name => PersonViewUtils.person_display_name(conversation.author, conversation.community)
+          :requester_name => PersonViewUtils.person_display_name(conversation.other_party(@current_user), conversation.community)
         ).html_safe,
         icon_classes: "ss-clockwise"
       )
