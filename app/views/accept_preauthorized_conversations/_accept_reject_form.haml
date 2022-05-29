@@ -1,3 +1,43 @@
+- content_for :extra_javascript do
+  :javascript
+    (function() {
+      var btn = $('#send_testimonial_button');
+      var msgText = $('#transaction_message_attributes_content');
+
+      btn.click(function() {
+        disable_and_submit("#accept-reject-form", $("#accept-reject-form"), "false", '#{I18n.locale}');
+      });
+
+      ST.initializeRadioButtons({
+        buttons: [".js-accept-radio-button", ".js-accept-close-radio-button", ".js-reject-radio-button", ".js-send-message-radio-button"],
+        input: ".js-accept-status",
+        callback: function(selector) {
+          switch(selector) {
+            case ".js-accept-radio-button":
+              btn.text('#{t("conversations.accept.accept")}');
+              msgText.removeAttr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.optional_message")}')
+              break;
+            case ".js-accept-close-radio-button":
+              btn.text('#{t("conversations.accept.accept")}');
+              msgText.removeAttr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.optional_message")}')
+              break;
+            case ".js-reject-radio-button":
+              btn.text('#{t("conversations.accept.decline")}');
+              msgText.attr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.mandatory_message")}')
+              break;
+            case ".js-send-message-radio-button":
+              btn.text('#{t("conversations.accept.send")}');
+              msgText.attr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.mandatory_message")}')
+              break;
+          }
+        }
+      })
+    })();
+
 = form_for form, :url => form_action, :html => { id: "accept-reject-form", :method => "put" } do |form|
 
   %input.js-accept-status{type: :hidden, name: "transaction[status]", value: preselected_action == "accept" ? "paid" : "rejected"}
