@@ -462,20 +462,7 @@ module TransactionHelper
   end
 
   def waiting_for_current_user_to_accept_preauthorized(transaction)
-    status_links([
-      {
-        link_href: accept_preauthorized_person_message_path(@current_user, :id => transaction.id),
-        link_classes: "accept_preauthorized",
-        link_icon_with_text_classes: icon_for("accept_preauthorized"),
-        link_text_with_icon: link_text_with_icon(transaction, "accept_preauthorized")
-      },
-      {
-        link_href: reject_preauthorized_person_message_path(@current_user, :id => transaction.id),
-        link_classes: "reject_preauthorized",
-        link_icon_with_text_classes: icon_for("reject_preauthorized"),
-        link_text_with_icon: link_text_with_icon(transaction, "reject_preauthorized")
-      }
-    ])
+    status_links([])
   end
 
   def feedback_pending_status(conversation)

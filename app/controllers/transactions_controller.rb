@@ -139,7 +139,6 @@ class TransactionsController < ApplicationController
 
     @conversation = @transaction.conversation
     @listing = @transaction.listing
-    hide_form = @transaction.current_state == 'confirmed'
 
     messages_and_actions = TransactionViewUtils.merge_messages_and_transitions(
       TransactionViewUtils.conversation_messages(@conversation.messages, @current_community.name_display_type),
@@ -149,6 +148,15 @@ class TransactionsController < ApplicationController
 
     is_author = @transaction.listing_author_id == @current_user.id
 
+    show_preauth_form = is_author && @transaction.current_state == 'preauthorized'
+    preauth_form = @transaction
+    preauth_form_action = acceptance_preauthorized_person_message_path(
+      person_id: @current_user.id,
+      id: @transaction.id
+    )
+    preauth_form_preselected_action = "accept"
+    hide_message_form = @transaction.current_state == 'confirmed' || @transaction.current_state == 'refunded' || @transaction.current_state == 'dismissed' || show_preauth_form
+
     render "transactions/show", locals: {
       messages: messages_and_actions.reverse,
       conversation_other_party: @conversation.other_party(@current_user),
@@ -157,7 +165,11 @@ class TransactionsController < ApplicationController
       message_form: Message.new({sender_id: @current_user.id, conversation_id: @conversation.id}),
       message_form_action: person_message_messages_path(@current_user, :message_id => @conversation.id),
       price_break_down_locals: price_break_down_locals(@transaction, @conversation),
-      hide_form: hide_form
+      hide_message_form: hide_message_form,
+      show_preauth_form: show_preauth_form,
+      preauth_form: preauth_form,
+      preauth_form_action: preauth_form_action,
+      preauth_form_preselected_action: preauth_form_preselected_action
     }
   end
 
