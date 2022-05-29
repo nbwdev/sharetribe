@@ -5,19 +5,37 @@
   :javascript
     (function() {
       var btn = $('#send_testimonial_button');
+      var msgText = $('#transaction_message_attributes_content');
 
       btn.click(function() {
         disable_and_submit("#accept-reject-form", $("#accept-reject-form"), "false", '#{I18n.locale}');
       });
 
       ST.initializeRadioButtons({
-        buttons: [".js-accept-radio-button", ".js-accept-close-radio-button", ".js-reject-radio-button"],
+        buttons: [".js-accept-radio-button", ".js-accept-close-radio-button", ".js-reject-radio-button", ".js-send-message-radio-button"],
         input: ".js-accept-status",
         callback: function(selector) {
           switch(selector) {
-            case ".js-accept-radio-button": btn.text('#{t("conversations.accept.accept")}'); break;
-            case ".js-accept-close-radio-button": btn.text('#{t("conversations.accept.accept")}'); break;
-            case ".js-reject-radio-button": btn.text('#{t("conversations.accept.decline")}'); break;
+            case ".js-accept-radio-button":
+              btn.text('#{t("conversations.accept.accept")}');
+              msgText.removeAttr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.optional_message")}')
+              break;
+            case ".js-accept-close-radio-button":
+              btn.text('#{t("conversations.accept.accept")}');
+              msgText.removeAttr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.optional_message")}')
+              break;
+            case ".js-reject-radio-button":
+              btn.text('#{t("conversations.accept.decline")}');
+              msgText.attr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.mandatory_message")}')
+              break;
+            case ".js-send-message-radio-button":
+              btn.text('#{t("conversations.accept.send")}');
+              msgText.attr('required','');
+              msgText.attr('placeholder','#{t("conversations.accept.mandatory_message")}')
+              break;
           }
         }
       })
@@ -155,22 +173,5 @@
 
   = render partial: "transactions/shipping_address", locals: { shipping_address: @transaction.shipping_address }
 
-  = form_for form, :url => form_action, :html => { id: "accept-reject-form", :method => "put" } do |form|
-
-    %input.js-accept-status{type: :hidden, name: "transaction[status]", value: preselected_action == "accept" ? "paid" : "rejected"}
-
-    %a.radio-button-positive.js-accept-close-radio-button{ data: { :"radio-button-value" => 'paid_and_close' }, class: preselected_action == 'accept' || preselected_action == 'accept_and_close' ? 'radio-button-selected' : '' }
-      .radio-button-icon{class: icon_for('accepted')}
-      .radio-button-label= t('conversations.accept.accept_request_and_close')
-    %a.radio-button-negative.js-reject-radio-button{ data: { :"radio-button-value" => "rejected" }, class: preselected_action == "reject" ? "radio-button-selected" : "" }
-      .radio-button-icon{class: icon_for("rejected")}
-      .radio-button-label= t("conversations.accept.reject_request")
-
-    %div
-      = fields_for "transaction[message_attributes]", Message.new do |message_form|
-        = message_form.label :content, t("conversations.new.message"), :class => "input"
-        = message_form.text_area :content, :class => "text_area", :placeholder => t("conversations.accept.optional_message")
-        = message_form.hidden_field :sender_id, :value => @current_user.id
-
-      - initial_send_label = preselected_action == "accept" ? t('conversations.accept.accept') : t('conversations.accept.decline')
-      = form.button initial_send_label, :class => "send_button", :id => "send_testimonial_button"
+  = render partial: "accept_preauthorized_conversations/accept_reject_form",
+    locals: { form: form, form_action: form_action, preselected_action: preselected_action }

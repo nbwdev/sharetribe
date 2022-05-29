@@ -43,3 +43,13 @@
     &:hover { background: lighten($red, 40%); }
   }
 }
+
+.radio-button-neutral {
+  @extend .radio-button;
+
+  &.radio-button-selected {
+    color: darken($yellow, 40%);
+    background: lighten($yellow, 40%);
+    &:hover { background: lighten($yellow, 40%); }
+  }
+}

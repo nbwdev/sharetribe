@@ -1304,12 +1304,15 @@ en:
       accept_request_and_close: "Accept the sale and close the listing"
       reject_offer: "Not this time"
       reject_request: "Reject this sale"
+      send_message: "Send a message"
       close_listing: "Close the listing %{listing_title_link}"
       update_later: "Leave the listing open"
       optional_message: "Optional message"
+      mandatory_message: "Write your message here"
       price_to_pay: "Total price to be paid"
       accept: Accept
       decline: Reject
+      send: Send
       quantity_label: "Quantity:"
       sum_label: "Subtotal:"
       service_fee_label: "%{service_name} fee:"
@@ -2270,6 +2273,7 @@ en:
       reply_sent: "Reply sent successfully"
       request_accepted: "Request accepted"
       request_accepted_and_closed: "Request accepted and listing closed"
+      message_sent: "Message was sent"
       request_confirmed: "Order completed"
       request_rejected: "Request rejected"
       request_canceled: "Order disputed"

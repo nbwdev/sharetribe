@@ -1,0 +1,23 @@
+= form_for form, :url => form_action, :html => { id: "accept-reject-form", :method => "put" } do |form|
+
+  %input.js-accept-status{type: :hidden, name: "transaction[status]", value: preselected_action == "accept" ? "paid" : "rejected"}
+
+  %a.radio-button-positive.js-accept-close-radio-button{ data: { :"radio-button-value" => 'paid_and_close' }, class: preselected_action == 'accept' || preselected_action == 'accept_and_close' ? 'radio-button-selected' : '' }
+    .radio-button-icon{class: icon_for('accepted')}
+    .radio-button-label= t('conversations.accept.accept_request_and_close')
+  %a.radio-button-negative.js-reject-radio-button{ data: { :"radio-button-value" => "rejected" }, class: preselected_action == "reject" ? "radio-button-selected" : "" }
+    .radio-button-icon{class: icon_for("rejected")}
+    .radio-button-label= t("conversations.accept.reject_request")
+  %a.radio-button-neutral.js-send-message-radio-button{ data: { :"radio-button-value" => "send_message" }, class: preselected_action == "send_message" ? "radio-button-selected" : "" }
+    .radio-button-icon{class: icon_for("send_message")}
+    .radio-button-label= t("conversations.accept.send_message")
+
+  %div
+    = fields_for "transaction[message_attributes]", Message.new do |message_form|
+      = message_form.label :content, t("conversations.new.message"), :class => "input"
+      = message_form.text_area :content, :class => "text_area",
+        :placeholder => preselected_action == 'accept' || preselected_action == 'accept_and_close' ? t("conversations.accept.optional_message") : t("conversations.accept.mandatory_message")
+      = message_form.hidden_field :sender_id, :value => @current_user.id
+
+    - initial_send_label = preselected_action == "accept" ? t('conversations.accept.accept') : preselected_action == "reject" ? t('conversations.accept.decline') : t('conversations.accept.send')
+    = form.button initial_send_label, :class => "send_button", :id => "send_testimonial_button"

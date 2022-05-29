@@ -61,22 +61,33 @@ class AcceptPreauthorizedConversationsController < ApplicationController
       return
     end
 
-    res = accept_or_reject_tx(@current_community.id, tx, status, message, sender_id)
+    if status == :send_message
+      # send the message without accepting or rejecting the transaction
+      TransactionService::Store::Transaction.add_message(community_id: @current_community.id,
+        transaction_id: tx.id,
+        message: message,
+        sender_id: sender_id)
+      flash[:notice] = success_msg(:flow)
+      redirect_to person_message_path(person_id: sender_id , id: tx_id)
 
-    if res[:success]
-      flash[:notice] = success_msg(res[:flow])
-
-      record_event(
-        flash,
-        status == (:paid || :paid_and_close) ? "PreauthorizedTransactionAccepted" : "PreauthorizedTransactionRejected",
-        { listing_id: tx.listing_id,
-          listing_uuid: UUIDUtils.parse_raw(tx.listing_uuid).to_s,
-          transaction_id: tx.id })
-
-      redirect_to person_transaction_path(person_id: sender_id, id: tx_id)
     else
-      flash[:error] = error_msg(res[:flow], tx)
-      redirect_to accept_preauthorized_person_message_path(person_id: sender_id , id: tx_id)
+      res = accept_or_reject_tx(@current_community.id, tx, status, message, sender_id)
+
+      if res[:success]
+        flash[:notice] = success_msg(res[:flow])
+
+        record_event(
+          flash,
+          status == (:paid || :paid_and_close) ? "PreauthorizedTransactionAccepted" : "PreauthorizedTransactionRejected",
+          { listing_id: tx.listing_id,
+            listing_uuid: UUIDUtils.parse_raw(tx.listing_uuid).to_s,
+            transaction_id: tx.id })
+
+        redirect_to person_transaction_path(person_id: sender_id, id: tx_id)
+      else
+        flash[:error] = error_msg(res[:flow], tx)
+        redirect_to accept_preauthorized_person_message_path(person_id: sender_id , id: tx_id)
+      end
     end
   end
 
@@ -131,6 +142,8 @@ class AcceptPreauthorizedConversationsController < ApplicationController
       t('layouts.notifications.request_accepted_and_closed')
     elsif flow == :reject
       t("layouts.notifications.request_rejected")
+    elsif flow == :send_message
+      t("layouts.notifications.message_sent")
     end
   end
 
