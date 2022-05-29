@@ -43,6 +43,13 @@
 .ajax-update-error {
   color: $background;
   background: $error-red;
+
+  a {
+    color: lighten($error-red, 45%);
+    &:hover {
+      color: lighten($error-red, 55%);
+    }
+  }
 }
 
 .flash-error-link {
