@@ -16,7 +16,8 @@ class Policy::ListingPolicy
   end
 
   def visible?
-     authorized_to_view? && (open? || is_author? || is_admin?)
+    everyone_can_see_closed_listings = true
+    authorized_to_view? && (open? || is_author? || is_admin? || everyone_can_see_closed_listings)
   end
 
   def authorized_to_view?
