@@ -2244,6 +2244,7 @@ sv:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "Bara ägaren av annonsen kan stänga annonsen"
       only_listing_author_can_edit_a_listing: "Bara ägaren av annonsen kan redigera annonsen"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Betalningen lyckades"
       payment_canceled: "Betalningen är avbryten"
       error_in_payment: "Fel på betalning. Om du inte har slutfört betalningen ännu så försök igen. Om du slutförde, vänligen skicka oss ett meddelande."

@@ -2254,6 +2254,7 @@ sk-SK:
       only_kassi_administrators_can_access_this_area: "Prihláste sa pomocou účtu správcu, ak sa chcete dostať do tejto oblasti"
       only_listing_author_can_close_a_listing: "Iba autor inzerátu môže uzavrieť inzerát"
       only_listing_author_can_edit_a_listing: "Iba autor inzerátu môže upravovať inzerát"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Platba prebehla úspešne"
       payment_canceled: "Platba bola zrušená"
       error_in_payment: "Chyba v platbe. Pokiaľ ste platbu ešte neukončili, skúste to znovu. Pokiaľ áno, prosím napíšte nám."

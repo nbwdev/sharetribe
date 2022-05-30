@@ -2246,6 +2246,7 @@ bg:
       only_kassi_administrators_can_access_this_area: "Моля, влезте с администраторски акаунт за достъп до тази зона"
       only_listing_author_can_close_a_listing: "Само авторът на обява може да я закрие"
       only_listing_author_can_edit_a_listing: "Само авторът на обява може да я редактира"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Плащането е успешно"
       payment_canceled: "Плащането е отменено"
       error_in_payment: "Грешка при плащането. Ако все още не сте извършили плащането, опитайте отново. Ако сте го направили, моля, изпратете ни обратна връзка."

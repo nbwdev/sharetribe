@@ -2224,6 +2224,7 @@ zh:
       only_kassi_administrators_can_access_this_area: 请使用管理者的账号来访这里
       only_listing_author_can_close_a_listing: 仅作者可以关闭发布的信息
       only_listing_author_can_edit_a_listing: 仅作者可以编辑发布的信息
+      cannot_edit_a_closed_listing: ~
       payment_successful: 付款成功
       payment_canceled: 付款已取消
       error_in_payment: 付款错误。如果你还没有完成付款，请重试。如果已完成，请联系我们。

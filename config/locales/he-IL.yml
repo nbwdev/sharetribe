@@ -2249,6 +2249,7 @@ he-IL:
       only_kassi_administrators_can_access_this_area: "אנא התחבר עם חשבון מנהל כדי לגשת לאיזור המבוקש"
       only_listing_author_can_close_a_listing: "רק מפרסם המודעה יכול לסגור את המודעה"
       only_listing_author_can_edit_a_listing: "רק מפרסם המודעה יכול לערוך את המודעה"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "התשלום הצליח"
       payment_canceled: "התשלום בוטל"
       error_in_payment: "שגיאה בתשלום. אם עדיין לא השלמת את התשלום, נסה שוב. אם כן, שלח לנו משוב."

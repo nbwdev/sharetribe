@@ -2262,6 +2262,7 @@ ru:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "Листинг может закрыть только автор"
       only_listing_author_can_edit_a_listing: "Листинг может редактировать только автор"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Оплата выполнена успешно"
       payment_canceled: "Платёж отменен"
       error_in_payment: "Ошибка оплаты. Если вы еще не завершили операцию оплаты, попробуйте снова. Если вы завершили, пожалуйста свяжитесь с нами."

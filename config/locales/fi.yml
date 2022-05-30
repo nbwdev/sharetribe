@@ -2244,6 +2244,7 @@ fi:
       only_kassi_administrators_can_access_this_area: "Ole hyvä ja kirjaudu sisään ylläpitäjän tilillä päästäksesi tälle alueelle"
       only_listing_author_can_close_a_listing: "Vain ilmoituksen laatija voi sulkea ilmoituksen."
       only_listing_author_can_edit_a_listing: "Vain ilmoituksen laatija voi muokata ilmoitusta."
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Maksu suoritettu"
       payment_canceled: "Maksu peruutettu"
       error_in_payment: "Virhe maksun käsittelyssä. Jos et maksanut vielä, yritä uudelleen. Jos maksoit, ota yhteys ylläpitoon."

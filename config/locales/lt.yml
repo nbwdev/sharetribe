@@ -2245,6 +2245,7 @@ lt:
       only_kassi_administrators_can_access_this_area: "Prašome prisijungti su administratoriaus paskyra, kad šita vieta būtų prieinama"
       only_listing_author_can_close_a_listing: "Tik skelbimo autorius gali uždaryti skelbimą"
       only_listing_author_can_edit_a_listing: "Tik skelbimo autorius gali redaguoti skelbimą"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Mokėjimas sėkmingas"
       payment_canceled: "Mokėjimas atšauktas"
       error_in_payment: "Klaida mokėjime. Jei nebaigėte mokėjimo, bandykite dar kartą. Jei baigėte, atsiųskite mums atsiliepimą."

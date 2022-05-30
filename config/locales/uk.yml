@@ -2264,6 +2264,7 @@ uk:
       only_kassi_administrators_can_access_this_area: "Будь ласка, увійдіть за допомогою облікового запису адміністратора, щоб отримати доступ до цієї області"
       only_listing_author_can_close_a_listing: "Тільки автор списку може закрити список"
       only_listing_author_can_edit_a_listing: "Тільки автор списку може редагувати список"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Оплата успішна"
       payment_canceled: "Платіж скасовано"
       error_in_payment: "Помилка оплати. Якщо ви не завершили операцію оплати, спробуйте знову. Якщо ви завершили, будь ласка, зв'яжіться з нами."

@@ -2230,6 +2230,7 @@ vi:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "Chỉ tác giả của bài đăng mới có thể đóng bài đăng"
       only_listing_author_can_edit_a_listing: "Chỉ tác giả của bài đăng mới có thể chỉnh sửa bài đăng"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Thanh toán thành công"
       payment_canceled: "Thanh toán bị hủy"
       error_in_payment: "Có lỗi phát sinh trong quá trình thanh toán. Nếu bạn chưa hoàn thành quá trình thanh toán, hãy thử lại, Nếu rồi, vui lòng liên hệ với chúng tôi."

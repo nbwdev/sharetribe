@@ -2231,6 +2231,7 @@ ar:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "فقط من وضع الاعلان يمكنه إغلاقه"
       only_listing_author_can_edit_a_listing: "فقط من وضع الإعلان يمكنه تعديله"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "تم الدفع بنجاح"
       payment_canceled: "تم إلغاء عملية الدفع"
       error_in_payment: "خطأ في عملية الدفع. إذا لم تقم بإكمال عملية الدفع، حاول مرة أخرى. إذا قمت باتمام عملية الدفع، رجاء تواصل معنا."

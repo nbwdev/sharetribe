@@ -2227,6 +2227,7 @@ pt-PT:
       only_kassi_administrators_can_access_this_area: "Por favor faça o login com uma conta de administrador para acessar esta área"
       only_listing_author_can_close_a_listing: "Só o autor do anúncio pode fechar o mesmo"
       only_listing_author_can_edit_a_listing: "Só o autor do anúncio pode editar o mesmo"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Pagamento bem sucedido"
       payment_canceled: "Pagamento cancelado"
       error_in_payment: "Ocorreu um erro durante o pagamento. Se você ainda não completou o pagamento, tente novamente. Caso contrário, entre em contacto connosco."

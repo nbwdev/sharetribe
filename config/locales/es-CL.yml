@@ -2213,6 +2213,7 @@ es-CL:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "Sólo el creador de una lista puede cerrarla"
       only_listing_author_can_edit_a_listing: "Sólo el creador de una lista puede editarla"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Pago exitoso"
       payment_canceled: "Pago cancelado."
       error_in_payment: "Ha habido un error en el pago. Si no completaste el proceso todavía, prueba de nuevo. Si ya lo completaste, por favor, contáctanos."

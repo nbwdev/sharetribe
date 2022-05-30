@@ -2244,6 +2244,7 @@ el:
       only_kassi_administrators_can_access_this_area: "Παρακαλούμε συνδεθείτε με το λογαριασμό του διαχειριστή για αποκτήσετε πρόσβαση."
       only_listing_author_can_close_a_listing: "Μόνο ο δημιουργός μιας καταχώρησης μπορεί να την κλείσει."
       only_listing_author_can_edit_a_listing: "Μόνο ο δημιουργός μιας καταχώρησης μπορεί να την επεξεργαστεί."
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Επιτυχής πληρωμή"
       payment_canceled: "Η πληρωμή ακυρώθηκε"
       error_in_payment: "Προέκυψε σφάλμα στην πληρωμή. Αν δεν την ολοκληρώσατε, δοκιμάστε ξανά. Διαφορετικά, επικοινωνήστε μαζί μας."

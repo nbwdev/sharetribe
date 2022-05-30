@@ -2232,6 +2232,7 @@ ja:
       only_kassi_administrators_can_access_this_area: "このエリアにアクセスするには管理者アカウントでログイン し て ください"
       only_listing_author_can_close_a_listing: 投稿者のみがこの投稿を編集出来ます
       only_listing_author_can_edit_a_listing: 投稿者のみがこの投稿を編集出来ます
+      cannot_edit_a_closed_listing: ~
       payment_successful: お支払い手続きが完了しました
       payment_canceled: お支払いはキャンセルされました
       error_in_payment: お支払い時にエラー発生。お支払いを完了していない場合、再試行してください。完了している場合は、お問い合わせにご連絡ください。

@@ -2219,6 +2219,7 @@ it:
       only_kassi_administrators_can_access_this_area: "Prego registrati con un account di amministratore per accedere a quest'area"
       only_listing_author_can_close_a_listing: "Solo l'autore dell'inserzione può chiudere l'inserzione"
       only_listing_author_can_edit_a_listing: "Solo l'autore dell'inserzione può modificare l'inserzione"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Pagamento riuscito"
       payment_canceled: "Pagamento cancellato"
       error_in_payment: "Errore nel pagamento. Se non hai ancora completato il pagamento, riprova. Se hai già riprovato, per favore inviaci un feedback."

@@ -2244,6 +2244,7 @@ et:
       only_kassi_administrators_can_access_this_area: "Sellele alale pääsemiseks logi sisse administraatori kontoga"
       only_listing_author_can_close_a_listing: "Ainult kuulutuse autor saab selle sulgeda"
       only_listing_author_can_edit_a_listing: "Ainult kuulutuse autor saab seda muuta"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Makse õnnestus"
       payment_canceled: "Makse peatatud"
       error_in_payment: "Viga maksmisel. Kui Sa ei olnud makset veel lõpetanud, proovi uuesti. Kui Sa olid makse lõpetanud, saada meile palun info."

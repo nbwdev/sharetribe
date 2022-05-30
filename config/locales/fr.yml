@@ -2244,6 +2244,7 @@ fr:
       only_kassi_administrators_can_access_this_area: "Veuillez vous connecter avec un compte administrateur pour accéder à cette page"
       only_listing_author_can_close_a_listing: "Seul l'auteur de l'annonce peut la clore"
       only_listing_author_can_edit_a_listing: "Seul l'annonce de liste peut la modifier"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Paiement réussi"
       payment_canceled: "Paiement annulé"
       error_in_payment: "Erreur lors du paiement. Si vous n'avez pas terminé le paiement, essayez de nouveau. Si vous l'aviez terminé, merci de nous contacter."

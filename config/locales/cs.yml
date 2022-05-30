@@ -2252,6 +2252,7 @@ cs:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "Pouze autor inzerátu může inzerát uzavřít"
       only_listing_author_can_edit_a_listing: "Pouze autor inzerátu může inzerát upravit"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Platba proběhla úspěšně"
       payment_canceled: "Platba zrušena"
       error_in_payment: "Nastala chyba při platbě. Pokud jste platbu ještě nedokončili, zkuste to znovu. Pokud ano, prosíme, napište nám."

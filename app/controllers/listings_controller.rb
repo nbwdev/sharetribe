@@ -23,6 +23,10 @@ class ListingsController < ApplicationController
     controller.ensure_current_user_is_listing_author t("layouts.notifications.only_listing_author_can_edit_a_listing")
   end
 
+  before_action :only => [:edit, :edit_form_content, :update, :delete] do |controller|
+    controller.ensure_current_listing_is_open t("layouts.notifications.cannot_edit_a_closed_listing")
+  end
+
   before_action :ensure_is_admin, :only => [:move_to_top, :show_in_updates_email]
 
   before_action :is_authorized_to_post, :only => [:new, :create]
@@ -279,6 +283,14 @@ class ListingsController < ApplicationController
   def ensure_current_user_is_listing_author(error_message)
     @listing = Listing.find(params[:id])
     return if current_user?(@listing.author) || @current_user.has_admin_rights?(@current_community)
+
+    flash[:error] = error_message
+    redirect_to @listing and return
+  end
+
+  def ensure_current_listing_is_open(error_message)
+    @listing = Listing.find(params[:id])
+    return if @listing.open || @current_user.has_admin_rights?(@current_community)
 
     flash[:error] = error_message
     redirect_to @listing and return

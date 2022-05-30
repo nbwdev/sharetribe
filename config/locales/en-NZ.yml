@@ -2241,6 +2241,7 @@ en-NZ:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "Only listing author can close a listing"
       only_listing_author_can_edit_a_listing: "Only listing author can edit a listing"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Payment successful"
       payment_canceled: "Payment cancelled"
       error_in_payment: "Error in payment. If you didn't complete the payment yet, try again. If you did, please send us feedback."
@@ -2352,7 +2353,7 @@ en-NZ:
     edit_links:
       close_listing: "Close listing"
       edit_listing: "Edit listing"
-      reopen_listing: "Reopen listing"
+      reopen_listing: ~
       move_to_top: "Move to top of homepage"
       show_in_updates_email: "Show in the next newsletter"
       show_in_updates_email_loading: Loading...

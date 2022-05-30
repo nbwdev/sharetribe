@@ -2226,6 +2226,7 @@ th-TH:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: ผู้ประกาศเท่านั้นจึงจะมีสิทธิ์ลบประกาศได้
       only_listing_author_can_edit_a_listing: คนเขียนรายการเท่านั้นที่จะสามารถแก้ไขรายการได้
+      cannot_edit_a_closed_listing: ~
       payment_successful: ชำระเงินสำเร็จ
       payment_canceled: การชำระเงินถูกยกเลิก
       error_in_payment: "เกิดข้อผิดพลาดในการชำระเงิน หากคุณยังไม่ได้ดำเนินการชำระเงิน กรุณาลองอีกครั้ง หากคุณชำระแล้ว โปรดส่งความคิดเห็นมาหาเรา"

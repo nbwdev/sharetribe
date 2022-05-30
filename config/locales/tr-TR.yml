@@ -2222,6 +2222,7 @@ tr-TR:
       only_kassi_administrators_can_access_this_area: "Bu alana erişmek için lütfen bir yönetici hesabıyla giriş yapın"
       only_listing_author_can_close_a_listing: "İlanı sadece ilan sahibi kapatabilir."
       only_listing_author_can_edit_a_listing: "İlanı yalnızca ilan sahibi düzenleyebilir."
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Ödeme başarıyla tamamlandı"
       payment_canceled: "Ödeme iptal edildi"
       error_in_payment: "Ödeme sırasında hata meydana geldi. Eğer ödemeyi henüz tamamlamadıysanız, yeniden deneyin. Tamamladıysanız, lütfen bize ulaşın."

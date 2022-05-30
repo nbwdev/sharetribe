@@ -2254,6 +2254,7 @@ ro:
       only_kassi_administrators_can_access_this_area: "Vă rugăm să vă conectați cu un cont de administrator pentru a accesa această zonă"
       only_listing_author_can_close_a_listing: "Numai autorul anunțului poate să închidă acest anunț"
       only_listing_author_can_edit_a_listing: "Numai autorul anunțului poate edita acest anunț"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Plata cu succes"
       payment_canceled: "Plată anulată"
       error_in_payment: "Eroare la efectuarea plății. Dacă nu ați efectuat plata încă, încercați din nou. Dacă ai efectuat-o, te rugăm să ne trimiți feedback."

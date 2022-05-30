@@ -2244,6 +2244,7 @@ ca:
       only_kassi_administrators_can_access_this_area: "Si us plau, inicia sessió amb un compte d'administrado per a accedir a aquesta àrea"
       only_listing_author_can_close_a_listing: "Només el creador d'un anunci pot tancar-lo"
       only_listing_author_can_edit_a_listing: "Només el creador d'un anunci pot editar-lo"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Pagament exitós"
       payment_canceled: "Pagament cancelat"
       error_in_payment: "Hi ha hagut un error en el pagament. Si encara no has completat el procés, tornau a provar. Si ja ho vas completar, si us plau, contacta'ns."

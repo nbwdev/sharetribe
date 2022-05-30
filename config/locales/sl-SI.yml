@@ -2128,6 +2128,7 @@ sl-SI:
       only_kassi_administrators_can_access_this_area: "Za dostop do tega območja, se prijavite z administratorskim računom"
       only_listing_author_can_close_a_listing: "Samo avtor oglasa lahko zapre oglas"
       only_listing_author_can_edit_a_listing: "Samo avtor oglasa lahko ureja oglas"
+      cannot_edit_a_closed_listing: ~
       payment_successful: ~
       payment_canceled: ~
       error_in_payment: ~

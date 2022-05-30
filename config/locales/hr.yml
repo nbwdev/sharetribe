@@ -2252,6 +2252,7 @@ hr:
       only_kassi_administrators_can_access_this_area: "Molimo prijavite se s administratorskim računom kako bi pristupili ovoj stranici"
       only_listing_author_can_close_a_listing: "Samo autor oglasa može zatvoriti oglas"
       only_listing_author_can_edit_a_listing: "Samo autor oglas može izmijeniti oglas"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Plaćanje uspješno"
       payment_canceled: "Uplata otkazana"
       error_in_payment: "Greška pri plaćanju. Ako niste dovršili svoju uplatu, probajte ponovno. Ako jeste, molimo pošaljite nam povratnu informaciju."

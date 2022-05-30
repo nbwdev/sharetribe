@@ -2226,6 +2226,7 @@ ka:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "მხოლოდ სიის ავტორს შეუძლია დახუროს ეს სია"
       only_listing_author_can_edit_a_listing: "მხოლოდ სიის ავტორს შეუძლია მისი დარედაქტირება."
+      cannot_edit_a_closed_listing: ~
       payment_successful: "წარმატებით გადახდა"
       payment_canceled: "გადახდა გაუქმებულია"
       error_in_payment: "შეცდომა გადახდაში. თუ არ დაგისრულებიათ ჯერ გადახდა, ცადეთ თავიდან. თუ დაასრულეთ გთხოვთ გამოგვიგზავნოთ შეფასება. "

@@ -2214,6 +2214,7 @@ lv:
       only_kassi_administrators_can_access_this_area: "Lūdzu, pieslēdzieties, izmantojot administratora kontu, lai piekļūtu šai zonai"
       only_listing_author_can_close_a_listing: "Tikai ieraksta autors var dzēst ierakstu"
       only_listing_author_can_edit_a_listing: "Tikai ieraksta autors var labot ierakstu"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Maksājums veiksmīgs"
       payment_canceled: "Maksājums atcelts"
       error_in_payment: "Kļūda maksājumā. Ja vēl neesat pabeidzis maksājumu, mēģiniet vēlreiz. Ja to izdarījāt, lūdzu, nosūtiet mums atsauksmes."

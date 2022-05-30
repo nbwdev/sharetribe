@@ -2235,6 +2235,7 @@ nb:
       only_kassi_administrators_can_access_this_area: ~
       only_listing_author_can_close_a_listing: "Kun annonsør kan stoppe en annonse"
       only_listing_author_can_edit_a_listing: "Kun annonsør kan endre en annonse"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Betaling vellykket"
       payment_canceled: "Betaling avbrutt"
       error_in_payment: "Betaling feilet. Dersom du ikke fullførte betalingen, prøv igjen. Dersom du gjorde det og den fremdeles feiler, kontakt oss."

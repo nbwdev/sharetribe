@@ -4,7 +4,7 @@
       .icon-with-text-container
         = icon_tag("lock", ["icon-part"])
         .text-part= t("listings.reply_link.listing_closed")
-    - if @listing_presenter.is_authorized
+    - if @listing_presenter.is_authorized && @listing_presenter.is_marketplace_admin
       .listing-view-admin-link
         %a.action-link{href: edit_listing_path(@listing)}
           .icon-with-text-container

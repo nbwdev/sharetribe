@@ -2247,6 +2247,7 @@ nl:
       only_kassi_administrators_can_access_this_area: "Voor toegang tot dit gedeelte gelieve in te loggen met een beheerderaccount"
       only_listing_author_can_close_a_listing: "Alleen de auteur van de advertentie kan deze sluiten"
       only_listing_author_can_edit_a_listing: "Alleen de auteur van de advertentie kan dit aanpassen"
+      cannot_edit_a_closed_listing: ~
       payment_successful: "Betaling succesvol"
       payment_canceled: "Betaling geannuleerd"
       error_in_payment: "Fout bij betaling. Als je nog geen betaling hebt uitgevoerd, probeer dan opnieuw. Als je dat wel al gedaan hebt, stuur ons dan een bericht."
