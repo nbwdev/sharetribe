@@ -22,6 +22,7 @@
       - if buyer_dispute_notes.present?
         %p.text-bold
           = t("emails.transaction_disputed.buyer_wrote").html_safe
+        %p
           - text_with_line_breaks_for_email do
             = buyer_dispute_notes
 
