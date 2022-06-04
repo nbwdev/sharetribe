@@ -1328,12 +1328,15 @@ en:
       stripe-fee_label: "Payment processing fee"
     confirm:
       confirm_description: "If your order has arrived you should confirm it as done. Then you can give feedback to the seller."
-      cancel_description_team: "If your order was not fulfilled, you can mark it as 'disputed'. The %{service_name} team will review the situation and will decide to refund or dismiss your dispute request."
+      cancel_description_team: "If you have an issue with this purchase, we recommend you contact the seller %{listing_author_name} to try to resolve the issue."
+      cancel_description_team_p2: "If your order was not fulfilled or it is not as described then you can mark it as 'disputed'. The customer service team will review the situation and will decide on the outcome of the dispute."
+      dispute_more_information: "Please give the reason for disputing this transaction and the steps taken to resolve it so far."
       cancel_payed_description: "If your request was accepted but you're having second thoughts, you can still cancel the request before the payment."
       canceling_payed_transaction: "Cancel transaction"
       confirm: "Mark the order completed"
       cancel: Dispute
       continue: Continue
+      send_message: "Send a message to the seller"
       give_feedback_to: "Give feedback to %{person_link}"
       do_not_give_feedback: "Skip feedback"
     details:
@@ -1377,7 +1380,7 @@ en:
         held_payment: "Seller has accepted the request. Payment is being held by %{service_name} until the order is marked as completed."
         held_payment_wo_sum: "Seller has accepted the request. Payment is being held by %{service_name} until the order is marked as completed."
         confirmed_request: "Marked the order as completed. The payment has now been transferred to %{author_name} bank account or will be transferred soon."
-      canceled_the_order: "Disputed the order. The %{service_name} team has been notified."
+      canceled_the_order: "Disputed the order. Customer service has been notified and a member of the team will contact you shortly."
       marked_as_refunded: "Marked as refunded"
       dismissed_the_cancellation: "Dismissed the dispute."
       payment_has_now_been_transferred: "The payment has now been transferred to %{seller} bank account or will be transferred soon."
@@ -1430,7 +1433,7 @@ en:
           multicurrency: "We couldn't process the PayPal payment because your PayPal account has not been set up to receive money in %{currency}. Go to %{paypal_url} and log in to your account to manually accept or reject the payment."
           verify: "You cannot accept this transaction because you haven't verified your PayPal account. Go to %{paypal_url} to verify your account."
           intl: "We couldn't process the PayPal payment because your PayPal account does not have a withdrawal mechanism. Go to %{paypal_url} and log in to your account to manually accept or reject the payment."
-      waiting_for_current_user_to_deliver_listing: "Please send %{listing_title} to %{requester_name} at the address above. You can use your preferred method, but we recommend you use recorded delivery and send the tracking number to %{requester_name} on the day you send the order. Use the \"Send Reply\" button below to do this."
+      waiting_for_current_user_to_deliver_listing: "Please send %{listing_title} to %{requester_name} at the address above. We recommend you use recorded delivery and send the tracking number to %{requester_name} on the day you post the order. Use the \"Send Reply\" button below to do this. If you choose not to do this and the goods do not arrive then the buyer may be refunded."
       waiting_for_current_user_to_deliver_listing_2: "The money will be released to your account when %{requester_name} confirms they have received %{listing_title}."
       waiting_for_listing_author_to_deliver_listing: "%{listing_author_name} has confirmed the purchase. We are now waiting for them to send %{listing_title} to you. Please confirm when you receive the order."
       request_accepted: Accepted
@@ -1848,6 +1851,7 @@ en:
       contact_the_marketplace_team: "Contact the %{service_name} team"
       you_must_now_decide: "You must now decide if a refund should happen or if you dismiss the dispute. You can %{learn_more_link}."
       learn_more_about: "learn more about what to do here"
+      buyer_wrote: "The buyer wrote this summary of the dispute:"
       review_the_transaction: "Review the transaction"
     transaction_refunded:
       subject: "Order marked as refunded - The %{service_name} team has approved the dispute from %{buyer}"

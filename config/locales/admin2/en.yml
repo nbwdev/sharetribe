@@ -725,6 +725,7 @@ en:
       waiting_for_fulfill_and_complete: "Waiting for %{provider} to fulfill the order for %{listing_title} and for %{buyer} to mark the order as completed."
       learn_more: "Learn more."
       you_should_investigate: "Discuss the situation with both parties to decide whether to refund or dismiss the dispute. %{learn_more_link}"
+      buyer_wrote_dispute_notes: "The buyer wrote this summary of the dispute:"
       marketplace_collects: "%{service_name} collects:"
       back_to_list: "‹ Back to transactions list"
       initiator: "Buyer:"

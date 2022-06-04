@@ -39,6 +39,7 @@
 #  commission_from_buyer             :integer
 #  minimum_buyer_fee_cents           :integer          default(0)
 #  minimum_buyer_fee_currency        :string(3)
+#  buyer_dispute_notes               :text(65535)
 #
 # Indexes
 #

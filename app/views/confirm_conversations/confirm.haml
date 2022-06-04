@@ -17,12 +17,26 @@
       %a#cancel-action-link.radio-button-negative.js-cancel-radio-button{ data: { :"radio-button-value" => "canceled" }, class: @presenter.cancel? ? "radio-button-selected" : "" }
         .radio-button-icon{class: icon_for("canceled")}
         .radio-button-label= t("conversations.confirm.cancel")
+      %a#send-message-action-link.radio-button-neutral.js-send-message-radio-button{ data: { :"radio-button-value" => "send_message" }, class: @presenter.send_message? ? "radio-button-selected" : "" }
+        .radio-button-icon{class: icon_for("send_message")}
+        .radio-button-label= t("conversations.confirm.send_message")
 
       .conversation-action-description
         %div{:class => "confirm-description #{@presenter.confirm? ? '' : 'hidden'}"}
           = t("conversations.confirm.confirm_description")
         %div{:class => "cancel-description #{@presenter.cancel? ? '' : 'hidden'}"}
-          = t("conversations.confirm.cancel_description_team")
+          %p
+            = t("conversations.confirm.cancel_description_team", :listing_author_name => PersonViewUtils.person_display_name(@presenter.other_person, @presenter.community))
+          %p
+            = t("conversations.confirm.cancel_description_team_p2", :listing_author_name => PersonViewUtils.person_display_name(@presenter.other_person, @presenter.community))
+        %div{:class => "send-message-description #{@presenter.send_message? ? '' : 'hidden'}"}
+          = t("conversations.confirm.dispute_more_information")
+
+      %div{:class => "send-message-form #{@presenter.confirm? ? 'hidden' : ''}"}
+        = fields_for :message, @presenter.message_form do |message_form|
+          = message_form.label :content, t("conversations.new.message"), :class => "input"
+          = message_form.text_area :content, :class => "text_area", :placeholder => t("conversations.accept.mandatory_message")
+
 
     - else
 

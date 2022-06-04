@@ -13,5 +13,12 @@
         %li
           - learn_more_link = link_to t('admin2.manage_transactions.learn_more'), "#{APP_CONFIG.knowledge_base_url}/en/articles/1587573", target: :_blank
           = t('admin2.manage_transactions.you_should_investigate', learn_more_link: learn_more_link).html_safe
+        %br
+        - if transaction.buyer_dispute_notes.present?
+          %p= t('admin2.manage_transactions.buyer_wrote_dispute_notes').html_safe
+          %div.dispute-message-container
+            %div.dispute-message
+              - text_with_line_breaks do
+                = transaction.buyer_dispute_notes
 
   = render 'delivery_method', pr: pr

@@ -1,12 +1,14 @@
 class Person::TransactionConfirmationPresenter
   CONFIRM = 'confirm'
   CANCEL = 'cancel'
+  SEND_MESSAGE = 'send_message'
 
-  attr_reader :community, :user, :params, :action_type
+  attr_reader :community, :user, :params, :action_type, :message_form
 
-  def initialize(community:, user:, params:)
+  def initialize(community:, user:, message_form:, params:)
     @community = community
     @user = user
+    @message_form = message_form
     @params = params
   end
 
@@ -18,12 +20,20 @@ class Person::TransactionConfirmationPresenter
     @action_type = CANCEL
   end
 
+  def action_type_send_message!
+    @action_type = SEND_MESSAGE
+  end
+
   def confirm?
     action_type == CONFIRM
   end
 
   def cancel?
     action_type == CANCEL
+  end
+
+  def send_message?
+    action_type == SEND_MESSAGE
   end
 
   def listing

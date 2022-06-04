@@ -11,6 +11,7 @@ class TransactionService::Confirmation
     return false unless can_transition_to?
 
     complete_or_cancel_tx
+    set_buyer_dispute_notes
     confirmation = ConfirmConversation.new(transaction, user, community)
     confirmation.update_participation(give_feedback)
     true
@@ -60,6 +61,15 @@ class TransactionService::Confirmation
 
   def give_feedback
     @give_feedback ||= params.try(:[], :give_feedback) == 'true'
+  end
+
+  def set_buyer_dispute_notes
+    if(params[:message][:content].present? && status == :canceled)
+      buyer_dispute_notes = (params[:message][:content]).html_safe
+      if(buyer_dispute_notes.present?)
+        @transaction.update(buyer_dispute_notes: buyer_dispute_notes)
+      end
+    end
   end
 end
 

@@ -4,7 +4,7 @@ default: &default_settings
   # If you are running on localhost, you can write here "lvh.me:3000" (which redirects to localhost port 3000)
   # The community subdomains will be added to this top domain.
   # NOTE: Do not include http(s) here, or subdomains, just the top level domain, like "sharetribe.com" for example
-  domain: "lvh.me:3000"
+  domain: "168.178.28:5000"
 
   # A comma separated string of trusted proxies. If you host your
   # application behind proxies this configuration allows
@@ -293,7 +293,7 @@ default: &default_settings
   support_email: support@example.com
 
   # Knowledge base
-  knowledge_base_url: http://www.example.com/knowledgebase
+  knowledge_base_url: https://help.sharetribe.com
   display_knowledge_base_articles: false
 
   # External plan service connection

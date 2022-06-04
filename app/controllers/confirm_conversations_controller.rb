@@ -24,9 +24,27 @@ class ConfirmConversationsController < ApplicationController
     render :confirm
   end
 
+  def send_message
+    TransactionService::Store::Transaction.add_message(community_id: @current_community.id,
+      transaction_id: service.transaction.id,
+      message: params[:message][:content],
+      sender_id: @current_user.id)
+    flash[:notice] = sent_msg
+    redirect_to person_transaction_path(:person_id => @current_user.id, :id => service.transaction.id)
+  end
+
+  def message_form
+    @message_form = Message.new({sender_id: @current_user.id, conversation_id: @conversation.id})
+  end
+
   # Handles confirm and cancel forms
   def confirmation
-    if service.process
+    set_buyer_dispute_notes
+
+    if params[:transaction][:status] == 'send_message'
+      send_message
+
+    elsif service.process
       flash[:notice] = service.flash_notice
 
       redirect_path =
@@ -56,6 +74,7 @@ class ConfirmConversationsController < ApplicationController
     @presenter = Person::TransactionConfirmationPresenter.new(
       community: @current_community,
       user: @current_user,
+      message_form: @message_form,
       params: params)
   end
 
@@ -64,5 +83,15 @@ class ConfirmConversationsController < ApplicationController
       community: @current_community,
       user: @current_user,
       params: params)
+  end
+
+  def sent_msg
+    t("layouts.notifications.message_sent")
+  end
+
+  def set_buyer_dispute_notes
+    if params[:message].present? && params[:message][:content].present? && params[:transaction][:status] == 'cancel'
+      params[:buyer_dispute_notes] = params[:message][:content]
+    end
   end
 end
