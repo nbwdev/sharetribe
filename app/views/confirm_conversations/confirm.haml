@@ -1,6 +1,11 @@
 - content_for :extra_javascript do
   :javascript
-    ST.ConfirmConversation.init({});
+    ST.ConfirmConversation.init({
+    sellerMessagePlaceholder: "#{t("conversations.confirm.send_message")}",
+    disputeMessagePlaceholder: "#{t("conversations.confirm.send_message_to_cs")}",
+    sellerMessageLabel: "#{t("conversations.new.message_to", :author_name => PersonViewUtils.person_display_name(@presenter.other_person, @presenter.community))}",
+    disputeMessageLabel: "#{t("conversations.confirm.message_to_cs")}"
+    });
 
 - content_for :title_header do
   %h1= t("layouts.no_tribe.inbox")
@@ -29,13 +34,16 @@
             = t("conversations.confirm.cancel_description_team", :listing_author_name => PersonViewUtils.person_display_name(@presenter.other_person, @presenter.community))
           %p
             = t("conversations.confirm.cancel_description_team_p2", :listing_author_name => PersonViewUtils.person_display_name(@presenter.other_person, @presenter.community))
+          %p
+            = t("conversations.confirm.dispute_more_information")
+
         %div{:class => "send-message-description #{@presenter.send_message? ? '' : 'hidden'}"}
-          = t("conversations.confirm.dispute_more_information")
+          = t("conversations.confirm.cancel_description_team", :listing_author_name => PersonViewUtils.person_display_name(@presenter.other_person, @presenter.community))
 
       %div{:class => "send-message-form #{@presenter.confirm? ? 'hidden' : ''}"}
         = fields_for :message, @presenter.message_form do |message_form|
-          = message_form.label :content, t("conversations.new.message"), :class => "input"
-          = message_form.text_area :content, :class => "text_area", :placeholder => t("conversations.accept.mandatory_message")
+          = message_form.label :content, "#{@presenter.cancel? ? t("conversations.confirm.message_to_cs") : t("conversations.new.message_to", :author_name => PersonViewUtils.person_display_name(@presenter.other_person, @presenter.community))}", :class => "input", :id => "confirm-message-label"
+          = message_form.text_area :content, :class => "text_area", :placeholder => "#{@presenter.cancel? ? t("conversations.confirm.send_message_to_cs") : t("conversations.confirm.send_message")}"
 
 
     - else

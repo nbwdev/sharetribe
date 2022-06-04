@@ -1324,7 +1324,7 @@ en-NZ:
       shipping_price_label: "Shipping:"
       stripe-fee_label: "Payment processing fee"
     confirm:
-      confirm_description: "If your order has been fulfilled you should confirm it as done. Then you can give feedback to the other party."
+      confirm_description: ~
       cancel_description_team: ~
       cancel_payed_description: "If your request was accepted but you're having second thoughts, you can still cancel the request before the payment."
       canceling_payed_transaction: "Cancel transaction"
