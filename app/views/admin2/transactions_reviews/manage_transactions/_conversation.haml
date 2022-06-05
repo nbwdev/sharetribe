@@ -1,0 +1,4 @@
+%h3= t('admin2.manage_transactions.conversation_with',
+  other_party: conversation[:recipient], started_on: "#{date_format(conversation[:started_on])}")
+
+= render partial: 'message', collection: conversation[:messages], as: :message_or_action, locals: { starter: starter }

@@ -18,6 +18,10 @@ class Admin2::ConversationsService
     @conversation ||= resource_scope.find(params[:id])
   end
 
+  def find_conversation_with_id(id)
+    resource_scope.find(id)
+  end
+
   def conversation_messages
     @conversation_messages ||= TransactionViewUtils.conversation_messages(conversation.messages.latest, community.name_display_type)
   end

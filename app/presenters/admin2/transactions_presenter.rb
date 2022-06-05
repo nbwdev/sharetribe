@@ -235,4 +235,29 @@ class Admin2::TransactionsPresenter
   def personal?
     service.personal
   end
+
+  def conversations_with_buyer
+    convs_service = conversations_service(buyer_name)
+    conversations = convs_service.conversations.reverse
+    @conversations_with_buyer ||= ConversationViewUtils.conversations(conversations, community, convs_service).reverse
+  end
+
+  def conversations_with_seller
+    convs_service = conversations_service(provider_name)
+    conversations = convs_service.conversations.reverse
+    @conversations_with_seller ||= ConversationViewUtils.conversations(conversations, community, convs_service).reverse
+  end
+
+  def conversations_service(for_person)
+    params = {
+      sort: "started",
+      page: 1,
+      q: for_person
+    }
+
+    Admin2::ConversationsService.new(
+      community: community,
+      params: params)
+  end
+
 end

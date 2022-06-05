@@ -37,6 +37,32 @@
     %h2= t('admin2.manage_transactions.timeline_and_conversation', count: transaction.conversation&.messages&.size.to_i)
     = render partial: 'message', collection: pr.messages_and_actions, as: :message_or_action, locals: { starter: pr.buyer }
 
+%section.conversations-with-participants
+  .conversation-wrapper
+    - buyer_name = PersonViewUtils.person_display_name(transaction.starter, transaction.community)
+    %h2= t('admin2.manage_transactions.conversations_with_buyer', buyer_name: buyer_name, count: pr.conversations_with_buyer&.size.to_i)
+
+    - if pr.conversations_with_buyer.present?
+      .link_to_new_message
+        = link_to t('admin2.manage_transactions.new_conversation', other_party: buyer_name), new_person_person_message_path(pr.buyer)
+      = render partial: 'conversation', collection: pr.conversations_with_buyer, as: :conversation, locals: {starter: pr.buyer}
+    - else
+      %p= t('admin2.manage_transactions.no_conversations_with', other_party: buyer_name)
+      = link_to t('admin2.manage_transactions.new_conversation', other_party: buyer_name), new_person_person_message_path(pr.buyer)
+
+  .conversation-wrapper
+    - seller_name = PersonViewUtils.person_display_name(transaction.author, transaction.community)
+    %h2= t('admin2.manage_transactions.conversations_with_seller', seller_name: seller_name, count: pr.conversations_with_seller&.size.to_i)
+    
+    - if pr.conversations_with_seller.present?
+      .link_to_new_message
+        = link_to t('admin2.manage_transactions.new_conversation', other_party: seller_name), new_person_person_message_path(pr.provider)
+      = render partial: 'conversation', collection: pr.conversations_with_seller, as: :conversation, locals: { starter: pr.provider }
+    - else
+      %p= t('admin2.manage_transactions.no_conversations_with', other_party: seller_name)
+      = link_to t('admin2.manage_transactions.new_conversation', other_party: seller_name), new_person_person_message_path(pr.provider)
+
+
 - content_for :popup_layout do
   = render 'mark_as_completed_popup', transaction: transaction
   = render 'dispute_popup', transaction: transaction

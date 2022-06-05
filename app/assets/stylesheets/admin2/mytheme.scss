@@ -11048,14 +11048,21 @@ a.link-tour:hover:before {
   .transaction-nextsteps ul {
     padding-left: 50px; } }
 
-section.transaction-conversation .conversation-wrapper {
+section.transaction-conversation .conversation-wrapper, section.conversations-with-participants .conversation-wrapper {
   margin-bottom: 49px; }
 @media (min-width: 1023px) {
-  section.transaction-conversation .conversation-wrapper {
+  section.transaction-conversation .conversation-wrapper, section.conversations-with-participants .conversation-wrapper {
     margin-left: 60px;
     margin-bottom: 72px; } }
 section.transaction-conversation .conversation-wrapper h2 {
   margin-bottom: 26px; }
+
+section.conversations-with-participants .conversation-wrapper h2 {
+  margin-bottom: 12px; }
+  
+section.conversations-with-participants div.link_to_new_message {
+  margin-bottom: 24px;
+}
 
 .payment-breakdown-wrapper {
   border-top: 1px solid #EAEDF3;
@@ -11231,6 +11238,13 @@ h2 {
   h2 {
     font-size: 22px; } }
 
+h3 {
+  font-size: 18px;
+}
+@media (min-width: 1023px) {
+  h3 {
+    font-size: 19px; } }
+    
 h3.modal-subtitle {
   font-size: 21px;
   color: #484B4A;

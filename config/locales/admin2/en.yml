@@ -735,6 +735,11 @@ en:
       show_transaction: Transaction
       payment_breakdown: "Payment breakdown"
       timeline_and_conversation: "Timeline and conversation (%{count})"
+      conversations_with_buyer: "Conversations between you and the buyer %{buyer_name} (%{count})"
+      conversations_with_seller: "Conversations between you and the seller %{seller_name} (%{count})"
+      new_conversation: "Start a new conversation with %{other_party}"
+      conversation_with: "Conversation with %{other_party} started on %{started_on}"
+      no_conversations_with: "You have no conversations with %{other_party}."
       commission_info: "Your commission was charged but will not be visible on your PayPal account. <a href=\"%{url}\" class='external-link' target=\"_blank\">Learn more</a>."
       buyer_pays: "Buyer pays:"
       booking_start: "Booking start"
