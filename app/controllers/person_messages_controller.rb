@@ -7,7 +7,12 @@ class PersonMessagesController < ApplicationController
   before_action :fetch_recipient
 
   def new
-    @conversation = Conversation.new
+    if @current_community.allow_free_conversations? || @is_current_community_admin
+      @conversation = Conversation.new
+    else
+      flash[:error] = t("layouts.notifications.muust_be_admin_to_message")
+      redirect_to @recipient
+    end
   end
 
   def create
