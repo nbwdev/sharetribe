@@ -1983,7 +1983,7 @@ en:
     search_kassi: "Search %{service_name}"
     create_new_marketplace: "Create a new marketplace"
     contact_us: "Contact us"
-    profile: Profile
+    profile: "My Profile"
     manage_listings: "My listings"
     invite: "Invite new members"
     login: "Log in"
@@ -2162,7 +2162,7 @@ en:
       code_of_conduct: "Code of conduct"
     logged_in:
       admin: Admin
-      go_to_your_profile_page: Profile
+      go_to_your_profile_page: "My profile"
       hi: Hi
       login: "Log in"
       logout: "Log out"
@@ -2193,7 +2193,7 @@ en:
       three: Three
     mobile_logged_in:
       admin: Admin
-      go_to_your_profile_page: Profile
+      go_to_your_profile_page: "My profile"
       hi: Hi
       login: "Log in"
       logout: "Log out"
@@ -3176,7 +3176,7 @@ en:
       search_location_placeholder: Location
       user: User
       inbox: Inbox
-      profile: Profile
+      profile: "My profile"
       manage_listings: "My listings"
       settings: Settings
       logout: "Log out"
