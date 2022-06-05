@@ -60,7 +60,6 @@ module MarketplaceService
     "journey",
     "journeys",
     "webinar",
-    "local",
     "marketplace-academy",
     "academy-proxy",
     "academy",
