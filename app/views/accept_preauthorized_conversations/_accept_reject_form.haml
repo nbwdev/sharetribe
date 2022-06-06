@@ -40,7 +40,7 @@
 
 = form_for form, :url => form_action, :html => { id: "accept-reject-form", :method => "put" } do |form|
 
-  %input.js-accept-status{type: :hidden, name: "transaction[status]", value: preselected_action == "accept" ? "paid" : "rejected"}
+  %input.js-accept-status{type: :hidden, name: "transaction[status]", value: preselected_action == "accept" ? "paid_and_close" : "rejected"}
 
   %a.radio-button-positive.js-accept-close-radio-button{ data: { :"radio-button-value" => 'paid_and_close' }, class: preselected_action == 'accept' || preselected_action == 'accept_and_close' ? 'radio-button-selected' : '' }
     .radio-button-icon{class: icon_for('accepted')}
