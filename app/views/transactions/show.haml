@@ -4,6 +4,6 @@
   = render :partial => "transactions/details", locals: {role: role, is_author: is_author, price_break_down_locals: price_break_down_locals}
 
   - if show_preauth_form
-    = render :partial => "accept_preauthorized_conversations/accept_reject_form", locals: { form: preauth_form, form_action: preauth_form_action, preselected_action: preauth_form_preselected_action }
+    = render :partial => "accept_preauthorized_conversations/accept_reject_form", locals: { form: preauth_form, form_action: preauth_form_action, preselected_action: preauth_form_preselected_action, potential_buyer: conversation_other_party }
 
   = render :partial => "conversations/messages_and_form", locals: {role: role, message_form: message_form, message_form_action: message_form_action, messages: messages, hide_message_form: hide_message_form}

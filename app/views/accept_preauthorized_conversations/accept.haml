@@ -135,4 +135,4 @@
   = render partial: "transactions/shipping_address", locals: { shipping_address: @transaction.shipping_address }
 
   = render partial: "accept_preauthorized_conversations/accept_reject_form",
-    locals: { form: form, form_action: form_action, preselected_action: preselected_action }
+    locals: { form: form, form_action: form_action, preselected_action: preselected_action, potential_buyer: @transaction.starter }

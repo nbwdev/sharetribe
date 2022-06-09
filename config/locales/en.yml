@@ -1303,12 +1303,13 @@ en:
       accept_request: "Accept the sale and keep the listing open"
       accept_request_and_close: "Accept the sale and close the listing"
       reject_offer: "Not this time"
-      reject_request: "Reject this sale"
+      reject_request: "Reject this sale and send a message"
       send_message: "Send a message"
       close_listing: "Close the listing %{listing_title_link}"
       update_later: "Leave the listing open"
       optional_message: "Optional message"
       mandatory_message: "Write your message here"
+      missing_message: "Please include a message to %{other_party}"
       price_to_pay: "Total price to be paid"
       accept: Accept
       decline: Reject

@@ -3,9 +3,17 @@
     (function() {
       var btn = $('#send_testimonial_button');
       var msgText = $('#transaction_message_attributes_content');
+      var msgError = $('#missing_message_error');
 
       btn.click(function() {
-        disable_and_submit("#accept-reject-form", $("#accept-reject-form"), "false", '#{I18n.locale}');
+
+        if (msgText.attr('required') && msgText.val().trim().length === 0) {
+          msgError.show();
+          msgText.focus();
+        } else {
+          msgError.hide();
+          disable_and_submit("#accept-reject-form", $("#accept-reject-form"), "false", '#{I18n.locale}');
+        }
       });
 
       ST.initializeRadioButtons({
@@ -15,21 +23,25 @@
           switch(selector) {
             case ".js-accept-radio-button":
               btn.text('#{t("conversations.accept.accept")}');
+              msgError.hide();
               msgText.removeAttr('required','');
               msgText.attr('placeholder','#{t("conversations.accept.optional_message")}')
               break;
             case ".js-accept-close-radio-button":
               btn.text('#{t("conversations.accept.accept")}');
+              msgError.hide();
               msgText.removeAttr('required','');
               msgText.attr('placeholder','#{t("conversations.accept.optional_message")}')
               break;
             case ".js-reject-radio-button":
               btn.text('#{t("conversations.accept.decline")}');
+              msgError.hide();
               msgText.attr('required','');
               msgText.attr('placeholder','#{t("conversations.accept.mandatory_message")}')
               break;
             case ".js-send-message-radio-button":
               btn.text('#{t("conversations.accept.send")}');
+              msgError.hide();
               msgText.attr('required','');
               msgText.attr('placeholder','#{t("conversations.accept.mandatory_message")}')
               break;
@@ -55,6 +67,8 @@
   %div
     = fields_for "transaction[message_attributes]", Message.new do |message_form|
       = message_form.label :content, t("conversations.new.message"), :class => "input"
+      %label.error.hidden{for: :contract_agreed, style: 'display: none', id: 'missing_message_error'}
+        = t('conversations.accept.missing_message', other_party: PersonViewUtils.person_display_name(potential_buyer, @current_community))
       = message_form.text_area :content, :class => "text_area",
         :placeholder => preselected_action == 'accept' || preselected_action == 'accept_and_close' ? t("conversations.accept.optional_message") : t("conversations.accept.mandatory_message")
       = message_form.hidden_field :sender_id, :value => @current_user.id
