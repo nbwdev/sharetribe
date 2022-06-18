@@ -113,10 +113,11 @@
             %a.icon-with-text-container{href: reject_admin2_listings_manage_listing_path(@listing)}
               = icon_tag("cross", ["icon-part"])
               .text-part= t("listings.edit_links.reject_listing")
-      .listing-view-admin-link
-        %a.icon-with-text-container{href: edit_listing_path(@listing)}
-          = icon_tag("edit", ["icon-part"])
-          .text-part= t("listings.edit_links.edit_listing")
+      - if @listing_presenter.is_editing_allowed
+        .listing-view-admin-link
+          %a.icon-with-text-container{href: edit_listing_path(@listing)}
+            = icon_tag("edit", ["icon-part"])
+            .text-part= t("listings.edit_links.edit_listing")
       - if @listing_presenter.show_manage_availability
         - availability_link_id = "edit-listing-availability-#{SecureRandom.urlsafe_base64(5)}"
         .listing-view-admin-link
@@ -130,15 +131,22 @@
               = icon_tag("calendar", ["icon-part"])
               .text-part= t("web.listings.edit_listing_availability")
             = react_component("ManageAvailabilityApp", props: @listing_presenter.manage_availability_props.merge({ availability_link_id: availability_link_id }), prerender: false)
-      .listing-view-admin-link
-        %a.icon-with-text-container{href: close_person_listing_path(@current_user, @listing), data: { method: "put", remote: "true"}}
-          = icon_tag("lock", ["icon-part"])
-          .text-part= t("listings.edit_links.close_listing")
-      .listing-view-admin-link
-        = link_to delete_listing_path(@listing), data: {confirm: t("listings.deleting_a_listing_cannot_be_undone")},
-          method: "delete", class: 'icon-with-text-container' do
-          = icon_tag("trash", ["icon-part"])
-          .text-part= t("listings.edit_links.delete_listing")
+      - if @listing_presenter.is_editing_allowed
+        .listing-view-admin-link
+          %a.icon-with-text-container{href: close_person_listing_path(@current_user, @listing), data: { method: "put", remote: "true"}}
+            = icon_tag("lock", ["icon-part"])
+            .text-part= t("listings.edit_links.close_listing")
+        .listing-view-admin-link
+          = link_to delete_listing_path(@listing), data: {confirm: t("listings.deleting_a_listing_cannot_be_undone")},
+            method: "delete", class: 'icon-with-text-container' do
+            = icon_tag("trash", ["icon-part"])
+            .text-part= t("listings.edit_links.delete_listing")
+
+      - if @listing_presenter.is_editing_blocked_due_to_transaction
+        - transactions_link = link_to(t("listings.edit_links.active_transaction_link_text"),
+          transactions_person_settings_path(@current_user, sort: "last_activity", direction: "desc", q:@listing.title))
+        
+        %p=t("listings.edit_links.has_active_transaction", active_transaction: transactions_link).html_safe
 
       - if @listing_presenter.is_marketplace_admin
         .listing-view-admin-link

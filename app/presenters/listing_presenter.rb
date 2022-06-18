@@ -34,6 +34,18 @@ class ListingPresenter < MemoisticPresenter
     is_authorized && availability_enabled
   end
 
+  def is_active_transaction
+    Transaction.unfinished_for_listing(@listing).any?
+  end
+
+  def is_editing_allowed
+    is_marketplace_admin || !is_active_transaction
+  end
+
+  def is_editing_blocked_due_to_transaction
+    is_active_transaction && !is_marketplace_admin
+  end
+
   def paypal_in_use
     PaypalHelper.user_and_community_ready_for_payments?(@listing.author_id, @current_community.id)
   end

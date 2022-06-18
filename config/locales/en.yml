@@ -2259,6 +2259,7 @@ en:
       only_listing_author_can_close_a_listing: "Only listing author can close a listing"
       only_listing_author_can_edit_a_listing: "Only listing author can edit a listing"
       cannot_edit_a_closed_listing: "You cannot edit a closed listing"
+      cannot_edit_a_listing_with_transaction: "You cannot change or close a listing with an active transaction. You will need to reject the transaction first."
       payment_successful: "Payment successful"
       payment_canceled: "Payment canceled"
       error_in_payment: "Error in payment. If you didn't complete the payment yet, try again. If you did, please send us feedback."
@@ -2383,6 +2384,8 @@ en:
       approve_listing: "Approve listing"
       reject_listing: "Reject listing"
       delete_listing: "Delete listing"
+      has_active_transaction: "This listing has an %{active_transaction}. If you want to edit the listing then you need to reject the transaction first."
+      active_transaction_link_text: "active transaction"
     map:
       open_in_google_maps: "Open in Google Maps"
     error:

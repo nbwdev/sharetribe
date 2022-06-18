@@ -160,6 +160,9 @@ class Transaction < ApplicationRecord
   # user data would be unwise.
   scope :unfinished_for_person, -> (person) { unfinished.for_person(person) }
 
+  scope :for_listing, ->(listing) { where('listing_id=?', listing.id) }
+  scope :unfinished_for_listing, ->(listing) { unfinished.for_listing(listing) }
+
   def booking_uuid_object
     if self[:booking_uuid].nil?
       nil

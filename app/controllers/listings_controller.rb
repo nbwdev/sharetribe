@@ -27,6 +27,10 @@ class ListingsController < ApplicationController
     controller.ensure_current_listing_is_open t("layouts.notifications.cannot_edit_a_closed_listing")
   end
 
+  before_action :only => [:edit, :edit_form_content, :update, :delete, :close] do |controller|
+    controller.ensure_current_listing_has_no_active_transaction t("layouts.notifications.cannot_edit_a_listing_with_transaction")
+  end
+
   before_action :ensure_is_admin, :only => [:move_to_top, :show_in_updates_email]
 
   before_action :is_authorized_to_post, :only => [:new, :create]
@@ -291,6 +295,14 @@ class ListingsController < ApplicationController
   def ensure_current_listing_is_open(error_message)
     @listing = Listing.find(params[:id])
     return if @listing.open || @current_user.has_admin_rights?(@current_community)
+
+    flash[:error] = error_message
+    redirect_to @listing and return
+  end
+
+  def ensure_current_listing_has_no_active_transaction(error_message)
+    @listing = Listing.find(params[:id])
+    return if Transaction.unfinished_for_listing(@listing).none? || @current_user.has_admin_rights?(@current_community)
 
     flash[:error] = error_message
     redirect_to @listing and return
