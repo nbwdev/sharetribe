@@ -24,13 +24,20 @@ class Admin::TransactionsPresenter
 
   FILTER_STATUSES = %w[free confirmed paid canceled preauthorized rejected
                        payment_intent_requires_action payment_intent_action_expired
-                       disputed refunded dismissed]
+                       disputed refunded dismissed initiated]
 
   def sorted_statuses
     statuses = FILTER_STATUSES
-    statuses.map {|status|
+    statuses.filter{|status| is_transaction_with_status?(status)
+    }.map {|status|
       [status, I18n.t("admin.communities.transactions.status_filter.#{status}"), status_checked?(status)]
     }.sort_by{|_status, translation, _checked| collator.get_sort_key(translation) }
+  end
+
+  def is_transaction_with_status?(status)
+    !transactions.find{
+      |transaction| transaction.status == status
+    }.nil?
   end
 
   def status_checked?(status)

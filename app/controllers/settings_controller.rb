@@ -1,5 +1,7 @@
 class SettingsController < ApplicationController
 
+  PER_PAGE = 30 # I want to use TransactionsService.PER_PAGE but I don't know how to do a static variable in ruby
+  
   before_action :except => :unsubscribe do |controller|
     controller.ensure_logged_in t("layouts.notifications.you_must_log_in_to_view_your_settings")
   end
@@ -56,6 +58,18 @@ class SettingsController < ApplicationController
   def transactions
     @selected_left_navi_link = "transactions"
     @service = Admin::TransactionsService.new(@current_community, params, request.format, @current_user, true)
+    @transactions_presenter = Admin::TransactionsPresenter.new(params, @service)
+  end
+
+  def selling
+    @selected_left_navi_link = "selling"
+    @service = Admin::TransactionsService.new(@current_community, params, request.format, @current_user, true, PER_PAGE, true, false)
+    @transactions_presenter = Admin::TransactionsPresenter.new(params, @service)
+  end
+
+  def buying
+    @selected_left_navi_link = "buying"
+    @service = Admin::TransactionsService.new(@current_community, params, request.format, @current_user, true, PER_PAGE, false, true)
     @transactions_presenter = Admin::TransactionsPresenter.new(params, @service)
   end
 

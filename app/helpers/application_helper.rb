@@ -598,16 +598,8 @@ module ApplicationHelper
   # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
   # Settings view left hand navigation content
-  def settings_links_for(person, community=nil, restrict_for_admin=false)
-    links = [
-      {
-        :id => "settings-tab-profile",
-        :text => t("layouts.settings.profile"),
-        :icon_class => icon_class("profile"),
-        :path => person_settings_path(person),
-        :name => "profile"
-      }
-    ]
+  def buy_and_sell_links_for(person, community=nil, restrict_for_admin=false)
+    links = []
     unless restrict_for_admin
       links +=
         [
@@ -621,10 +613,41 @@ module ApplicationHelper
           {
             :id => "settings-tab-transactions",
             :text => t("layouts.settings.transactions"),
-            :icon_class => icon_class("coins"),
+            :icon_class => icon_class("credit_card"),
             :path => transactions_person_settings_path(person, sort: "last_activity", direction: "desc"),
             :name => "transactions"
           },
+          {
+            :id => "settings-tab-selling",
+            :text => t("layouts.settings.selling"),
+            :icon_class => icon_class("coins"),
+            :path => selling_person_settings_path(person, sort: "last_activity", direction: "desc"),
+            :name => "selling"
+          },
+          {
+            :id => "settings-tab-buying",
+            :text => t("layouts.settings.buying"),
+            :icon_class => icon_class("order_types"),
+            :path => buying_person_settings_path(person, sort: "last_activity", direction: "desc"),
+            :name => "buying"
+          }
+        ]
+    end
+  end
+
+  def settings_links_for(person, community=nil, restrict_for_admin=false)
+    links = [
+      {
+        :id => "settings-tab-profile",
+        :text => t("layouts.settings.profile"),
+        :icon_class => icon_class("profile"),
+        :path => person_settings_path(person),
+        :name => "profile"
+      }
+    ]
+    unless restrict_for_admin
+      links +=
+        [
           {
             :id => "settings-tab-account",
             :text => t("layouts.settings.account"),

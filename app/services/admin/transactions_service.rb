@@ -4,12 +4,14 @@ module Admin
 
     attr_reader :community, :params, :format, :current_user, :personal, :per_page
 
-    def initialize(community, params, format, current_user, personal = false, per_page = PER_PAGE)
+    def initialize(community, params, format, current_user, personal = false, per_page = PER_PAGE, selling_only = false, buying_only = false)
       @community = community
       @params = params
       @format = format
       @current_user = current_user
       @personal = personal
+      @selling_only = selling_only
+      @buying_only = buying_only
       @per_page = per_page
     end
 
@@ -31,6 +33,13 @@ module Admin
 
       if personal
         scope = scope.for_person(current_user)
+
+        # filter to show the buying or selling on the personal transactions page
+        if @selling_only
+          scope = scope.for_seller(current_user)
+        elsif @buying_only
+          scope = scope.for_buyer(current_user)
+        end
       end
 
       if params[:q].present?

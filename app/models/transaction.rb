@@ -163,6 +163,13 @@ class Transaction < ApplicationRecord
   scope :for_listing, ->(listing) { where('listing_id=?', listing.id) }
   scope :unfinished_for_listing, ->(listing) { unfinished.for_listing(listing) }
 
+  scope :for_buyer, -> (person){
+    where('starter_id = ?', person.id)
+  }
+  scope :for_seller, -> (person){
+    where('listing_author_id = ?', person.id)
+  }
+
   def booking_uuid_object
     if self[:booking_uuid].nil?
       nil

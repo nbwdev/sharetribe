@@ -275,6 +275,18 @@ ul {
   }
 }
 
+// Specific nav links
+.left-navi {
+  a.left-navi-link#settings-tab-selling, a.left-navi-link#settings-tab-buying {
+    padding-left: 2.25em;
+  }
+}
+.left-navi-menu {
+  a#selling_left_navi_link, a#buying_left_navi_link {
+    padding-left: 2.25em;
+  }
+}
+
 .avatar {
   position: relative;
   width: lines(1);

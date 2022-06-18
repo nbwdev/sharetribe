@@ -889,6 +889,8 @@ Rails.application.routes.draw do
             get :unsubscribe
             get :listings
             get :transactions
+            get :buying
+            get :selling
           end
         end
         resources :testimonials

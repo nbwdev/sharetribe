@@ -471,8 +471,10 @@ en:
         search_by_title_parties: "Search for a transaction title or parties involved"
         search: Search
         reset_search: "Show all"
+        only_show_active: "Only open transactions"
         status_filter:
           all: "All statuses"
+          all_active: "All open transactions"
           selected: "Selected statuses: %{count}"
           selected_js: "Selected statuses: "
           free: "Free transaction"
@@ -486,14 +488,15 @@ en:
           payment_intent_action_expired: Expired
           refunded: Refunded
           dismissed: Dismissed
+          initiated: Started
         headers:
           conversation: "Conversation thread"
           listing: Listing
           status: Status
-          sum: Sum
+          sum: Total
           started: Started
           last_activity: "Latest activity"
-          initiated_by: Starter
+          initiated_by: Buyer
           other_party: Seller
         status:
           conversation: Conversation
@@ -2123,7 +2126,7 @@ en:
       learn_more: "Learn more"
     no_tribe:
       inbox: Inbox
-      settings: Settings
+      settings: "My account"
       feedback: "Contact the %{service_name} team"
     application:
       join_this_community: "Join marketplace"
@@ -2341,16 +2344,18 @@ en:
       an_error_occurred_when_saving_your_information: "An error occurred when saving your information: \"%{message}\". Please check that all information is correct and try again."
     settings:
       account: Account
+      buying: Buying
       notifications: Notifications
-      profile: "Profile info"
-      settings: Settings
+      profile: "Edit profile"
+      settings: "Buying and Selling"
       paypal_payments: "PayPal Payments"
       stripe_payments: "Stripe Payments"
-      payments: Payments
+      payments: Payments settings
       listings: Listings
       listings_search_placeholder: "Search for a listing title"
+      selling: Selling
       transactions_search_placeholder: "Search for a transaction title or other party involved"
-      transactions: Transactions
+      transactions: All transactions
   listings:
     bubble_listing_not_visible:
       listing_not_visible: "You do not have permission to view this listing."
@@ -3193,7 +3198,7 @@ en:
       inbox: Inbox
       profile: "My profile"
       manage_listings: "My listings"
-      settings: Settings
+      settings: "My account settings"
       logout: "Log out"
       login: "Log in"
       signup: "Sign up"
