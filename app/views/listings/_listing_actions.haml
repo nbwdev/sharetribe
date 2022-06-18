@@ -20,6 +20,9 @@
 
   - if @listing_presenter.is_author
     = render partial: "delivery_opts", locals: { delivery_opts: @listing_presenter.delivery_opts, is_author: @listing_presenter.is_author }
+  - elsif @listing_presenter.is_active_transaction
+    = render partial: "cannot_buy_due_to_active_transaction",
+      locals: { is_buyer: @listing_presenter.has_offered_to_buy }
   - else
 
     = form_tag @listing_presenter.form_path, :method => :get, :id => "booking-dates" do

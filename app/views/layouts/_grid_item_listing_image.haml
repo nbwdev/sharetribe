@@ -17,7 +17,10 @@
       = listing.title
 
     .fluid-thumbnail-grid-image-price-container{:class => "#{modifier_class}"}
-      - if listing.price
+      - if Transaction.unfinished_for_listing(listing).any?
+        %span.fluid-thumbnail-grid-image-status
+          = t("listings.transaction_status.reserved")
+      - elsif listing.price
         %span.fluid-thumbnail-grid-image-price
           = MoneyViewUtils.to_humanized(listing.price)
           - price_unit = price_quantity_slash_unit(listing)

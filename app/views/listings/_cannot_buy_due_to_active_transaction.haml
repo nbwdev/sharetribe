@@ -1,0 +1,8 @@
+- if is_buyer 
+  - transaction_url = link_to(t("listings.transaction_status.transaction_link_text"), @listing_presenter.transaction_url)
+  %p=t("listings.transaction_status.is_buying")
+  %p=t("listings.transaction_status.see_transaction", transaction_url: transaction_url).html_safe
+- else
+  %p=t("listings.transaction_status.someone_else_is_buying")
+  - category_link = link_to(@listing_presenter.category_name, search_path({category: @listing_presenter.category_name}) + "#after-banner")
+  %p=t("listings.transaction_status.similar_items", category_link: category_link).html_safe

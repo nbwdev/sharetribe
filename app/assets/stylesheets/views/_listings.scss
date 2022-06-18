@@ -301,3 +301,12 @@ $listing-author-avatar-height: 108;
   font-size: 15px;
   color: gray;
 }
+
+.marketplace-lander {
+  .marketplace-title-header {
+    a.listing-category-link {
+      font-weight: normal;
+      font-size: 0.9em;
+    }
+  }
+}

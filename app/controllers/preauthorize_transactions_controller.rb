@@ -8,6 +8,7 @@ class PreauthorizeTransactionsController < ApplicationController
   before_action :ensure_listing_author_is_not_current_user
   before_action :ensure_authorized_to_reply
   before_action :ensure_can_receive_payment
+  before_action :ensure_no_active_transaction
 
   def initiate
     params_validator = params_per_hour? ? TransactionService::Validation::NewPerHourTransactionParams : TransactionService::Validation::NewTransactionParams
@@ -235,6 +236,14 @@ class PreauthorizeTransactionsController < ApplicationController
         { listing_id: listing.id,
           listing_uuid: listing.uuid_object.to_s })
 
+      redirect_to listing_path(listing)
+    end
+  end
+
+  # Ensure an item is only sold once (hard coding this behaviour, will need to change it for a service based website)
+  def ensure_no_active_transaction
+    if Transaction.unfinished_for_listing(listing).any?
+      flash[:error] = t("layouts.notifications.you_cannot_buy_transaction_in_progress")
       redirect_to listing_path(listing)
     end
   end

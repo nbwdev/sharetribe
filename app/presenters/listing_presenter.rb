@@ -38,6 +38,28 @@ class ListingPresenter < MemoisticPresenter
     Transaction.unfinished_for_listing(@listing).any?
   end
 
+  def has_offered_to_buy
+    transactions = Transaction.unfinished_for_listing(@listing)
+    if transactions.any?
+      transaction = transactions.first
+      result = @current_user == transaction.buyer
+    else
+      result = false
+    end
+    result
+  end
+
+  def transaction_url
+    transactions = Transaction.unfinished_for_listing(@listing)
+    if transactions.any?
+      transaction = transactions.first
+      listing_path(id: transaction.id)
+      person_transaction_path(:person_id => @current_user.id, :id => transaction.id)
+    else
+      nil
+    end
+  end
+
   def is_editing_allowed
     is_marketplace_admin || !is_active_transaction
   end
@@ -299,6 +321,10 @@ class ListingPresenter < MemoisticPresenter
 
   def subcategory_id
     @listing.category.parent_id ?  @listing.category.id : nil
+  end
+
+  def category_name
+    @listing.category.url
   end
 
   def payments_enabled?

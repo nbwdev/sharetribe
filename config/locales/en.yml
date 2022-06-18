@@ -2298,6 +2298,7 @@ en:
       listing_closed: "This listing has been closed"
       send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
       you_cannot_reply_to_a_closed_offer: "You cannot reply to a closed offer"
+      you_cannot_buy_transaction_in_progress: "You cannot buy this item because someone has already requested to buy it. Click here to be notified if the item becomes available again."
       you_cannot_send_message_to_yourself: "You cannot send a message to yourself"
       you_followed_listing: "You are now following this listing"
       you_have_already_given_feedback_about_this_event: "You have already given feedback about this event"
@@ -2601,6 +2602,7 @@ en:
       rideshare_offer: "Rideshare offer"
       rideshare_request: "Rideshare request"
       send_private_message: "Send private message"
+      see_category: "See all %{category_name}"
       tags: Tags
       time: time
       times: times
@@ -2617,6 +2619,15 @@ en:
       pickup: Pickup
       pickup_no_price: Pickup
       youtube_video_player: "YouTube video player"
+    transaction_status:
+      reserved: "Reserved"
+      is_buying: "You have requested to buy this item"
+      see_transaction: "Click to %{transaction_url}"
+      transaction_link_text: "view the transaction information"
+      someone_else_is_buying: "You cannot buy this item because somebody has already requested to buy it"
+      similar_items: "Click to look for more %{category_link}"
+      be_notified: "Click here to %{watch_item_url}."
+      be_notified_link_text: "be notified if it becomes available"
     unit_types:
       piece: piece
       hour: hour

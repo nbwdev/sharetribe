@@ -24,6 +24,10 @@
 - content_for :title_header do
   %h1
     %span#listing-title.listing-title= @listing.title
+    |
+    - category_link_cta = t(".see_category", category_name: @listing_presenter.category_name )
+    = link_to category_link_cta, search_path({category: @listing_presenter.category_name}) + "#after-banner",
+      :id => "listing-category-link", :class => "listing-category-link", :title => category_link_cta
 
 %script{type: "text/template", class: "template", id: "image-frame-template"}
   .listing-image-frame
