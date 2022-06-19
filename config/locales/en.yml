@@ -1449,6 +1449,7 @@ en:
       request_paid: "Payment successful"
       request_preauthorized: "Payment authorized"
       seller_request_preauthorized: "We have authorised the buyer's payment and we are now waiting for you to accept the sale"
+      seller_request_preauthorized_additional: "You must accept the sale before %{end_date} or it will be cancelled automatically and the money refunded to the buyer. Your item will be available for someone else to buy if this happens"
       buyer_request_preauthorized: "You have authorised us to process your payment for this purchase"
       skip_feedback: "Skip feedback"
       waiting_for_listing_author_to_accept_offer: "Waiting for %{listing_author_name} to accept the offer"
@@ -1524,8 +1525,8 @@ en:
       remember_to_accept_request: "Remember to accept or reject a request from %{sender_name}"
       you_can_accept_or_reject_offer_at: "You can accept or reject the offer at"
       you_can_accept_or_reject_request_at: "You can accept or reject the request at"
-      you_have_not_yet_accepted_or_rejected_offer: "You have not yet accepted or rejected the offer %{title} you received %{date}."
-      you_have_not_yet_accepted_or_rejected_request: "You have not yet accepted or rejected the request %{title} you received %{date}."
+      you_have_not_yet_accepted_or_rejected_offer: "You have not yet accepted or rejected the offer %{title} you received on %{date}."
+      you_have_not_yet_accepted_or_rejected_request: "You have not yet accepted or rejected the request %{title} you received on %{date}."
       show_thread: "Show conversation"
     branding:
       powered_by: "%{service_name} is powered by the %{sharetribe_link} marketplace platform."
@@ -3085,7 +3086,7 @@ en:
     format: mm/dd/yyyy
   time:
     formats:
-      short: "%b %e, %Y at %H:%M"
+      short: "%b %e, %Y at %l:%M%P"
       shorter: "%b %e at %H:%M"
       short_date: "%b %e, %Y"
       hours_only: "%l:%M %P"

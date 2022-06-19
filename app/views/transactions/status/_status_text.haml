@@ -4,3 +4,6 @@
   - else
     .icon-part{:class => status_info[:info_icon_part_classes]}
   .text-part= status_info[:info_text_part]
+  - if status_info[:additional_info_text].present?
+    %br
+    .text-part= status_info[:additional_info_text]

@@ -44,7 +44,7 @@ module TransactionHelper
         {
           author: {
             icon: icon_waiting_you,
-            text: t("conversations.status.waiting_for_you_to_accept_request")
+            text: t("conversations.status.waiting_for_you_to_accept_request") 
           },
           starter: {
             icon: icon_waiting_other,
@@ -54,7 +54,7 @@ module TransactionHelper
       preauthorized: ->() { {
         author: {
           icon: icon_waiting_you,
-          text: t("conversations.status.waiting_for_you_to_accept_request")
+          text: t("conversations.status.waiting_for_you_to_accept_request") 
         },
         starter: {
           icon: icon_waiting_other,
@@ -250,7 +250,8 @@ module TransactionHelper
               },
         preauthorized: -> { {
           author: [
-            status_info(t("conversations.status.seller_request_preauthorized"), icon_classes: icon_for("preauthorized")),
+            status_info(t("conversations.status.seller_request_preauthorized"), icon_classes: icon_for("preauthorized"),
+              additional_text:t("conversations.status.seller_request_preauthorized_additional", end_date: get_expiry_date_time(conversation))),
             preauthorized_status(conversation)
           ],
           starter: [
@@ -521,6 +522,20 @@ module TransactionHelper
     status_info(text, icon_classes: 'ss-clock')
   end
 
+  # This should very much be in the Transaction class
+  def get_expiry_date_time(transaction)
+    payment_type = transaction.payment_gateway.to_sym
+    gateway_expires = TransactionService::Transaction.authorization_expiration_period(payment_type)
+
+    expires = Maybe(transaction).booking.end_on.map { |booking_end|
+      TransactionService::Transaction.preauth_expires_at(gateway_expires.days.from_now, booking_end)
+    }.or_else(gateway_expires.days.from_now)
+
+    buffer = 1.minute # Add a small buffer (it might take a couple seconds until the email is sent)
+    expires_at = date_format(expires + buffer)
+    #expires_in = TimeUtils.time_to(expires_at)
+  end
+
   def feedback_given_status
     status_info(t("conversations.status.feedback_given"), icon_tag: icon_tag("testimonial", ["icon-part"]))
   end
@@ -529,11 +544,12 @@ module TransactionHelper
     status_info(t("conversations.status.feedback_skipped"), icon_classes: "ss-skipforward")
   end
 
-  def status_info(text, icon_tag: nil, icon_classes: nil)
+  def status_info(text, icon_tag: nil, icon_classes: nil, additional_text: nil)
     hash = {
       type: :status_info,
       content: {
-        info_text_part: text
+        info_text_part: text,
+        additional_info_text: additional_text
       }
     }
 
