@@ -186,3 +186,14 @@ gem "select2-rails"
 gem "cocoon"
 gem "fast-polylines"
 gem "codemirror-rails"
+
+# Alternative http server (production only)
+group :staging, :production do
+  gem "unicorn"
+end
+
+# Add debugging to test as well because I will run it locally
+group :development, :test do
+  gem 'ruby-debug-ide'
+  gem 'debase'
+end
