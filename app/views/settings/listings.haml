@@ -7,6 +7,6 @@
 = render :partial => "layouts/left_hand_navigation", :locals => { :links => buy_and_sell_links_for(@current_user, @current_community) }
 
 .left-navi-section
-  %h2= t("admin.communities.listings.listings")
+  %h2= t("admin.communities.listings.my_listings")
 
   = render partial: 'admin/community_listings/table', locals: {placeholder: t('layouts.settings.listings_search_placeholder')}

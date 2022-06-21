@@ -615,6 +615,7 @@ en:
           date_sent: "Date sent"
       listings:
         listings: Listings
+        my_listings: "My listings"
         search_by_title_author_category: "Search for a listing title, author or category name"
         search: Search
         reset_search: "Show all"
@@ -2352,7 +2353,7 @@ en:
       paypal_payments: "PayPal Payments"
       stripe_payments: "Stripe Payments"
       payments: Payments settings
-      listings: Listings
+      listings: "My listings"
       listings_search_placeholder: "Search for a listing title"
       selling: Selling
       transactions_search_placeholder: "Search for a transaction title or other party involved"
