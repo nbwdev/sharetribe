@@ -12,8 +12,9 @@
       .field-titles.user-fields.field-data
         .col-4= t('admin2.user_fields.field_title')
         .col-3= t('admin2.user_fields.field_type')
-        .col.text-center= t('admin2.user_fields.sign_up')
-        .col.text-center= t('admin2.user_fields.public')
+        .col.text-center{title: t('admin2.user_fields.sign_up_tooltip')}= t('admin2.user_fields.sign_up')
+        .col.text-center{title: t('admin2.user_fields.public_tooltip')}= t('admin2.user_fields.public')
+        .col.text-center{title: t('admin2.user_fields.system_tooltip')}= t('admin2.user_fields.system')
         .col-2
       .list-group
         = render 'fixed_fields'

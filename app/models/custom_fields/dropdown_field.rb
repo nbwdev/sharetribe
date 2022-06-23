@@ -16,6 +16,7 @@
 #  entity_type    :integer          default("for_listing")
 #  public         :boolean          default(FALSE)
 #  assignment     :integer          default("unassigned")
+#  system         :boolean          default(FALSE)
 #
 # Indexes
 #

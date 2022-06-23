@@ -75,4 +75,14 @@ $(function() {
         });
     }
 
+    $(document).on('change', '#custom_field_system', function() {
+        if ($('#custom_field_system').is(":checked")) {
+            $('#custom_field_required').prop("checked", false).prop("disabled", true);
+            $('#custom_field_public').prop("checked", false).prop("disabled", true);
+        } else {
+            $('#custom_field_required').prop("disabled", false);
+            $('#custom_field_public').prop("disabled", false);
+        }
+    })
+
 });

@@ -340,6 +340,10 @@ en:
       field_type: "Field type"
       sign_up: "Sign up"
       public: Public
+      system: System
+      sign_up_tooltip: "This field must be entered when the customer signs up"
+      public_tooltip: "This appears on the customer's profile and can be seen by any other user"
+      system_tooltip: "This is a system field which will not be shown to the customer"
       add_new_field: "+ Add a user field"
       first_name: "First name"
       last_name: "Last name"
@@ -357,8 +361,11 @@ en:
       edit_field_type: "Edit the user field \"%{name}\" (%{field_type})"
       required_field: "Make this field mandatory when signing up to the marketplace"
       public_field: "Show this field on the public profile page"
+      system_field: "DO NOT TOUCH! This is a system field. Be careful when ticking or unticking this box. It is used by the system to process the customer correctly. It is not shown to the customer on their profile."
+      system_field_title_tooltip: "Do not touch! This is a system field so it will break something if edited or deleted."
       required_field_title: "Required field"
       public_field_title: "Public field"
+      system_field_title: "System field"
       decimal: Decimal
       allow_decimals: "Allow decimals"
       minimum_value: "Minimum value"

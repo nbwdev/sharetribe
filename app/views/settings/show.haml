@@ -109,22 +109,23 @@
       = loc.hidden_field :longitude, :value => target_user.location.longitude
     - if @service.has_person_custom_fields?
       - @service.custom_field_values.each_with_index do |custom_field_value, index|
-        .inline-label-container
-        - custom_field = custom_field_value.question
-        - custom_field.with_type do |field_type|
-          - prefix = "person[custom_field_values_attributes][]"
+        - unless custom_field_value.question.system? && !@current_user.has_admin_rights?(@current_community)
           .inline-label-container
-            = label "person_custom_fields", index, "#{custom_field.name(I18n.locale)}#{custom_field.required ? '*' : ''}",
-              class: 'inline'
-            - if custom_field.public?
-              %small= t('settings.profile.shown_in_your_public_profile')
-          = hidden_field_tag "#{prefix}[id]", custom_field_value.id
-          = hidden_field_tag "#{prefix}[type]", custom_field_value.type
-          = hidden_field_tag "#{prefix}[custom_field_id]", custom_field_value.custom_field_id
-          = render "settings/custom_fields/#{field_type}", :service => @service,
-            :custom_field => custom_field, index: index,
-            :custom_field_value => custom_field_value,
-            :prefix => prefix
+          - custom_field = custom_field_value.question
+          - custom_field.with_type do |field_type|
+            - prefix = "person[custom_field_values_attributes][]"
+            .inline-label-container
+              = label "person_custom_fields", index, "#{custom_field.name(I18n.locale)}#{custom_field.required ? '*' : ''}",
+                class: 'inline'
+              - if custom_field.public?
+                %small= t('settings.profile.shown_in_your_public_profile')
+            = hidden_field_tag "#{prefix}[id]", custom_field_value.id
+            = hidden_field_tag "#{prefix}[type]", custom_field_value.type
+            = hidden_field_tag "#{prefix}[custom_field_id]", custom_field_value.custom_field_id
+            = render "settings/custom_fields/#{field_type}", :service => @service,
+              :custom_field => custom_field, index: index,
+              :custom_field_value => custom_field_value,
+              :prefix => prefix
     = form.button t("settings.save_information"), :class => "send_button"
 
 = render :partial => 'layouts/markdown_help'
