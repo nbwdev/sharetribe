@@ -2609,7 +2609,7 @@ en:
       rideshare_offer: "Rideshare offer"
       rideshare_request: "Rideshare request"
       send_private_message: "Send private message"
-      see_category: "See all %{category_name}"
+      see_category: "Go to all %{category_name}"
       tags: Tags
       time: time
       times: times
