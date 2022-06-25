@@ -19,7 +19,7 @@ module TransactionService::Gateway
       p_set = PaymentSettingsStore.get_active_by_gateway(community_id: opts_tx[:community_id], payment_gateway: :paypal)
 
       {minimum_commission: Money.new(p_set[:minimum_transaction_fee_cents], currency),
-       commission_from_seller: p_set[:commission_from_seller],
+       commission_from_seller: opts_tx.key?(:commission_from_seller) ? opts_tx[:commission_from_seller] : p_set[:commission_from_seller],
        automatic_confirmation_after_days: p_set[:confirmation_after_days]}
     end
 

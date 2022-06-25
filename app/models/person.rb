@@ -179,6 +179,9 @@ class Person < ApplicationRecord
     username
   end
 
+  VIP_CHECKBOX_GROUP_NAME = "Customer Flags"
+  VIP_CHECKBOX_NAME = "VIP"
+
   DEFAULT_TIME_FOR_COMMUNITY_UPDATES = 7.days
 
   # These are the email notifications, excluding newsletters settings
@@ -598,6 +601,25 @@ class Person < ApplicationRecord
 
   def custom_field_value_for(custom_field)
     custom_field_values.by_question(custom_field).first
+  end
+
+  def is_vip(community)
+    vip = false
+
+    # bit weird because you have the checkbox group called VIP and then the checkbox inside that called VIP
+    # Maybe call it user flags instead or something
+    community.person_custom_fields.each do |field|
+      if field.name == VIP_CHECKBOX_GROUP_NAME
+        field.options.each do |option|
+          if option.title == VIP_CHECKBOX_NAME
+            vip_field_value = custom_field_value_for(field)
+            vip = vip_field_value.selected_option_ids.include?(option.id)
+          end
+        end
+      end
+    end
+
+    vip
   end
 
   private

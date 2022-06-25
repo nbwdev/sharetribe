@@ -298,6 +298,11 @@ class PreauthorizeTransactionsController < ApplicationController
           delivery_method: opts[:delivery_method] || :none
     }
 
+    tmp = opts[:listing].author
+    if opts[:listing].author.is_vip(opts[:community])
+      transaction[:commission_from_seller] = 0
+    end
+
     if opts[:delivery_method] == :shipping
       transaction[:shipping_price] = opts[:shipping_price]
     end
