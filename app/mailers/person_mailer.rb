@@ -208,6 +208,32 @@ class PersonMailer < ActionMailer::Base # rubocop:disable Metrics/ClassLength
     end
   end
 
+  def new_update_to_watched_listing_notification(listing, recipient, community)
+    set_up_layout_variables(recipient, community)
+    @email_type = 'email_watched_listing_updated'
+    with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
+      @listing = listing
+      mail(:to => recipient.confirmed_notification_emails_to,
+           :from => community_specific_sender(community),
+           :subject => t("emails.update_to_watched_listing.listing_you_watch_can_be_bought")) do |format|
+        format.html { render v2_template(community.id, 'new_update_to_watched_listing_notification'), layout: v2_layout(community.id) }
+      end
+    end
+  end
+
+  def new_watcher_of_unavailable_listing_notification(listing, recipient, community)
+    set_up_layout_variables(recipient, community)
+    @email_type = 'email_when_someone_wants_to_buy'
+    with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
+      @listing = listing
+      mail(:to => recipient.confirmed_notification_emails_to,
+           :from => community_specific_sender(community),
+           :subject => t("emails.new_watcher_for_listing.someone_wants_to_buy")) do |format|
+        format.html { render v2_template(community.id, 'new_watcher_of_unavailable_listing_notification'), layout: v2_layout(community.id) }
+      end
+    end
+  end
+
   def new_listing_by_followed_person(listing, recipient, community)
     set_up_layout_variables(recipient, community)
     @email_type = 'email_about_new_listings_by_followed_people'

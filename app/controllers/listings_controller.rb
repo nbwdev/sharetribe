@@ -2,9 +2,9 @@ class ListingsController < ApplicationController
   class ListingDeleted < StandardError; end
 
   # Skip auth token check as current jQuery doesn't provide it automatically
-  skip_before_action :verify_authenticity_token, :only => [:close, :update, :follow, :unfollow]
+  skip_before_action :verify_authenticity_token, :only => [:close, :update, :follow, :unfollow, :watch, :unwatch]
 
-  before_action :only => [:edit, :edit_form_content, :update, :close, :follow, :unfollow] do |controller|
+  before_action :only => [:edit, :edit_form_content, :update, :close, :follow, :unfollow, :watch, :unwatch] do |controller|
     controller.ensure_logged_in t("layouts.notifications.you_must_log_in_to_view_this_content")
   end
 
@@ -13,7 +13,7 @@ class ListingsController < ApplicationController
   end
 
   before_action :save_current_path, :only => :show
-  before_action :ensure_authorized_to_view, :only => [:show, :follow, :unfollow]
+  before_action :ensure_authorized_to_view, :only => [:show, :follow, :unfollow, :watch, :unwatch]
 
   before_action :only => [:close] do |controller|
     controller.ensure_current_user_is_listing_author t("layouts.notifications.only_listing_author_can_close_a_listing")
@@ -268,6 +268,40 @@ class ListingsController < ApplicationController
 
   def unfollow
     change_follow_status("unfollow")
+  end
+
+  def watch
+    if @current_user.is_watching?(@listing)
+      # hopefully catch the validation error. It goes to the main error page if there is an error further down the stack
+      unwatch_link = view_context.button_to(t('layouts.notifications.unwatch_link_text'), unwatch_listing_path(@listing), :method => :delete, :class => "flash-button")
+      flash[:notice] = t("layouts.notifications.added_as_listing_watcher", unwatch: unwatch_link).html_safe
+      redirect_to @listing
+    else
+      @current_user.watch(@listing)
+      @listing.notify_seller_about_watcher(@current_community)
+      respond_to do |format|
+        format.html {
+          unwatch_link = view_context.button_to(t('layouts.notifications.unwatch_link_text'), unwatch_listing_path(@listing), :method => :delete, :class => "flash-button")
+          flash[:notice] = t("layouts.notifications.added_as_listing_watcher", unwatch: unwatch_link).html_safe
+          redirect_to @listing
+            }
+        format.js {
+          render :watch, :layout => false
+        }
+      end
+    end
+  end
+
+  def unwatch
+    @current_user.unwatch(@listing)
+    respond_to do |format|
+      format.html {
+        redirect_to @listing
+      }
+      format.js {
+        render :watch, :layout => false
+      }
+    end
   end
 
   def verification_required

@@ -68,6 +68,10 @@ class ListingPresenter < MemoisticPresenter
     is_active_transaction && !is_marketplace_admin
   end
 
+  def is_watching?
+    @current_user.is_watching?(@listing)
+  end
+
   def paypal_in_use
     PaypalHelper.user_and_community_ready_for_payments?(@listing.author_id, @current_community.id)
   end

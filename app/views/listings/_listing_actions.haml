@@ -89,6 +89,12 @@
         .content
           = action_button_label(@listing)
 
+    - if @listing_presenter.is_watching?
+      .row.listing-status-notification
+        .col-12
+          - unwatch_link = button_to(t("layouts.notifications.unwatch_link_text"), unwatch_listing_path(@listing), :method => :delete, :id => "unwatch-button")
+          %p=t("layouts.notifications.watching_this_listing", unwatch: unwatch_link).html_safe
+
     - if @listing_presenter.payments_enabled?
       .row
         .col-12

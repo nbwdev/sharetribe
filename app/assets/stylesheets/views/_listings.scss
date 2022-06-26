@@ -310,3 +310,23 @@ $listing-author-avatar-height: 108;
     }
   }
 }
+
+.listing-status-notification {
+  margin-bottom: lines(0.5);
+  background: #e8e8e8;
+  @include media(tablet) {
+    margin-bottom: lines(1);
+  }
+  position: relative;
+  padding: em(8) em(20) em(8) em(20);
+  @include border-radius(em(5));
+  .ajax-icon, .flash-icon {
+    position: absolute;
+    top: em(10);
+    left: em(12);
+  }
+  .ajax-text, .flash-text {
+    margin-left: lines(0.75);
+    min-height: lines(0.5);
+  }
+}

@@ -227,7 +227,8 @@ class PreauthorizeTransactionsController < ApplicationController
         if @current_community.allow_free_conversations?
           t("layouts.notifications.listing_author_payment_details_missing")
         else
-          t("layouts.notifications.listing_author_payment_details_missing_no_free")
+          notify_me_link = view_context.button_to(t('layouts.notifications.notify_link_text'), watch_listing_path(@listing), :class => "flash-button")
+          t("layouts.notifications.listing_author_payment_details_missing_no_free", notify_me: notify_me_link).html_safe
         end
 
       record_event(

@@ -52,6 +52,33 @@
   }
 }
 
+.flash-error, .flash-notice {
+  .button_to {
+    display: inline-block;
+  }
+}
+
+.flash-error {
+  .button_to {
+    .flash-button {
+      background-color: white;
+      border-radius: 0.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      color: $error-red;
+      font-weight: bold;
+      border: none;
+  
+      &:hover {
+        background-color: lighten($error-red, 10%);
+        color: white;
+      }
+  
+    }
+  }
+  
+}
+
 .flash-error-link {
   color: darken($background, 20%);
   &:hover {

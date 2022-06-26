@@ -744,6 +744,8 @@ Rails.application.routes.draw do
         post :follow
         delete :unfollow
         delete :delete
+        post :watch
+        delete :unwatch
       end
       collection do
         get :new_form_content

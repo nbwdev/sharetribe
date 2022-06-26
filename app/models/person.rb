@@ -127,6 +127,8 @@ class Person < ApplicationRecord
   has_many :starter_transactions, :class_name => "Transaction", :foreign_key => "starter_id", :dependent => :destroy, :inverse_of => :starter
   has_many :payer_stripe_payments, :class_name => "StripePayment", :foreign_key => "payer_id", :dependent => :destroy, :inverse_of => :payer
   has_many :receiver_stripe_payments, :class_name => "StripePayment", :foreign_key => "receiver_id", :dependent => :destroy, :inverse_of => :receiver
+  has_many :listing_watchers, :dependent => :destroy, :foreign_key => "watcher_id"
+  has_many :watched_listings, :class_name => "Listing", :through => :listing_watchers, :source => :listing, :inverse_of => :watchers
 
   deprecate communities: "Use accepted_community instead.",
             community_memberships: "Use community_membership instead.",
@@ -197,7 +199,9 @@ class Person < ApplicationRecord
     "email_about_new_payments",
     "email_about_new_listings_by_followed_people",
     "email_listing_new_comment",
-    "email_listing_updated"
+    "email_listing_updated",
+    "email_watched_listing_updated",
+    "email_when_someone_wants_to_buy"
     # These should not yet be shown in UI, although they might be stored in DB
     # "email_when_new_friend_request",
     # "email_when_new_feedback_on_transaction",
@@ -399,6 +403,42 @@ class Person < ApplicationRecord
         follow(listing) unless is_following?(listing)
       else
         unfollow(listing) if is_following?(listing)
+      end
+    end
+  end
+
+  # As the seller - tell watchers they can now purchase an item
+  # because payments have been set up
+  def notify_watchers_after_payment_setup(community)
+    listings.each do |listing|
+      listing.notify_watchers(community)
+    end
+
+  end
+
+  # As a buyer
+  # Starts watching a listing - to be notified when it becomes available to buy
+  # I am not using follow in case it is deleted by Sharetribe
+  def watch(listing)
+    watched_listings << listing
+  end
+
+  def unwatch(listing)
+    watched_listings.delete(listing)
+  end
+
+  def is_watching?(listing)
+    watched_listings.include?(listing)
+  end
+
+  # Updates the user watching status based on the given status
+  # for the given listing
+  def update_watch_status(listing, status)
+    unless id == listing.author.id
+      if status
+        watch(listing) unless is_watching?(listing)
+      else
+        unwatch(listing) if is_watching?(listing)
       end
     end
   end

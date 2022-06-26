@@ -379,7 +379,9 @@ class PeopleController < Devise::RegistrationsController
         :email_about_new_listings_by_followed_people,
         :empty_notification,
         :email_listing_new_comment,
-        :email_listing_updated
+        :email_listing_updated,
+        :email_watched_listing_updated,
+        :email_when_someone_wants_to_buy
       ]
     ]
   end

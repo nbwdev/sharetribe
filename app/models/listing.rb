@@ -91,6 +91,8 @@ class Listing < ApplicationRecord
   accepts_nested_attributes_for :origin_loc, :destination_loc
 
   has_and_belongs_to_many :followers, :class_name => "Person", :join_table => "listing_followers"
+  has_many :listing_watchers, :dependent => :destroy, :foreign_key => "listing_id"
+  has_many :watchers, :class_name => "Person", :through => :listing_watchers, :source => :watcher, :inverse_of => :watched_listings
 
   belongs_to :category
   has_many :working_time_slots, ->{ ordered }, dependent: :destroy, inverse_of: :listing
@@ -235,6 +237,28 @@ class Listing < ApplicationRecord
           MailCarrier.deliver_now(PersonMailer.new_comment_to_followed_listing_notification(comments.last, follower, community))
         end
       end
+    end
+  end
+
+  def has_watcher(watcher)
+    watchers.include?(watcher)
+  end
+
+  # Send notification to watchers when the listing is available to buy
+  def notify_watchers(community)
+    Delayed::Job.enqueue(NotifyWatchersJob.new(self.id, community.id))
+  end
+
+  # Tell the seller that someone is ready to buy their item, if this is the first watcher of the listing
+  def notify_seller_about_watcher(community)
+    if watchers.size == 1 && author.should_receive?('email_when_someone_wants_to_buy')
+      Delayed::Job.enqueue(WatchedListingJob.new(self.id, community.id))
+    end
+  end
+
+  def remove_all_watchers
+    watchers.each do |watcher|
+      watchers.delete(watcher)
     end
   end
 
@@ -389,6 +413,7 @@ class Listing < ApplicationRecord
       deleted: true
     )
     listings.each do |listing|
+      listing.remove_all_watchers
       listing.location&.destroy
     end
     ids = listings.pluck(:id)

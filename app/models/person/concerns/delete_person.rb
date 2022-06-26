@@ -49,6 +49,7 @@ module DeletePerson
 
           # Delete followed listings relationships
           person.followed_listings.destroy_all
+          person.watched_listings.destroy_all
 
           # Delete memberships
           person.community_membership.update(status: "deleted_user")

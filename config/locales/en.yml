@@ -1773,6 +1773,15 @@ en:
     transaction_preauthorized_reminder_v2:
       headline: "remember to accept the request from %{requester} about %{listing_link}."
       remember_to_accept: "%{requester} has already paid for the listing. You have to accept the request in order to receive the payment."
+    update_to_watched_listing:
+      listing_you_watch_can_be_bought: "An item you watch is available to buy"
+      this_listing_can_be_bought: "The item '%{listing}' can be bought on %{service_name}. The seller has finished setting up their account so you can now buy it. Happy shopping!"
+      view_listing: "View listing"
+    new_watcher_for_listing:
+      someone_wants_to_buy: "Someone wants to buy your item but it cannot be sold"
+      listing_cannot_be_sold: "Someone is interested in your item '%{listing}' on %{service_name} but it cannot be sold until you finish setting up your account."
+      view_listing: "View listing"
+      view_settings: "Go to your account settings"
     welcome_email:
       welcome_email_subject: "Welcome to %{service_name}"
       welcome_to_marketplace: "Welcome to %{service_name}! Glad to have you on board."
@@ -2332,7 +2341,11 @@ en:
       user_does_not_have_email_to_delete: "You don't have the email address you're trying to remove"
       email_deleted: "Email removed"
       listing_author_payment_details_missing: "Please contact the author by pressing the 'Contact' button below. They need to update their payment details to receive payments."
-      listing_author_payment_details_missing_no_free: "The seller needs to set up their payment information before you can buy this. We have sent them a message to remind them to do this. Please check again later."
+      listing_author_payment_details_missing_no_free: "The seller needs to set up their payment information before you can buy this. We have sent them a message to remind them to do this. Do you want to be notified when it is ready to buy? %{notify_me}"
+      notify_link_text: "Yes notify me"
+      added_as_listing_watcher: "You are watching this listing and we will notify you when it is available to buy %{unwatch}"
+      watching_this_listing: "It is not possible to buy this item until the seller finishes setting up their account. You are watching this listing and we will notify you when it is available to buy %{unwatch}"
+      unwatch_link_text: "Do not notify me"
       images_are_processing: "We are processing your images. Give us a minute or two and they'll be visible."
       maintenance_mode:
         zero: "The website will now go offline for maintenance"
@@ -2958,6 +2971,8 @@ en:
       unsuccessful_unsubscribe_info_text: "The unsubscribe link has expired. Log in to change your email subscription settings."
       email_listing_new_comment: "...a listing public discussion I follow has a new comment"
       email_listing_updated: "...a listing I have commented on has been updated"
+      email_watched_listing_updated: "...I can now buy a listing I asked to be notified about"
+      email_when_someone_wants_to_buy: "...someone wants to buy a listing before I have fully set up my account"
     profile:
       about_you: "About you"
       city: City

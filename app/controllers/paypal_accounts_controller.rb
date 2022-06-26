@@ -104,6 +104,7 @@ class PaypalAccountsController < ApplicationController
     )
 
     if response[:success]
+      @current_user.notify_watchers_after_payment_setup(@current_community)
       redirect_to paypal_account_settings_payment_path(@current_user.username)
     else
       case response.error_msg
