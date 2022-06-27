@@ -11,14 +11,13 @@
         - avatar = @current_community.logo.present? ? @current_community.logo.url(:header_icon) : missing_avatar(:thumb)
         = image_tag avatar, :class => "conversation-avatar"
       - else
-        = link_to person_path(conversation[:other]) do
-          = image_tag avatar, :class => "conversation-avatar"
+        = image_tag avatar, :class => "conversation-avatar", :alt => ""
       .conversation-details
         .conversation-other-party-name
           - if last_admin_action
             %b= @current_community.name(I18n.locale)
           - else
-            = link_to_unless conversation[:other].deleted, PersonViewUtils.person_display_name(conversation[:other], @current_community), person_path(conversation[:other])
+            %span=PersonViewUtils.person_display_name(conversation[:other], @current_community)
         .conversation-last-message-at
           = conversation[:last_activity_ago]
 

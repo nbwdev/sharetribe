@@ -93,3 +93,36 @@
   @include vertical-centering-table-content;
 
 }
+
+// Make the clickable area for the notification cover the whole message box
+.conversation-row a.conversation-title-link-unread::after, .conversation-row a.conversation-title-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// Make the link to the item listing come above the link to the message so they can go to the item if desired
+.conversation-row .conversation-context a {
+  position:relative;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.conversation-row:hover {
+  box-shadow: 0 0 10px 1px black;
+}
+
+.conversation-row a:focus {
+  text-decoration: underline;
+}
+
+.conversation-row:focus-within {
+  box-shadow: 0 0 10px 1px black;
+}
+
+.conversation-row:focus-within a:focus {
+    text-decoration: none;
+}
