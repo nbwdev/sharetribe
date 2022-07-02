@@ -22,17 +22,17 @@
           = conversation[:last_activity_ago]
 
   %div{class: payments_in_use ? "col-6" : "col-9"}
+    .conversation-context
+      - if conversation[:listing_url].present?
+        = t("conversations.conversation.about_listing", listing_title: link_to_unless(conversation[:listing_deleted], conversation[:listing_title], conversation[:listing_url])).html_safe
+      - else
+        = t("conversations.conversation.free_message")
     = link_to conversation[:path], class:(conversation[:should_notify] ? 'conversation-title-link-unread' : 'conversation-title-link') do
       - if conversation[:title].present?
         = conversation[:title]
       - else
         %span.conversation-last-message-content-not-available
           = t("conversations.conversation.message_content_not_available")
-    .conversation-context
-      - if conversation[:listing_url].present?
-        = t("conversations.conversation.about_listing", listing_title: link_to_unless(conversation[:listing_deleted], conversation[:listing_title], conversation[:listing_url])).html_safe
-      - else
-        = t("conversations.conversation.free_message")
 
   - if payments_in_use
     .col-3
