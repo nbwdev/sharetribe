@@ -83,6 +83,10 @@ This document explains what is SessionContextStore, how and when to use it.
 
 This guide shows how to use "Fakepal", which is a fake PayPal implementation that can be used for development purposes
 
+#### [Articles](./articles.md)
+
+This guide explains how to add an article
+
 ## Process documentation
 
 Documentation of the development process.
