@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
     {
         'why_we_started_neverbeenworn' => {
             :id => 'why_we_started_neverbeenworn',
-            :title => "Why We Started Neverbeenworn"
+            :title => "Why We Started Neverbeenworn",
+            :created => Date.new(2022,7,5)
         }
     }
 

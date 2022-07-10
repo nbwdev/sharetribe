@@ -136,11 +136,21 @@ class SitemapController < ActionController::Metal
       adapter = SitemapGenerator::NeverWriteAdapter.new
 
       open_listings = find_open_listings(community.id)
+      articles = all_articles(community.id)
+      newest_article_date = most_recent_article_date(articles)
+      infos_pages = get_infos_pages_for_sitemap(community)
 
       SitemapGenerator::Sitemap.create(
             default_host: default_host,
             verbose: false,
             adapter: adapter) do
+        add articles_path, lastmod: newest_article_date
+        articles.each do |key,article|
+          add article_path(:id => article[:id]), lastmod: article[:created]
+        end
+        infos_pages.each do |i|
+          add i[:path], lastmod: i[:modified]
+        end
         open_listings.each do |l|
           add listing_path(id: l[:id]), lastmod: l[:lastmod]
         end
@@ -173,6 +183,15 @@ class SitemapController < ActionController::Metal
       .map { |(id, title, updated_at)|
           {id: Listing.to_param(id, title), lastmod: updated_at}
       }
+  end
+
+  def all_articles(community_id)
+    ArticlesController::ARTICLES
+  end
+
+  def most_recent_article_date(articles)
+    newest = articles.max_by { |k,v| v.values.first["created"] }
+    newest[1][:created]
   end
 
   def from_cache(keys, &block)
@@ -226,4 +245,18 @@ class SitemapController < ActionController::Metal
 
     ControllerLogging.append_request_info_to_payload!(request, payload)
   end
+
+  # Pages and last update for the sitemap
+  # Want to move these in InfosHelper really
+  def get_infos_pages_for_sitemap(community)
+    [
+      { :path => Rails.application.routes.url_helpers.about_infos_path, :modified => Date.new(2022,3,31)},
+      { :path => Rails.application.routes.url_helpers.how_to_use_infos_path, :modified => Date.new(2022,3,31)},
+      { :path => Rails.application.routes.url_helpers.privacy_infos_path, :modified => Date.new(2022,3,31)},
+      { :path => Rails.application.routes.url_helpers.terms_infos_path, :modified => Date.new(2022,3,31)},
+      { :path => Rails.application.routes.url_helpers.cookie_policy_infos_path, :modified => Date.new(2022,3,31)},
+      { :path => Rails.application.routes.url_helpers.code_of_conduct_infos_path, :modified => Date.new(2022,3,31)},
+    ]
+  end
+  
 end
