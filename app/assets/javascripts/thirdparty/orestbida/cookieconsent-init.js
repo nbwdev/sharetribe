@@ -51,10 +51,8 @@ cc.run(
                 en: {
                     consentModal: {
                         title: 'We use cookies',
-                        description: 'We use necessary cookies to make our site work. We\'d also like to set analytics cookies that help us make improvements by measuring how you use the site. These will be set only if you accept.',
-                        acceptAllBtn: 'Accept all',
-                        acceptNecessaryBtn: 'Reject all',
-                        showPreferencesBtn: 'Manage Individual preferences'
+                        description: 'We only use necessary cookies to make our site work. We do not set any analytics or tracking cookies, and we will ask for your consent again if we ever want to set them.',
+                        acceptAllBtn: 'OK'
                     },
                     preferencesModal: {
                         title: 'Manage cookie preferences',
