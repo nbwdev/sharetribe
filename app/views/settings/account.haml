@@ -99,7 +99,7 @@
         = t("common.password") + ":"
       = "********"
       = link_to t(".change"), "#", :id => "account_password_link", :class => "change-link"
-    #account_password_form.password-form
+    #account_password_form.password-form.squeaky-hide
       = form_for target_user, :html => {:id => 'password_form'} do |form|
         = form.password_field :password, :class => :text_field_account, :maxlength => "255", :placeholder => t(".new_password")
         = form.password_field :password2, :class => :text_field_account, :maxlength => "255", :placeholder => t(".confirm_new_password")

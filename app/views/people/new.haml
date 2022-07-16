@@ -67,10 +67,10 @@
     = form.text_field :family_name, :class => :text_field, :maxlength => "30"
 
     -# Password
-    = form.label :password, t('common.password')
-    = form.password_field :password, :class => :text_field, :maxlength => "255", :id => "person_password1"
+    = form.label :password1, t('common.password')
+    = form.password_field :password, :class => "text_field squeaky-hide", :maxlength => "255", :id => "person_password1"
     = form.label :password2, t('.password_again')
-    = form.password_field :password2, :class => :text_field, :maxlength => "255"
+    = form.password_field :password2, :class => "text_field squeaky-hide", :maxlength => "255"
 
     - if @service.has_person_custom_fields?
       - @service.custom_field_values.each_with_index do |custom_field_value, index|

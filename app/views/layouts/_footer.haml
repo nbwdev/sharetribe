@@ -16,7 +16,7 @@
           - if @custom_footer.social?
             .footer__social-media
               - @custom_footer.social.each do |social|
-                %a.footer__social-media-link{:href => social.url, :rel => "noreferrer", :target => "_blank"}
+                %a.footer__social-media-link{:href => social.url, :rel => "noreferrer", :target => "_blank", :"aria-label" => "See us on "+social.provider}
                   = render 'layouts/footer/social_icons', social_service: social.provider
         %hr.footer__separator/
         .footer__copyrights--markdown

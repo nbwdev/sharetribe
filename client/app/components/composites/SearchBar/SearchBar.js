@@ -194,6 +194,8 @@ class SearchBar extends Component {
     }, [
       button({
         className: css.mobileToggle,
+        'aria-label': 'Show the search box',
+        title: 'Show the search box',
         onClick: () => this.setState({ mobileSearchOpen: !this.state.mobileSearchOpen }),
       }, [
         div({
@@ -221,6 +223,8 @@ class SearchBar extends Component {
         button({
           type: 'submit',
           className: css.searchButton,
+          'aria-label': 'Search',
+          title: 'Search',
           dangerouslySetInnerHTML: { __html: icon },
           style: {
             backgroundColor: this.state.mobileSearchOpen ? bgColorDarkened : 'transparent',
