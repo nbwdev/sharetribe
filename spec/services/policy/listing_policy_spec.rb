@@ -33,30 +33,32 @@ describe Policy::ListingPolicy do
       expect(Policy::ListingPolicy.new(listing, community, nil).visible?).to be_falsey
     end
 
-    it "is not visible, if the listing is closed" do
+    it "is visible, if the listing is closed and the community is public" do
+      community.update_attribute(:private, false)
       listing.update_attribute(:open, false)
 
-      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_falsey
-      expect(Policy::ListingPolicy.new(listing, community, nil).visible?).to be_falsey
+      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_truthy
+      expect(Policy::ListingPolicy.new(listing, community, nil).visible?).to be_truthy
     end
 
     it "is visible to admin if the listing is closed" do
       listing.update_attribute(:open, false)
 
-      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_falsey
+      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_truthy
       expect(Policy::ListingPolicy.new(listing, community, admin).visible?).to be_truthy
     end
 
-    it "is not visible, if the listing is not approved" do
+    it "is visible, if the listing is not approved and the community is public" do
+      community.update_attribute(:private, false)
       listing.update_attribute(:state, Listing::APPROVAL_PENDING)
 
-      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_falsey
-      expect(Policy::ListingPolicy.new(listing, community, nil).visible?).to be_falsey
+      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_truthy
+      expect(Policy::ListingPolicy.new(listing, community, nil).visible?).to be_truthy
 
       listing.update_attribute(:state, Listing::APPROVAL_REJECTED)
 
-      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_falsey
-      expect(Policy::ListingPolicy.new(listing, community, nil).visible?).to be_falsey
+      expect(Policy::ListingPolicy.new(listing, community, person).visible?).to be_truthy
+      expect(Policy::ListingPolicy.new(listing, community, nil).visible?).to be_truthy
     end
 
     it "is visible to admin if the listing not approved" do

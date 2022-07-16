@@ -69,7 +69,7 @@ class ListingPresenter < MemoisticPresenter
   end
 
   def is_watching?
-    @current_user.is_watching?(@listing)
+    @current_user.present? && @current_user.is_watching?(@listing)
   end
 
   def paypal_in_use

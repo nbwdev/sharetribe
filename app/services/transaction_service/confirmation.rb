@@ -64,7 +64,7 @@ class TransactionService::Confirmation
   end
 
   def set_buyer_dispute_notes
-    if(params[:message][:content].present? && status == :canceled)
+    if(params[:message].present? && params[:message][:content].present? && status == :canceled)
       buyer_dispute_notes = (params[:message][:content]).html_safe
       if(buyer_dispute_notes.present?)
         @transaction.update(buyer_dispute_notes: buyer_dispute_notes)

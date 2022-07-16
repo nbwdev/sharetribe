@@ -27,7 +27,8 @@ describe Admin::AdminBaseController, type: :controller do
       sign_in_for_spec(person)
       get :index
       expect(response).to have_http_status(302)
-      expect(response).to redirect_to('/')
+      # redirect to the shop page not the homepage
+      expect(response).to redirect_to('/s')
     end
 
     it "does not redirect admin" do

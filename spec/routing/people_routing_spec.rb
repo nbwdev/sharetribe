@@ -114,28 +114,28 @@ describe "routing for people", type: :routing do
     )
   end
 
-  it "routes /en to home page" do
+  it "routes /en to landing page" do
     expect(get "#{@protocol_and_host}/en").to(
       route_to({
-                 :controller => "homepage",
+                 :controller => "landing_page",
                  :action => "index",
                  :locale => "en"
                }))
   end
 
-  it "routes /pt-BR to home page" do
+  it "routes /pt-BR to landing page" do
     expect(get "/pt-BR").to(
       route_to({
-                 :controller => "homepage",
+                 :controller => "landing_page",
                  :action => "index",
                  :locale => "pt-BR"
                }))
   end
 
-  it "routes / to home page" do
+  it "routes / to landing page" do
     expect(get "/").to(
       route_to({
-                 :controller => "homepage",
+                 :controller => "landing_page",
                  :action => "index"
                }))
   end

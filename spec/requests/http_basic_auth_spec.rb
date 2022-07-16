@@ -9,8 +9,8 @@ describe "HTTP basic auth", type: :request do
 
   before(:each) do
     @domain = "market.custom.org"
-    @http_url = "http://#{@domain}"
-    @https_url = "https://#{@domain}"
+    @http_url = "http://#{@domain}/s"
+    @https_url = "https://#{@domain}/s"
     @community = FactoryGirl.create(:community, :domain => @domain, use_domain: true)
 
     # Refresh from DB
@@ -22,7 +22,7 @@ describe "HTTP basic auth", type: :request do
   end
 
   it "is required when enabled" do
-    get "/"
+    get "/s"
     expect(response.status).to eq(401)
 
     get "/admin"
@@ -45,7 +45,7 @@ describe "HTTP basic auth", type: :request do
 
   it "is not required when disabled" do
     APP_CONFIG.use_http_auth = false
-    get "/"
+    get "/s"
     expect(response.status).not_to eq(401)
   end
 
