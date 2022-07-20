@@ -57,6 +57,12 @@
 - if @current_community.facebook_connect_id
   %meta{ :property => "fb:app_id", :content => "#{@current_community.facebook_connect_id}" }
 
+- if content_for?(:meta_article_id)
+  = render partial: "layouts/seo_structured_data/seo_articles"
+
+- if content_for?(:meta_listing_id)
+  = render partial: "layouts/seo_structured_data/seo_listing"
+
 / CSS
 = stylesheet_link_tag "application"
 

@@ -1,0 +1,29 @@
+%script{ type: 'application/ld+json' }
+  :plain
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "#{ content_for(:meta_article_headline) }",
+      "image": [
+        "#{ content_for(:meta_article_image_1) }",
+        "#{ content_for(:meta_article_image_2) }"
+       ],
+      "datePublished": "#{ content_for(:meta_article_date_published) }",
+      "dateModified": "#{ content_for(:meta_article_date_modified) }",
+      "author": [{
+          "@type": "Oragnization",
+          "logo": "https://neverbeenworn.co.uk/system/logos/1/original/nbw-large-favicon.png?1649778673",
+          "slogan": "Helping the planet by reselling your fashion",
+          "name": "neverbeenworn",
+          "url": "https://neverbeenworn.co.uk"
+        }],
+      "publisher": {
+        "@type": "Organization",
+        "name": "neverbeenworn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neverbeenworn.co.uk/system/logos/1/original/nbw-large-favicon.png?1649778673"
+        }
+      }
+    }
+

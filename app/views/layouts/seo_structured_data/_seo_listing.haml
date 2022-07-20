@@ -1,0 +1,19 @@
+%script{ type: 'application/ld+json' }
+  :plain
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "#{ content_for(:title) }",
+      "image": [
+        "#{ @listing.listing_images.empty? ? '' : @listing.listing_images.first.image.url(:big) }"
+       ],
+      "description": "#{ content_for(:meta_description) }",
+      "offers": {
+        "@type": "Offer",
+        "url": "#{@current_community.full_url}#{request.fullpath}",
+        "priceCurrency": "GBP",
+        "price": "#{ content_for(:meta_listing_price) }",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock"
+      }
+    }
