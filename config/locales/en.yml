@@ -1991,6 +1991,8 @@ en:
       commented: "%{commenter_name} commented on listing %{listing_title} %{time_ago}."
       offer_partitive: offer
       request_partitive: request
+  footer:
+    see_us_on: "See us on %{service}"
   header:
     about: About
     home: Home
@@ -2376,6 +2378,13 @@ en:
       transactions_search_placeholder: "Search for a transaction title or other party involved"
       transactions: All transactions
   listings:
+    alt_text:
+      avatar_of_seller: "avatar of the seller %{seller_name}"
+      go_to_seller: "go to the seller %{seller_name}'s profile"
+      seller_profile: "%{seller_name}'s profile"
+      share_to: "share to %{service}"
+      show_this_image: "show this image"
+      thumbnail: "thumbnail of product image"
     bubble_listing_not_visible:
       listing_not_visible: "You do not have permission to view this listing."
     comment:

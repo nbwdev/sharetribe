@@ -9,7 +9,7 @@
         - name = PersonViewUtils.person_entity_display_name(listing.author, @current_community.name_display_type)
         .home-fluid-thumbnail-grid-author-avatar
           = link_to(person_path(username: listing.author.username)) do
-            = image_tag(listing.author.avatar.thumb || missing_avatar(:thumb), :class => "home-fluid-thumbnail-grid-author-avatar-image", :alt => "Avatar of "+name)
+            = image_tag(listing.author.avatar.thumb || missing_avatar(:thumb), :class => "home-fluid-thumbnail-grid-author-avatar-image", :alt => t("listings.alt_text.avatar_of_seller", :seller_name => name))
 
         - distance = Maybe(listing.distance).or_else(nil)
         - if(!show_distance || distance.blank?)

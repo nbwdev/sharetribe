@@ -43,7 +43,7 @@
 
 %script{type: "text/template", class: "template", id: "image-thumbnail-template"}
   .listing-image-thumbnail-container
-    %img.listing-image-thumbnail{src: "${url}", alt: "thumbnail of product image", title: "show this image"}
+    %img.listing-image-thumbnail{src: "${url}", alt: t("listings.alt_text.thumbnail"), title: t("listings.alt_text.show_this_image")}
     .fade
 
 = render partial: 'layouts/onboarding_popup_wrapper'
@@ -117,7 +117,7 @@
               = facebook_like(current_user?(@listing.author))
             .listing-tweet-button
               - twitter_params =  {count: "horizontal", via: (@current_community.twitter_handle), text: @listing.title }.compact
-              = link_to("", "https://twitter.com/share", :class => "twitter-share-button", "aria-label" => "share on twitter", "data" => twitter_params)
+              = link_to("", "https://twitter.com/share", :class => "twitter-share-button", "aria-label" => t("listings.alt_text.share_to", :service => "twitter"), "data" => twitter_params)
               - content_for :extra_javascript do
                 :javascript
                   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
@@ -158,10 +158,10 @@
         .listing-author
           - seller_name = PersonViewUtils.person_display_name(@listing.author, @current_community)
           .listing-author-avatar
-            = medium_avatar_thumb(@listing.author, {:class => "listing-author-avatar-image", :alt => "avatar of the seller " + seller_name, :title => "go to the seller "+seller_name+"'s profile"})
+            = medium_avatar_thumb(@listing.author, {:class => "listing-author-avatar-image", :alt => t("listings.alt_text.avatar_of_seller", :seller_name => seller_name), :title => t("listings.alt_text.go_to_seller", :seller_name => seller_name)})
           .listing-author-details
             .listing-author-name
-              = link_to seller_name, @listing.author, :id => "listing-author-link", :class => "listing-author-name-link", :title => seller_name + "'s profile"
+              = link_to seller_name, @listing.author, :id => "listing-author-link", :class => "listing-author-name-link", :title => t("listings.alt_text.seller_profile", :seller_name => seller_name)
             - if @listing.author != @current_user && @current_community.allow_free_conversations?
               .listing-author-contact
                 %a#listing-contact{href: contact_to_listing_path(:listing_id => @listing.id.to_s), :class => "listing-author-contact-button"}
