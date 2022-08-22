@@ -181,10 +181,10 @@ module CustomLandingPage
           "button_path": {"value": "/en/infos/how_to_use"}
         },
         {
-          "title": "Code of conduct",
+          "title": "Little Code of Conduct",
           "icon": "heart-favorite",
           "paragraph": "Being good to each other",
-          "button_title": "Code of conduct",
+          "button_title": "Little Code of Conduct",
           "button_path": {"value": "en/infos/code_of_conduct"}
         }
       ]
