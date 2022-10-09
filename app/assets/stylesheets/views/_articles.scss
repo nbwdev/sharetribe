@@ -1,4 +1,5 @@
 @import "mixins/all";
+@import "../landing_page/mixins/all";
 
 .articles {
     padding-left: 0;
@@ -40,8 +41,49 @@
             )
             repeat scroll 0 0;
     }
+
+    hr {
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, transparent, #000, transparent);
+        margin-bottom: 2em;
+        margin-top: 1.75em;
+    }
+
+    a.read-more {
+        margin-bottom: 0;
+    }
+
+    img.article_col6_image {
+        @media #{$mobile} {
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    }    
 }
 
 .article_col6_image {
     width: 100%;
+
+    @media #{$mobile} {
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    @media #{$desktop}, #{$mobile-landscape}, #{$tablet} {
+        aspect-ratio: 316/413;
+        object-fit: cover;
+    }
+}
+
+h2.article-title {
+    margin-bottom: 0;
+    @media #{$mobile} {
+        font-size: 1.5em;
+    }
+}
+
+p.published-date {
+    margin-bottom: 0.75em;
+    color: $light-body;
 }

@@ -2,28 +2,55 @@
   %h1= t("articles.articles")
 
 %ul.articles
-  - articles.each do |article_id, article|
-    %li
-      .row
-        .col-4
-          -first_url = image_path("articles/lady-in-poppy-field.jpg")
-          =image_tag(first_url, class: 'article_col6_image', alt: "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.")
-        .col-8
-          %h2
-            =link_to(article[:title], article_path(id=article[:id]))
-          
-          %h3 We want to help
-          %p
-            We all have clothes in our wardrobe that we just never got around to wearing and we simply no longer need.
-            We know they take up too much room and we know we can’t bring ourselves to get rid of them just yet.
-            Why? Because these are great clothes and we still hope maybe we will wear them just once.
-            The sad thing is, we know this might never happen, so we are stuck and there is no more room.
-            Well great news ladies. We want to help you out with that. 
 
-          %h3 Life is busy. How can we help?
-          %p
-            We want to help all you lovely ladies out there clear out your wardrobe and find a great new
-            %br
-            ='...'
+  -article = articles['autumn_is_now_upon_us']
+  .row
+    .col-4
+      -first_url = image_path("articles/autumn-leaves-sunlight.jpg")
+      =image_tag(first_url, class: 'article_col6_image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
+    .col-8
+      %h2.article-title
+        =link_to(article[:title], article_path(id=article[:id]))
+      %p.published-date
+        October 2022
+      
+      %h3 A change of season
+      %p
+        As neverbeenworn goes into its first autumn, we are taking a quick moment to reflect on how far we have come.
+        We are proud to be here today and you are part of that journey too.
+        So, we want to thank all you lovely ladies that have joined and come to support neverbeenworn on the journey so far.
+        There is further to go and much to do, but for now we are simply enjoying the delights of the journey.
+        There will always be things in life to deal with, and there will always be testing times along the way.
+        %br
+        ='...'
 
-          =link_to(t('articles.read_more'), article_path(id=article[:id]), class: 'read-more', 'aria-label':"Read the full article: "+article[:title])
+      =link_to(t('articles.read_more'), article_path(id=article[:id]), class: 'read-more', 'aria-label':"Read the full article: "+article[:title])
+
+  %hr
+
+  -article = articles['why_we_started_neverbeenworn']
+  .row
+    .col-4
+      -first_url = image_path("articles/lady-in-poppy-field.jpg")
+      =image_tag(first_url, class: 'article_col6_image', alt: "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.")
+    .col-8
+      %h2.article-title
+        =link_to(article[:title], article_path(id=article[:id]))
+      %p.published-date
+        July 2022
+      
+      %h3 We want to help
+      %p
+        We all have clothes in our wardrobe that we just never got around to wearing and we simply no longer need.
+        We know they take up too much room and we know we can’t bring ourselves to get rid of them just yet.
+        Why? Because these are great clothes and we still hope maybe we will wear them just once.
+        The sad thing is, we know this might never happen, so we are stuck and there is no more room.
+        Well great news ladies. We want to help you out with that. 
+
+      %h3 Life is busy. How can we help?
+      %p
+        We want to help all you lovely ladies out there clear out your wardrobe and find a great new
+        %br
+        ='...'
+
+      =link_to(t('articles.read_more'), article_path(id=article[:id]), class: 'read-more', 'aria-label':"Read the full article: "+article[:title])

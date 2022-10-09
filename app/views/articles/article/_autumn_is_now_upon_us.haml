@@ -1,0 +1,69 @@
+-# Set these fields for SEO purposes. They will be included in the header
+-# TODO: Do this in a more elegant way to aviod duplication with controller and view
+- content_for :meta_article_id, 'autumn_is_now_upon_us'
+- content_for :meta_article_headline, 'Autumn is now upon us'
+- content_for :meta_article_image_1, image_path("articles/autumn-leaves-sunlight.jpg")
+- content_for :meta_article_image_2, image_path("articles/lady-autumn-blue-coat.jpg")
+- content_for :meta_article_date_published, '2022-10-09T08:00:00+01:00'
+- content_for :meta_article_date_modified, '2022-10-09T08:00:00+01:00'
+
+%h2.article-title="Autumn is now upon us"
+%p.published-date
+  October 2022
+.row
+  .col-4
+    .col-12
+      -first_url = image_path("articles/autumn-leaves-sunlight.jpg")
+      =image_tag(first_url, class: 'article_col6_image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
+  .col-8
+    %h3 A change of season
+    %p
+      As neverbeenworn goes into its first autumn, we are taking a quick moment to reflect on how far we have come.
+      We are proud to be here today and you are part of that journey too.
+      So, we want to thank all you lovely ladies that have joined and come to support neverbeenworn on the journey so far.
+      There is further to go and much to do, but for now we are simply enjoying the delights of the journey.
+      There will always be things in life to deal with, and there will always be testing times along the way.
+      We hope you will find more than clothes to resell and buy at neverbeenworn,
+      we hope you will find somewhere to belong and somewhere to connect when the world feels a bit upside down.
+      We hope you will find a good community to be part of along the way. We are grateful you are here with us. 
+
+    %h3 Reflecting on the year so far
+    %p
+      As we go into autumn and feel the changes of the season upon us,
+      we reach for comfort and warmth around us and in what we wear.
+      The crisp fresh air and deep warm colours can encourage a little reflection on the time that has passed.
+      Remind yourself how far you have come this year and that you have done well.
+      Life is not always perfect and if something didn’t go quite right or just how you planned,
+      let it be a time to be kind to yourself and a reminder yourself that you are strong and resilient.
+
+
+.row 
+  .col-8
+    %h3 Looking forward in autumn
+    %p
+      Autumn brings the comfort of accessories as we reach for soft scarves,
+      warm hats and good gloves to keep us warm in the fresh crisp air.
+      So, about this time of year I like to have a good rummage through my autumn accessories and see what I have and I will need.
+      Only this year I will looking much more closely at what I have and what I will wear.
+      This year I want to really support sustainability.
+      I will be looking for anything I have not managed to wear,
+      so I can find it a new home and it can be enjoyed by someone else,
+      and I will be looking for sustainable sources for anything I might need.
+      If any of you are still new to the idea of sustainability in fashion then don’t fear,
+      there are definitely more and more opportunities for us to make more sustainable choices in fashion without losing your sense of style.
+      With your help it can become more a part of our daily lives.
+      We can make sure that choosing sustainability in fashion becomes the easy choice and it becomes the good choice for the benefit of all animals, plants and humans in the world.
+      It’s a choice that we really need to keep making to ensure that it sticks around now and for a long time in the future.
+      Let’s make the right choices this autumn. Let’s make them together. 
+  .col-4 
+    .col-12
+      -second_url = image_path("articles/lady-autumn-blue-coat.jpg")
+      =image_tag(second_url, class: 'article_col6_image', alt: "A lady takes a walk in a forest in autumn.")
+
+
+%p
+  The fashion and sustainability team
+  =link_to('neverbeenworn.co.uk', s_path)
+
+%p
+  Thanks to Marcel Strauss and Raychan Tobu @ Unsplash for images

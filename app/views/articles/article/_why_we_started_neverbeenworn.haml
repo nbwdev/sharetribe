@@ -1,13 +1,15 @@
 -# Set these fields for SEO purposes. They will be included in the header
 -# TODO: Do this in a more elegant way to aviod duplication with controller and view
 - content_for :meta_article_id, 'why_we_started_neverbeenworn'
-- content_for :meta_article_headline, 'Why We Started Neverbeenworn'
+- content_for :meta_article_headline, 'Why we started neverbeenworn'
 - content_for :meta_article_image_1, image_path("articles/lady-in-poppy-field.jpg")
 - content_for :meta_article_image_2, image_path("articles/globe-in-park.jpg")
 - content_for :meta_article_date_published, '2022-07-05T08:00:00+01:00'
 - content_for :meta_article_date_modified, '2022-07-05T08:00:00+01:00'
 
-%h2="Why We Started Neverbeenworn"
+%h2.article-title="Why we started neverbeenworn"
+%p.published-date
+  July 2022
 
 .row
   .col-4
@@ -70,3 +72,6 @@
 %p
   The fashion and sustainability team
   =link_to('neverbeenworn.co.uk', s_path)
+
+%p.image-credits
+  Thanks to Monica Turlui and Nothing Ahead @ Pexels for images
