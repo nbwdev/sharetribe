@@ -1233,8 +1233,8 @@ en:
         manage_reviews: "Manage reviews"
         you_should_investigate: "You should investigate the situation by discussing with both parties and decide to refund or dismiss the dispute. %{learn_more_link}"
         learn_more: "Learn more."
-  articles:
-    articles: Articles
+  blog:
+    blog: Blog
     article_not_found: "We couldn't find the article you are looking for. Try clicking from this page"
     read_more: "Read more"
   common:

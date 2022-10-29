@@ -781,7 +781,11 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :articles, only: [:index, :show]
+    resources :blog, only: [:index, :show]
+    resources :articles, path: 'blog', only: [:index, :show]
+
+    # redirect temporarily so the top bar articles link is not broken and to hopefully signal the move to google
+    get '/articles', to:redirect('/blog')
     
     resources :infos do
       collection do

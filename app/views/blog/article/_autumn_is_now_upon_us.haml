@@ -2,8 +2,8 @@
 -# TODO: Do this in a more elegant way to aviod duplication with controller and view
 - content_for :meta_article_id, 'autumn_is_now_upon_us'
 - content_for :meta_article_headline, 'Autumn is now upon us'
-- content_for :meta_article_image_1, image_path("articles/autumn-leaves-sunlight.jpg")
-- content_for :meta_article_image_2, image_path("articles/lady-autumn-blue-coat.jpg")
+- content_for :meta_article_image_1, image_path("blog/autumn-leaves-sunlight.jpg")
+- content_for :meta_article_image_2, image_path("blog/lady-autumn-blue-coat.jpg")
 - content_for :meta_article_date_published, '2022-10-09T08:00:00+01:00'
 - content_for :meta_article_date_modified, '2022-10-09T08:00:00+01:00'
 
@@ -13,7 +13,7 @@
 .row
   .col-4
     .col-12
-      -first_url = image_path("articles/autumn-leaves-sunlight.jpg")
+      -first_url = image_path("blog/autumn-leaves-sunlight.jpg")
       =image_tag(first_url, class: 'article_col6_image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
   .col-8
     %h3 A change of season
@@ -63,7 +63,7 @@
         =link_to('neverbeenworn.co.uk', s_path)
   .col-4 
     .col-12
-      -second_url = image_path("articles/lady-autumn-blue-coat.jpg")
+      -second_url = image_path("blog/lady-autumn-blue-coat.jpg")
       =image_tag(second_url, class: 'article_col6_image', alt: "A lady takes a walk in a forest in autumn.")
 
 

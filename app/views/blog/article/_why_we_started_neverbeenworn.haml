@@ -2,8 +2,8 @@
 -# TODO: Do this in a more elegant way to aviod duplication with controller and view
 - content_for :meta_article_id, 'why_we_started_neverbeenworn'
 - content_for :meta_article_headline, 'Why we started neverbeenworn'
-- content_for :meta_article_image_1, image_path("articles/lady-in-poppy-field.jpg")
-- content_for :meta_article_image_2, image_path("articles/globe-in-park.jpg")
+- content_for :meta_article_image_1, image_path("blog/lady-in-poppy-field.jpg")
+- content_for :meta_article_image_2, image_path("blog/globe-in-park.jpg")
 - content_for :meta_article_date_published, '2022-07-05T08:00:00+01:00'
 - content_for :meta_article_date_modified, '2022-07-05T08:00:00+01:00'
 
@@ -14,7 +14,7 @@
 .row
   .col-4
     .col-12
-      -first_url = image_path("articles/lady-in-poppy-field.jpg")
+      -first_url = image_path("blog/lady-in-poppy-field.jpg")
       =image_tag(first_url, class: 'article_col6_image', alt: "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.")
   .col-8
     %h3 Why do we want to help?
@@ -60,7 +60,7 @@
       but right now we hope it makes your life a little easier in a nice human way.
   .col-4 
     .col-12
-      -second_url = image_path("articles/globe-in-park.jpg")
+      -second_url = image_path("blog/globe-in-park.jpg")
       =image_tag(second_url, class: 'article_col6_image', alt: "A child's toy globe sits in a park. The globe has a vivid blue sea and is rotated to show Africa whose coutries are in primary colurs. There are daisies and fallen leaves on the floor around the globe.")
 
 %h3 A new beginning

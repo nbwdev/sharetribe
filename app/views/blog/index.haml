@@ -1,12 +1,12 @@
 - content_for :title_header do
-  %h1= t("articles.articles")
+  %h1= t("blog.blog")
 
-%ul.articles
+%ul.blog
 
   -article = articles['autumn_is_now_upon_us']
   .row
     .col-4
-      -first_url = image_path("articles/autumn-leaves-sunlight.jpg")
+      -first_url = image_path("blog/autumn-leaves-sunlight.jpg")
       =image_tag(first_url, class: 'article_col6_image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
     .col-8
       %h2.article-title
@@ -24,14 +24,14 @@
         %br
         ='...'
 
-      =link_to(t('articles.read_more'), article_path(id=article[:id]), class: 'read-more', 'aria-label':"Read the full article: "+article[:title])
+      =link_to(t('blog.read_more'), article_path(id=article[:id]), class: 'read-more', 'aria-label':"Read the full article: "+article[:title])
 
   %hr
 
   -article = articles['why_we_started_neverbeenworn']
   .row
     .col-4
-      -first_url = image_path("articles/lady-in-poppy-field.jpg")
+      -first_url = image_path("blog/lady-in-poppy-field.jpg")
       =image_tag(first_url, class: 'article_col6_image', alt: "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.")
     .col-8
       %h2.article-title
@@ -53,4 +53,4 @@
         %br
         ='...'
 
-      =link_to(t('articles.read_more'), article_path(id=article[:id]), class: 'read-more', 'aria-label':"Read the full article: "+article[:title])
+      =link_to(t('blog.read_more'), article_path(id=article[:id]), class: 'read-more', 'aria-label':"Read the full article: "+article[:title])

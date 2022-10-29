@@ -1,0 +1,9 @@
+- content_for :title_header do
+  %h1
+    = link_to blog_path do
+      = t("blog.blog")
+    |
+    = article_data[:title]
+
+- partial_name = "blog/article/" + article_id
+= render :partial => partial_name

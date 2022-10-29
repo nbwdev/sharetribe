@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class BlogController < ApplicationController
 
     ARTICLES = 
     {
@@ -26,8 +26,8 @@ class ArticlesController < ApplicationController
     # the ID will match the filename of the article partial under views > articles > article
     def show
         if !article_exists(params[:id])
-            flash[:error] = t("articles.article_not_found")
-            redirect_to articles_path and return
+            flash[:error] = t("blog.article_not_found")
+            redirect_to blog_path and return
         end
 
         article_id = params[:id]

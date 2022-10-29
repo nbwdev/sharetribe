@@ -144,7 +144,7 @@ class SitemapController < ActionController::Metal
             default_host: default_host,
             verbose: false,
             adapter: adapter) do
-        add articles_path, lastmod: newest_article_date
+        add blog_path, lastmod: newest_article_date
         articles.each do |key,article|
           add article_path(:id => article[:id]), lastmod: article[:created]
         end
@@ -186,7 +186,7 @@ class SitemapController < ActionController::Metal
   end
 
   def all_articles(community_id)
-    ArticlesController::ARTICLES
+    BlogController::ARTICLES
   end
 
   def most_recent_article_date(articles)
