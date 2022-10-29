@@ -85,7 +85,7 @@ module TopbarHelper
               link: menu_link.url(I18n.locale),
               title: menu_link.title(I18n.locale),
               priority: menu_link.sort_priority,
-              external: link_external?(menu_link.url(I18n.locale), host_with_port)
+              external: false
             }
           }
       }.or_else([])
