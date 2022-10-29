@@ -295,24 +295,12 @@ module ApplicationHelper
   def about_links
     links = [
       {
-        :text => t('layouts.infos.about'),
-        :icon_class => icon_class("information"),
-        :path => about_infos_path,
-        :name => "about"
-      }
-    ]
-    links << {
-      :text => t('layouts.infos.how_to_use'),
-      :icon_class => icon_class("how_to_use"),
-      :path => how_to_use_infos_path,
-      :name => "how_to_use"
-    }
-    links << {
       :text => t('layouts.infos.register_details'),
       :icon_class => icon_class("privacy"),
       :path => privacy_infos_path,
       :name => "privacy"
-    }
+      }
+    ]
     links << {
       :text => t('layouts.infos.terms'),
       :icon_class => icon_class("terms"),
@@ -324,12 +312,6 @@ module ApplicationHelper
       :icon_class => icon_class("cookies"),
       :path => cookie_policy_infos_path,
       :name => "cookie_policy"
-    }
-    links << {
-      :text => t('layouts.infos.code_of_conduct'),
-      :icon_class => icon_class("code_of_conduct"),
-      :path => code_of_conduct_infos_path,
-      :name => "code_of_conduct"
     }
   end
 

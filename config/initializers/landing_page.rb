@@ -209,7 +209,7 @@ module CustomLandingPage
         {"label": "Terms", "href": {"type": "path", "id": "terms"}},
         {"label": "Privacy", "href": {"type": "path", "id": "privacy"}},
         {"label": "Influencer club", "href": {"type": "path", "id": "new_invitation"}},
-        {"label": "Shop", "href": {"value": "/s"}}
+        {"label": "Cookies", "href": {"value": "/en/infos/cookie_policy"}}
       ],
       "social": [
         {"service": "facebook", "url": "https://www.facebook.com/neverbeenworn/"},
