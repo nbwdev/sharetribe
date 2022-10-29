@@ -27,7 +27,7 @@ class BlogController < ApplicationController
     def show
         if !article_exists(params[:id])
             flash[:error] = t("blog.article_not_found")
-            redirect_to blog_path and return
+            redirect_to articles_path and return
         end
 
         article_id = params[:id]
