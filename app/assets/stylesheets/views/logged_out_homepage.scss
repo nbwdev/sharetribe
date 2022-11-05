@@ -87,6 +87,14 @@ article.page-content.no-padding-bottom {
                 max-height: inherit;
                 height: inherit;
                 width: inherit;
+
+                @include border-radius(20px);
+
+                &:hover {
+                    transform: scale(1.011);
+                    @include prefix-prop(transition, all 50ms ease-in-out);
+                }
+        
             }
 
             .intro-image-2 {
@@ -158,8 +166,23 @@ article.page-content.no-padding-bottom {
                 flex-direction: column;
                 flex: 1 1 0;
 
+                &:hover {
+                    transform: scale(1.011);
+                    @include prefix-prop(transition, all 50ms ease-in-out);
+                }
+
                 img {
-                    border-radius: 50%;
+
+                    width: 200px;
+                    @media (min-width: 569px) and (max-width: 700px) {
+                        width: 180px;
+                    }
+                    @media (min-width: 1023px) {
+                        width: 300px;
+                    }                
+    
+                    @include border-radius(20px);
+
                     border-style: solid;
                     border-width: 2px;
                     border-color: #ffffff;
