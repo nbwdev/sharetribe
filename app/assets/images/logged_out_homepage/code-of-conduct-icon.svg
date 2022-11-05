@@ -1,0 +1,11 @@
+<!--
+    Credit:
+    <a href="https://iconscout.com/icons/heart" target="_blank">Heart Icon</a> by <a href="https://iconscout.com/contributors/buatoom" target="_blank">Buatoom</a>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.77 61.32">
+  <g data-name="Layer 2">
+    <path fill="#b76a8a" d="M41.63 17.65c-26.24-25.71-54.45 24.79 0 43.67 54.46-18.89 26.24-69.38 0-43.67z" opacity=".15"/>
+    <path fill="none" stroke="#783676" stroke-miterlimit="10" stroke-width="5" d="M33.63 9.65c-26.24-25.71-54.45 24.78 0 43.67 54.46-18.89 26.24-69.38 0-43.67z"/>
+    <ellipse cx="17.49" cy="15.33" fill="none" stroke="#783676" stroke-miterlimit="10" stroke-width="2" rx="6.12" ry="5" transform="rotate(-35.23 17.479 15.327)"/>
+  </g>
+</svg>

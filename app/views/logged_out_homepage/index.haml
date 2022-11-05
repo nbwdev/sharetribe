@@ -1,0 +1,115 @@
+- content_for :title_header do
+  %h1.logged-out-homepage
+    Welcome to neverbeenworn.co.uk
+
+- content_for :page_article_class do
+  = "no-padding-bottom"
+- content_for :page_wrapper_class do
+  = "no-min-width"
+
+.logged_out_homepage 
+  .intro-container
+    .intro-section
+      %p
+        Do you have clothes in your wardrobe that have never been worn?
+
+      %p
+        Are they taking up too much space?
+    
+      .intro-images
+        .intro-image.intro-image-1
+          = link_to("/signup", :class => "intro-link") do
+            -image_url = image_path("logged_out_homepage/choosing-clothes-pink.jpg")
+            =image_tag(image_url, class: 'intro-image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
+        .intro-image.intro-image-2
+          = link_to("/signup", :class => "intro-link") do
+            -image_url = image_path("logged_out_homepage/choosing-clothes-sunny-window.jpg")
+            =image_tag(image_url, class: 'intro-image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
+    
+      %p
+        Now you can re-sell them at neverbeenworn.co.uk
+
+      %p
+        Start clearing out your wardrobe and get cash too!
+
+      %a.hp-button.hp-button-standard
+        Join us for free
+
+  .quick-guide-container
+    .quick-guide
+      %h2
+        Quick Guide
+      %p.so-simple
+        It's so simple
+      
+      .guide-columns
+        .guide-column
+          .guide-column-content
+            -image_url = image_path("logged_out_homepage/taking-photo-of-shirt.jpg")
+            =image_tag(image_url, class: 'step_img', alt: "Person with a smartphone taking a photo of a blue denim shirt.")
+            %p.step-number
+              1
+            %p.step-description
+              list your item for free
+        .guide-column
+          .guide-column-content
+            -image_url = image_path("logged_out_homepage/unboxing.jpg")
+            =image_tag(image_url, class: 'step_img', alt: "A lady sits on a sofa opening a cardboard box. She is looking into the box and smiling.")
+            %p.step-number
+              2
+            %p.step-description
+              sell it and send it to its new home
+        .guide-column
+          .guide-column-content
+            -image_url = image_path("logged_out_homepage/make-it-rain.jpg")
+            =image_tag(image_url, class: 'step_img', alt: "A lady smiles as she holds a stack of bank notes in each hand while more bank notes rain down from above.")
+            %p.step-number
+              3
+            %p.step-description
+              and you get cash!
+    
+      %a.hp-button.hp-button-inverted
+        Join us for free
+  
+  .tips-container
+    .tips
+      -image_url = image_path("logged_out_homepage/insta-autumn-leggings.jpg")
+      =image_tag(image_url, class: 'step_img', alt: "Autumn Tips: Match your leggings with ankle boots for a longer leg.")
+
+      %p.follow-insta
+        Follow us on instagram for more
+    
+  .our-story-container
+    .our-story
+      %h2
+        Our Story
+      .our-story-columns
+        .our-story-column
+          .our-story-icon.about-icon
+          %h3.our-story-title
+            About
+          %p.our-story-text
+            Building a community
+          .story-button-container
+            = link_to("/en/infos/about", :class => "about-button hp-button hp-button-inverted") do
+              About
+        .our-story-column
+          .our-story-icon.how-it-works-icon
+          %h3.our-story-title
+            How it works
+          %p.our-story-text
+            Simple and quick how-to guides
+          .story-button-container
+            = link_to("/en/infos/how_to_use", :class => "about-button hp-button hp-button-inverted") do
+              How it works
+        .our-story-column
+          .our-story-icon.code-of-conduct-icon
+          %h3.our-story-title
+            Little Code of Conduct
+          %p.our-story-text
+            Being good to each other
+          .story-button-container
+            = link_to("/en/infos/code_of_conduct", :class => "about-button hp-button hp-button-inverted") do
+              Little Code of Conduct
+
+

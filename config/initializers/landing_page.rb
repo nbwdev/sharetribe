@@ -160,7 +160,7 @@ module CustomLandingPage
       "id": "further_reading",
       "kind": "info",
       "variation": "multi_column",
-      "title": "Things you might like to read...",
+      "title": "Our Story",
       "background_color": [247, 155, 177],
       "button_color": {"type": "marketplace_data", "id": "primary_color"},
       "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},

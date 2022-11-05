@@ -1,0 +1,14 @@
+<!--
+    Credit:
+    Icon from buatoom: https://dribbble.com/shots/1658992-Free-Lined-Icons
+    Download credit: <a href="https://iconscout.com/icons/magnifier" target="_blank">Magnifier Icon</a> by <a href="https://iconscout.com/contributors/buatoom">Buatoom</a> on <a href="https://iconscout.com">IconScout</a>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.32 65.32">
+  <g data-name="Layer 2">
+    <circle cx="35.15" cy="35.15" r="25.65" fill="#b76a8a" opacity=".15" transform="rotate(-45 35.15 35.15)"/>
+    <circle cx="28.15" cy="28.15" r="25.65" fill="none" stroke="#783676" stroke-miterlimit="10" stroke-width="5" transform="rotate(-45 28.15 28.15)"/>
+    <ellipse cx="17.76" cy="17.76" fill="none" stroke="#783676" stroke-miterlimit="10" stroke-width="2" rx="7.84" ry="4.79" transform="rotate(-45 17.758 17.764)"/>
+    <path fill="none" stroke="#783676" stroke-miterlimit="10" stroke-width="3" d="M49.66 49.66l1.87 1.87"/>
+    <path fill="none" stroke="#783676" stroke-miterlimit="10" stroke-width="5" d="M53.2 53.2l10.35 10.35"/>
+  </g>
+</svg>

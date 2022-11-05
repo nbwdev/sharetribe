@@ -74,6 +74,9 @@ Rails.application.routes.draw do
   locale_matcher = Regexp.new(locale_regex_string)
   locale_matcher_anchored = Regexp.new("^(#{locale_regex_string})$")
 
+  # New home/landing page
+  get '/logged_out_homepage' => 'logged_out_homepage#index'
+
   # Conditional routes for custom landing pages
   get '/:locale/' => 'landing_page#index', as: :landing_page_with_locale, constraints: ->(request) {
     locale_matcher_anchored.match(request.params["locale"]) &&
