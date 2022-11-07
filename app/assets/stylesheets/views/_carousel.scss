@@ -3,63 +3,137 @@
 
 .logged_out_homepage {
 
-    p {
-        hyphens: none;
-    }
+    .tips-container {
 
-    .carousel-item {
-        display: flex;
-        justify-content: center;
-    }
-    .insta-container {
-        margin-left: 10px;
-        margin-right: 10px;
-        display: flex;
-        justify-content: center;
-        background-color: #783676;
-        border-radius: 20px;
-        max-width: -moz-fit-content;
-        max-width: fit-content;
-        
-        .image-container, .text-container {
-            width: 300px;
-            height: 300px;
+        div.carousel-hide {
+            display: none;
         }
 
-        img {
-            border-bottom-left-radius: 20px;
-            border-top-left-radius: 20px;
-        }
-
-        .text-container {
-            background-color: $nbw-dark;
-
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-
-        .tip-title, .tip-text {
-            color: $nbw-pale;
-            margin-bottom: 0;
-            font-size: 28px;
-            line-height: normal;
-        }
-
-        .tip-title {
-            margin-top: 15px;
-            font-size: 34px;
-        }
-
-        .tip-text {
-            flex: 1;
+        .carousel-item {
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding-bottom: 17px;
+        }
+
+        .insta-container {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: #783676;
+            border-radius: 20px;
+            max-width: -moz-fit-content;
+            max-width: fit-content;
+            
+            .image-container, .text-container {
+                width: 200px;
+                height: 200px;
+            }
+   
+            @media #{$desktop} {
+                .image-container, .text-container {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            img {
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .text-container {
+                background-color: $nbw-dark;
+
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            .tip-title, .tip-text {
+                color: $nbw-pale;
+                margin-bottom: 0;
+                line-height: normal;
+            }
+
+            .tip-title {
+                margin-top: 15px;
+                font-size: 22px;
+            }
+
+            .tip-text {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 17px;
+                font-size: 20px;
+            }
+
+            @media #{$desktop} {
+                .tip-title {
+                    font-size: 34px;
+                }
+    
+                .tip-text {
+                    font-size: 28px;
+                }    
+            }
+        }
+
+        .slick-list{padding:0 20% 0 20% !important;}
+        button.slick-prev:before, button.slick-next:before {
+            color: $nbw-dark;
+        }
+        .slick-slide {
+            margin: 0;
+        }
+
+        button.slick-next {
+            display: block;
+            z-index: 100;
+            padding-top: 151px;
+            padding-bottom: 187px;
+            right: 0px;
+            padding-left: 170px;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,1) 100%);
+        }
+
+        button.slick-next:before {
+            margin-left: -45px;
+            font-size: 40px;
+        }
+
+        button.slick-prev {
+            display: block;
+            z-index: 100;
+            padding-top: 151px;
+            padding-bottom: 187px;
+            left: 0px;
+            padding-right: 170px;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+        }
+
+        button.slick-prev:before {
+            margin-left: 0px;
+            font-size: 40px;
+        }
+
+        ul.slick-dots {
+
+            li.slick-active > button:before {
+                opacity: 1;
+            }
+
+            button:before {
+                font-size:25px;
+                margin-top: 10px;
+                color: $nbw-dark;
+            }
         }
     }
 }

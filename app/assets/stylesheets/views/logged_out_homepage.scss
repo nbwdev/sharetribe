@@ -3,11 +3,14 @@
 
 /*
     min width magic numbers:
-desktop: 1024px;
-$tablet: 768px;
-$tablet-small: 568px;
-$mobile: 400px;
+    desktop: 1024px;
+    $tablet: 768px;
+    $tablet-small: 568px;
+    $mobile: 400px;
 */ 
+
+$mini-tablet: "(min-width: 660px)";
+
 
 article.page-content.no-padding-bottom {
     padding-bottom: 0;
@@ -32,7 +35,7 @@ article.page-content.no-padding-bottom {
         font-size: 2em;
     }
 
-    @media (min-width: 1023px) {
+    @media #{$desktop} {
         font-size: 3em;
     }
 }
@@ -50,6 +53,7 @@ article.page-content.no-padding-bottom {
         font-size: 1.5em;
         line-height: 1.5em;
         text-align: center;
+        hyphens: none;
     }
 
     .intro-container {
@@ -61,7 +65,7 @@ article.page-content.no-padding-bottom {
         margin: 0 auto;
         text-align: center;
         
-        @media (min-width: 568px) {
+        @media (min-width: 660px) {
             width: 100%;
         }
         
@@ -69,7 +73,7 @@ article.page-content.no-padding-bottom {
             max-width: 1132px;
         }
 
-        @media (max-width: 568px) {
+        @media (max-width: 660px) {
             margin-left: 1em;
             margin-right: 1em;
         }
@@ -98,7 +102,7 @@ article.page-content.no-padding-bottom {
             }
 
             .intro-image-2 {
-                @media (max-width: 568px) {
+                @media (max-width: 660px) {
                     display: none;
                 }
             }
@@ -145,7 +149,7 @@ article.page-content.no-padding-bottom {
             font-size: 3em;
             font-weight: 400;
 
-            @media (max-width: 568px) {
+            @media (max-width: 660px) {
                 font-size: 2em;
             }
         }
@@ -157,7 +161,7 @@ article.page-content.no-padding-bottom {
             margin: auto;
             margin-bottom: 0.5em;
 
-            @media (max-width: 568px) {
+            @media (max-width: 660px) {
                 flex-direction: column;
             }
 
@@ -177,7 +181,7 @@ article.page-content.no-padding-bottom {
                     @media (min-width: 569px) and (max-width: 700px) {
                         width: 180px;
                     }
-                    @media (min-width: 1023px) {
+                    @media #{$desktop} {
                         width: 300px;
                     }                
     
@@ -191,13 +195,13 @@ article.page-content.no-padding-bottom {
                 p.step-number {
                     font-weight: bolder;
 
-                    @media (max-width: 568px) {
+                    @media (max-width: 660px) {
                         margin-bottom: 0;
                     }        
                 }
 
                 p.step-description {
-                    @media (max-width: 568px) {
+                    @media (max-width: 660px) {
                         margin-bottom: 1em;
                     }        
                 }
@@ -213,17 +217,9 @@ article.page-content.no-padding-bottom {
         padding-bottom: 2.5em;
         margin: auto;
 
-        .carousel-hide {
-            display: none;
-        }
-
-        @media (max-width: 568px) {
+        @media (max-width: 660px) {
             margin-left: 1em;
             margin-right: 1em;
-        }
-
-        img {
-            max-width: 100%;
         }
 
         a.follow-insta {
@@ -244,59 +240,6 @@ article.page-content.no-padding-bottom {
         }
 
         max-width: 1024px;
-        img {
-            margin: 0;
-        }
-        .slick-list{padding:0 20% 0 20% !important;}
-        button.slick-prev:before, button.slick-next:before {
-            color: $nbw-dark;
-        }
-        .slick-slide {
-            margin: 0;
-        }
-
-        button.slick-next {
-            display: block;
-            z-index: 100;
-            padding-top: 151px;
-            padding-bottom: 187px;
-            right: 0px;
-            padding-left: 170px;
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,1) 100%);
-        }
-
-        button.slick-next:before {
-            margin-left: -45px;
-            font-size: 40px;
-        }
-
-        button.slick-prev {
-            display: block;
-            z-index: 100;
-            padding-top: 151px;
-            padding-bottom: 187px;
-            left: 0px;
-            padding-right: 170px;
-            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
-        }
-
-        button.slick-prev:before {
-            margin-left: 0px;
-            font-size: 40px;
-        }
-
-        ul.slick-dots {
-
-            li.slick-active > button:before {
-                opacity: 1;
-            }
-
-            button:before {
-                font-size:25px;
-                margin-top: 10px;
-                color: $nbw-dark;
-            }
-        }
     }
 
     .our-story-container {
@@ -311,7 +254,7 @@ article.page-content.no-padding-bottom {
                 font-size: 3em;
                 padding-top: 1em;
 
-                @media (min-width: 568px) {
+                @media (min-width: 660px) {
                     margin-bottom: 1em;
                 }
             }
@@ -322,7 +265,7 @@ article.page-content.no-padding-bottom {
                 justify-content: center;
                 margin: auto;
 
-                @media (max-width: 568px) {
+                @media (max-width: 660px) {
                     flex-direction: column;
                 }    
     
@@ -356,14 +299,14 @@ article.page-content.no-padding-bottom {
                         font-size: 1.75em;
 
                         margin-bottom: 0.25em;
-                        @media (min-width: 568px) {
+                        @media (min-width: 660px) {
                             margin-bottom: 1.25em;
                         }
                     }
 
                     p { 
                         font-size: 1.25em;
-                        @media (min-width: 568px) {
+                        @media (min-width: 660px) {
                             margin-bottom: 1.25em;
                         }
                     }
