@@ -106,4 +106,8 @@
 
 = auto_discovery_link_tag(:atom, atom_feed_url )
 
+-# Allow a page to add its own css just for that page
+- if content_for?(:page_specific_css)
+  = yield(:page_specific_css)
+
 = render 'layouts/head_script'

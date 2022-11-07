@@ -6,6 +6,22 @@
   = "no-padding-bottom"
 - content_for :page_wrapper_class do
   = "no-min-width"
+- content_for :page_specific_css do
+  /%link{:rel => "stylesheet", :href => "/assets/thirdparty/slick-slider/slick.css", :media => "print", :onload => "this.media='all'"}
+  /%link{:rel => "stylesheet", :href => "/assets/thirdparty/slick-slider/slick-theme.css", :media => "print", :onload => "this.media='all'"}
+
+  %link{:rel => "stylesheet", :type => "text/css", :href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
+  %link{:rel => "stylesheet", :type => "text/css", :href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"}
+- content_for :extra_javascript do
+  %script{:type => "text/javascript", :src => "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
+  :javascript
+    $(".tips-carousel").slick( {
+      centerMode: true,
+      centerPadding: '2px',
+      variableWidth: true,
+      dots: true
+    });
+    $(".carousel-hide").removeClass("carousel-hide");
 
 .logged_out_homepage 
   .intro-container
@@ -72,13 +88,17 @@
         Join us for free
   
   .tips-container
-    .tips
-      -image_url = image_path("logged_out_homepage/insta-autumn-leggings.jpg")
-      =image_tag(image_url, class: 'step_img', alt: "Autumn Tips: Match your leggings with ankle boots for a longer leg.")
+    =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}
 
-      %p.follow-insta
-        Follow us on instagram for more
+    %p
+    = link_to("https://instagram.com/neverbeenwornuk", :class => "follow-insta") do
+      Find us on instagram 
+      %span.instagram<
+        = render 'layouts/footer/social_icons', social_service: "instagram"
+        neverbeenwornuk
     
+    /=render :partial => "logged_out_homepage/carousel_item", :locals => {item_class: ""}
+
   .our-story-container
     .our-story
       %h2
