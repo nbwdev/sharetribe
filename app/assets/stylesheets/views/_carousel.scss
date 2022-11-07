@@ -23,7 +23,7 @@
             border-radius: 20px;
             max-width: -moz-fit-content;
             max-width: fit-content;
-            
+
             .image-container, .text-container {
                 width: 200px;
                 height: 200px;
@@ -69,9 +69,21 @@
                 flex: 1;
                 display: flex;
                 justify-content: center;
-                align-items: center;
                 padding-bottom: 17px;
                 font-size: 20px;
+                margin-top: 10px;
+            }
+
+            @media (max-width: 660px) {
+                flex-direction: column;
+
+                img.carousel-img {
+                    border-radius: 20px 20px 0 0;
+                }
+
+                div.text-container {
+                    border-radius: 0 0 20px 20px;
+                }
             }
 
             @media #{$desktop} {
@@ -81,7 +93,9 @@
     
                 .tip-text {
                     font-size: 28px;
-                }    
+                    min-height: 220px;
+                    margin-top: 20px;
+                }
             }
         }
 
@@ -93,12 +107,15 @@
             margin: 0;
         }
 
-        button.slick-next {
+        button.slick-next, button.slick-prev {
             display: block;
             z-index: 100;
-            padding-top: 151px;
-            padding-bottom: 187px;
-            right: 0px;
+            padding-top: 121px;
+            padding-bottom: 157px;
+        }
+
+        button.slick-next {
+            right: -1px;
             padding-left: 170px;
             background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,1) 100%);
         }
@@ -109,11 +126,7 @@
         }
 
         button.slick-prev {
-            display: block;
-            z-index: 100;
-            padding-top: 151px;
-            padding-bottom: 187px;
-            left: 0px;
+            left: -1px;
             padding-right: 170px;
             background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
         }
@@ -133,6 +146,30 @@
                 font-size:25px;
                 margin-top: 10px;
                 color: $nbw-dark;
+            }
+        }
+
+        @media #{$desktop} {
+            button.slick-next, button.slick-prev {
+                display: block;
+                z-index: 100;
+                padding-top: 151px;
+                padding-bottom: 187px;
+            }    
+        }
+
+        @media (max-width: 660px) {
+            button.slick-next, button.slick-prev {
+                padding-top: 191px;
+                padding-bottom: 227px;
+            }
+
+            button.slick-next {
+                padding-left: 60px;
+            }
+
+            button.slick-prev {
+                padding-right: 60px;
             }
         }
     }
