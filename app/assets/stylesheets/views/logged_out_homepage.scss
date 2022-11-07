@@ -273,7 +273,7 @@ article.page-content.no-padding-bottom {
                     display: flex;
                     flex-direction: column;
                     margin: 0 50px 50px 50px;
-                    justify-content: center;
+                    justify-content: space-between;
                     flex: 1 1 0;
     
                     .our-story-icon {
@@ -311,8 +311,30 @@ article.page-content.no-padding-bottom {
                         }
                     }
                 }
+
+                @media (min-width: 660px) and (max-width: 1024.9px) {
+                    div.story-button-container {
+                        min-height: 104px;
+                    }
+                }    
             }
+
     
+    
+            @media #{$desktop} {
+                div.our-story-column {
+                    min-height: 300px;
+
+                    h3.our-story-title {
+                        min-height: 48px;
+                        margin-bottom: 5px;
+                    }
+
+                    p.our-story-text {
+                        min-height: 60px;
+                    }
+                }
+            }
         }
     }
 
