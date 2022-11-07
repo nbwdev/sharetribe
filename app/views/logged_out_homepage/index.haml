@@ -12,6 +12,11 @@
 
   %link{:rel => "stylesheet", :type => "text/css", :href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
   %link{:rel => "stylesheet", :type => "text/css", :href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"}
+  / temp
+  :css
+    span.ShopButton_background { background-color: #783676; }
+    span.AddNewListingButton_background {background-color: #783676; }
+
 - content_for :extra_javascript do
   %script{:type => "text/javascript", :src => "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
   :javascript
@@ -23,8 +28,8 @@
     });
     $(".carousel-hide").removeClass("carousel-hide");
     // temp until I change all the shop buttons
-    $(".ShopButton_background").css("background-color","#783676");
-    $(".AddNewListingButton_background").css("background-color","#783676");
+    //$(".ShopButton_background").css("background-color","#783676");
+    //$(".AddNewListingButton_background").css("background-color","#783676");
 
 .logged_out_homepage 
   .intro-container

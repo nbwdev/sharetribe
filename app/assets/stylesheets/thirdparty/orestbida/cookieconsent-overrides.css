@@ -1,10 +1,10 @@
 #cc-main {
 
     /** Change button primary color to black **/
-    --cc-btn-primary-bg: #F79BB1;
-    --cc-btn-primary-border-color: #F79BB1;
-    --cc-btn-primary-hover-bg: #ee2b59;
-    --cc-btn-primary-hover-border-color: #ee2b59;
+    --cc-btn-primary-bg: #783676;
+    --cc-btn-primary-border-color: #783676;
+    --cc-btn-primary-hover-bg: #5E2A5D;
+    --cc-btn-primary-hover-border-color: #5E2A5D;
 
     /** Also make toggles the same color as the button **/
     --cc-toggle-on-bg: var(--cc-btn-primary-bg);
