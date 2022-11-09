@@ -95,7 +95,7 @@
     =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}
 
     %p
-    = link_to("https://instagram.com/neverbeenwornuk", :class => "follow-insta") do
+    = link_to("https://instagram.com/neverbeenwornuk", :class => "follow-insta", :target => "_blank") do
       Find us on instagram 
       %span.instagram<
         = render 'layouts/footer/social_icons', social_service: "instagram"
