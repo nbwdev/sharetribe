@@ -88,6 +88,7 @@ article.page-content.no-padding-bottom {
             gap: 1em;
 
             @media #{$desktop} {
+                max-height: 382px;
                 margin-bottom: 10px;
             }
 
@@ -104,12 +105,6 @@ article.page-content.no-padding-bottom {
                     @include prefix-prop(transition, all 50ms ease-in-out);
                 }
         
-            }
-
-            .intro-image-2 {
-                @media (max-width: 660px) {
-                    display: none;
-                }
             }
 
             a.intro-link {
