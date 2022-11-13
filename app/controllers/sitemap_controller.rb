@@ -129,7 +129,7 @@ class SitemapController < ActionController::Metal
 
   def render_site_map(community)
     cache_hit = true
-    default_host = community.full_domain(with_protocol: true)
+    default_host = "https://neverbeenworn.co.uk"
 
     sitemap = from_cache([community.id, max_sitemap_links, default_host]) do
       cache_hit = false
