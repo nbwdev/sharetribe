@@ -51,9 +51,9 @@ body {
 
   p {
     margin-bottom: lines(0.5);
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
     overflow-wrap: break-word;
     word-wrap: break-word;
   }

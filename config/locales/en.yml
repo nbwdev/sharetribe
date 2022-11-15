@@ -2723,6 +2723,8 @@ en:
     please_comment: Comment
   mercury:
     content_too_long: "Inserted content was too long."
+  my_story:
+    my_story: "My Story"
   okl:
     member_id: "Member id"
     member_id_or_email: "Member id or email"

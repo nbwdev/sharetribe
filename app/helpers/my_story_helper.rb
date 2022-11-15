@@ -1,0 +1,2 @@
+module MyStoryHelper
+end

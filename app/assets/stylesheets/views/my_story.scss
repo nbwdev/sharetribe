@@ -1,0 +1,49 @@
+@import "../landing_page/mixins/all";
+
+.my_story {
+
+    p {
+        text-align: justify;
+    }
+
+    @media #{$mobile} {
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+
+    .my-story-image {
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 400px;
+        float: right;
+        margin-left: 20px;
+        background-size: cover;
+    }
+
+    .my-story-section {
+        overflow: hidden;
+        margin-bottom: 3em;
+    }
+
+    .section-1
+    {
+        .my-story-image {
+            background-image: url(image-path("my_story/wardrobe-messy.jpg"));
+        }
+    }
+
+    .section-2
+    {
+        .my-story-image {
+            background-image: url(image-path("my_story/wardrobe-tidy.jpg"));
+            }
+    }
+
+    .section-3
+    {
+        .my-story-image {
+            background-image: url(image-path("my_story/contemplating-wardrobe-challenge.jpg"));
+        }
+    }
+}

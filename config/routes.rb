@@ -790,6 +790,9 @@ Rails.application.routes.draw do
     # redirect temporarily so the top bar articles link is not broken and to hopefully signal the move to google
     get '/articles', to:redirect('/blog')
     
+    # standalone "My Story" page replaces the about page
+    resources :my_story, only: [:index]
+
     resources :infos do
       collection do
         get :about
