@@ -1,0 +1,110 @@
+-# Set these fields for SEO purposes. They will be included in the header
+-# TODO: Do this in a more elegant way to aviod duplication with controller and view
+- content_for :meta_article_id, 'big_boots_how_to_wear_them'
+- content_for :meta_article_headline, 'Big Boots - How to Wear Them'
+- content_for :meta_article_image_1, image_path("blog/sitting-on-plinth.jpg")
+- content_for :meta_article_image_2, image_path("blog/black-boots-stepping.jpg")
+- content_for :meta_article_image_3, image_path("blog/white-boots-sitting.jpg")
+- content_for :meta_article_date_published, '2022-11-15T08:00:00+01:00'
+- content_for :meta_article_date_modified, '2022-11-15T08:00:00+01:00'
+
+%h2.article-title="Big Boots - How to Wear Them"
+%p.published-date
+  November 2022
+.row
+  .col-4
+    .col-12
+      -first_url = image_path("blog/sitting-on-plinth.jpg")
+      =image_tag(first_url, class: 'article_col6_image', alt: "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.")
+  .col-8
+    %h3 Big boots
+    %p
+      Big boots are here for another autumn and winter season.
+    %p
+      If you already have a pair then great news, you are good to go this autumn and winter
+    %p
+      Which is great news for your wardrobe too.
+    %p
+      Your boots will already be matched well to your current wardrobe and everything like to wear
+    %p
+      If you are new to big boots then it’s important to pick the right ones for you from the start.
+
+    %h3 Before you choose
+    %p
+      Knowing your current wardrobe and overall style will help you make the right choice when selecting your big boots for this autumn and winter.
+    %p
+      It’s important to know what will suit you best and what will help you build on what you already have and wear.
+    %p
+      The right boots will instantly compliment  your current style and a new look to everything you are wearing right now and plan to wear the coming months
+    %p
+      It’s a really good idea to take into account the time of year and weather changes too, this is vital if you are to avoid making an unsuitable choice that wont last until the next season.
+
+
+.row 
+  .col-8
+    %h3 What style is right for you
+    %p
+      There are a few things that you should really think about before you make your choice
+    %p
+      Think about you height and frame and consider what type of garment you wear on your lover half most.
+    %p
+      Some big boots are quite long and best suited to longer legs and they can sometimes reduce the appearance of a shorter leg even more.
+    %p
+      Leggings are often the best option but if you wear jeans more for instance you might prefer a less chunky boot.
+    %p
+      Another thing to think about is the sole. If you are happy with a few extra inches, great big boots are just the thing right now
+    %p
+      If you are more happy with your current height or are already on the tall side then some boots might be adding to much height for you.
+
+  .col-4 
+    .col-12
+      -second_url = image_path("blog/black-boots-stepping.jpg")
+      =image_tag(second_url, class: 'article_col6_image', alt: "A lady stretches one foot out as she walks next to a bright blue-painted brick wall.")
+
+.row
+  .col-4
+    .col-12
+      -first_url = image_path("blog/white-boots-sitting.jpg")
+      =image_tag(first_url, class: 'article_col6_image', alt: "Wearing white 8 hole boots and a black lace dress, sitting on a wooden floor.")
+  .col-8
+    %h3 What colour is right for you
+    %p
+      Picking the right colour is going to be the make or break of your big boot purchase
+    %p
+      Think about what colours you are already wearing.
+    %p
+      If you wear all black, maybe think about a contrasting neutral colour that will compliment all black.
+    %p
+      Most colours go well with black anyway, so you are free to be as adventurous as you want.
+    %p
+      Black will also work if your main wardrobe colours are more varied or neutral.
+    %p
+      If you are unsure, try a few different colours on and see how you feel an look in them.
+
+    %h3 What price is right for you
+    %p
+      Budgets vary and so does quality.
+    %p
+      If you plan to wear your big boots all the time it is best to go for a good strong sole that won’t wear out to quickly, especially if you want it to last a few seasons.
+    %p
+      The rest of the boot should also be made of a good quality material, one that you are happy with and again one that will last a few seasons
+    %p
+      Whether its elasticated, leather, repurposed, or otherwise do make sure it will withstand the level of use you have planned
+    %p
+      Comfort and ease of use is always another great thing to consider.
+    %p
+      You want your big boots to be easy to get in and out of no matter what the time of day or weather.
+    %p
+      If it is cold and wet outside you don’t want to come in and be struggling with a big wet boot and cold hands.
+    %p
+      Make the right choice and you and your boots will have a great few season together and will come together with you and your wardrobe effortlessly every time.
+
+
+%p
+  If you found this article useful do let us know. We would love to hear from you. Send an email to
+  %br
+  =link_to('neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Big Boots')
+  with the subject ‘Big Boots’. If there is anything you would love to ready about. We would be happy to considered your request too.
+
+%p
+  Thanks to Marcel Strauss and Raychan Tobu @ Unsplash for images

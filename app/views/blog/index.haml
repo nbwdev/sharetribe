@@ -4,6 +4,25 @@
 .blog
   .articles-grid
     %ul.blog-articles
+      -article = articles['big_boots_how_to_wear_them']
+      -image_url = image_path("blog/sitting-on-plinth-square.jpg")
+      %li.article-card.col-5{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            Big boots are here for another autumn and winter season.
+            <br>
+            Here's how to choose the right pair for you
+            
       -article = articles['sustainability_in_autumn']
       -image_url = image_path("blog/autumn-leaves-square.jpg")
       %li.article-card.col-5{:role => "article"}
@@ -38,4 +57,5 @@
                   Read
           %p.article-summary
             We all have clothes in our wardrobe that we never quite got around to wearing and can't bring ourselves to get rid of.
+            <br>
             We want to help you to find a great home for them and start a little change on the way
