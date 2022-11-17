@@ -184,6 +184,17 @@ p.published-date {
         margin-bottom: 3em;
     }
 
+    .article-text {
+        span.li-heading {
+            font-weight: bold;
+        }
+
+        span.challenge-time {
+            font-style: italic;
+            white-space: nowrap;
+        }
+    }
+
     .article-image {
         background-repeat: no-repeat;
         width: 33.333333%;

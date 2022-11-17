@@ -16,6 +16,11 @@ class BlogController < ApplicationController
             :id => 'big_boots_how_to_wear_them',
             :title => 'Big Boots - How to Wear Them',
             :created => Date.new(2022,11,15)
+        },
+        'the_wardrobe_challenge' => {
+            :id => 'the_wardrobe_challenge',
+            :title => 'The Wardrobe Challenge',
+            :created => Date.new(2022,11,19)
         }
     }
 

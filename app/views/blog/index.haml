@@ -4,6 +4,25 @@
 .blog
   .articles-grid
     %ul.blog-articles
+      -article = articles['the_wardrobe_challenge']
+      -image_url = image_path("blog/sitting-on-plinth-square.jpg")
+      %li.article-card.col-5{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "Choosing between a plain white shirt and a white and green striped top.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            Take the wardrobe challenge.
+            <br>
+            A step by step guide to winning back your wardrobe space
+            
       -article = articles['big_boots_how_to_wear_them']
       -image_url = image_path("blog/sitting-on-plinth-square.jpg")
       %li.article-card.col-5{:role => "article"}
