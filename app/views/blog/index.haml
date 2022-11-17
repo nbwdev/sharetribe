@@ -5,7 +5,7 @@
   .articles-grid
     %ul.blog-articles
       -article = articles['the_wardrobe_challenge']
-      -image_url = image_path("blog/sitting-on-plinth-square.jpg")
+      -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
       %li.article-card.col-5{:role => "article"}
         = link_to(article_path(id=article[:id]), :class => "article-link") do
           .article-image-container
