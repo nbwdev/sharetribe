@@ -2,6 +2,15 @@
   %h1.logged-out-homepage
     Welcome to neverbeenworn.co.uk
 
+- content_for :footer_attribution do
+  Images by
+  =link_to "https://www.freepik.com/free-photo/attractive-stylish-smiling-woman-choosing-apparel-clothing-store_10686399.htm", target: '_blank' do
+    marymarkevich
+  and
+  =link_to "https://www.freepik.com/free-photo/beautiful-female-with-happy-expression-looking-through-her-clothes-being-glad-choose-outfit-by-herself-glad-woman-looking-through-clothing-closet-having-positive-look-posing-fitting-room_9439036.htm", target: '_blank' do
+    wayhomestudio
+  on Freepik
+
 - content_for :page_article_class do
   = "no-padding-bottom"
 - content_for :page_wrapper_class do
@@ -27,33 +36,45 @@
       dots: true
     });
     $(".carousel-hide").removeClass("carousel-hide");
-    // temp until I change all the shop buttons
-    //$(".ShopButton_background").css("background-color","#783676");
-    //$(".AddNewListingButton_background").css("background-color","#783676");
 
 .logged_out_homepage 
+
+  .banner
+    .caption
+      %h2.banner-title
+        Never Worn It?
+        <br>
+        Why Keep It?
+      %p.banner-text
+        Declutter and elevate your life
+      .button-container
+        = link_to("/signup", :class => "hp-button hp-banner-button") do
+          Sell now
+    -image_url = image_path("logged_out_homepage/holding-orange-red-dresses.jpg")
+    =image_tag(image_url, class: 'intro-image', alt: "A lady holds two new dresses as if choosing which to wear.")
+
   .intro-container
     .intro-section
-      %p
-        Do you have clothes in your wardrobe that have never been worn?
+      .intro-content
+        .intro-image
+          = link_to("/blog/the_wardrobe_challenge", :class => "intro-link") do
+            -image_url = image_path("logged_out_homepage/peeking-through-clothes.jpg")
+            =image_tag(image_url, class: 'intro-image', alt: "A lady peeks through her messy clothes rail with a very happy expression on her face, perhaps looking forward to a good decluttering session.")
+      
+        .intro-text
+          %h2
+            Take the wardrobe challenge
+          %p
+            Resti falsi ha cia, ie ial samo kial proksimumeco, ial ia multo supre anstataŭ    
+      
+          %p
+            Faka sanskrito ido iz, tra tebi tutampleksa memkompreneble go
 
-      %p
-        Are they taking up too much space?
-    
-      .intro-images
-        .intro-image.intro-image-1
-          = link_to("/signup", :class => "intro-link") do
-            -image_url = image_path("logged_out_homepage/wardrobe-rail.jpg")
-            =image_tag(image_url, class: 'intro-image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
-    
-      %p
-        Now you can re-sell them at neverbeenworn.co.uk
+          %p
+            Obl termo helpi io, ien filo duuma nv. Poa al hodiaŭa liternomo kondicionalo, ferio septiliono cia da.
 
-      %p
-        Start clearing out your wardrobe and get cash too!
-
-      = link_to("/signup", :class => "hp-button hp-button-standard") do
-        Join us for free
+        = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
+          Take the wardrobe challenge
 
   .quick-guide-container
     .quick-guide
