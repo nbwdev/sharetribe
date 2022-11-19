@@ -1,9 +1,14 @@
+@import "mixins/all";
 @import "../landing_page/mixins/all";
 
 .my_story {
 
     p {
         text-align: justify;
+    }
+
+    span.nbw-dark {
+        color: $nbw-dark;
     }
 
     @media #{$mobile} {
