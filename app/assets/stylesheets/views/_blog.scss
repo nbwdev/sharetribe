@@ -225,6 +225,39 @@ p.published-date {
         }
     }
 
+    ul {
+        margin-bottom: 0.75em;
+
+        li:not(:last-child) { 
+            margin-bottom: 0.5em;  
+         }
+    }
+
+    .quick-guide-container {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .quick-guide {
+        text-align: left;
+        background-color: #f1f1f1;
+        border-radius: 20px;
+        padding: 10px;
+        display: inline-block;
+
+        ul {
+            list-style: none;
+
+            a {
+                color: #853C82;
+            }
+        }
+    }
+
+    .download-quick-guide-container {
+        display: none;
+    }
+
     .article-footer {
         background-color: #f1f1f1;
         border-radius: 20px;

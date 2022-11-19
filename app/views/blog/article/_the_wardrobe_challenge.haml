@@ -28,24 +28,32 @@
         Which is something we would all love to do.
         After this life-changing moment I began to wonder if the wardrobe challenge could help others too and with a little persuasion I made the decision to share my story.
         Let’s start off with a quick guide to give you an idea of how I did it:
-    .quick-guide
-      %p
-        Quick guide - Preparing for my wardrobe challenge
+    .quick-guide-container
+      .quick-guide
+        %h4.quick-guide-title
+          %span.quick-guide
+            Quick guide
+            \- Preparing for my wardrobe challenge
         %ul
           %li 
-            Step 1 - How to get started
+            =link_to "#step-1" do
+              Step 1 – How to get started
           %li
-            Step 2 - Assess the size of the problem
+            =link_to "#step-2" do
+              Step 2 – Assess the size of the problem
           %li
-            Step 3 - A good plan – how it helped me to succeed
+            =link_to "#step-3" do
+              Step 3 – A good plan – how it helped me to succeed
           %li
-            Step 4 - Getting ready – why it was so important
+            =link_to "#step-4" do
+              Step 4 – Getting ready – why it was so important
           %li
-            Step 5 – Final Prep – Declutter day was finally here
+            =link_to "#step-5" do
+              Step 5 – Final Prep – Declutter day was finally here
 
   .article-section.article-section-right-image
     .article-text
-      %h3 1 - How to get started
+      %h3#step-1 1 - How to get started
       %p
         I originally came up with the wardrobe challenge to help me win back my wardrobe space and make it more manageable.
         Ultimately, I wanted to declutter and make it work for me and not the other way around.
@@ -63,7 +71,7 @@
       =image_tag(first_url, alt: "A wardrobe rail packed pull of clothes.")
 
     .article-text
-      %h3 2 - Assessing the size of the problem
+      %h3#step-2 2 - Assessing the size of the problem
       %p
         The first step I took was to find a few minutes to think about my wardrobe and the state it was in right now.
         Next I thought about what state I would like it to be in. Putting it into words really helped me to focus in the right way from the beginning.
@@ -97,7 +105,7 @@
 
   .article-section.article-section-right-image
     .article-text
-      %h3 3 - A good plan - how it will help you succeed
+      %h3#step-3 3 - A good plan - how it will help you succeed
       %p
         You may not have the time to tackle the whole wardrobe in one go, so break it down into smaller manageable chunks.
         This will ensure you are not overwhelmed the moment you get started.
@@ -110,7 +118,7 @@
       =image_tag(first_url, alt: "An office clock against a blue-painted wall.")
 
     .article-text
-      %h3 4 - Getting ready – why it’s important
+      %h3#step-4 4 - Getting ready – why it’s important
       %p
         Getting ready and being in the right mindset is really going to help you with your first steps and it will help you achieve success early on.
         If you spend a little time thinking about your chosen area and what you want to achieve, it will help you focus.
@@ -154,7 +162,7 @@
       =image_tag(first_url, alt: "Choosing between a plain white shirt and a white and green striped top.")
 
     .article-text
-      %h3 5- Final Prep – almost ready
+      %h3#step-5 5- Final Prep – almost ready
       %p
         Because I was decluttering I had to decide exactly how I was going to be doing this.
         If you end up making nothing more than an uncontrolled mess then you’re more likely to get overwhelmed at the sight of it all and less likely to finish in time.
@@ -263,11 +271,13 @@
         I wish you good luck on your declutter day.
         Remember, preparing yourself and having a solid plan will help you succeed.
         We all live slightly different lives and slightly different routines, so start in a way that best suits you.
-      %p{style: 'background: yellow;'}
-        I also have a quick guide cheat sheet to help you get started super fast.
-        I found this so helpful to read on my declutter day.
-        It really helped me get focused and in the mindset to succeed.
-        Sign up to get the cheat sheet emailed to you.
+      .download-quick-guide-container
+        .download-quick-guide
+          %p
+            I also have a quick guide cheat sheet to help you get started super fast.
+            I found this so helpful to read on my declutter day.
+            It really helped me get focused and in the mindset to succeed.
+            Sign up to get the cheat sheet emailed to you.
 
       %h4
         How this changed my life – being free of mess
