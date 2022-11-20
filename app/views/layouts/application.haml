@@ -54,7 +54,7 @@
             %figure.marketplace-cover-small.fluidratio
             .coverimage-fade{:class => yield(:coverfade_class)}
               %figure.marketplace-cover-small-fade.fluidratio
-          .title-container
+          .title-container{:class => yield(:title_container_class)}
             .title-header-wrapper
               .marketplace-title-header
                 = yield :title_header

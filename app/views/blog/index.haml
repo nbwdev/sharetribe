@@ -1,12 +1,18 @@
+- content_for :title_container_class do
+  = "blog-homepage"
 - content_for :title_header do
   %h1= t("blog.blog")
+
+- content_for :page_article_class do
+  = "blog-homepage"
+
 
 .blog
   .articles-grid
     %ul.blog-articles
       -article = articles['the_wardrobe_challenge']
       -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
-      %li.article-card.col-5{:role => "article"}
+      %li.article-card{:role => "article"}
         = link_to(article_path(id=article[:id]), :class => "article-link") do
           .article-image-container
             =image_tag(image_url, class: 'article_card_image', alt: "Choosing between a plain white shirt and a white and green striped top.")
@@ -25,7 +31,7 @@
             
       -article = articles['big_boots_how_to_wear_them']
       -image_url = image_path("blog/sitting-on-plinth-square.jpg")
-      %li.article-card.col-5{:role => "article"}
+      %li.article-card{:role => "article"}
         = link_to(article_path(id=article[:id]), :class => "article-link") do
           .article-image-container
             =image_tag(image_url, class: 'article_card_image', alt: "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.")
@@ -44,7 +50,7 @@
             
       -article = articles['sustainability_in_autumn']
       -image_url = image_path("blog/autumn-leaves-square.jpg")
-      %li.article-card.col-5{:role => "article"}
+      %li.article-card{:role => "article"}
         = link_to(article_path(id=article[:id]), :class => "article-link") do
           .article-image-container
             =image_tag(image_url, class: 'article_card_image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
@@ -62,7 +68,7 @@
 
       -article = articles['why_we_started_neverbeenworn']
       -image_url = image_path("blog/lady-in-poppy-field-square.jpg")
-      %li.article-card.col-5{:role => "article"}
+      %li.article-card{:role => "article"}
         = link_to(article_path(id=article[:id]), :class => "article-link") do
           .article-image-container
             =image_tag(image_url, class: 'article_card_image', alt: "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.")
