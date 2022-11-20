@@ -85,8 +85,12 @@ article.page-content.no-padding-bottom {
 
                 font-size: 3em;
 
+                @media (min-width: 660px) {
+                    font-size: 2em;
+                }
+
                 @media (min-width: 769px) {
-                    font-size: 3em;
+                    font-size: 2.5em;
                 }
             
                 @media #{$desktop} {
@@ -145,7 +149,7 @@ article.page-content.no-padding-bottom {
     .wardrobe-challenge-section {
         display:none;
         position: relative;
-        overflow: auto;
+        overflow: hidden;
         background-color: #efefef;
 
         .wardrobe-challenge-link {
