@@ -142,6 +142,92 @@ article.page-content.no-padding-bottom {
         }
     }
 
+    .wardrobe-challenge-section {
+        display:none;
+        position: relative;
+        overflow: auto;
+        background-color: #efefef;
+
+        .wardrobe-challenge-link {
+            background-color: #efefef;
+        }
+
+        img {
+            /* Make image responsive */
+            display: block;
+            width: 50%;
+            float: right;
+        }
+        
+        .caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 0%;
+    
+            p, h2 {
+                color: $homepage-text-colour;
+            }
+            .banner-title {
+
+                font-size: 2em;
+
+                @media #{$desktop} {
+                    font-size: 3em;
+                }
+            
+                line-height: 1.15em;
+                margin-bottom: 10px;
+            }
+            .banner-text {
+                @media #{$desktop} {
+                    padding-bottom: 1em;
+                }
+            }
+            .hp-banner-button {
+                color: $homepage-text-colour;
+                background-color: none;
+                border-radius: 0;
+                border-color: $homepage-text-colour;
+            }
+            .hp-banner-button:hover {
+                color: #F1E6FF;
+                background-color: $homepage-text-colour;
+                border-radius: 0;
+            }
+
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            //background-color: #FFAD15;
+        }
+
+        .caption>p {
+            text-align: center;
+        }
+
+        @media (max-width: 660px) {
+
+            .caption {
+                left: auto;
+                width: 100%;
+                overflow: hidden;
+                position: unset;
+                padding-top: 1em;
+                padding-bottom: 2em;
+            }
+            img {
+                width: 100%;
+                overflow: hidden;
+                float:none;
+            }
+        }
+    }
+
+
+
+
     .intro-container {
         margin: auto;
         margin-top: 30px;
