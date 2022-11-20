@@ -5,10 +5,12 @@
 - content_for :footer_attribution do
   Images by
   =link_to "https://www.freepik.com/free-photo/attractive-stylish-smiling-woman-choosing-apparel-clothing-store_10686399.htm", target: '_blank' do
-    marymarkevich
-  and
+    marymarkevich,
   =link_to "https://www.freepik.com/free-photo/beautiful-female-with-happy-expression-looking-through-her-clothes-being-glad-choose-outfit-by-herself-glad-woman-looking-through-clothing-closet-having-positive-look-posing-fitting-room_9439036.htm", target: '_blank' do
-    wayhomestudio
+    wayhomestudio,
+  and
+  =link_to "https://www.freepik.com/free-photo/close-up-hand-holding-smartphone_20825569.htm", target: '_blank' do
+    Freepik
   on Freepik
 
 - content_for :page_article_class do
@@ -63,7 +65,7 @@
       .guide-columns
         .guide-column
           .guide-column-content
-            -image_url = image_path("logged_out_homepage/taking-photo-of-shirt.jpg")
+            -image_url = image_path("logged_out_homepage/taking-photo-of-jumper.jpg")
             =image_tag(image_url, class: 'step_img', alt: "Person with a smartphone taking a photo of a blue denim shirt.")
             %p.step-number
               1
