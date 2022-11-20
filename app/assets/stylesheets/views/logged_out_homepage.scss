@@ -97,7 +97,9 @@ article.page-content.no-padding-bottom {
                 margin-bottom: 10px;
             }
             .banner-text {
-                padding-bottom: 1em;
+                @media #{$desktop} {
+                    padding-bottom: 1em;
+                }
             }
             .hp-banner-button {
                 color: $homepage-text-colour;
@@ -491,11 +493,4 @@ article.page-content.no-padding-bottom {
         border-color: $homepage-text-colour;
     }
 }
-
-.footer__attribution, .footer__attribution a {
-    margin-top: 0.5em;
-    text-align: center;
-    color: #ffffff;
-}
-
 
