@@ -65,7 +65,7 @@
                 bottom: 0;
                 width: 100%;
 
-                $min-cta-height: 5.5em;
+                $min-cta-height: 4em;
 
                 .cta-left {
                     width: 75%;
@@ -91,9 +91,12 @@
                 .article-title {
                     display: flex;
                     align-items: center;
-                    padding: 0.75em; /*0.75em 0.75em 0 0.75em;*/
+                    padding: 0 0.75em 0 0.75em;
                     line-height: 1.2em;
                     color: white;
+                    margin-bottom: 0;
+                    padding-top: 0;
+                    font-size: 1.375em;
                 }
 
                 p.article-read {
