@@ -156,192 +156,78 @@ article.page-content.no-padding-bottom {
     }
 
     .wardrobe-challenge-section {
-        display:none;
-        position: relative;
-        overflow: hidden;
+
         background-color: #efefef;
+        display: flex;
+        flex-direction: row-reverse;
 
         .wardrobe-challenge-link {
             background-color: #efefef;
         }
 
-        img {
-            /* Make image responsive */
-            display: block;
+        .wardrobe-challenge-image {
             width: 50%;
-            float: right;
-        }
-        
-        .caption {
+
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            left: 0%;
-    
-            p, h2 {
-                color: $homepage-text-colour;
-            }
-            .banner-title {
+            background-size: cover;
+            text-align: center;
 
-                font-size: 2em;
-
-                @media #{$desktop} {
-                    font-size: 3em;
-                }
-            
-                line-height: 1.15em;
-                margin-bottom: 10px;
-            }
-            .banner-text {
-                @media #{$desktop} {
-                    padding-bottom: 1em;
+            .image-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-size: cover;
+                text-align: center;
+                img {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 20px;
                 }
             }
-            .hp-banner-button {
-                color: $homepage-text-colour;
-                background-color: none;
-                border-radius: 0;
-                border-color: $homepage-text-colour;
-            }
-            .hp-banner-button:hover {
-                color: #F1E6FF;
-                background-color: $homepage-text-colour;
-                border-radius: 0;
-            }
-
-            position: absolute;
-            top: 0;
-            width: 50%;
-            height: 100%;
-            //background-color: #FFAD15;
         }
 
-        .caption>p {
+        .caption {
+            width: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
             text-align: center;
+
+            .caption-container {
+
+                padding: 20px;
+
+                p, h2 {
+                    color: $homepage-text-colour;
+                }
+                .banner-title {
+
+                    font-size: 2em;
+
+                    @media #{$desktop} {
+                        font-size: 3em;
+                    }
+                
+                    line-height: 1.15em;
+                    margin-bottom: 10px;
+                }
+            }
         }
 
         @media (max-width: 660px) {
 
-            .caption {
-                left: auto;
+            flex-direction: column;
+
+            .wardrobe-challenge-image, .caption {
                 width: 100%;
-                overflow: hidden;
-                position: unset;
-                padding-top: 1em;
-                padding-bottom: 2em;
             }
+
             img {
-                width: 100%;
-                overflow: hidden;
-                float:none;
-            }
-        }
-    }
-
-
-
-
-    .intro-container {
-        margin: auto;
-        margin-top: 30px;
-        background-color: #efefef;
-        padding-top: 3em;
-
-        .intro-content {
-            overflow: hidden;
-            padding-right: 10px;
-        }
-
-        .intro-section {
-
-            margin: 0 auto;
-            text-align: center;
-
-            @media (min-width: 660px) {
-                width: 100%;
-            }
-            
-            @media (max-width: 660px) {
-                margin-left: 1em;
-                margin-right: 1em;
-            }
-
-            h2 {
-                font-size: 2em;
-                margin: 0 0.5em 0.5em 0.5em;
-
-                @media (min-width: 769px) {
-                    font-size: 2em;
-                }
-            
-                @media #{$desktop} {
-                    font-size: 3em;
-                }
-            }
-    
-            .intro-image {
-                width: 50%;
-                float: right;
-                max-height: 282px;
-                overflow: visible;
-                margin-bottom: 1em;
-
-                @media (max-width: 660px) {
-                    width: 100%;
-                    float: none;
-                }
-
-                @media #{$desktop} {
-                    max-height: 95%;
-                    margin-bottom: 10px;
-                }
-
-                img.intro-image {
-                    max-width: 100%;
-                    max-height: inherit;
-                    height: inherit;
-                    width: 100%;
-
-                    @include border-radius(20px);
-
-                    &:hover {
-                        transform: scale(1.011);
-                        @include prefix-prop(transition, all 50ms ease-in-out);
-                    }
-            
-                }
-
-                a.intro-link {
-                    max-width: inherit;
-                    max-height: inherit;
-                    height: inherit;
-                    width: inherit;
-                }
-
-                img {
-                    max-width: inherit;
-                    max-height: inherit;
-                    height: inherit;
-                    width: inherit;
-                    aspect-ratio: 1.5 / 1;
-                    object-fit: contain;
-                }
-            }
-
-            .intro-text {
-                width: 50%;
-                left: 0;
-                padding-left: 1em;
-                padding-right: 1em;
-
-                @media (max-width: 660px) {
-                    width: 100%;
-                }
-            }
-
-            a.hp-button {
-                margin-bottom: 3em;
-                margin-top: 1em;
+                padding-top: 10px;
             }
         }
     }

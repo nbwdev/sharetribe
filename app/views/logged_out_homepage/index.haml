@@ -91,48 +91,24 @@
       = link_to("/signup", :class => "hp-button hp-button-inverted") do
         Join for free
 
-  / TEMP while I figure out how to centre a div for the 15th slightly different time this week
   .wardrobe-challenge-section
-    .caption
-      %h2.banner-title
-        Take the wardrobe challenge
-      %p.banner-text
-        Take back your wardrobe, declutter and win
-      %p.banner-text
-        Make your wardrobe work for you
-        <br>
-        and elevate your life
-      .button-container
-        = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
-          Take the wardrobe challenge
     .wardrobe-challenge-image
-      = link_to("/blog/the_wardrobe_challenge", :class => "intro-link") do
+      .image-container
         -image_url = image_path("logged_out_homepage/peeking-through-clothes.jpg")
         =image_tag(image_url, class: 'intro-image', alt: "A lady peeks through her messy clothes rail with a happy expression on her face, perhaps looking forward to a good decluttering session.")
-
-
-  .intro-container
-    .intro-section
-      .intro-content
-        .intro-image
-          = link_to("/blog/the_wardrobe_challenge", :class => "intro-link") do
-            -image_url = image_path("logged_out_homepage/peeking-through-clothes.jpg")
-            =image_tag(image_url, class: 'intro-image', alt: "A lady peeks through her messy clothes rail with a happy expression on her face, perhaps looking forward to a good decluttering session.")
-      
-        .intro-text
-          %h2
+    .caption
+      .caption-container
+        %h2.banner-title
+          Take the wardrobe challenge
+        %p.banner-text
+          Take back your wardrobe, declutter and win
+        %p.banner-text
+          Make your wardrobe work for you
+          <br>
+          and elevate your life
+        .button-container
+          = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
             Take the wardrobe challenge
-          %p
-            Take back your wardrobe, declutter and win  
-      
-          %p
-            Make your wardrobe work for you
-            <br>
-            and elevate your life
-
-          .button-container
-            = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
-              Take the wardrobe challenge
 
   .tips-container
     =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}
