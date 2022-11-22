@@ -149,6 +149,10 @@
             }
         }
 
+        .slick-dotted.slick-slider {
+            margin-bottom: 50px;
+        }    
+
         @media #{$desktop} {
             button.slick-next, button.slick-prev {
                 display: block;
