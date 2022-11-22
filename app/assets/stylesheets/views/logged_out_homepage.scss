@@ -8,6 +8,7 @@
     $tablet-small: 568px;
     $mobile: 400px;
 */ 
+@font-face { font-family: Fifita; src: url('fonts/Fifita_Regular_free.ttf'); } 
 
 $mini-tablet: "(min-width: 660px)";
 $homepage-text-colour: #4a4a4a;
@@ -320,6 +321,15 @@ article.page-content.no-padding-bottom {
         padding-top: 3em;
         padding-bottom: 2.5em;
         margin: auto;
+
+        .text-container {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        p {
+            font-family: Fifita, 'Proxima Soft', 'Source Sans Pro', helvetica, sans-serif;
+        }
 
         @media (max-width: 660px) {
             margin-left: 1em;
