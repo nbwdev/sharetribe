@@ -4,7 +4,7 @@ default: &default_settings
   # If you are running on localhost, you can write here "lvh.me:3000" (which redirects to localhost port 3000)
   # The community subdomains will be added to this top domain.
   # NOTE: Do not include http(s) here, or subdomains, just the top level domain, like "sharetribe.com" for example
-  domain: "168.178.28:5000"
+  domain: "neverbeenworn.co.uk"
 
   # A comma separated string of trusted proxies. If you host your
   # application behind proxies this configuration allows
@@ -35,7 +35,7 @@ default: &default_settings
   #
   # Example value: http://mydomain.com
   #
-  community_not_found_redirect:
+  community_not_found_redirect: https://neverbeenworn.co.uk
 
   # Login url. This can be a separate address for loggin in. For example
   # a subdomain with https. It's recommended to use https here, so passwords
@@ -90,7 +90,7 @@ default: &default_settings
   # - 0c84dc78c9435aec606bbf2428c2c476.cloudfront.com
   # - assets%0.your_domain.com
   #
-  asset_host:
+  asset_host: neverbeenworn.co.uk
 
   # Your user-uploaded assets CDN distribution host name, including the desired protocol (http or https).
   #
@@ -105,7 +105,7 @@ default: &default_settings
   #
   # - https://yourdistribution.cloudfront.com
   #
-  user_asset_host:
+  user_asset_host: https://neverbeenworn.co.uk
 
   # AWS keys
   aws_access_key_id:
@@ -185,10 +185,10 @@ default: &default_settings
   # smtp_email_domain: "localhost"
 
   # This will be the from field in the mails sent from Sharetribe
-  sharetribe_mail_from_address: "your-team@example.com"
+  sharetribe_mail_from_address: "info@neverbeenworn.co.uk"
 
   # The address where the notifications of feedbacks from Sharetribe UI are sent
-  feedback_mailer_recipients:  'admins@example.com'
+  feedback_mailer_recipients:  'info@neverbeenworn.co.uk'
 
   grid_listings_limit: 24
   map_listings_limit: 150
@@ -289,11 +289,11 @@ default: &default_settings
   original_image_height: 1600
 
   # Email addresses for sales & support. Will be shown to the administrator.
-  sales_email: hello@example.com
-  support_email: support@example.com
+  sales_email: info@neverbeenworn.co.uk
+  support_email: info@neverbeenworn.co.uk
 
   # Knowledge base
-  knowledge_base_url: https://help.sharetribe.com
+  knowledge_base_url: http://www.example.com/knowledgebase
   display_knowledge_base_articles: false
 
   # External plan service connection
@@ -457,8 +457,8 @@ default: &default_settings
   stripe_payout_delay: 7.5
 
   # Key pattern to ensure production keys
-  stripe_private_key_pattern: "\\Ask_test_.{24,200}\\z"
-  stripe_publishable_key_pattern: "\\Apk_test_.{24,200}\\z"
+  stripe_private_key_pattern: "\\sk_(test|live)_.{24}"
+  stripe_publishable_key_pattern: "\\pk_(test|live)_.{24}"
 
   # Stripe allows to hold funds up to 90 days
   # (85 and not 90 or 89 as a security, also because timezones are not
@@ -501,7 +501,7 @@ production: &production_settings
 
   eager_load: true
 
-  active_storage_service: amazon
+  active_storage_service: local
 
   log_level: INFO
   stripe_private_key_pattern: "\\Ask_live_.{24,200}\\z"
