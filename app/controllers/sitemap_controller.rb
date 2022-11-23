@@ -151,6 +151,7 @@ class SitemapController < ActionController::Metal
         infos_pages.each do |i|
           add i[:path], lastmod: i[:modified]
         end
+        add my_story_index_path, :lastmod => Date.new(2022,11,13)
         open_listings.each do |l|
           add listing_path(id: l[:id]), lastmod: l[:lastmod]
         end
@@ -250,7 +251,6 @@ class SitemapController < ActionController::Metal
   # Want to move these in InfosHelper really
   def get_infos_pages_for_sitemap(community)
     [
-      { :path => Rails.application.routes.url_helpers.about_infos_path, :modified => Date.new(2022,3,31)},
       { :path => Rails.application.routes.url_helpers.how_to_use_infos_path, :modified => Date.new(2022,3,31)},
       { :path => Rails.application.routes.url_helpers.privacy_infos_path, :modified => Date.new(2022,3,31)},
       { :path => Rails.application.routes.url_helpers.terms_infos_path, :modified => Date.new(2022,3,31)},
