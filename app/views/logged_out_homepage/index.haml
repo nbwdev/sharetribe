@@ -1,6 +1,6 @@
 - content_for :title_header do
   %h1.logged-out-homepage
-    Welcome to neverbeenworn.co.uk
+    Welcome to Never Been Worn
 
 - content_for :footer_attribution do
   Images by
@@ -48,7 +48,7 @@
         <br>
         Why Keep It?
       %p.banner-text
-        Declutter, save time, and elevate your life
+        Make space, make money, and elevate your life
       .button-container
         = link_to("/signup", :class => "hp-button hp-banner-button") do
           Sell now
@@ -57,9 +57,7 @@
 
   .quick-guide-container
     .quick-guide
-      %h2
-        Quick Guide
-      %p.so-simple
+      %h2.so-simple
         It's so simple to sell
       
       .guide-columns
@@ -86,7 +84,7 @@
             %p.step-number
               3
             %p.step-description
-              and you get cash!
+              and bank the cash!
     
       = link_to("/signup", :class => "hp-button hp-button-inverted") do
         Join for free
@@ -101,12 +99,12 @@
         %h2.banner-title
           Take the wardrobe challenge
         %p.banner-text
-          Take back your wardrobe, declutter&nbsp;and&nbsp;win
+          Ready for a new wardrobe and a new&nbsp;you?
         %p.banner-text
-          Make your wardrobe work&nbsp;for&nbsp;you
+          We show you how to take back your&nbsp;wardrobe with our easy to follow steps
         .button-container
           = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
-            Take the wardrobe challenge
+            Take the challenge
 
   .tips-container
     =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}

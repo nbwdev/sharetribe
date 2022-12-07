@@ -64,7 +64,7 @@ article.page-content.no-padding-bottom {
     .banner {
         position: relative;
         overflow: auto;
-        background-color: #F1E6FF;
+        background-color: #fde1e7;
 
         img {
             /* Make image responsive */
@@ -116,14 +116,14 @@ article.page-content.no-padding-bottom {
                 }
             }
             .hp-banner-button {
-                color: $homepage-text-colour;
-                background-color: none;
+                color: $nbw-pale;
+                background-color: $homepage-text-colour;
                 border-radius: 0;
                 border-color: $homepage-text-colour;
             }
             .hp-banner-button:hover {
-                color: #F1E6FF;
-                background-color: $homepage-text-colour;
+                color: $homepage-text-colour;
+                background: none;
                 border-radius: 0;
             }
 
@@ -216,6 +216,17 @@ article.page-content.no-padding-bottom {
                     line-height: 1.15em;
                     margin-bottom: 10px;
                 }
+
+                a.hp-button {
+                    background-color: $homepage-text-colour;
+                    color: white;
+                    border-color: $homepage-text-colour;
+                }
+                a.hp-button:hover {
+                    background: none;
+                    color: $homepage-text-colour;
+                    border-color: $homepage-text-colour;
+                }            
             }
         }
 
@@ -245,12 +256,6 @@ article.page-content.no-padding-bottom {
         }
 
         h2 {
-            font-weight: bolder;
-            font-size: 1.75em;
-            margin-bottom: 0.2em;
-        }
-
-        p.so-simple {
             font-size: 3em;
             font-weight: 400;
 
@@ -465,25 +470,13 @@ article.page-content.no-padding-bottom {
         border-style: solid;
     }
 
-    a.hp-button-standard {
-        background-color: none;
-        color: $homepage-text-colour;
-        border-color: $homepage-text-colour;
-    }
-
-    a.hp-button-standard:hover {
+    a.hp-button-inverted {
         background-color: $homepage-text-colour;
         color: white;
-        border-color: $homepage-text-colour;
     }
 
     a.hp-button-inverted:hover {
-        background-color: $homepage-text-colour;
-        color: white;
-    }
-
-    a.hp-button-inverted {
-        background-color: none;
+        background: none;
         color: $homepage-text-colour;
         border-color: $homepage-text-colour;
     }
