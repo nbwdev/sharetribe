@@ -1,0 +1,271 @@
+-# Set these fields for SEO purposes. They will be included in the header
+-# TODO: Do this in a more elegant way to aviod duplication with controller and view
+- content_for :meta_article_id, 'too_many_scarves'
+- content_for :meta_article_headline, 'Too Many Scarves'
+- content_for :meta_article_image_1, image_path("blog/too-many-scarves/knitted-cosy-scarves.jpg")
+- content_for :meta_article_image_2, image_path("blog/too-many-scarves/scarves-white-green-grey.jpg")
+- content_for :meta_article_image_3, image_path("blog/too-many-scarves/scarf-hoard.png")
+- content_for :meta_article_date_published, '2022-12-14T08:00:00+01:00'
+- content_for :meta_article_date_modified, '2022-12-14T08:00:00+01:00'
+
+.blog-article
+  %h2.article-title="Too Many Scarves"
+  %p.published-date
+    December 2022
+  .article-section.article-section-right-image
+    .article-text
+      %h3 My scarf hoard – why I have one and why I am getting rid of it
+      %p
+        I have often wondered how I ended up with so many scarves.
+        At the last count I had a total of 18 and I am not even sure how this happened.
+        What I am really wondering is, why I got to a stage in life were I thought I needed 18 scarves?
+        I am aware that I have only one neck and like most people I am accustomed to wearing only one scarf around it at any one time.
+        So the big question here is:
+        %span.big-question
+          Why do we feel we need more than we actually do?
+        The need for 18 scarves has been on my mind for a little while now.
+        I am still wondering what led me to this number.
+        As a person of habit I know that I have only one favorite scarf for Autumn and winter and that 9 times out of 10, this is the one that I reach for and without even thinking about it.
+        It has serves me very well whenever I am in need of reliable neck warmth.
+        So, if this is indeed the case then I am wonder why do I have 17 more?
+        It was time to take a closer look at my scarf collection and make more sense of it all.
+
+    .article-image
+      -image_url = image_path("blog/too-many-scarves/scarves-white-green-grey.jpg")
+      =image_tag(image_url, alt: "Three wool scarves piled up on a wooden table. One is loosely knitted, one is tighly machine knit in green and the other is a soft cable-knit grey.")
+
+  .article-section.article-section-right-image
+    .article-text
+      %h4
+        Scarf collecting – when did it start?
+
+      %p
+        What is it about scarf collecting?
+        We all do a bit of it, but I seem to do it without thinking.
+        Is it this semi-conscious act of hoarding that is my problem?
+        I don’t recall signing up to any scarf collecting group.
+        I have attended any meetings and I really don’t think there is a group in my area.
+        But it’s clear to see that I have at some point taken it upon myself to start my own independent scarf collection.
+        I am sure that others have more than me and some may have less, but I have 18 of the messy things and that is more than enough.
+        I say messy when referring to my collection because it always seems to be in one.
+        Scarves are, and have always been, a funny sort of shape to try and keep in good order.
+        They don’t like to be folded and they definitely don’t like to stay folded, ever.
+        I know this because I seem to be forever folding and refolding them and when I do reach for one they all seem come along for the ride like it was some kind of group outing.
+        The reality I have to face is that in my world, my scarves are always, always in a mess.
+
+      %h4
+        The truth behind my scarf hoard
+      %p
+        It turns out that out of my 18 scarves, I had 14 for autumn and winter and 4 for spring summer.
+        Of my autumn/winter collection I had three that I considered my back-ups to my one ‘favourite, wear it all the time’ scarf.
+        These back-ups are apparently ‘just in case’ my one favourite scarf was not available, or in case something unexpectedly and disastrous had happened to it at any point.
+        I also had 4 other spare back-up scarves, one for each of my other spare back-up jackets.
+        Which was another hoard that would soon need my attention.
+        Then I had 3 dressy scarves for special occasions and for when an evening or event requiring a little more effort or a much more presentable outfit.
+        After that I had three other scarves, one of which has great sentimental value and the last two scarves, well I don’t even know why I have them.
+        They went with jackets that I no longer have and probably I parted company with some time ago.
+        I can’t say why I continued to hold on to these two lonely scarves.
+        If it no longer has a pairing jacket then it is destined to never make it off the scarf shelf ever again.
+        When I think about it, they had both been shelved for some time and I cannot remember the last time I wore either of them.
+        Seriously, I don’t have a clue.
+
+    .quick-guide-container
+      .quick-guide
+        %h4.quick-guide-title
+          My scarf collection and categories
+        %p.quick-guide-intro
+          My hoard:
+        %ul
+          %li 
+            1x Main scarf – worn every day
+          %li
+            3x back-up main scarves – just in case
+          %li
+            4x spare back-up scarves – one for each spare back up jacket
+          %li
+            3x dressy scarves – special events and occasions
+          %li
+            1x sentimental scarf – gift from relative
+          %li
+            2x random scarves. Went with an old jacket I no longer have
+          %li
+            4x spring summer scarves
+        %p
+          Total = 18 scarves
+
+  .article-section.article-section-right-image
+    .article-text
+      %h3
+        Let the fun begin. Decluttering your scarf collection – why it will save you time and space forever
+      %p
+        It was clear that either way my scarf hoard had got out of hand.
+        I am not sure how but it had.
+        So, what do you do when you realise you have this problem?
+        How do you change your scarf hoarding habits and how do you create something more manageable in its place?
+        Below you will find the steps I took to achieving this next step in my decluttering journey.
+
+    .quick-guide-container
+      .quick-guide
+        %h4.quick-guide-title
+          %span.quick-guide
+            Quick guide
+            \- preparing to reduce my scarf hoard
+        %ul
+          %li 
+            =link_to "#step-1" do
+              Step 1 – How to get started
+          %li
+            =link_to "#step-2" do
+              Step 2 – Assess the size of your hoard
+          %li
+            =link_to "#step-3" do
+              Step 3 – Creating better scarf categories
+          %li
+            =link_to "#step-4" do
+              Step 4 – Finally seeing the clutter
+          %li
+            =link_to "#step-5" do
+              Step 5 – What to do with it all
+          %li
+            =link_to "#step-6" do
+              Step 5 – Final steps
+
+
+  .article-section.article-section-right-image
+    .article-image
+      -image_url = image_path("blog/too-many-scarves/knitted-cosy-scarves.jpg")
+      =image_tag(image_url, alt: "Three cozy and soft woolen scarves in a pile.")
+
+    .article-text
+      %h3#step-1 Step 1 – How I got started
+      %p
+        If you can’t do it right away pick a time when you can give this task your full attention.
+        You want a nice quiet piece of time with no disturbances.
+        This is so you can complete the task in full, once you have started.
+        Leaving a task unfinished can have a negative affect and be a constant reminder that it is unfinished.
+        This will go on until you eventually return to the task and complete it, so make a start when you know you can also make enough time to finish it.
+        You also want a nice free space to help you work quickly.
+        I used my dining table as I also know I would have to have it cleared before the next sitting.
+
+      %h3#step-2 Step 2 – Assess the size of your hoard
+      %p
+        When you are ready, take out your entire hoard of scarves and place them all out on your clear space.
+        Don’t be overwhelmed if it turns out to be quite a lot.
+        To successfully clear your excess clutter, you want take a really good look at them all.
+        Start to think about how much space you have in total for all of your accessories and how much of this space you really want to be giving up to what will be your new and reduced scarf collection. 
+
+      %h3#step-3 Step 3 – Creating our new categories
+      %p
+        Now it’s time to start afresh.
+        Create some new categories.
+        You want to create no more than 4 new categories.
+        Think about the purpose and occasions you most have need of a scarf.
+        I chose autumn/winter - day to day or special occasions, sentimental, and spring/summer.
+
+      %p
+        Next sort your scarves out into your new categories and then take a good look at each one.
+        Ask yourself how many of the scarves in each new category you actually wear on a regular basis and rely on.
+        You want to have at least one reliable scarf in each category.
+        By reliable I mean in good condition, you love it and you already know it goes with the majority of what you wear in each category.
+        These scarves are the ones that will go in the new space you have designated for your reduced scarf collection.
+        Here are my new categories, but feel free to make some of your own:
+
+    .quick-guide-container
+      .quick-guide
+        %h4.quick-guide-title
+          Declutter prep – know your new scarf categories
+        %p.quick-guide-intro
+          Knowing your scarf categories is a great way to realise when you have to many scarves.
+          It can help you asses what you wear and what you don’t.
+          Here is a good basic example to get your started:
+        %ul
+          %li 
+            Category 1 – Autumn/winter - Day to day
+          %li
+            Category 2 - Autumn/winter - Special occasions
+          %li
+            Category 3 - Sentimental
+          %li
+            Category 4 – Spring/Summer
+
+    .article-text
+      %h4.scarf-category Category 1 – Autumn/winter - Day to day scarves
+      %p
+        The right scarf in this category requires almost no effort when choosing it.
+        It is warm and feels nice and it matches the majority of your autumn/winter - day to day casual wardrobe
+        It literally goes with everything you wear and is in really good condition.
+        You always reach for it without even thinking about it and by having it you save time valuable time getting ready and out the door.
+        This scarf can go in the keep pile and the rest you should setting aside.
+
+      %h4.scarf-category Category 2 – Autumn/winter - Special occasions.
+      %p
+        You want a really nice scarf in this category.
+        It should be of good quality.
+        You take good care of it, so it is always clean, it is always in perfect condition and always ready to wear.
+        You can rely on this scarf to it add the finishing touches to any dressy outfit.
+        So it can definitely go in the keep pile and the rest you should setting aside.
+
+      %h4.scarf-category Category 3 - Sentimental.
+      %p
+        These are always the keepers for me.
+        I have a scarf that was bought for me by a relative that is no longer here.
+        It has a life-long free pass.
+        I can’t tell anyone to get rid of a scarf in this category, not even myself.
+        So, it’s really up to you what happens with any scarf in this category.
+        No questions asked.
+
+      %h4.scarf-category Spring/Summer.
+      %p
+        If you are doing this in autumn then you can either put all your spring/summer scarves away until it gets a little warmer and you are ready to go through them or take them through the same process now and visa versa.
+
+      %p
+        Now you are done sorting out your hoard you should have a nice small collection of reliable scarves in good condition and quality that you can grab and look great in no matter where you are going or what the occasion is.
+        It should take you seconds to select a scarf when you need one and you should not have to second-guess your choice either.
+
+      %h3#step-4 Step 4 – Seeing the clutter
+      %p
+        Whatever is left aside in your collection is what you should consider getting rid of.
+        These will probably fall into items past their best, items that you no longer wear or even consider to be spares, and maybe items that have never been worn.
+        Basically these should be scarves that you really don’t need and might never wear.
+        These are the ones that have been taking up valuable space and costing you time when you come to choosing the right scarf to wear.
+        These are your clutter and these are the items that are not supporting you and your wardrobe and that you get little benefit from keeping that ensure you have less space.
+
+      %h3#step-5 Step 5 – What to do with it all
+      %p
+        Any Scarf that is past its best can go to a charity shop for weigh in as scrap material.
+        Any scarf that you no longer wear, but is still in good condition can also go to a charity or second-hand shop to be resold and to support sustainable fashion.
+        Any items that have never been worn you can add to this website, sell them and get the cash. 
+
+      %h3#step-6 Step 6 – Final steps
+      %p
+        One last thing.
+        All the autumn/ winter scarves that you will be keeping can now go in your new designated space for scarves.
+        If you have decluttered your hoard correctly, they should fit in nicely.
+        You can also think about how to store them in their new space, maybe think about folding a certain way or placing them in a storage container if you have the room.
+        It can be much easier to pull a container down, take what you need and put it back quickly and neatly, so you are less likely make a mess and less likely to pull them all out at once.
+        This will always save you lots of time.
+
+  .article-footer
+    %p
+      We would love to hear from you if you found this article useful
+    %p
+      Send us a before and after shot and show us how well you did.
+      You can send it to
+      =link_to('info@neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Too Many Scarves')
+      and make sure you add ‘Too Many Scarves in the subject bar
+
+    %p
+      If there is anything you would love to read about, we would be happy to consider your request too
+
+    %p.image-credit
+      Thanks to pvproductions @ Freepik,
+      and StockSnap @ Pixabay for images
+
+  %br
+  .article-section
+    .article-text
+      %h3#pin-it Pin for later?
+    .article-image
+      -image_url = image_path("blog/too-many-scarves/scarf-hoard.png")
+      =image_tag(image_url, alt: "Three cozy and soft woolen scarves in a pile.")
+  

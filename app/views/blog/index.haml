@@ -10,6 +10,23 @@
 .blog
   .articles-grid
     %ul.blog-articles
+      -article = articles['too_many_scarves']
+      -image_url = image_path("blog/too-many-scarves/knitted-cosy-scarves.jpg")
+      %li.article-card{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "Three cozy and soft woolen scarves in a pile.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            How I went from owning 18 scarves to just&nbsp;2
+            
       -article = articles['the_wardrobe_challenge']
       -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
       %li.article-card{:role => "article"}
