@@ -282,4 +282,13 @@
         margin-top: 2em;
         font-style: italic;
     }
+
+    ul.boots-text {
+        padding-left: 0;
+
+        li {
+            list-style-position: inside;
+            line-height: normal;
+        }
+    }
 }
