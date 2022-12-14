@@ -4,7 +4,7 @@ class BlogController < ApplicationController
     {
         'why_we_started_neverbeenworn' => {
             :id => 'why_we_started_neverbeenworn',
-            :title => "Why we started neverbeenworn",
+            :title => "Why we started NeverBeenWorn",
             :created => Date.new(2022,7,5)
         },
         'sustainability_in_autumn' => {
