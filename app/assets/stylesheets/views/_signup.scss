@@ -1,5 +1,9 @@
 @import "mixins/all";
 
+.title-header-wrapper h1.signup-title {
+  text-align: center;
+}
+
 .signup-horizontal-line {
   margin: lines(1.25) 0;
   text-align: center;
@@ -32,5 +36,9 @@
     small {
       display: inline;
     }
+  }
+
+  .sign-up-information span.cheat-sheet {
+    font-weight: bold;
   }
 }

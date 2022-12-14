@@ -2,13 +2,16 @@
   initialize_signup_form("#{I18n.locale}","#{email_not_accepted_message}", "#{t("people.new.invalid_invitation_code")}", #{@current_community.real_name_required?}, #{@current_community.join_with_invite_only?} );
 
 - content_for :title_header do
-  %h1= t('.sign_up')
+  %h1.signup-title= t('.sign_up')
 
 .signup-form.centered-section
 
   - if @community_customization && @community_customization.signup_info_content
-    %p
-      = @community_customization.signup_info_content.html_safe
+    %p.sign-up-information
+      = t('.sign_up_information')
+      - if params[:cheat_sheet]
+        %span.cheat-sheet
+          = t('.get_cheat_sheet')
   - elsif @current_community.allowed_emails && @current_community.allowed_emails[0] != "/" 
     %p
       = t('.email_restriction_instructions',
@@ -55,6 +58,10 @@
     -# Honey pot: hidden field to detect spammers
     = form.label :input_again, "You should not see this field, if CSS is working. If you see this, please send feedback!", :class => "unwanted_text_field"
     = form.text_field :input_again, :class => "unwanted_text_field", :id => "error_regristration_unwanted_email2", :autocomplete => "off"
+
+    -# email a cheat sheet to them
+    - if params[:cheat_sheet]
+      = hidden_field_tag "cheat_sheet", "wardrobe_challenge"
 
     -# Email
     = form.label :email, t('.email')
@@ -112,5 +119,15 @@
       .recaptcha
         = recaptcha_tags(site_key: @current_community.recaptcha_site_key, hl: I18n.locale)
     = button_tag t('.create_new_account')
+
+    - if params[:cheat_sheet]
+      - url_to_login = login_path(:cheat_sheet => "yes")
+    - else
+      - url_to_login = login_path
+    %p
+      %br
+      Already signed up?
+      = link_to t('sessions.new.login'), url_to_login, :class => "green_part_link"
+      here
 
 = render :partial => "help_texts", :collection => ["terms", "help_invitation_code", "privacy"], :as => :field

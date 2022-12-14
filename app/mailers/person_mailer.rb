@@ -328,6 +328,21 @@ class PersonMailer < ActionMailer::Base # rubocop:disable Metrics/ClassLength
     end
   end
 
+  # Send a cheat sheet by email
+  def cheat_sheet(recipient, community)
+    subject = t("emails.cheat_sheet.wardrobe_challenge")
+
+    set_up_layout_variables(recipient, community)
+    @email_type = 'wardrobe_challenge_cheat_sheet'
+    with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
+      mail(:to => recipient.confirmed_notification_emails_to,
+           :from => community_specific_sender(community),
+           :subject => t("emails.cheat_sheet.wardrobe_challenge")) do |format|
+        format.html { render v2_template(community.id, 'cheat_sheet_wardrobe_challenge'), layout: v2_layout(community.id) }
+      end
+    end
+  end
+
   # Old layout
 
   def new_member_notification(new_member, community, admin)

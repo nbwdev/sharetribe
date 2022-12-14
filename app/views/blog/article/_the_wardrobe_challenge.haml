@@ -273,13 +273,6 @@
         I wish you good luck on your declutter day.
         Remember, preparing yourself and having a solid plan will help you succeed.
         We all live slightly different lives and slightly different routines, so start in a way that best suits you.
-      .download-quick-guide-container
-        .download-quick-guide
-          %p
-            I also have a quick guide cheat sheet to help you get started super fast.
-            I found this so helpful to read on my declutter day.
-            It really helped me get focused and in the mindset to succeed.
-            Sign up to get the cheat sheet emailed to you.
 
       %h4
         How this changed my life – being free of mess
@@ -294,6 +287,9 @@
         Why? Because I no longer make any.
         The best thing of all is that as well as reclaiming my wardrobe I reclaimed so much personal time back.
         I found that I had more free time to myself, which I was really not expecting.
+
+
+      = render :partial => "cheat_sheet/download_cheat_sheet", :locals => { :type => "wardrobe_challenge"}
 
   .article-section.article-section-right-image
     .article-image
@@ -322,6 +318,16 @@
       You can send it to
       =link_to('info@neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Wardrobe Challenge')
       and make sure you add ‘Wardrobe Challenge’ in the subject bar.
+
+    %p.download-cheat-sheet
+      - if logged_in?
+        Don't forget to
+        =link_to 'download the cheat sheet', wardrobe_challenge_download_cheat_sheet_index_path
+        to help get you started.
+      - else
+        Don't forget you can
+        = link_to 'sign up', sign_up_path(:cheat_sheet => "yes")
+        to get the cheat sheet emailed to you and help get you started.
 
     %p
       If there is anything you would love to read about, we would be happy to consider your request too

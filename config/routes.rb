@@ -793,6 +793,15 @@ Rails.application.routes.draw do
     # standalone "My Story" page replaces the about page
     resources :my_story, only: [:index]
 
+    # request a cheat sheet by email
+    resources :cheat_sheet, only: [] do
+      collection do
+        # email should be a post. Making a get so I can test it more easily
+        get :wardrobe_challenge_email
+        get :wardrobe_challenge_download
+      end
+    end
+
     resources :infos do
       collection do
         get :about

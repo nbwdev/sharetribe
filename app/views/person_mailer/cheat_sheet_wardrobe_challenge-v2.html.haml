@@ -1,0 +1,25 @@
+- download_url = wardrobe_challenge_download_cheat_sheet_index_url(:host => "https://neverbeenworn.co.uk")
+- view_article_url = article_url(:id => 'the_wardrobe_challenge', :host => "https://neverbeenworn.co.uk")
+
+
+%tr
+  %td.person-name
+    %h1= t("emails.common.hi", name: PersonViewUtils.person_display_name_for_type(@recipient, 'first_name_only'))
+
+%tr
+  %td
+    %p
+      Here is your
+      wardrobe challenge cheat sheet.
+      You can
+      =link_to("read the full article", view_article_url)
+      on the NeverBeenWorn website.
+    %p
+      %br
+      We would love to hear from you after you have taken the wardrobe challenge.
+    %p
+      Send us a before and after shot and show us how well you did.
+      You can send it to info@neverbeenworn.co.uk and make sure you add ‘Wardrobe Challenge’ in the subject bar.
+
+= render :partial => "action_button-v2", :locals => { :text => t("emails.cheat_sheet.download"), :url => download_url}
+= render 'person_mailer/cant_click', url: download_url

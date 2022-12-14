@@ -1,0 +1,14 @@
+.get-cheat-sheet-container
+  .get-cheat-sheet
+    %p
+      I also have a quick guide cheat sheet to help you get started super fast.
+      %br
+      I found this so helpful to read on my declutter day.
+      It really helped me get focused and in the mindset to succeed.
+    %p
+      - if logged_in?
+        =link_to 'Download the cheat sheet', wardrobe_challenge_download_cheat_sheet_index_path
+        and get started today.
+      - else
+        = link_to 'Sign up', sign_up_path(:cheat_sheet => "yes")
+        to get the cheat sheet emailed to you.

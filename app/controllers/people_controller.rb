@@ -106,6 +106,13 @@ class PeopleController < Devise::RegistrationsController
 
     record_event(flash, "SignUp", method: :email)
 
+    # If they signed up after clicking through the cheat sheet link
+    if params[:cheat_sheet]
+      Delayed::Job.enqueue(CheatSheetWardrobeChallengeJob.new(@person.id, @current_community.id))
+      record_event(flash, "CheatSheetEmailed")
+      flash[:notice] = t("emails.cheat_sheet.check_email")
+    end
+
     # send email confirmation
     # (unless disabled for testing environment)
     if APP_CONFIG.skip_email_confirmation

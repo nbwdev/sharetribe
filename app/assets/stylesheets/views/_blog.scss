@@ -247,9 +247,31 @@
         }
     }
 
-    .download-quick-guide-container {
+    .get-cheat-sheet-container {
         display: none;
+        margin-top: 30px;
+        text-align: center;
+
+        .get-cheat-sheet {
+            text-align: left;
+            background-color: #f1e9e9;
+            border-radius: 20px;
+            padding: 10px;
+            display: inline-block;
+    
+            ul {
+                list-style: none;
+    
+                a {
+                    color: #853C82;
+                }
+            }
+        }    
     }
+
+    p.download-cheat-sheet {
+        display: none;
+    }    
 
     .article-footer {
         background-color: #f1f1f1;
