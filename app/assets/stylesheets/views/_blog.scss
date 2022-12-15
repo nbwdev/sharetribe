@@ -176,6 +176,9 @@
         overflow: hidden;
         margin-bottom: 3em;
     }
+    .article-section-with-quote {
+        margin-bottom: 0;
+    }
 
     .article-text {
         span.li-heading {
@@ -186,6 +189,13 @@
             font-style: italic;
             white-space: nowrap;
         }
+    }
+
+    .article-text.followed-by-image {
+        margin-bottom: 2em;
+    }
+    .article-text.following-image {
+        margin-top: 2em;
     }
 
     .article-image {
@@ -218,6 +228,18 @@
         }
     }
 
+    .article-section {
+        .article-image-centred {
+            float: none;
+            margin: auto;
+            width: 50%;
+
+            @media #{$mobile} {
+                width: 100%;
+            }
+        }
+    }
+
     ul {
         margin-bottom: 0.75em;
 
@@ -243,6 +265,26 @@
 
             a {
                 color: #853C82;
+            }
+        }
+    }
+
+    .quick-guide-container.quick-guide-scarves {
+        .quick-guide {
+            width: 50%;
+            color: #ffffff;
+            background: #697b84;
+
+            a, h4, p {
+                color: #fff;
+            }
+            h4.quick-guide-title {
+                font-size: 1.5em;
+                margin-bottom: 0.5em;
+            }
+
+            @media #{$mobile} {
+                width: 100%;
             }
         }
     }
@@ -294,17 +336,17 @@
 
     span.big-question {
         display: block;
-        font-size: 1.4em;
-        width: 60%;
+        font-size: 1.6em;
+        width: 70%;
         margin: 50px auto;
         font-family: 'Zin Display', serif;
         font-style: italic;
-        color: #555555;
+        color: #ffffff;
         padding: 1.2em 30px 1.2em 75px;
-        border-left: 8px solid $nbw-dark;
+        border-left: 8px solid #424A4F;
         line-height: 1.6;
         position: relative;
-        background: #EDEDED;
+        background: #697b84;
     }
 
     /*
@@ -316,6 +358,14 @@
         position: absolute;
         left: 10px;
         top:-10px;
+      }
+
+    span.big-question .author{
+        display:block;
+        color:#333333;
+        font-style: normal;
+        font-weight: bold;
+        margin-top:1em;
       }
     */
 

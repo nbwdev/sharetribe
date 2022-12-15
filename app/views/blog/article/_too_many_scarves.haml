@@ -12,7 +12,7 @@
   %h2.article-title="Too Many Scarves"
   %p.published-date
     December 2022
-  .article-section.article-section-right-image
+  .article-section.article-section-with-quote
     .article-text
       %h3 My scarf hoard – why I have one and why I am getting rid of it
       %p
@@ -23,18 +23,21 @@
         So the big question here is:
         %span.big-question
           Why do we feel we need more than we actually do?
+
+  .article-section
+    .article-text.followed-by-image
+      %p
         The need for 18 scarves has been on my mind for a little while now.
         I am still wondering what led me to this number.
         As a person of habit I know that I have only one favorite scarf for Autumn and winter and that 9 times out of 10, this is the one that I reach for and without even thinking about it.
         It has serves me very well whenever I am in need of reliable neck warmth.
         So, if this is indeed the case then I am wondering why do I have 17 more?
         It was time to take a closer look at my scarf collection and make more sense of it all.
-
-    .article-image
+    .article-image.article-image-centred
       -image_url = image_path("blog/too-many-scarves/scarves-white-green-grey.jpg")
       =image_tag(image_url, alt: "Three wool scarves piled up on a wooden table. One is loosely knitted, one is tighly machine knit in green and the other is a soft cable-knit grey.")
 
-  .article-section.article-section-right-image
+  .article-section
     .article-text
       %h4
         Scarf collecting – when did it start?
@@ -68,7 +71,7 @@
         They had both been shelved for some time and I cannot remember the last time I wore either of them.
         I seriously have no recollection.
 
-    .quick-guide-container
+    .quick-guide-container.quick-guide-scarves
       .quick-guide
         %h4.quick-guide-title
           My scarf collection and categories
@@ -92,7 +95,7 @@
         %p
           Total = 18 scarves
 
-  .article-section.article-section-right-image
+  .article-section
     .article-text
       %h3
         Let the fun begin. Decluttering your scarf collection – why it will save you time and space forever
@@ -104,12 +107,10 @@
         This was a very good question.
         Below you will find the next steps I took in my decluttering journey.
 
-    .quick-guide-container
+    .quick-guide-container.quick-guide-scarves
       .quick-guide
         %h4.quick-guide-title
-          %span.quick-guide
-            Quick guide
-            \- preparing to reduce my scarf hoard
+          Quick guide - preparing to reduce my scarf hoard
         %ul
           %li 
             =link_to "#step-1" do
@@ -131,12 +132,9 @@
               Step 6 – Final steps
 
 
-  .article-section.article-section-right-image
-    .article-image
-      -image_url = image_path("blog/too-many-scarves/knitted-cosy-scarves.jpg")
-      =image_tag(image_url, alt: "Three cozy and soft woolen scarves in a pile.")
+  .article-section
 
-    .article-text
+    .article-text.followed-by-image
       %h3#step-1 Step 1 – How I got started
       %p
         If you can’t do it right away pick a time when you can give this task your full attention.
@@ -148,6 +146,11 @@
         You also want a nice free space to help you work quickly.
         I used my dining table as I also know I would have to have it cleared before the next sitting.
 
+    .article-image.article-image-centred
+      -image_url = image_path("blog/too-many-scarves/knitted-cosy-scarves.jpg")
+      =image_tag(image_url, alt: "Three cozy and soft woolen scarves in a pile.")
+
+    .article-text.following-image
       %h3#step-2 Step 2 – Assess the size of your hoard
       %p
         When you are ready, take out your entire hoard of scarves and place them all out on your clear space.
@@ -171,14 +174,10 @@
         These scarves are the ones that will go in the new space you have designated for your reduced scarf collection so think honestly.
         Here are my new categories, but feel free to make up some of your own:
 
-    .quick-guide-container
+    .quick-guide-container.quick-guide-scarves
       .quick-guide
         %h4.quick-guide-title
           Declutter prep – know your new scarf categories
-        %p.quick-guide-intro
-          Knowing your scarf categories is a great way to realise when you have to many scarves.
-          It can help you asses what you wear and what you don’t.
-          Here is a good basic example to get you started:
         %ul
           %li 
             Category 1 – Autumn/winter - Day to day
@@ -189,6 +188,7 @@
           %li
             Category 4 – Spring/Summer
 
+  .article-section
     .article-text
       %h4.scarf-category Category 1 – Autumn/winter - Day to day scarves
       %p
