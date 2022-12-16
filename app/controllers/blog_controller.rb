@@ -26,6 +26,11 @@ class BlogController < ApplicationController
             :id => 'too_many_scarves',
             :title => 'Too Many Scarves',
             :created => Date.new(2022,12,14)
+        },
+        'fix_your_drawers_forever' => {
+            :id => 'fix_your_drawers_forever',
+            :title => 'Fix your drawers forever',
+            :created => Date.new(2022,12,16)
         }
     }
 

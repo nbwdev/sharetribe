@@ -160,6 +160,18 @@
         color: #4a4a4a;
     }
 
+    .inline {
+        display: inline-block;
+    }
+
+    h3.inline::after {
+        margin-bottom: 0.75em;
+    }
+
+    .strong {
+        font-weight: bold;
+    }
+
     h2.article-title {
         margin-bottom: 0;
         @media #{$mobile} {
@@ -218,6 +230,18 @@
         .article-image {
             float: right;
             margin-left: 20px;
+        }
+    }
+
+    .article-section-right-image.text-first {
+        .article-image {
+            float: right;
+            margin-left: 0;
+        }
+        .article-text {
+            float: left;
+            width: 66%;
+            padding-right: 20px;
         }
     }
 
@@ -285,6 +309,10 @@
 
             @media #{$mobile} {
                 width: 100%;
+            }
+
+            span.strong {
+                font-weight: bold;
             }
         }
     }
