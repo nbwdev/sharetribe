@@ -789,6 +789,11 @@ Rails.application.routes.draw do
 
     # redirect temporarily so the top bar articles link is not broken and to hopefully signal the move to google
     get '/articles', to:redirect('/blog')
+
+    # Vanity URLs for the articles
+    get '/fix-your-drawers', to:redirect('/en/blog/fix_your_drawers_forever')
+    get '/too-many-scarves', to:redirect('/en/blog/too_many_scarves')
+    get '/wardrobe-challenge', to:redirect('/en/blog/the_wardrobe_challenge')
     
     # standalone "My Story" page replaces the about page
     resources :my_story, only: [:index]
