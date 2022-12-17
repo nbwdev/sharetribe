@@ -36,6 +36,8 @@
     .article-image.article-image-centred
       -image_url = image_path("blog/too-many-scarves/scarves-white-green-grey.jpg")
       =image_tag(image_url, alt: "Three wool scarves piled up on a wooden table. One is loosely knitted, one is tighly machine knit in green and the other is a soft cable-knit grey.")
+      %figcaption
+        Photo by Stocksnap on Pixabay
 
   .article-section
     .article-text
@@ -149,6 +151,10 @@
     .article-image.article-image-centred
       -image_url = image_path("blog/too-many-scarves/knitted-cosy-scarves.jpg")
       =image_tag(image_url, alt: "Three cozy and soft woolen scarves in a pile.")
+      %figcaption
+        Photo by
+        =link_to('pvproductions', 'https://www.freepik.com/free-photo/cozy-winter-composition-with-knitted-items-blurred-background-with-bokeh_11568685.htm')
+        on Freepik
 
     .article-text.following-image
       %h3#step-2 Step 2 – Assess the size of your hoard
@@ -198,7 +204,7 @@
         You always reach for it without even thinking about it and by having it you save valuable time getting ready and out the door.
         This scarf can go in the keep pile and the rest you should setting aside.
 
-      %h4.scarf-category Category 2 – Autumn/winter - Special occasions.
+      %h4.scarf-category Category 2 – Autumn/winter - Special occasions
       %p
         You want a really nice scarf in this category.
         It should be of good quality.
@@ -206,7 +212,7 @@
         You can rely on this scarf to add the finishing touches to any special outfit.
         This one can definitely go in the keep pile. The rest you should set aside.
 
-      %h4.scarf-category Category 3 - Sentimental.
+      %h4.scarf-category Category 3 - Sentimental
       %p
         These are always the keepers for me.
         I have a scarf that was bought for me by a relative that is no longer here.
@@ -215,7 +221,7 @@
         So, it’s really up to you what happens with any scarf in this category.
         No questions asked.
 
-      %h4.scarf-category Category 4 - Spring/Summer.
+      %h4.scarf-category Category 4 - Spring/Summer
       %p
         If you are doing this in autumn then you can either put all your spring/summer scarves away until it gets a little warmer and you are ready to go through them or take them through the same process now and visa versa.
 
@@ -250,6 +256,11 @@
         It can be much easier to pull a container down, take what you need and put it back quickly and neatly, so you are less likely make a mess and less likely to pull them all out at once.
         This will always save you lots of time.
 
+  .article-section
+    .article-image.article-image-centred
+      -image_url = image_path("blog/too-many-scarves/scarf-hoard.png")
+      =image_tag(image_url, alt: "The breakdown of my scarf hoard into different categories and showing which scarves I kept. I started with 18 scarves and kept 4: one for winter, one dressy, one for spring/summer and one for sentimental reasons.")
+
   .article-footer
     %p
       We would love to hear from you if you found this article useful
@@ -263,15 +274,4 @@
       If there is anything you would love to read about, we would be happy to consider your request too.
       Please just a dd a few details and why you would find it helpful.
 
-    %p.image-credit
-      Thanks to pvproductions @ Freepik,
-      and StockSnap @ Pixabay for images
-
-  %br
-  .article-section
-    .article-text
-      %h3#pin-it Pin for later?
-    .article-image
-      -image_url = image_path("blog/too-many-scarves/scarf-hoard.png")
-      =image_tag(image_url, alt: "The breakdown of my scarf hoard into different categories. Which really means, one essential scarf and 17 standby scarves that I don't really need.")
   

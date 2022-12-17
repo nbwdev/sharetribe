@@ -5,6 +5,7 @@
 - content_for :meta_article_image_1, image_path("blog/fix-your-drawers-forever/overflowing-drawers.jpg")
 - content_for :meta_article_image_2, image_path("blog/fix-your-drawers-forever/piling-clothes-neatly.jpg")
 - content_for :meta_article_image_3, image_path("blog/fix-your-drawers-forever/overwhelmed.jpg")
+- content_for :meta_article_image_4, image_path("blog/fix-your-drawers-forever/fix-your-drawers-flowchart.png")
 - content_for :meta_article_date_published, '2022-12-16T08:00:00+01:00'
 - content_for :meta_article_date_modified, '2022-12-16T08:00:00+01:00'
 
@@ -48,6 +49,11 @@
     .article-image
       -image_url = image_path("blog/fix-your-drawers-forever/overflowing-drawers.jpg")
       =image_tag(image_url, alt: "All three drawers in a chest of drawers overflow with clothes.")
+      %figcaption
+        Photo by
+        =link_to('Freepik', 'https://www.freepik.com/free-photo/dirty-home-concept-with-wardrobe-high-angle_23591496.htm')
+        on Freepik
+        
 
   .article-section
     .article-text
@@ -137,7 +143,7 @@
           %li
             Which drawers do you go to the least?
 
-  .article-section
+  .article-section.article-section-with-quote
     .article-text.followed-by-image
       %h3
         Know what you wear  - Time to be honest with yourself
@@ -250,6 +256,10 @@
     .article-image.article-image-centred
       -image_url = image_path("blog/fix-your-drawers-forever/piling-clothes-neatly.jpg")
       =image_tag(image_url, alt: "Sitting cross-legged on the floor and piling clothes into three neat piles.")
+      %figcaption
+        Photo by
+        =link_to('Sarah Brown', 'https://unsplash.com/photos/oa7pqZmmhuA')
+        on Unsplash
 
     .article-text.following-image
       %p
@@ -288,7 +298,7 @@
   .article-section.article-section-right-image
     .article-image
       -first_url = image_path("blog/fix-your-drawers-forever/fix-your-drawers-flowchart.png")
-      =image_tag(first_url, alt: "A flowchart showing how to decide whether or not to keep each item of clothing. The flow is described in section 5 of this article.")
+      =image_tag(first_url, alt: "A flowchart showing how to decide whether or not to keep each item of clothing when clearing your drawers. The flow is described in section 5 of this article.")
 
     .article-text
       %h3#step-5.inline Step 5 – A new start
@@ -345,6 +355,10 @@
     .article-image.article-image-centred
       -image_url = image_path("blog/fix-your-drawers-forever/overwhelmed.jpg")
       =image_tag(image_url, alt: "A tall and unstable pile of woolen clothing.")
+      %figcaption
+        Photo by
+        =link_to('Freepik', 'https://www.freepik.com/free-photo/fast-fashion-vs-slow-sustainable-fashion_19533984.htm')
+        on Freepik
 
   .article-section
     .article-text
@@ -389,7 +403,4 @@
     %p
       If there is anything you would love to read about, we would be happy to consider your request too
 
-    %p.image-credit
-      Thanks to freepik @ Freepik,
-      and Sarah Brown @ Unsplash for images
   

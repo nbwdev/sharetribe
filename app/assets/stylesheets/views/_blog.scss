@@ -218,12 +218,25 @@
         img {
             width: 100%;
             border-radius: 20px;
+            vertical-align: middle;
         }
 
         @media #{$mobile} {
             width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
+        figcaption {
+            text-align: right;
+            font-size: 0.8em;
+            font-style: italic;
+            padding-right: 20px;
+
+            a {
+                color: #4a4a4a;
+            }
+        }
     }
 
     .article-section-right-image {
@@ -382,17 +395,17 @@
         background: #697b84;
     }
 
-    /*
     span.big-question::before{
         font-family:Arial;
         content: "\201C";
-        color:$nbw-dark;
+        color:#ffffff;
         font-size:4em;
         position: absolute;
         left: 10px;
         top:-10px;
       }
 
+    /*
     span.big-question .author{
         display:block;
         color:#333333;
