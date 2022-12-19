@@ -11,5 +11,3 @@
 // Rails.application.config.assets.precompile
 //= require vendor-bundle
 //= require app-bundle
-
-//= require fastclick

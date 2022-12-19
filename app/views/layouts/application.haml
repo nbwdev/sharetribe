@@ -108,8 +108,6 @@
       $(function() {
         if ('touchAction' in document.body.style) {
           document.body.style.touchAction = 'manipulation';
-        } else {
-          window.FastClick.attach(document.body, { excludeNode: '^pac-'} );
         }
       });
 
