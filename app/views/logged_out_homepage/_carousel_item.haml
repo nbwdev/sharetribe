@@ -1,15 +1,21 @@
 -# Variables: 
 -# item_class: class to set on the carousel item (for example to hide it on initial display before the javascript loads)
--# image_path
+-# image_path - if the card has an image (in which case the card_title will be ignored)
+-# card_title - if the card has a title
 -# alt_text
 -# tip_title: the title of the text
 -# text: the paragraph of text (include line breaks as needed to make it read better)
 -# font_size: desktop font size
 .carousel-item{ :class => item_class}
-  .insta-container 
-    .image-container
-      -image_url = image_path(image_path)
-      =image_tag(image_url, class: 'carousel-img', alt: alt_text)
+  .insta-container
+    - if image_path
+      .image-container
+        -image_url = image_path(image_path)
+        =image_tag(image_url, class: 'carousel-img', alt: alt_text)
+    - else
+      .title-container
+        %h1
+          =card_title
     .text-container 
       %p.tip-title
         #{tip_title}
