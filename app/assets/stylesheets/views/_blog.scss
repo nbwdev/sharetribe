@@ -274,7 +274,15 @@
         .article-image-centred {
             float: none;
             margin: auto;
-            width: 50%;
+            width: 60%;
+
+            @media #{$mobile} {
+                width: 100%;
+            }
+        }
+
+        .article-image-centred.portrait {
+            width: 40%;
 
             @media #{$mobile} {
                 width: 100%;
