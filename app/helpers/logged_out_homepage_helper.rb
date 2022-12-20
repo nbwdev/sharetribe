@@ -102,14 +102,6 @@ module LoggedOutHomepageHelper
         :item_class => "carousel-hide",
         :card_title => "Try this one new habit to reduce your fast fashion",
         :tip_text => "Everyday wear gets worn and washed regularly so it should be of good quality to stay looking good and last longer".html_safe
-      },
-      {
-        :card_type => "IMAGE_AND_TEXT",
-        :item_class => "carousel-hide",
-        :image_path => "logged_out_homepage/upgrade-with-an-elegant-scarf.jpg",
-        :alt_text => "A woman stands under the arched walkway on a European street. She wears a fresh pastel pink long wool coat with a paisley scarf. She is looking intently into the window of a nearby store.",
-        :tip_title => "Autumn Tips",
-        :tip_text => "Is your outfit feeling<br>a bit casual?<br>Add an elegant scarf<br>for an instant upgrade".html_safe
       }
     ]
   end
