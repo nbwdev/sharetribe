@@ -1,23 +1,49 @@
 -# Variables: 
+-# card_type - a string like <left-pane>_AND_<right-pane> is one of:
+-#             IMAGE_AND_TEXT - image on the left, paragraph of text on the right
+-#             IMAGE_AND_LIST - image on the left, bullet list on the right
+-#             TITLE_AND_TEXT - title on the left, paragraph of text on the right
+-#             TITLE_AND_LIST - title on the left, bullet list on the right
 -# item_class: class to set on the carousel item (for example to hide it on initial display before the javascript loads)
 -# image_path - if the card has an image (in which case the card_title will be ignored)
--# card_title - if the card has a title
 -# alt_text
+-# card_title: the title of the card
 -# tip_title: the title of the text
+-#  - will either fill the left side for WITH_TITLE type or be the title above the text for WITH_IMAGE type
 -# text: the paragraph of text (include line breaks as needed to make it read better)
+-# tip-list: list of lines of text to show as bullet list for IMAGE_AND_LIST or TITLE_AND_LIST card type
 -# font_size: desktop font size
+
+- if card_type == LoggedOutHomepageHelper::TITLE_AND_TEXT || card_type == LoggedOutHomepageHelper::TITLE_AND_LIST
+  - gradient_class = "title-card"
 .carousel-item{ :class => item_class}
-  .insta-container
-    - if image_path
+  .insta-container{ :class => gradient_class }
+    -# Left pane
+    - if card_type == LoggedOutHomepageHelper::IMAGE_AND_TEXT
       .image-container
         -image_url = image_path(image_path)
         =image_tag(image_url, class: 'carousel-img', alt: alt_text)
-    - else
+    - elsif card_type == LoggedOutHomepageHelper::TITLE_AND_TEXT || card_type == LoggedOutHomepageHelper::TITLE_AND_LIST
       .title-container
-        %h1
+        %p.tip-title
           =card_title
-    .text-container 
-      %p.tip-title
-        #{tip_title}
-      %p.tip-text
-        #{tip_text}
+    
+    -# Right pane
+    - if card_type == LoggedOutHomepageHelper::IMAGE_AND_TEXT || card_type == LoggedOutHomepageHelper::TITLE_AND_TEXT
+      .text-container{ :class => gradient_class }
+        - if defined? tip_title
+          %p.tip-title
+            #{tip_title}
+          %p.tip-text
+            #{tip_text}
+        - else
+          %p.tip-text.no-title
+            #{tip_text}
+
+    - elsif card_type == LoggedOutHomepageHelper::TITLE_AND_LIST
+      .text-container{ :class => gradient_class }
+        %ul
+          - tip_list.each do |tip|
+            %li
+              =tip
+

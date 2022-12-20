@@ -5,6 +5,44 @@
 
     .tips-container {
 
+        padding-top: 3em;
+        padding-bottom: 2.5em;
+        margin: auto;
+
+        .text-container {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        p, li {
+            font-family: Fifita, 'Proxima Soft', 'Source Sans Pro', helvetica, sans-serif;
+        }
+
+        @media (max-width: 660px) {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        a.follow-insta {
+            color: $nbw-dark;
+            margin-bottom: 0;
+            font-size: 20px;
+
+            span {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            svg {
+                vertical-align: text-bottom;
+                margin-right: 0.075em;
+            }
+            path {
+                fill: $nbw-dark;
+            }
+        }
+
+        max-width: 1024px;
+
         div.carousel-hide {
             display: none;
         }
@@ -24,15 +62,33 @@
             max-width: -moz-fit-content;
             max-width: fit-content;
 
-            .image-container, .text-container {
-                width: 200px;
-                height: 200px;
-            }
-   
+            width: 400px;
+            height: 200px;
             @media #{$desktop} {
-                .image-container, .text-container {
+                width:600px;
+                height: 300px;
+            }
+
+            @media (max-width: 660px) {
+                width: 200px;
+                height: 400px;
+            }
+
+            .image-container, .text-container {
+                width: 50%;
+            }
+  
+            @media #{$desktop} {
+                .image-container, .text-container, .title-container {
                     width: 300px;
                     height: 300px;
+                }
+            }
+            @media (max-width: 660px) {
+                .image-container, .text-container, .title-container {
+                    width: 100%;
+                    height: 200px;
+                    width: 200px;
                 }
             }
 
@@ -49,16 +105,51 @@
 
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
+            }
 
+            .text-container, .title-container {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
             }
 
-            .tip-title, .tip-text {
+            .tip-title, .tip-text, ul, li {
                 color: $nbw-pale;
                 margin-bottom: 0;
                 line-height: normal;
+            }
+
+            ul {
+                text-align: left;
+                margin-left: 1em;
+                margin-right: 1em;
+
+                list-style-type: disc;
+
+                li:not(:last-child) { 
+                    margin-bottom: 6px;  
+                }
+
+                li {
+                    font-size: 18px;
+                }
+
+                @media #{$desktop} {
+
+                    li {
+                        font-size: 24px;
+                    }
+                }
+
+                @media (max-width: 660px) {
+
+                    margin-left: 5px;
+                    margin-right: 5px;
+                        
+                    li {
+                        font-size: 18px;
+                    }
+                }
             }
 
             .tip-title {
@@ -66,13 +157,34 @@
                 font-size: 22px;
             }
 
+            .title-container {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                background-color: $nbw-pale;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+
+                background: linear-gradient(45deg, #d8a7d5 0%, #f1e6ff 30%, #f1e6ff 100%);
+ 
+                .tip-title {
+                    margin-top: 0;
+                    color: $nbw-dark;
+                }
+
+                @media (max-width: 660px) {
+                    border-radius: 20px 20px 0 0;
+                }
+            }
+
             .tip-text {
-                flex: 1;
                 display: flex;
                 justify-content: center;
                 padding-bottom: 17px;
                 font-size: 20px;
                 margin-top: 10px;
+            }
+            .tip-text.no-title {
+                margin-bottom: 10px;
             }
 
             @media (max-width: 660px) {
@@ -97,6 +209,44 @@
                     min-height: 220px;
                     margin-top: 20px;
                 }
+                .tip-text.no-title {
+                    min-height: 0;
+                    margin-bottom: 20px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        .title-card {
+            .text-container {
+                width: 60%;
+            }
+  
+            .title-container {
+                width: 40%;
+            }
+
+            @media (max-width: 660px) {
+                .text-container, .title-container {
+                    width: 100%;
+                }
+
+                .title-container {
+                    height: 40%;
+                }
+
+                .text-container {
+                    height: 60%;
+                    justify-content: start;
+                    padding-top: 1em;
+
+                    .tip-text.no-title {
+                        font-size: 18px;
+                        padding-bottom: 0;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }      
             }
         }
 

@@ -322,46 +322,6 @@ article.page-content.no-padding-bottom {
         }
     }
 
-    .tips-container {
-        padding-top: 3em;
-        padding-bottom: 2.5em;
-        margin: auto;
-
-        .text-container {
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-
-        p {
-            font-family: Fifita, 'Proxima Soft', 'Source Sans Pro', helvetica, sans-serif;
-        }
-
-        @media (max-width: 660px) {
-            margin-left: 1em;
-            margin-right: 1em;
-        }
-
-        a.follow-insta {
-            color: $nbw-dark;
-            margin-bottom: 0;
-            font-size: 20px;
-
-            span {
-                font-weight: bold;
-                white-space: nowrap;
-            }
-            svg {
-                vertical-align: text-bottom;
-                margin-right: 0.075em;
-            }
-            path {
-                fill: $nbw-dark;
-            }
-        }
-
-        max-width: 1024px;
-    }
-
     .our-story-container {
         background-color: $nbw-pale;
 
