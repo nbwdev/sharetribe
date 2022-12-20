@@ -24,10 +24,10 @@ module LoggedOutHomepageHelper
         :item_class => "carousel-hide",
         :card_title => "4 Top categories to help you declutter",
         :tip_list => [
-            "Keep & wear".html_safe,
-            "Recycle".html_safe,
-            "Sell".html_safe,
-            "Donate".html_safe
+            "Keep it & wear it".html_safe,
+            "Recycle it".html_safe,
+            "Sell it".html_safe,
+            "Donate it".html_safe
         ]
       },
       {
