@@ -5,5 +5,9 @@
     |
     = article_data[:title]
 
+- content_for :title do
+  = social_title
+- content_for :meta_description do
+  = social_description
 - partial_name = "blog/article/" + article_id
 = render :partial => partial_name

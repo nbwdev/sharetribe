@@ -28,6 +28,11 @@
     span.ShopButton_background { background-color: #783676; }
     span.AddNewListingButton_background {background-color: #783676; }
 
+- content_for :title do
+  = "Welcome to NeverBeenWorn"
+- content_for :meta_description do
+  = "Never Worn It? Why Keep It? Make space, make money, and elevate your life"
+
 - content_for :extra_javascript do
   %script{:type => "text/javascript", :src => "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
   :javascript
