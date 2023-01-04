@@ -3,6 +3,18 @@
 
 .logged_out_homepage {
 
+    /* Define colours at the top so we can mess about with them more easily */
+    $tip-title-panel-text-colour: $nbw-dark;
+    $tip-text-panel-text-colour: $nbw-pale;
+    
+    $tip-title-panel-light-shade: #f1e6ff;
+    $tip-title-panel-dark-shade: #d8a7d5;
+    $tip-text-panel-light-shade: #B04FAB;
+    $tip-text-panel-dark-shade: #7D387A;
+
+    $find-us-on-instagram-colour: $nbw-dark;
+
+
     .tips-container {
 
         padding-top: 3em;
@@ -24,7 +36,7 @@
         }
 
         a.follow-insta {
-            color: $nbw-dark;
+            color: $find-us-on-instagram-colour;
             margin-bottom: 0;
             font-size: 20px;
 
@@ -37,7 +49,7 @@
                 margin-right: 0.075em;
             }
             path {
-                fill: $nbw-dark;
+                fill: $find-us-on-instagram-colour;
             }
         }
 
@@ -57,7 +69,6 @@
             margin-right: 10px;
             display: flex;
             justify-content: center;
-            background-color: $nbw-dark;
             border-radius: 20px;
             max-width: -moz-fit-content;
             max-width: fit-content;
@@ -100,8 +111,8 @@
             }
 
             .text-container {
-                background-color: $nbw-dark;
-                background: linear-gradient(45deg, #B04FAB 0%, #B04FAB 30%, #7D387A 100%);
+                background-color: $tip-text-panel-dark-shade;
+                background: linear-gradient(45deg, $tip-text-panel-light-shade 0%, $tip-text-panel-light-shade 30%, $tip-text-panel-dark-shade 100%);
 
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
@@ -114,7 +125,7 @@
             }
 
             .tip-title, .tip-text, ul, li {
-                color: $nbw-pale;
+                color: $tip-text-panel-text-colour;
                 margin-bottom: 0;
                 line-height: normal;
             }
@@ -160,15 +171,15 @@
             .title-container {
                 padding-left: 0.5em;
                 padding-right: 0.5em;
-                background-color: $nbw-pale;
                 border-top-left-radius: 20px;
                 border-bottom-left-radius: 20px;
 
-                background: linear-gradient(45deg, #d8a7d5 0%, #f1e6ff 30%, #f1e6ff 100%);
+                background-color: $tip-title-panel-light-shade;
+                background: linear-gradient(45deg, $tip-title-panel-dark-shade 0%, $tip-title-panel-light-shade 30%, $tip-title-panel-light-shade 100%);
  
                 .tip-title {
                     margin-top: 0;
-                    color: $nbw-dark;
+                    color: $tip-title-panel-text-colour;
                 }
 
                 @media (max-width: 660px) {
@@ -250,9 +261,13 @@
             }
         }
 
+        /*
+          Slick list - styling of the carousel elements
+        */
+
         .slick-list{padding:0 20% 0 20% !important;}
         button.slick-prev:before, button.slick-next:before {
-            color: $nbw-dark;
+            color: $tip-text-panel-dark-shade;
         }
         .slick-slide {
             margin: 0;
@@ -296,7 +311,7 @@
             button:before {
                 font-size:25px;
                 margin-top: 10px;
-                color: $nbw-dark;
+                color: $tip-text-panel-dark-shade;
             }
         }
 
