@@ -326,6 +326,9 @@ class PersonMailer < ActionMailer::Base # rubocop:disable Metrics/ClassLength
     else
       platform_admin_email
     end
+
+    # hard code it while we are on the free tier so the spams don't cost us money
+    "info@neverbeenworn.co.uk"
   end
 
   # Send a cheat sheet by email
