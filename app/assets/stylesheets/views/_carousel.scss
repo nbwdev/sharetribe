@@ -4,13 +4,13 @@
 .logged_out_homepage {
 
     /* Define colours at the top so we can mess about with them more easily */
-    $tip-title-panel-text-colour: $nbw-dark;
-    $tip-text-panel-text-colour: $nbw-pale;
+    $title-panel-text-colour: 	$nbw-dark;
+    $text-panel-text-colour: #f1e6ff;
     
-    $tip-title-panel-light-shade: #f1e6ff;
-    $tip-title-panel-dark-shade: #d8a7d5;
-    $tip-text-panel-light-shade: #B04FAB;
-    $tip-text-panel-dark-shade: #7D387A;
+    $title-panel-light-shade: #f1e6ff;
+    $title-panel-dark-shade: 	#d8a7d5;
+    $text-panel-light-shade: #b04fab;
+    $text-panel-dark-shade: 	#7d387a;
 
     $find-us-on-instagram-colour: $nbw-dark;
 
@@ -111,8 +111,8 @@
             }
 
             .text-container {
-                background-color: $tip-text-panel-dark-shade;
-                background: linear-gradient(45deg, $tip-text-panel-light-shade 0%, $tip-text-panel-light-shade 30%, $tip-text-panel-dark-shade 100%);
+                background-color: $text-panel-dark-shade;
+                background: linear-gradient(45deg, $text-panel-light-shade 0%, $text-panel-light-shade 30%, $text-panel-dark-shade 100%);
 
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
@@ -125,7 +125,7 @@
             }
 
             .tip-title, .tip-text, ul, li {
-                color: $tip-text-panel-text-colour;
+                color: $text-panel-text-colour;
                 margin-bottom: 0;
                 line-height: normal;
             }
@@ -174,12 +174,12 @@
                 border-top-left-radius: 20px;
                 border-bottom-left-radius: 20px;
 
-                background-color: $tip-title-panel-light-shade;
-                background: linear-gradient(45deg, $tip-title-panel-dark-shade 0%, $tip-title-panel-light-shade 30%, $tip-title-panel-light-shade 100%);
+                background-color: $title-panel-light-shade;
+                background: linear-gradient(45deg, $title-panel-dark-shade 0%, $title-panel-light-shade 30%, $title-panel-light-shade 100%);
  
                 .tip-title {
                     margin-top: 0;
-                    color: $tip-title-panel-text-colour;
+                    color: $title-panel-text-colour;
                 }
 
                 @media (max-width: 660px) {
@@ -267,7 +267,7 @@
 
         .slick-list{padding:0 20% 0 20% !important;}
         button.slick-prev:before, button.slick-next:before {
-            color: $tip-text-panel-dark-shade;
+            color: $text-panel-dark-shade;
         }
         .slick-slide {
             margin: 0;
@@ -311,7 +311,7 @@
             button:before {
                 font-size:25px;
                 margin-top: 10px;
-                color: $tip-text-panel-dark-shade;
+                color: $text-panel-dark-shade;
             }
         }
 
