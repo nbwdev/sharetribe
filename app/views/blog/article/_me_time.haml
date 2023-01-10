@@ -1,0 +1,484 @@
+-# Set these fields for SEO purposes. They will be included in the header
+-# TODO: Do this in a more elegant way to aviod duplication with controller and view
+- content_for :meta_article_id, 'me_time'
+- content_for :meta_article_headline, 'Me Time'
+- content_for :meta_article_image_1, image_path("blog/me-time/relaxing-bath.jpg")
+- content_for :meta_article_image_2, image_path("blog/me-time/holding-cup.jpg")
+- content_for :meta_article_date_published, '2023-01-10T08:00:00+01:00'
+- content_for :meta_article_date_modified, '2023-01-10T08:00:00+01:00'
+
+.blog-article
+  %h2.article-title="Me Time"
+  %p.published-date
+    January 2023
+  .article-section.article-section-right-image.text-first.article-section-with-quote
+    .article-text
+      %h3 
+        Kick start your new year with my relaxing ‘just for me’ day.
+        It’s the best way to unwind, make new plans and get yourself ready for a great year ahead.
+      %p
+        Ending the year with a celebration always feels great and it’s good to give the past a good send off whether it's been a good year or not.
+        Around this time of year I like to pause for a minute and reflect on all 12 months as I wave them goodbye and move forward with new and exciting things.
+        %span.big-question
+          Take a breath and relax
+
+      %p
+        I find this is also a perfect point to take some well-deserved time out and re-connect with who I am and where I am going in life.
+        It’s important for me to really say goodbye to the past and work out what I want from the future.
+        I like to know where I am heading next and I feel that this is the perfect time to stop and think about it all before life starts moving forward again.
+        If you struggle to find the time to make new aspirations, this is a great way to ensure you take a moment to do some serious thinking.
+        Establish what you really want next in life.
+        I love how it helps me get ready for a new year and new beginnings and really get focus on achieving my new goals. 
+    .article-image
+      -image_url = image_path("blog/me-time/relaxing-bath.jpg")
+      =image_tag(image_url, alt: "A relaxing bath surrounded by candles, a good book and a hot drink.")
+      %figcaption
+        Photo by
+        =link_to('Taryn Elliott', 'https://www.pexels.com/photo/a-romantic-setting-in-the-bathroom-4099354/')
+        on Pexels
+        
+
+  .article-section
+    .article-text
+      %h3
+        Me time - my relaxing day
+      %ul
+        %li
+          To help me unwind on the day I make a list of some of all my favourite relaxing things I like to do
+        %li
+          The relax day is about letting the past year go with all experiences good and bad
+        %li
+          It’s about looking forward to new things and focusing on what you want next
+        %li
+          It’s also about really checking in with yourself and making sure you are okay
+        %li
+          Reflect on the year that has just gone and think about what worked for you and what didn’t
+        %li
+          The plan is to have a go-slow day to reconnect and reflect on who you are and where you are going
+        %li
+          I find It helps me to re-focus and make the right  plans for the year ahead
+        %li
+          This way I can check how I am doing and am more likely to succeed as the year unfolds
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image
+    .article-text
+      %h3 
+        How to start – think of some relaxing things to do
+      
+      %p
+        I first started out by creating what I called ‘me time hours’ a few years ago, but I enjoyed it so much that now I now make a full day of it.
+        A day actually allows me to take time out from the world and to recharge, and it also gives me much needed space to think.
+        I can say that I have never missed a time out/me time day since.
+        It really gives me something to look forward to after the carnage of Christmas and because of that I do it every year now.
+        It’s become my favourite little secret wellbeing trick.
+        If you plan your day right it will turn out to be a really great and relaxing day and could have such a positive and lasting effect for the whole year.
+        Also, if you need some time out in-between Christmas and new year it’s a great relaxer,
+        but feel free to fit it in wherever it suits you and just find the best time for you and your needs.
+        The most important thing is to have the time to yourself, really relax and enjoy your day completely.
+        If you do this you will have a greater chance of getting the most benefit from your time out day and that can lead to a genuinely positive effect on your health,
+        well-being and general outlook on life itself.
+
+    .article-image
+      -image_url = image_path("blog/me-time/holding-cup.jpg")
+      =image_tag(image_url, alt: "A woman sits on the floor resting against her bed and holding a cup of herbal tea. She is relaxed with her eyes closed.")
+      %figcaption
+        Photo by
+        =link_to('Vlada Karpovich', 'https://www.pexels.com/photo/a-woman-holding-a-coffee-mug-5357365/')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          How to start – think of some relaxing things to do
+        %ul
+          %li
+            Have a nice lie in - wake up refreshed and relaxed
+          %li
+            Breakfast in bed
+          %li
+            Take a nice long bath - with candles, a good book or even a nice glass of wine in the evening
+          %li
+            Watch a favorite film – it’s all about easy watching and being relaxed
+          %li
+            Go for a nice walk – getting out in the fresh air and having a change of scene can be so good for you.
+            It can help you collect your thoughts and give those legs a nice gentle work out
+          %li
+            Read a book – it doesn’t matter what type as along as its enjoyable to you
+          %li
+            It’s important to pick things you really do find relaxing and love to do
+
+  .article-section.article-section-right-image.article-section-with-quote.text-first.article-half-page-image
+    .article-text
+      %h3 
+        Preparing for your day
+
+      %p
+        I like to start by making a list of the things I would like to eat and drink on the day to make sure I have everything I need.
+        It’s a good idea to think about how you will feed yourself throughout the day.
+        If you don’t want to do any major meal cooking them make sure you prepare for that in advance.
+        I tend to fill the fridge with easy grab treats to last through-out the day and make sure I have a delicious and prepared meal for the evening.
+        Next, I make a final list of some the relaxing things I would like to do.
+        When finalizing your own list think about the lings you love to do, but don’t always have the time for.
+        That way its more enjoyable and more personal to you.
+
+      %p
+        Finally I like to pick a day when the house is going to be quiet and I can be by myself.
+        If you have a busy house think about when the best time would be.
+        Maybe arrange to be in when everyone else to be out.
+        Also, think ahead about how connected you want to be with the outside world.
+        We all have responsibilities to maintain, so if you need to keep your phone close to hand then go ahead,
+        but try to take some time out and don’t get lost in scrolling through what the rest of the world is up to.
+        This is your time and it should be special so try to reserve it just for you.
+        Think of yourself as the VIP guest in your day.
+
+    .article-image
+      -image_url = image_path("blog/me-time/bedside.jpg")
+      =image_tag(image_url, alt: "A stylish bed with wooden headboard and clean white bedlinen. A bedside table beside it has a copper lamp and small white bud vase with a sprig from a tree. The scene is stylish and calming.")
+      %figcaption
+        Photo by
+        =link_to('Burst', 'https://www.pexels.com/photo/white-bedspread-beside-nightstand-with-white-and-copper-table-lamp-545012/')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Meals and snacks – some dos and don’ts
+        %ul
+          %li
+            %span.strong
+              Do
+            make sure you have enough food and refreshments for the day
+          %li
+            %span.strong
+              Do
+            try to have things to hand that you really love to eat. A plate with all your favourites already in the fridge is a great way to go.
+          %li
+            %span.strong
+              Don’t
+            make it to complicated.
+            I go for easy, tasty and quick food I love.
+          %li
+            %span.strong
+              Don’t
+            rush your food either.
+            The idea is to relax and enjoy each meal or snack.
+            You want to take your time, enjoy it and let the moment pass nice and slowly.
+          %li
+            %span.strong
+              Don’t
+            over indulge. Eat what you love but be comfortable after eating.
+            If you over eat you will be uncomfortable for some time and it will undo that wonderful relaxed feeling
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image
+    .article-text
+      %h3 
+        Me time day – Let the relaxing begin
+
+      %p
+        The night before I put fresh bedding on, so I wake up all relaxed and ready to enjoy my day.
+        I like to start with a little lie in to ensure that I wake nicely recharged and relaxed and ready for my me time-day to begin.
+        Next, I have a delicious breakfast of some of my favorite things and make sure it has a few healthy aspects to add to my well-being.
+        Feel free to turn it into breakfast in bed if you want, it’s your day remember, just do as you please and definitely don’t get dressed if you don’t want to.
+        The day is all about doing exactly what you want and when you want and doing it all in your own time.
+        After a nice cup of tea, I like to pick a couple of favorite things to do and loosely plan them into my day.
+        Today I am having a bit of a movie day and a nice hot bath a little later on.
+        I also choose to have a little nap before lunch. 
+
+    .article-image
+      -image_url = image_path("blog/me-time/coffee-and-croissant.jpg")
+      =image_tag(image_url, alt: "A cup of espresso and a croissant on a french cut-glass plate.")
+      %figcaption
+        Photo by
+        =link_to('Alesia Talkachova', 'https://www.pexels.com/photo/photograph-of-a-cup-of-coffee-and-a-croissant-on-a-glass-plate-7426480/')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Me time – some dos and don’ts
+        %ul
+          %li
+            %span.strong
+              Don't
+            structure you day to much.
+            Relax and see how you feel.
+          %li
+            %span.strong
+              Do
+            have a loose idea of how you want to spend your day, but let it unfold naturally and let time go out the window.
+            There is no hour-by-hour schedule here.
+          %li
+            %span.strong
+              Don’t
+            rush. You want your day to slowly unfold at your own speed, rather than like a tight schedule.
+            The idea is to get away from that for a day.
+          %li
+            %span.strong
+              Do
+            things as you feel you want to.
+            Move onto something else only when you really feel you want to.
+          %li
+            %span.strong
+              Do
+            feel free to take as many naps as you like.
+            This is your day.
+
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image
+    .article-text
+      %h3 
+        Lunch time – my first snack of the day
+
+      %p
+        Relaxing is hard work, especially if you are used to being on the go all the time, and it inevitable that you are going to need nourishment at some point.
+        Make sure you have some tasty and easy to prepare lunch ideas to keep you happy and to be able to continue the feel good factor of your day.
+        I love to have a late brunch and am happy to do the little prep it requires, but feel free to plan your snack in any way you want.
+        The key here is not to spend too much time preparing your lunch, to have what you would really love and to enjoy it thoroughly.
+        Obviously after your lunch you will need to take it slow, so you want a nice easy afternoon activity to help you digest.
+        It’s at this point I either watch a favourite film or read a book, but I have been known to take a little couch nap and allow my food to digest real slow.
+        Remember the choice is yours, so do as you please.
+        Here are some of my favourite after lunch activities:
+
+    .article-image
+      -image_url = image_path("blog/me-time/salmon-and-cream-cheese.jpg")
+      =image_tag(image_url, alt: "Three bite-sized open salmon and cream cheese sandwiches on crusty seeded bread with some herbs for flavour and garnish.")
+      %figcaption
+        Photo by
+        =link_to('timolina', 'https://www.freepik.com/free-photo/sandwich-with-salted-salmon-cream-cheese_6801211.htm')
+        on Freepik
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Snacks – Easy and favourite things to eat
+        %ul
+          %li
+            Bruschetta
+          %li
+            Bagel sandwich
+          %li
+            Toasted sandwich
+          %li
+            Tasty wrap
+          %li
+            Cheese board
+          %li
+            Charcuterie board
+  
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image
+    .article-text
+      %h3 
+        Making a new plan for the year ahead
+
+      %p
+        It’s around this time that you should be feeling nice and relaxed and have a clear mind to tackle the one bit of homework for the day.
+        If you are not ready, then simply move it to another part of the day.
+        You know what suits, so do it a bit later when you will be ready for it.
+        I look forward to making a good start on this part, but only once I have had some time to relax.
+        The aim is to stop for a minute and really think about the year that has just gone.
+        I like to dig out my goals that I wrote for the year and remind myself what I wanted to achieve and when.
+        This reflection is a great first exercise because it allows me to get in the right mindset for making setting new goals and making new plans.
+        If you are new to this and it’s your first time, don’t worry.
+        This can be an exciting time and you have a whole year to see what you can achieve.
+
+    .article-image
+      -image_url = image_path("blog/me-time/relaxing-by-the-window.jpg")
+      =image_tag(image_url, alt: "A woman sits on a cushion on a wide and sunny windowsill. She is relaxing with a hot drink while wearing loose natural clothes.")
+      %figcaption
+        Photo by
+        =link_to('Mikhail Nilov', 'https://www.pexels.com/photo/woman-in-white-sweater-sitting-by-the-glass-window-6968340/')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          First steps – to making good plans
+        %ul
+          %li
+            Have a nice sit down with a little refreshment. I like to grab a cup of tea at this point
+          %li
+            If you have your list from last year then take a look at it again
+          %li
+            Think about what worked and what didn’t and process why
+          %li
+            Start to think about your new plans for the year ahead
+          %li
+            Think about what you would like to achieve
+          %li
+            Think about where  you would like to go
+          %li
+            Think about who you would like to spend your time with
+          %li
+            Write your new plans down and put it aside for now
+      
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image
+    .article-text
+      %h3 
+        Afternoon Treat – Relaxing activities
+
+      %p
+        Once you have thought about and processed your experiences of the past year and made some plans for the new one, its time to have a little reward.
+        I like to pick a fun activity to pass the afternoon in a totally stress-free way.
+        Remember you are catching up and checking in with yourself so pick something that you love to waste time doing, even if its absolutely nothing,
+        just go ahead and do it.
+        The idea is to enjoy the moment and the time to be by yourself for a while.
+        Read that book you have always been meaning to.
+        Watch your favourite film again, because there will be no interruptions, listen to some of your favourite music,
+        just make sure it’s more on the relaxing side than the dance floor carnage side. 
+
+    .article-image
+      -image_url = image_path("blog/me-time/reading-on-the-sofa.jpg")
+      =image_tag(image_url, alt: "A woman reads on a white Chesterfield sofa, her back against the arm and a cup of tea in her hand. She is either enjoying the book or has a naturally happy resting face.")
+      %figcaption
+        Photo by 
+        =link_to('Andrea Piacquadio', 'https://www.pexels.com/photo/woman-sitting-on-white-couch-while-reading-a-book-3767382/')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Me time – After lunch easy activities
+        %ul
+          %li
+            Watch a favourite film
+          %li
+            Take a couch nap
+          %li
+            Read a good book
+          %li
+            Have a nice cup of tea
+          %li
+            Stare out the window
+          %li
+            Listen to some of your favourite relaxing music
+          %li
+            Listen to an audio book
+            
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image
+    .article-text
+      %h3 
+        Give yourself a bonus treat – Mini spa
+
+      %p
+        The time you spend on this activity and when you fit in your bonus treat is entirely up to you.
+        I have done this after breakfast, in the afternoon and even in the evening with a nice glass of fizz.
+        It’s all about when you feel it would suit you. Over the past couple of years, I have tried a number of different things too.
+        Some were great and some were just not for me. My favourite has turned out to be a nice relaxing bath.
+        It’s all about feeling pampered and who doesn’t love a bit of feel good pampering?
+        It can be anything you like, after all this your day and it’s all about you and how you feel.
+        I like to have all my favourite beauty products on hand to make my mini spa that extra bit special.
+        Here are some of the activities I have tried and loved over the years.  
+
+    .article-image
+      -image_url = image_path("blog/me-time/reading-in-the-bath.jpg")
+      =image_tag(image_url, alt: "A woman reads In a bathtub, with her feet on the side of the bath and the book resting against her legs.")
+      %figcaption
+        Photo by 
+        =link_to('Vlada Karpovich', 'https://www.pexels.com/photo/a-woman-reading-a-book-while-bathing-6634874/')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Mini spa – Pamper time
+        %ul
+          %li
+            Mini facial – with my favorite products
+          %li
+            Mini foot spa - pedicure and toe nail painting
+          %li
+            Manicure and finger nail painting
+          %li
+            Exfoliate and moisturize – with favourite products
+          %li
+            Nourish and condition hair – with some extra special hair products
+          %li
+            A nice long soak in the bath – with a relaxing bath soak
+            
+            
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image
+    .article-text
+      %h3 
+        Evening time – reflect and be sure
+
+      %p
+        Now you have had time to relax and reflect on your plans for the coming year,
+        it is time to take another look at that list and see if your new goals still resonate with you and what you really want to achieve.
+        Tomorrow is when you can start making plans to achieve all that is on your list, but today you should concentrate on making sure that they are things you really want.
+        Try to think about what they will really bring to your life and if it is still the right thing for you.
+        The key is to make your list about the things that will really mean something and make a difference.
+        There is no point picking things that look great, but turn out to be not what you thought they would be.
+        Choose the right plans now and you will achieve more and enjoy the outcome at the end too.
+        I like to sit down with a nice dinner and a glass of wine and really think about what goals I have planned and how I planned to achieve them.
+
+    .article-image
+      -image_url = image_path("blog/me-time/evening-meal-red-wine.jpg")
+      =image_tag(image_url, alt: "An meditteranean-style platter with meats and red wine.")
+      %figcaption
+        Photo by 
+        =link_to('KamranAydinov', 'https://www.freepik.com/free-photo/mixed-kebab-bottle-red-wine_6779063.htm')
+        on Freepik
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          New goals  – being sure they are right for you
+        %ul
+          %li
+            Make sure your goals reflect who you are and not how you like to be perceived.
+            These are very different things.
+          %li
+            If you are not being honest with yourself you will choose the wrong goals to suit you and you may lose commitment to them early on.
+          %li
+            Your goals should help you move forward as the person you naturally are and build on your current skills.
+          %li
+            For lifestyle goals you should be sure they will actually suit you and that you are not just choosing them for appearance sake.
+            
+
+  .article-section.article-section-right-image.text-first.article-half-page-image
+    .article-text
+      %h3 
+        Me time – Final thoughts
+
+      %p
+        However your day unfolds, I hope you really enjoy the time and reflection.
+        If you have done things right, you should have experienced a truly lovely day relaxing in the best company and be ready for a good night sleep.
+        If I end my day like this it tells me I have done it right.
+        My plans for the next 12 months are ready to roll and tomorrow is will be the start of an amazing year.
+        Remember you don’t have to do everything listed here. If you wanted to do absolutely nothing at all, then go right ahead.
+        As long as you get the time out, clarity and reflection needed to take on your goals in the year to come.
+        Good luck with your goals and have a great year.
+
+    .article-image
+      -image_url = image_path("blog/me-time/eyes-closed-swooshy-hair.jpg")
+      =image_tag(image_url, alt: "A lady with eyes closed in thought and hair blowing to frame her face.")
+      %figcaption
+        Photo by 
+        =link_to('cookie_studio', 'https://www.freepik.com/free-photo/beautiful-woman-after-spa-procedures-enjoying-herself-eyes-closed_8357978.htm')
+        on Freepik
+ 
+
+  .article-footer
+
+    %p
+      If you try the ‘me time day’, and get your new goals all set, then we would love to hear from you.
+    %p
+      Send us the highlights of your day or share your goals to inspire other people.
+      You can send it to
+      =link_to('info@neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Me Time')
+      and make sure you add ‘Me Time’ in the subject bar.
+
+    %p
+      If there is anything you would love to read about, we would be happy to consider your request too
+  

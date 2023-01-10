@@ -37,6 +37,12 @@ class BlogController < ApplicationController
             :title => 'Fix your drawers forever',
             :description => "From nightmare drawers to no more trouble",
             :created => Date.new(2022,12,16)
+        },
+        'me_time' => {
+            :id => 'me_time',
+            :title => 'Me Time',
+            :description => "Kick start your new year with my relaxing Just For Me day. It is the best way to unwind, make new plans and get yourself ready for a great year ahead.",
+            :created => Date.new(2023,01,10)
         }
     }
 

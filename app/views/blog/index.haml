@@ -15,6 +15,23 @@
 .blog
   .articles-grid
     %ul.blog-articles
+      -article = articles['me_time']
+      -image_url = image_path("blog/me-time/relaxing-bath.jpg")
+      %li.article-card{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "A relaxing bath surrounded by candles, a good book and a hot drink.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            Kick start your new year with my relaxing ‘just for me’&nbsp;day. It’s the best way to unwind, make new plans and get yourself ready for a great year&nbsp;ahead.
+            
       -article = articles['fix_your_drawers_forever']
       -image_url = image_path("blog/fix-your-drawers-forever/overflowing-drawers.jpg")
       %li.article-card{:role => "article"}
