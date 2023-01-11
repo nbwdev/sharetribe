@@ -1,0 +1,192 @@
+-# Set these fields for SEO purposes. They will be included in the header
+-# TODO: Do this in a more elegant way to aviod duplication with controller and view
+- content_for :meta_article_id, 'sustainability_the_right_choice'
+- content_for :meta_article_headline, "Sustainability - It's The Right Choice"
+- content_for :meta_article_image_1, image_path("blog/sustainability/globe-in-field.jpg")
+- content_for :meta_article_image_2, image_path("blog/sustainability/recycling-boxes.jpg")
+- content_for :meta_article_date_published, '2023-01-12T08:00:00+01:00'
+- content_for :meta_article_date_modified, '2023-01-12T08:00:00+01:00'
+
+.blog-article
+  %h2.article-title="Sustainability - It's The Right Choice"
+  %p.published-date
+    January 2023
+  .article-section.article-section-right-image.text-first.article-section-with-quote
+    .article-text
+      %p
+        Our never-ending consumption has caused some severe environmental damage and used up far too much of the natural resources of the planet.
+        If we don’t change now and make better choices we may cause permanent damage and it's very close to becoming almost irreversible.
+        We are polluting our own water supply and the ground that grows our food, to make all these products.
+        Not only that but we are polluting it for all other living things that also need it.
+      %p
+        These days we are all aware of the urgent need to change how and why we have a need to buy more and more stuff and it raises the following question
+        %span.big-question
+          Why do we feel the need to buy so much?
+
+      %h3 
+        We are not scientists
+      %p
+        And we are not world leaders, but we are humans so how about making a human change together right now?
+        It could be much more powerful.
+        This is why I started NeverBeenWorn.
+        Our homes are full of clutter.
+        Things we do not need or use.
+        Things that take up too much space and eventually get sent to landfill to pollute the ground.
+
+    .article-image
+      -image_url = image_path("blog/sustainability/globe-in-field.jpg")
+      =image_tag(image_url, alt: "A brightly-coloured child's globe sits in a field with daisies and other plants growing around it.")
+      %figcaption
+        Photo by
+        =link_to('Nothing Ahead','https://www.pexels.com/photo/earth-globe-toy-placed-on-grass-in-park-7425354')
+        on Pexels
+        
+  .article-section
+    .quick-guide-container.quick-guide-scarves.qg-left
+      .quick-guide.quick-guide-left
+        %h4.quick-guide-title
+          Around 1.8m tonnes of clothing and textile waste is created in the UK each year
+        %ul
+          %li
+            1m tonnes of this ends up in landfill
+          %li
+            350,000 tonnes  of this is clothes
+          %li
+            Fast fashion is on average worn less than 10 times before being discarded
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote
+    .article-text
+      %h3
+        Why I want to help
+      %p
+        A prime example is that we all have clothes in our wardrobe that we never got around to wearing and we know they take up far too much room.
+        So why can’t we bring ourselves to get rid of them?
+
+      %p
+        I know which items I reach for and wear every day and every week.
+        Yet every time I open my wardrobe, I see items I never wear and they just sit there day in day out, taking up too much space and deep down I know it.
+        We all do it.
+      
+      %p
+        Maybe like me, you hope you will wear those items one day because they are good clothes and maybe then you won’t feel like you wasted your money.
+        The sad thing is, I know this might never happen, so I am stuck with a wardrobe full of clothes I don’t wear and loads of clutter.
+        Well great news ladies.
+        I want to help you out with that. 
+        %span.big-question
+          Why do we hold on to what we really don’t need?
+
+      %h3
+        Life is busy. I want to help
+      %p
+        So how can we fix it?
+        I want to help you declutter and clear out your wardrobe quickly in your busy and demanding life and I want to help you find a new home for all your unworn items to stop them eventually going to land fill.
+        I know that you have probably taken great care of every item and that you have spent good money buying them all.
+        If they are taking up too much room in your wardrobe and you might never wear them, its time to let them go and someone else buy them.
+        You can clear out your wardrobe, declutter and sell all your unworn items right here.
+        Put them back out into the world, sell them and put some money back in your pocket.
+        Add your neverbeenworn clothes to our website and turn them into sustainable clothing right away.
+        It's quick and easy to do.
+
+    .article-image
+      -image_url = image_path("blog/sustainability/recycling-boxes.jpg")
+      =image_tag(image_url, alt: "A stack of three recycling boxes reading Metals, Plastic and Paper.")
+      %figcaption
+        Photo by
+        =link_to('cottonbro studio','https://www.pexels.com/photo/piled-plastic-containers-6591429')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves.qg-left
+      .quick-guide.quick-guide-left
+        %h4.quick-guide-title
+          The average UK wardrobe has as many as 16-25 items of clothing that have never been worn
+        %ul
+          %li
+            On average a single fast fashion garment is worn no more than 7 times before it is thrown away
+          %li
+            We wear approximately 20 % of our entire wardrobe on a regular basis
+          %li
+            We keep less than 50% of our clothes in circulation for no more than a year
+
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote
+    .article-text
+      %h3 
+        The world needs your help now
+      
+      %p
+        There are lots of lovely ladies out there looking for great sustainable clothes to buy and add to their wardrobe.
+        Clothes like yours that have been taken great care of and have never been worn.
+        You will be sending your items back out into the world to be re-sold and re-loved with a chance to be worn instead of them filling your home up and taking up all of that valuable space. 
+
+      %p
+        By putting your never been worn items back out into the world you are supporting sustainable fashion and giving everyone the chance to buy and wear already made items instead of using up our natural resources to create more and more things we don’t really need and that are damaging the environment.
+        This could make a real a difference for everyone.
+        You will be doing your human bit to help the planet and help make a change for the better. 
+
+    .article-image
+      -image_url = image_path("blog/sustainability/laptop-on-sofa.jpg")
+      =image_tag(image_url, alt: "A woman uses her laptop while sitting on a sofa.")
+      %figcaption
+        Photo by
+        =link_to('Monstera','https://www.pexels.com/photo/focused-young-african-american-lady-working-online-on-netbook-at-home-5331198')
+        on Pexels
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves.qg-left
+      .quick-guide.quick-guide-left
+        %h4.quick-guide-title
+          Take care of what you wear campaign
+        %p
+          3 steps to making the right changes in your wardrobe and better choices
+        %p
+          %span.strong
+            Step 1
+          \– Declutter your wardrobe and put all your unworn items back out in to the world
+        %p
+          %span.strong
+            Step 2
+          \– Buy only what you need and will wear often
+        %p
+          %span.strong
+            Step 3
+          \– Take care of what you wear
+
+  .article-section.article-section-right-image.text-first
+    .article-text
+      %h3 
+        A little human change and a new beginning
+
+      %p
+        With your help this could one day become a big human change, but right now we want to help you declutter, get rid of all you unworn items and make your life less cluttered and a little easier in a nice human way.
+        Join us in our new campaign
+        %span.strong
+          &apos;take care of what you wear&apos;
+        and take our 3 step guide to making better wardrobe choices now.
+
+      %p
+        Give your clothes and your wardrobe a new life and a new beginning.
+        It’s easy and you could be joining in to help save the life our planet.
+        Your clothes will be supporting sustainability in fashion and encourage more and more ladies to choose sustainable clothing.
+        Your will be helping to encourage the world to stop taking more from the planet to make more waste.
+        Together we can all help sustainable fashion grow. 
+
+      %p
+        At neverbeenworn, we say yes to new beginnings and yes to new directions.
+        We say yes to doing our human bit to help the planet and save our world.
+        We say yes to sustainable and yes to a fulfilling and happy life.
+        We say yes to working together. 
+
+      %p.strong
+        The fashion and sustainability team
+      %p.strong
+        NeverBeenWorn
+
+    .article-image
+      -image_url = image_path("blog/sustainability/blue-sky-field.jpg")
+      =image_tag(image_url, alt: "A field of green grass stretches below a blue sky with whispy white clouds.")
+      %figcaption
+        Photo by
+        =link_to('Scott Webb','https://www.pexels.com/photo/green-grass-field-under-white-clouds-1048039')
+        on Pexels
+

@@ -43,6 +43,12 @@ class BlogController < ApplicationController
             :title => 'Me Time',
             :description => "Kick start your new year with my relaxing Just For Me day. It is the best way to unwind, make new plans and get yourself ready for a great year ahead.",
             :created => Date.new(2023,01,10)
+        },
+        'sustainability_the_right_choice' => {
+            :id => 'sustainability_the_right_choice',
+            :title => "Sustainability - It's The Right Choice",
+            :description => "These days we are all aware of the urgent need to change how and why we have a need to buy more and more stuff. It raises the question: Why do we feel the need to buy so much?",
+            :created => Date.new(2023,01,10)
         }
     }
 

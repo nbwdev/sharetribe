@@ -15,6 +15,23 @@
 .blog
   .articles-grid
     %ul.blog-articles
+      -article = articles['sustainability_the_right_choice']
+      -image_url = image_path("blog/sustainability/globe-in-field.jpg")
+      %li.article-card{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "A brightly-coloured child's globe sits in a field with daisies and other plants growing around it.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            These days we are all aware of the urgent need to change how and why we have a need to buy more and more stuff. It raises the question: Why do we feel the need to buy so much?
+            
       -article = articles['me_time']
       -image_url = image_path("blog/me-time/relaxing-bath.jpg")
       %li.article-card{:role => "article"}

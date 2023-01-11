@@ -369,6 +369,19 @@
                 width: 100%;
             }
         }
+
+        .quick-guide.quick-guide-left {
+            width: 66%;
+
+            @media #{$mobile} {
+                width: 100%;
+            }
+        }
+    }
+
+    .quick-guide-container.quick-guide-scarves.qg-left {
+        text-align: left;
+        margin-right: 20px;
     }
 
     .get-cheat-sheet-container {
