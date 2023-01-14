@@ -15,6 +15,24 @@
 .blog
   .articles-grid
     %ul.blog-articles
+    
+      -article = articles['get_your_messy_shelves_in_shape']
+      -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
+      %li.article-card{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "A messy bedroom shelf holds a jumble of tops, jeans, and t-shirts.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            My shelves are always a mess! Here's how to make a new start and fix that mess
+            
       -article = articles['sustainability_the_right_choice']
       -image_url = image_path("blog/sustainability/globe-in-field.jpg")
       %li.article-card{:role => "article"}

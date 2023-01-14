@@ -310,7 +310,7 @@
         }
     }
 
-    ul {
+    ul, ol {
         margin-bottom: 0.75em;
 
         li:not(:last-child) { 
@@ -336,6 +336,10 @@
             a {
                 color: #853C82;
             }
+        }
+
+        ol {
+            padding-left: 1.5em;
         }
     }
 

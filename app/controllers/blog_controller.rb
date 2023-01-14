@@ -49,6 +49,12 @@ class BlogController < ApplicationController
             :title => "Sustainability - It's The Right Choice",
             :description => "These days we are all aware of the urgent need to change how and why we have a need to buy more and more stuff. It raises the question: Why do we feel the need to buy so much?",
             :created => Date.new(2023,01,10)
+        },
+        'get_your_messy_shelves_in_shape' => {
+            :id => 'get_your_messy_shelves_in_shape',
+            :title => "Get Your Messy Shelves In Shape",
+            :description => "Are your shelves always in a mess? Make a fresh start and fix that mess",
+            :created => Date.new(2023,01,10)
         }
     }
 
