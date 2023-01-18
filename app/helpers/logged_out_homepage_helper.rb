@@ -22,46 +22,12 @@ module LoggedOutHomepageHelper
       {
         :card_type => TITLE_AND_LIST,
         :item_class => "carousel-hide",
-        :card_title => "4 Top categories to help you declutter",
+        :card_title => "Top 4 questions to help you declutter",
         :tip_list => [
-            "Keep it & wear it".html_safe,
-            "Recycle it".html_safe,
-            "Sell it".html_safe,
-            "Donate it".html_safe
-        ]
-      },
-      {
-        :card_type => TITLE_AND_LIST,
-        :item_class => "carousel-hide",
-        :card_title => "4 Top clutter mistakes people make",
-        :tip_list => [
-            "Keeping it for when it fits".html_safe,
-            "Keeping more than 1 spare".html_safe,
-            "Keeping to repair one day".html_safe,
-            "Keeping just in case".html_safe
-        ]
-      },
-      {
-        :card_type => TITLE_AND_LIST,
-        :item_class => "carousel-hide",
-        :card_title => "5 Top clothing categories to reduce your clutter",
-        :tip_list => [
-            "Wear every day".html_safe,
-            "Winter".html_safe,
-            "Spring/Autumn".html_safe,
-            "Summer".html_safe,
-            "Special occasions".html_safe
-        ]
-      },
-      {
-        :card_type => TITLE_AND_LIST,
-        :item_class => "carousel-hide",
-        :card_title => "4 Ruthless categories to reduce your winter accessories",
-        :tip_list => [
-            "Every day scarf".html_safe,
-            "Every day hat and gloves".html_safe,
-            "Special occasions scarf".html_safe,
-            "Special occasions hat and gloves".html_safe
+            "Do I wear it now?".html_safe,
+            "Does it need repairing?".html_safe,
+            "Does it fit?".html_safe,
+            "Is it in good condition?".html_safe
         ]
       },
       {
@@ -78,12 +44,12 @@ module LoggedOutHomepageHelper
       {
         :card_type => TITLE_AND_LIST,
         :item_class => "carousel-hide",
-        :card_title => "4 Top declutter questions to ask yourself",
+        :card_title => "Top 4 clutter mistakes people make",
         :tip_list => [
-            "Do I wear it now?".html_safe,
-            "Does it need repair?".html_safe,
-            "Does it fit?".html_safe,
-            "Is it in good condition?".html_safe
+            "Keeping it for when it fits".html_safe,
+            "Keeping more than 1 spare".html_safe,
+            "Keeping to repair one day".html_safe,
+            "Keeping just in case".html_safe
         ]
       },
       {
@@ -95,6 +61,40 @@ module LoggedOutHomepageHelper
             "Nothing fits".html_safe,
             "You can’t find what you are looking for".html_safe,
             "It takes you a long time to get ready".html_safe
+        ]
+      },
+      {
+        :card_type => TITLE_AND_LIST,
+        :item_class => "carousel-hide",
+        :card_title => "Top 5 clothing categories to organise your wardrobe",
+        :tip_list => [
+            "Wear every day".html_safe,
+            "Winter".html_safe,
+            "Spring/Autumn".html_safe,
+            "Summer".html_safe,
+            "Special occasions".html_safe
+        ]
+      },
+      {
+        :card_type => TITLE_AND_LIST,
+        :item_class => "carousel-hide",
+        :card_title => "4 basic needs for your winter accessories",
+        :tip_list => [
+            "Every day scarf".html_safe,
+            "Every day hat and gloves".html_safe,
+            "Special occasions scarf".html_safe,
+            "Special occasions hat and gloves".html_safe
+        ]
+      },
+      {
+        :card_type => TITLE_AND_LIST,
+        :item_class => "carousel-hide",
+        :card_title => "Top 4 categories to help you declutter",
+        :tip_list => [
+            "Keep it & wear it".html_safe,
+            "Recycle it".html_safe,
+            "Sell it".html_safe,
+            "Donate it".html_safe
         ]
       },
       {
