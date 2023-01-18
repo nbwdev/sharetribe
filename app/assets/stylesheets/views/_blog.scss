@@ -186,13 +186,13 @@
 
     .article-section {
         overflow: hidden;
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
     .article-section-with-quote {
         margin-bottom: 0;
     }
 
-    .article-text {
+    .article-text, .quick-guide-container {
         span.li-heading {
             font-weight: bold;
         }
