@@ -322,6 +322,18 @@ article.page-content.no-padding-bottom {
         }
     }
 
+    .tips-container {
+        h2 {
+            font-size: 3em;
+            font-weight: 600;
+            color: $nbw-dark;
+
+            @media (max-width: 660px) {
+                font-size: 2em;
+            }
+        }
+    }
+
     .our-story-container {
         background-color: $nbw-pale;
 
