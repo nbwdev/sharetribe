@@ -283,6 +283,29 @@
         }
     }
 
+    .article-section-right-image.article-half-page-image-floated {
+        .article-image {
+            width: 45%;
+            margin-left: 20px;
+
+            @media #{$mobile} {
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-left: 0;
+            }    
+        }
+        .article-text {
+            float: none;
+            width: 100%;
+
+            @media #{$mobile} {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    }
+
     .article-section-left-image {
         .article-image {
             float: left;

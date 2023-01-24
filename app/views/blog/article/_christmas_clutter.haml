@@ -1,0 +1,447 @@
+-# Set these fields for SEO purposes. They will be included in the header
+-# TODO: Do this in a more elegant way to aviod duplication with controller and view
+- content_for :meta_article_id, 'christmas_clutter'
+- content_for :meta_article_headline, 'Christmas Clutter'
+- content_for :meta_article_image_1, image_path("blog/christmas/too-many-gifts.jpg")
+- content_for :meta_article_image_2, image_path("blog/christmas/opening-gifts.jpg")
+- content_for :meta_article_date_published, '2023-01-26T08:00:00+01:00'
+- content_for :meta_article_date_modified, '2023-01-26T08:00:00+01:00'
+
+.blog-article
+  %h2.article-title="Christmas Clutter"
+  %p.published-date
+    January 2023
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image-floated
+
+    .article-text
+      %h3 
+        Modern day gift giving. The afterlife of Christmas gifts.
+
+    .article-image
+      -image_url = image_path("blog/christmas/too-many-gifts.jpg")
+      =image_tag(image_url, alt: "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.")
+      %figcaption
+        Photo by
+        =link_to('user15285612', 'https://www.freepik.com/free-photo/frustreted-brunette-pink-having-problem-choosing-clothes_23655811.htm')
+        on Freepik
+
+    .article-text
+      %p
+        The Christmas break is over and it’s time to take a breather, well for a least the next 11 months anyway,
+        but what do we do with all the gifts we received that we don’t need or want?
+
+      %p
+        It’s inevitable that some gifts are going to be exactly what you wanted,
+        some gifts are going to be things you never thought you needed and some gifts are going to be just not for you.
+        As humans, secretly we may already know if we like a Christmas gift or not from the moment we open it. We know what we like.
+        We may also misjudge a few on first impressions.
+        How many times have you taken a quick glance at a gift and given a mediocre thanks only to discover later on that it turned out to be the best present ever?
+        Most people are aware that among all the gifts you receive, some are going to be great, some are going to be okay and some are going to be way off the mark.
+        But back to the miss judged ones. What happens here is the most interesting thing of all.
+        Whether we like a gift or not, we always give thanks and show appreciation and love.
+        Which means only one thing:
+        we are happier to lie to the gift giver than risk hurting their feelings and relationship.
+        
+      %h3
+        Why do we feel it necessary to lie about a gift?
+      %p
+        Why we do this is a totally human thing.
+        These are people we know and care about and they form part of our close circle of family and friends, so obviously we want to keep that bond.
+        So, are we bound by an unwritten rule of Christmas gift giving to fabricate the truth to our nearest and dearest to spare their feelings?
+        I wonder though.
+        Is there more to it than that?
+        What does a misjudged gift really mean in today's world?
+        We have probably known most of these people for some time and we would probably refer to them as a close relative or friend.
+        So what’s the problem? If we have such a problem buying a gift. Do we really know who we are buying for anymore?
+        Maybe the bond we thought we had is not quite as close as we originally thought it was.
+        Is this the real reason behind our costly panic buying at the end of the year?
+        Here are some of the top reasons we found for not liking a gift of clothing at Christmas:
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Top 4 reasons a clothing gift is unwanted
+        %ul
+          %li
+            Not your style
+          %li
+            Not your colour
+          %li
+            Not your size
+          %li
+            Don’t like the fabric
+
+
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image-floated
+    .article-text
+      %h3 
+        The Stress of Christmas gift buying
+      
+    .article-image
+      -image_url = image_path("blog/christmas/head-in-hands.jpg")
+      =image_tag(image_url, alt: "A woman sits with her head in her hands, appearing to be worn out, stressed or contemplating life.")
+      %figcaption
+        Photo by
+        =link_to('Liza Summer', 'https://www.pexels.com/photo/despaired-woman-touching-head-in-room-6383267')
+        on Pexels
+
+    .article-text
+      %p
+        It is so often said that Christmas is a time of great joy.
+        A time to be with your family and close friends and a time to relax and enjoy the festive season.
+        But is it?
+        My Christmas time seems to be about hectic buying and wrapping followed by further panic buying,
+        more wrapping and often ends with a big zero in my bank balance, a ton of excess wrapping paper that I feel obliged to keep for a whole 12 months,
+        and with way too many gifts tags and it all ends in a big sigh of relief that I have at least 11 months to go before I have to go through the whole thing all over again.
+
+      %h3 
+        Why has Christmas got so stressful?
+      
+      %p
+        Gift giving seems to have turned into a complex equation comprising a number of key conflicting factors that heavily influence our decisions
+        and inevitably lead to a lot of over purchasing and far too much stress.
+        Is it because we are worried what people will think of us that our gift buying has got so out of hand?
+        Is it because we want to be liked by all?
+        Or is it because we feel obliged to do it?
+        Maybe we just think we have to buy presents for everyone, so we just do it and get on with the stress regardless?
+        But have we ever stopped to think about what it is actually doing to us all?
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Top 4 reasons for stress when buying gifts
+        %ul
+          %li
+            Finding time to buy gifts
+          %li
+            Having to buy too many gifts
+          %li
+            Having to wrap too many gifts
+          %li
+            Finding the money to buy gifts
+
+  .article-section
+    .article-text
+      %h3 
+        Stage 1 - A short family history of Christmas gifts
+
+      %p
+        Think of your family circle.
+        You probably grew up with a pre-set list of people in your family that you all buy for.
+        At a young age the responsibility lay with all the adults in the family circle to service all the needs of gift buying, so it was never quite an issue for you.
+        For your Christmas, you got to receive gifts and experience all the joy and excitement that comes with it.
+        Great fun!
+        The tree was obtained and decorated, the gifts all bought and your name was simply added to them all for you.
+        Christmas dinner was all made for you and everyone else and you probably didn’t have to do any vegetable chopping or any of the washing up after.
+        In fact the biggest decision you probably had to make was which present to open first followed by which toy to play with first.
+        These are all the wonderful things that we would wish for any child to have at Christmas.
+        It builds so many great memories and experiences that are often cherished and repeated for years to come.
+
+  .article-section
+    .article-image.article-image-centred
+      -image_url = image_path("blog/christmas/bank-notes.jpg")
+      =image_tag(image_url, alt: "A pile of twenty, ten and five pound notes, with two-pound and one-pound coins on top of them.")
+      %figcaption
+        Photo by
+        =link_to('Suzy Hazelwood', 'https://www.pexels.com/photo/bank-notes-1791583')
+        on Pexels
+
+  .article-section.article-section-with-quote
+    .article-text
+      %p
+        Now jump forward a decade and things are starting to look a bit different.
+        Once you become a teenager or a young adult then this is where things start to change.
+        By now you might have a few Christmas buying responsibilities of your own now. Immediate family, parents, grandparents, siblings and the odd aunt and uncle.
+        So let’s do some quick maths.
+        As a teenager, maybe you have a Saturday job or an evening job.
+        Something that gives you a bit of cash coming in every week, but not much.
+        If you look at your immediate family circle then you could be looking at about 8 people to buy (Mum, Dad, a sibling or two, Grandpa, Grandma, Aunt, Uncle),
+        to buy for on your weekly wage.
+        Please adjust accordingly.
+        So let's say you look to spend about 20 pounds on each person, this could work out at about 200 pounds with wrapping, sellotape, scissors gift tags.
+        Depending on when you start buying, you probably need to have at least 150 by around mid-November to be in a good chance of getting everything you need and having the money to do that.
+        This does not even include any gifts for friends.
+        Let's say that you have a circle of 5 close friends.
+        How much do you need to add now?
+        Finding 200 pounds as a starting amount for close family is a big deal for the average teenager with nothing more than a Saturday job. 
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Top 5 Categories for gift buying
+        %ul
+          %li
+            Mum & Dad
+          %li
+            Any Siblings
+          %li
+            Grandparents
+          %li
+            Aunts and Uncles
+          %li
+            Close friends
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image-floated
+    .article-text
+      %h3 
+        Stage 2 - Close friends and not-so-close friends
+
+    .article-image
+      -image_url = image_path("blog/christmas/opening-gifts.jpg")
+      =image_tag(image_url, alt: "Two ladies exchange gifts in front of a Christmas tree.")
+      %figcaption
+        Photo by
+        =link_to('Karolina Grabowska', 'https://www.pexels.com/photo/two-women-opening-their-gift-boxes-5469719')
+        on Pexels
+
+    .article-text
+      %p
+        It doesn’t stop there though.
+        This is the point at which that excitement and joy could first start to fade and the stress slowly begins to show.
+        Why?
+        Because there is Christmas inflation to consider.
+        Each year, from here on you have Christmas inflation working against you.
+        What is Christmas inflation?
+        Well it's something I just made up to explain my point, but I truly believe it exists.
+        Here is the little science bit.
+        I believe that year on year, as we and our friends get older, so do our tastes.
+        They will get increasingly more expensive every year.
+        So, you remember that &pound;200 all-in for close family, well as you get older that &pound;200 will start to grow because of all your friends and peers and by this I mean friends that you physically see on a regular basis, like school friends or friends that live near you.
+        Because who doesn’t want to show their friendship is important by buying them a gift they like at Christmas.
+        Each one of these could be a 10 pound gift at the start, but who knows what tastes they may have further down the line in their 20s or 30s if you manage to stay friends that long.
+        So now you are looking at an extra 100 pounds on top of the 200 and don’t forget to add extra for wrapping paper, gift bags and tags and everything else.
+        Total sum so far – 300 pounds.
+        And don’t forget to add your Christmas inflation year on year as you all get older.
+
+  .article-section.article-section-with-quote
+    .article-text
+      %h3
+        The ups and downs of Christmas gifts giving
+      %p
+        We all like to give gifts at Christmas and we all like to receive them too.
+        Who doesn’t love a gift at Christmas? But what happens when it goes wrong?
+        You feel bad when someone buys you a gift and you don’t have one for them.
+        It can haunt you all year and so when Christmas eventually comes back around you can be sure you won’t be enduring the shame of forgetting them this time and that’s a fact.
+        One giant overspend coming right up.
+        Or what happens when you receive a gift and you don’t like it?
+        That nicely wrapped gift that you have been staring at under the tree and wondering what exciting thing it could be.
+        Well, all that excitement just turned to dust as you say thank you and assure them that you love it when you really don’t.
+        So, they probably overspent and they don’t even like it. But, make a mental note of all that for next year.
+        So why are we always out of sync? If we don’t know what to get someone, should we really be buying for them in the first place?
+        Is our relationship really that strong and worth all this stress?
+        Have we ever really talked to them about it?
+        Who knows, they might feel exactly the same.
+        Here are some of the top reasons Christmas gift buying got so painful:
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Top 4 Most stressful gift buying experiences
+        %ul
+          %li
+            Not knowing what to buy
+          %li
+            Not knowing the person well enough
+          %li
+            Not having the time
+          %li
+            Not having the money 
+
+
+  .article-section.article-section-with-quote
+    .article-text
+      %h3 
+        The non-communication of gift buying 
+
+      %p
+        Women are worst than men at this.
+        Men don’t care if they gift each other or not, but we women can be cruel to each other and very judgmental.
+        Have you ever been disappointed because you spent more on a gift to a female friend or relative or you bought a gift that you knew they would absolutely love and they bought you something that was just not you at all?
+        Again mental note for next year. I truly believe that once you get past the age of having no responsibilities you enter a world of pain and over-buying.
+        Is this truly what Christmas is about for adults now?
+        So, if the gift of giving just became a complete nightmare for everyone, then why do we do this to ourselves and why do we do it to each other year after year?
+        Do we really have a strong bond after all?
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Top 5 reasons why we overspend or get Christmas gift buying wrong
+        %ul
+          %li
+            We received a more expensive gift than we gave last year, so we spent even more this year
+          %li
+            We are buying a gift for this person for the very first time and we don’t know what to buy
+          %li
+            We think they have more expensive taste than us, so we overspend
+          %li
+            We really want them to like us, so we overspend
+          %li
+            We don’t really know what to buy, so we overspend just in case
+  
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image-floated
+    .article-text
+      %h3 
+        How to manage your money and your gift giving next year
+
+    .article-image
+      -image_url = image_path("blog/christmas/choosing-shirts.jpg")
+      =image_tag(image_url, alt: "A woman chooses between a long sleeve plaid shirt and a short sleeved ivory shirt.")
+      %figcaption
+        Photo by
+        =link_to('cookie_studio', 'https://www.freepik.com/free-photo/woman-holding-shirts-choosing-what-outfit-wear_9229087.htm')
+        on Freepik
+
+    .article-text
+      %p
+        In time for next year we thought we would try and help by coming up with a solution for any unwanted clothes and a few suggestions to help find some better options for next year.
+        I think the first thing we need to do is stop wasting our time and our money buying things for people that they don’t really need or want.
+
+      %h3 
+        Unwanted clothing gifts
+
+      %p
+        For any clothing gifts that you have that you know you will probably not wear, or you know you can’t exchange,
+        then you can put them on our website and find a new home for them.
+        Please don’t send them to landfill.
+        They can be worn by someone else.
+        Some charity shops also get inundated just after Christmas and they have to send it all for shredding because they just don’t have the room to keep it all.
+        You can save the item and keep it in circulation at NeverBeenWorn and get a bit of cash to get yourself something you really want instead.
+      
+      %p
+        One thing I have always found a touch confusing is, that if this is what Christmas has now become, why do we keep doing it to ourselves?
+        Why have we been emptying our bank balances, causing ourselves large amounts of stress and gracefully receiving things we don’t want year on year?
+        Have we become a nation of mindless stress heads at Christmas?
+        To help make your Christmas a more enjoyable time of year next year, we have come up with a few alternative options to make gift giving a little easier.
+        Talk to the people you know and set some of the following rules for yourself and others.
+        You have a whole year to get it right this time:
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          My top 5 ideas for managing your gift buying next year
+        %ol
+          %li
+            Set some rules on the number of presents per person
+          %li
+            Do a secret Santa with a set limit at work
+          %li
+            Stick to family and close friends only, if you can
+          %li
+            Get to know the person better throughout the year. It can make gift buying easier and stop that panic buying and overspending
+          %li
+            Give a gift voucher instead.
+            They tend to be more in line with what you would want to spend and the recipient can buy something they really want as well
+      
+
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image-floated
+    .article-text
+      %h3 
+        Make Christmas great again
+
+    .article-image
+      -image_url = image_path("blog/christmas/gift-boxes.jpg")
+      =image_tag(image_url, alt: "A selection of neatly wrapped and ribboned gift boxes sit on a red table cloth.")
+      %figcaption
+        Photo by
+        =link_to('George Dolgikh', 'https://www.pexels.com/photo/assorted-gift-boxes-on-red-surface-1666065')
+        on Pexels
+
+    .article-text
+      %p
+        To help make your Christmas a more enjoyable time next year and reduce the stress, we have come up with some great alternatives.
+        This is our extreme Christmas makeover for gift buying.
+        It’s all about doing something you know you will both enjoy more.
+        Don’t be afraid to say why when making a different suggestion either.
+        Be honest.
+        Say I think we will enjoy it more and it's one less present to buy.
+        The alternative suggestion might turn out to be a welcome relief and much more relaxing than rushing around trying to find each other a pointless gift or frantically searching for one online at the last minute.
+        It will make for great memories too and strengthen your bond more.
+
+      %h3
+        My top tips for buying gifts next year. 
+      %p
+        If you want to still get gifts, then go ahead, but maybe ask if they have a wish list.
+        At first I was against the idea of wish lists.
+        I thought how presumptuous to be asking for what you want, but hey how helpful is that and now I can see how they actually work in your favour.
+        And how they can help you with some of that awful gift stress -1 point.
+        If you have the opportunity to select something they actually want, then you know they are going to like it from the start.
+        Gift stress -2 points.
+        People usually have a list full of varying prices to choose from too, so it can really help your bank balance and help you budget.
+        Gift stress -3 points.
+        Surely this is one of the best ways to help you manage and reduce your Christmas stress better?
+        There are other options too.
+        Have a meal out together instead and split the bill.
+        It doesn’t have to be anything fancy, try a pizza place.
+        That way you can have some time together and have a memorable moment too.
+        Just make sure you consume the same value to keep it fair.
+        I knew someone who would order all the most expensive things on the menu knowing that she would not have to pay for some of them.
+        Needless to say we don’t see each other anymore.
+        Or go out to lunch or afternoon tea and catch up if you haven’t seen each other in a while.
+        Afternoon tea is usually a set price so you will have an idea of the cost from the start.
+        Again this is a great experience at a reasonable price and making amazing memories all in one.
+
+  .article-section
+    .quick-guide-container.quick-guide-scarves
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          My top 5 tips for alternative gift buying/experiences next year
+        %ol
+          %li
+            Ask if they have a wish list
+          %li
+            Go out for lunch or afternoon tea
+          %li
+            Go out for Christmas cocktails or a meal together
+          %li
+            Go see something: cinema, show, comedy club or concert
+          %li
+            Go for a nice walk together and get each other a little gift to open on the day
+            
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+
+    .article-image
+      -image_url = image_path("blog/christmas/party-tinsel-ladies.jpg")
+      =image_tag(image_url, alt: "Two happy ladies at a Christmas party, one with tinsel loosely draped around her neck like a scarf, hold a glass of fizz in their hand and a party blower in their mouth.")
+      %figcaption
+        Photo by 
+        =link_to('Julia Larson', 'https://www.pexels.com/photo/cheerful-women-in-tinsel-with-party-whistles-near-balloons-6113648')
+        on Pexels
+
+    .article-text
+      %h3 
+        Are we hurting our friends by assuming they need to buy us gifts to retain our friendship?
+
+      %p
+        Or does their friendship mean much more than that?
+        The thing is if we told each people what it was really like do you think they would want to put you through that?
+        We don’t need more panic presents in our lives, we need great connections and experiences with people.
+        We need more memorable moments.
+        There are so many other and more meaningful things you could choose to do together that would give us more control and more of an idea of spend on each other. 
+      
+      %p
+        Buy fewer and more meaningful gifts next year.
+        Share time together and build a nice memory that will give back for longer.
+        Whatever you do, don’t panic buy, don’t over buy and don’t spend so much that it causes you stress for the rest of year trying to pay it off.
+        Be kinder to yourself, your bank balance and each other. Give the gift of your time and enjoy sharing it together.  
+
+  .article-footer
+
+    %p
+      If you enjoyed this article then we would love to hear from you.
+    %p
+      Send us your thoughts about Christmas present buying to 
+      =link_to('info@neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Christmas Clutter')
+      and make sure you add ‘Christmas Clutter’ in the subject bar.
+
+    %p
+      If there is anything you would love to read about, we would be happy to consider your request too
+  

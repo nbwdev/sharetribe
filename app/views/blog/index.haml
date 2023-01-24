@@ -16,6 +16,23 @@
   .articles-grid
     %ul.blog-articles
     
+      -article = articles['christmas_clutter']
+      -image_url = image_path("blog/christmas/too-many-gifts.jpg")
+      %li.article-card{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            Modern day gift giving. The afterlife of Christmas gifts.
+            
       -article = articles['get_your_messy_shelves_in_shape']
       -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
       %li.article-card{:role => "article"}
