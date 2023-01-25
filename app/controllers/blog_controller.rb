@@ -56,10 +56,10 @@ class BlogController < ApplicationController
             :description => "Are your shelves always in a mess? Make a fresh start and fix that mess",
             :created => Date.new(2023,01,10)
         },
-        'christmas_clutter' => {
-            :id => 'christmas_clutter',
-            :title => "Christmas Clutter",
-            :description => "Modern day gift giving. The afterlife of Christmas gifts.",
+        'declutter_after_christmas' => {
+            :id => 'declutter_after_christmas',
+            :title => "Declutter After Christmas",
+            :description => "Declutter – for your head, your home and your wallet.",
             :created => Date.new(2023,01,26)
         }
     }

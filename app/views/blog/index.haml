@@ -16,7 +16,7 @@
   .articles-grid
     %ul.blog-articles
     
-      -article = articles['christmas_clutter']
+      -article = articles['declutter_after_christmas']
       -image_url = image_path("blog/christmas/too-many-gifts.jpg")
       %li.article-card{:role => "article"}
         = link_to(article_path(id=article[:id]), :class => "article-link") do
@@ -31,7 +31,7 @@
                 %p.article-read
                   Read
           %p.article-summary
-            Modern day gift giving. The afterlife of Christmas gifts.
+            Christmas delutter – for your head, your home and your wallet.
             
       -article = articles['get_your_messy_shelves_in_shape']
       -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
