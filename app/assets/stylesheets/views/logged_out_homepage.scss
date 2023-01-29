@@ -63,7 +63,7 @@ article.page-content.no-padding-bottom {
 
     .banner {
         position: relative;
-        overflow: auto;
+        overflow: hidden;
         background-color: #fde1e7;
 
         img {
@@ -324,24 +324,37 @@ article.page-content.no-padding-bottom {
 
     .sustainability-banner {
         position: relative;
-        overflow: auto;
+        overflow: hidden;
         background-color: #298D37;
 
+        display: flex;
+        flex-direction: row-reverse;
+        @media (max-width: 660px) {
+            flex-direction: column;
+        }
+
         img {
-            /* Make image responsive */
             display: block;
             width: 50%;
-            float: left;
+            object-fit: cover;
         }
         
         .caption {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            left: 50%;
             padding-left: 10px;
             padding-right: 10px;
-    
+
+            width: 50%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            @media (max-width: 660px) {
+                width: 100%;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
             p, h2 {
                 color: #B7F89C;
             }
@@ -376,6 +389,7 @@ article.page-content.no-padding-bottom {
                     padding-bottom: 1em;
                 }
             }
+
             .hp-banner-button {
                 color: #298D37;
                 background-color: #B7F89C;
@@ -387,12 +401,6 @@ article.page-content.no-padding-bottom {
                 background: none;
                 border-radius: 0;
             }
-
-            position: absolute;
-            top: 0;
-            width: 50%;
-            height: 100%;
-            //background-color: #FFAD15;
         }
 
         .caption>p {
@@ -484,9 +492,7 @@ article.page-content.no-padding-bottom {
 
                     p { 
                         font-size: 1.25em;
-                        @media (min-width: 660px) {
-                            margin-bottom: 1.25em;
-                        }
+                        margin-bottom: auto;
                     }
 
                     img {
@@ -507,6 +513,10 @@ article.page-content.no-padding-bottom {
                             @include prefix-prop(transition, all 50ms ease-in-out);
                         }        
                     }
+                }
+
+                div.story-button-container {
+                    margin-top: 1.25em;
                 }
 
                 @media (min-width: 660px) and (max-width: 1024.9px) {
