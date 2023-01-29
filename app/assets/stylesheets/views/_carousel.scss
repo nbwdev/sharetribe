@@ -4,15 +4,15 @@
 .logged_out_homepage {
 
     /* Define colours at the top so we can mess about with them more easily */
-    $title-panel-text-colour: 	$nbw-dark;
-    $text-panel-text-colour: #f1e6ff;
+    $title-panel-text-colour: 	#F94A29;
+    $text-panel-text-colour: #F94A29;
     
-    $title-panel-light-shade: #f1e6ff;
-    $title-panel-dark-shade: 	#d8a7d5;
-    $text-panel-light-shade: #b04fab;
-    $text-panel-dark-shade: 	#7d387a;
+    $title-panel-light-shade: #FFB805;
+    $title-panel-dark-shade: 	#F94A29;
+    $text-panel-light-shade: #FFB805;
+    $text-panel-dark-shade: 	#F94A29;
 
-    $find-us-on-instagram-colour: $nbw-dark;
+    $find-us-on-instagram-colour: #F94A29;
 
 
     .tips-container {
@@ -20,11 +20,6 @@
         padding-top: 3em;
         padding-bottom: 2.5em;
         margin: auto;
-
-        .text-container {
-            padding-left: 5px;
-            padding-right: 5px;
-        }
 
         p, li {
             font-family: Fifita, 'Proxima Soft', 'Source Sans Pro', helvetica, sans-serif;
@@ -111,9 +106,6 @@
             }
 
             .text-container {
-                background-color: $text-panel-dark-shade;
-                background: linear-gradient(45deg, $text-panel-light-shade 0%, $text-panel-light-shade 30%, $text-panel-dark-shade 100%);
-
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
             }
@@ -166,6 +158,7 @@
             .tip-title {
                 margin-top: 15px;
                 font-size: 22px;
+                font-weight: bold;
             }
 
             .title-container {
@@ -173,9 +166,6 @@
                 padding-right: 0.5em;
                 border-top-left-radius: 20px;
                 border-bottom-left-radius: 20px;
-
-                background-color: $title-panel-light-shade;
-                background: linear-gradient(45deg, $title-panel-dark-shade 0%, $title-panel-light-shade 30%, $title-panel-light-shade 100%);
  
                 .tip-title {
                     margin-top: 0;
@@ -190,12 +180,8 @@
             .tip-text {
                 display: flex;
                 justify-content: center;
-                padding-bottom: 17px;
                 font-size: 20px;
                 margin-top: 10px;
-            }
-            .tip-text.no-title {
-                margin-bottom: 10px;
             }
 
             @media (max-width: 660px) {
@@ -229,6 +215,15 @@
         }
 
         .title-card {
+
+            border-width: 11px;
+            border-color: #F94A29;
+            border-style: solid;
+
+            /* double border*/
+            margin: 17px;
+            outline: 11px solid #FFB805;
+
             .text-container {
                 width: 60%;
             }
@@ -243,7 +238,7 @@
                 }
 
                 .title-container {
-                    height: 40%;
+                    height: 30%;
                 }
 
                 .text-container {

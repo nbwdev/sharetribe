@@ -15,9 +15,10 @@
 -# font_size: desktop font size
 
 - if card_type == LoggedOutHomepageHelper::TITLE_AND_TEXT || card_type == LoggedOutHomepageHelper::TITLE_AND_LIST
-  - gradient_class = "title-card"
+  - card_class = "title-card"
+  - gradient_class = "title-panel"
 .carousel-item{ :class => item_class}
-  .insta-container{ :class => gradient_class }
+  .insta-container{ :class => card_class }
     -# Left pane
     - if card_type == LoggedOutHomepageHelper::IMAGE_AND_TEXT
       .image-container
