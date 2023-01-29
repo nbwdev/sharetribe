@@ -114,6 +114,20 @@
           = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
             Take the challenge now
 
+  .sustainability-banner
+    .caption
+      %h2.banner-title
+        Sustainable Fashion For&nbsp;Good
+      %p.banner-text
+        Declutter, Resell, Repurpose
+        %br
+        Put your Never Been Worn clothes back out into the world
+      .button-container
+        = link_to("/blog/sustainability_the_right_choice", :class => "hp-button hp-banner-button") do
+          Read more
+    -image_url = image_path("logged_out_homepage/earth-heart-dark-background.jpg")
+    =image_tag(image_url, class: 'intro-image', alt: "A simplistic landscape scene with rolling hills, trees and wind turbines drawn with childlike shapes.")
+
   .tips-container
     %h2
       Quick tips to declutter faster
