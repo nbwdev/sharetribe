@@ -144,37 +144,43 @@
     
     /=render :partial => "logged_out_homepage/carousel_item", :locals => {item_class: ""}
 
-  .our-story-container
-    .our-story
+  .seasonal-articles-container
+    .seasonal-articles
       %h2
-        Our Story
-      .our-story-columns
-        .our-story-column
-          .our-story-icon.about-icon
-          %h3.our-story-title
-            My story
-          %p.our-story-text
+        Declutter 1, 2, 3
+      .seasonal-articles-columns
+        .seasonal-articles-column
+          %h3.seasonal-articles-title
+            Wardrobe
+          = link_to("/en/blog/the_wardrobe_challenge") do
+            -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
+            =image_tag(image_url, alt: "Read how to take the wardrobe challenge.")
+          %p.seasonal-articles-text
             From wardrobe nightmare to declutter heaven
           .story-button-container
-            = link_to("/my_story", :class => "about-button hp-button hp-button-inverted") do
-              My journey
-        .our-story-column
-          .our-story-icon.how-it-works-icon
-          %h3.our-story-title
-            How it works
-          %p.our-story-text
-            Simple and quick how-to guides
-          .story-button-container
-            = link_to("/en/infos/how_to_use", :class => "about-button hp-button hp-button-inverted") do
-              How it works
-        .our-story-column
-          .our-story-icon.code-of-conduct-icon
-          %h3.our-story-title
-            Fix your drawers forever
-          %p.our-story-text
+            = link_to("/en/blog/the_wardrobe_challenge", :class => "about-button hp-button hp-button-inverted") do
+              Read how
+        .seasonal-articles-column
+          %h3.seasonal-articles-title
+            Drawers
+          = link_to("/en/blog/fix_your_drawers_forever") do
+            -image_url = image_path("blog/fix-your-drawers-forever/overflowing-drawers.jpg")
+            =image_tag(image_url, alt: "Read how to fix your overflowing drawers.")
+          %p.seasonal-articles-text
             Nightmare drawers no more
           .story-button-container
             = link_to("/en/blog/fix_your_drawers_forever", :class => "about-button hp-button hp-button-inverted") do
+              Read how
+        .seasonal-articles-column
+          %h3.seasonal-articles-title
+            Shelves
+          = link_to("/en/blog/get_your_messy_shelves_in_shape") do
+            -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
+            =image_tag(image_url, alt: "Read how to organise your messy shelves.")
+          %p.seasonal-articles-text
+            Get your shelves in shape
+          .story-button-container
+            = link_to("/en/blog/get_your_messy_shelves_in_shape", :class => "about-button hp-button hp-button-inverted") do
               Read how
 
 

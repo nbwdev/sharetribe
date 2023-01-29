@@ -429,13 +429,22 @@ article.page-content.no-padding-bottom {
         }
     }
 
-    .our-story-container {
-        background-color: $nbw-pale;
+    .seasonal-articles-container {
+        $seasonal-articles-bg: #FFF5c3;
+        background-color: $seasonal-articles-bg;
 
-        .our-story {
+        .seasonal-articles {
             p, h2, h3 {
                 color: $homepage-text-colour;
             }    
+
+            a.hp-button-inverted {
+                color: $seasonal-articles-bg;
+            }
+
+            a.hp-button-inverted:hover {
+                color: $homepage-text-colour;
+            }
 
             h2 {
                 font-size: 3em;
@@ -446,7 +455,7 @@ article.page-content.no-padding-bottom {
                 }
             }
 
-            .our-story-columns {
+            .seasonal-articles-columns {
                 max-width: 1192px;
                 display: flex;
                 justify-content: center;
@@ -456,31 +465,13 @@ article.page-content.no-padding-bottom {
                     flex-direction: column;
                 }    
     
-                .our-story-column {
+                .seasonal-articles-column {
                     display: flex;
                     flex-direction: column;
-                    margin: 0 50px 50px 50px;
+                    margin: 0 0 50px 0;
                     justify-content: space-between;
                     flex: 1 1 0;
-    
-                    .our-story-icon {
-                        min-height: 5em;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        margin-bottom: 1em;
-                    }
-
-                    .code-of-conduct-icon {
-                        background-image: url(image-path("logged_out_homepage/code-of-conduct-icon.svg"));
-                    }
-
-                    .about-icon {
-                        background-image: url(image-path("logged_out_homepage/about-icon.svg"));
-                    }
-
-                    .how-it-works-icon {
-                        background-image: url(image-path("logged_out_homepage/how-it-works-icon.svg"));
-                    }
+                    align-items: center;
 
                     h3 {
                         font-size: 1.75em;
@@ -497,6 +488,25 @@ article.page-content.no-padding-bottom {
                             margin-bottom: 1.25em;
                         }
                     }
+
+                    img {
+                        aspect-ratio: 1;
+                        border-radius: 20px;
+                        margin-bottom: 0.5em;
+
+                        width: 200px;
+                        @media (min-width: 569px) and (max-width: 700px) {
+                            width: 180px;
+                        }
+                        @media #{$desktop} {
+                            width: 250px;
+                        }
+        
+                        &:hover {
+                            transform: scale(1.011);
+                            @include prefix-prop(transition, all 50ms ease-in-out);
+                        }        
+                    }
                 }
 
                 @media (min-width: 660px) and (max-width: 1024.9px) {
@@ -509,15 +519,15 @@ article.page-content.no-padding-bottom {
     
     
             @media #{$desktop} {
-                div.our-story-column {
+                div.seasonal-articles-column {
                     min-height: 300px;
 
-                    h3.our-story-title {
+                    h3.seasonal-articles-title {
                         min-height: 48px;
                         margin-bottom: 5px;
                     }
 
-                    p.our-story-text {
+                    p.seasonal-articles-text {
                         min-height: 60px;
                     }
                 }
