@@ -1,0 +1,78 @@
+@import "mixins/all";
+@import "../landing_page/mixins/all";
+
+/* temporarily pulling the css defined in custom script into a css file, will move it to the right files piece by piece */
+
+
+a { color: #C458C1; }
+  
+.marketplace-lander h1.marketplace-lander-content-title {
+    font-size: 60px;
+    font-weight: 60;
+}
+
+.marketplace-lander .marketplace-lander-content-description {
+    background-color: #FFD9FE;
+    color: #783676;
+    max-width: unset;
+}
+
+/*  Remove the fade from the small banner image (pink bar), turn the text white  */
+.marketplace-lander div.coverimage-fade {
+    background: none;
+}
+.marketplace-lander div.marketplace-title-header h1 {
+  color:#783676;
+}
+
+/*  About, How it works, Privacy, etc */
+div.left-navi-section.about-section h2, div.left-navi-section.about-section h3 {
+  font-weight: bold;
+}
+  
+/* Banner */
+.marketplace-lander h1.marketplace-lander-content-title {
+    display:none;
+}
+.marketplace-lander div.marketplace-lander-content {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 200px;
+  padding-bottom: 0px;
+}
+.marketplace-lander p.marketplace-lander-content-description {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+/* Footer (on normal pages not landing page) */
+svg.footer__social-media-icon path {
+    fill: #ffffff;
+}
+div.footer__content {
+  padding-top: 10px;
+}
+p.footer__marketplace-description {
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 2px;
+  padding-top: 8px;
+}
+@media (min-width: 1024px) {
+  p.footer__marketplace-description {
+    font-size: 21px;
+  }
+}
+
+/* Hide location on the profile page and listing page */
+form.edit_person div#settings_map_canvas,
+form#new_listing div#listing_map_canvas {
+  display:none;
+}
+
+/* Make the sidebar text grey on the shop page */
+a.home-categories-main, #desktop-filters .custom-filter-title, 
+#desktop-filters .custom-filter-min-max-title,
+#desktop-filters .custom-filter-checkbox-label-text {
+  color: #797979;  
+}
