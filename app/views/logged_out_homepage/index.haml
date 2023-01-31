@@ -96,6 +96,22 @@
       = link_to("/signup", :class => "hp-button hp-button-inverted") do
         Join for free
 
+  .sustainability-banner
+    .caption
+      %h2.banner-title
+        Support
+        %br
+        Sustainable Fashion For&nbsp;Good
+      %p.banner-text
+        Declutter, Resell, Repurpose
+        %br
+        Put your Never Been Worn clothes back out into the world
+      .button-container
+        = link_to("/blog/sustainability_the_right_choice", :class => "hp-button hp-banner-button") do
+          Read more
+    -image_url = image_path("logged_out_homepage/earth-heart-dark-background.jpg")
+    =image_tag(image_url, class: 'intro-image', alt: "A simplistic landscape scene with rolling hills, trees and wind turbines drawn with childlike shapes.")
+
   .wardrobe-challenge-section
     .wardrobe-challenge-image
       .image-container
@@ -114,21 +130,50 @@
           = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
             Take the challenge now
 
-  .sustainability-banner
-    .caption
-      %h2.banner-title
-        Support
-        %br
-        Sustainable Fashion For&nbsp;Good
-      %p.banner-text
-        Declutter, Resell, Repurpose
-        %br
-        Put your Never Been Worn clothes back out into the world
-      .button-container
-        = link_to("/blog/sustainability_the_right_choice", :class => "hp-button hp-banner-button") do
-          Read more
-    -image_url = image_path("logged_out_homepage/earth-heart-dark-background.jpg")
-    =image_tag(image_url, class: 'intro-image', alt: "A simplistic landscape scene with rolling hills, trees and wind turbines drawn with childlike shapes.")
+  .seasonal-articles-container
+    .seasonal-articles
+      %h2
+        Declutter 1-2-3
+      .seasonal-articles-columns
+        .seasonal-articles-column
+          %h3.seasonal-articles-title
+            Wardrobe
+          %p.step-number
+            1
+          = link_to("/en/blog/the_wardrobe_challenge") do
+            -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
+            =image_tag(image_url, alt: "Read how to take the wardrobe challenge.")
+          %p.seasonal-articles-text
+            From wardrobe nightmare to declutter heaven
+          .story-button-container
+            = link_to("/en/blog/the_wardrobe_challenge", :class => "about-button hp-button hp-button-inverted") do
+              Read how
+        .seasonal-articles-column
+          %h3.seasonal-articles-title
+            Drawers
+          %p.step-number
+            2
+          = link_to("/en/blog/fix_your_drawers_forever") do
+            -image_url = image_path("blog/fix-your-drawers-forever/overflowing-drawers.jpg")
+            =image_tag(image_url, alt: "Read how to fix your overflowing drawers.")
+          %p.seasonal-articles-text
+            Nightmare drawers no more
+          .story-button-container
+            = link_to("/en/blog/fix_your_drawers_forever", :class => "about-button hp-button hp-button-inverted") do
+              Read how
+        .seasonal-articles-column
+          %h3.seasonal-articles-title
+            Shelves
+          %p.step-number
+            3
+          = link_to("/en/blog/get_your_messy_shelves_in_shape") do
+            -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
+            =image_tag(image_url, alt: "Read how to organise your messy shelves.")
+          %p.seasonal-articles-text
+            Get your shelves in shape
+          .story-button-container
+            = link_to("/en/blog/get_your_messy_shelves_in_shape", :class => "about-button hp-button hp-button-inverted") do
+              Read how
 
   .tips-container
     %h2
@@ -141,46 +186,3 @@
       %span.instagram
         = render 'layouts/footer/social_icons', social_service: "instagram"
         neverbeenwornuk
-    
-    /=render :partial => "logged_out_homepage/carousel_item", :locals => {item_class: ""}
-
-  .seasonal-articles-container
-    .seasonal-articles
-      %h2
-        Declutter 1, 2, 3
-      .seasonal-articles-columns
-        .seasonal-articles-column
-          %h3.seasonal-articles-title
-            Wardrobe
-          = link_to("/en/blog/the_wardrobe_challenge") do
-            -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
-            =image_tag(image_url, alt: "Read how to take the wardrobe challenge.")
-          %p.seasonal-articles-text
-            From wardrobe nightmare to declutter heaven
-          .story-button-container
-            = link_to("/en/blog/the_wardrobe_challenge", :class => "about-button hp-button hp-button-inverted") do
-              Read how
-        .seasonal-articles-column
-          %h3.seasonal-articles-title
-            Drawers
-          = link_to("/en/blog/fix_your_drawers_forever") do
-            -image_url = image_path("blog/fix-your-drawers-forever/overflowing-drawers.jpg")
-            =image_tag(image_url, alt: "Read how to fix your overflowing drawers.")
-          %p.seasonal-articles-text
-            Nightmare drawers no more
-          .story-button-container
-            = link_to("/en/blog/fix_your_drawers_forever", :class => "about-button hp-button hp-button-inverted") do
-              Read how
-        .seasonal-articles-column
-          %h3.seasonal-articles-title
-            Shelves
-          = link_to("/en/blog/get_your_messy_shelves_in_shape") do
-            -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
-            =image_tag(image_url, alt: "Read how to organise your messy shelves.")
-          %p.seasonal-articles-text
-            Get your shelves in shape
-          .story-button-container
-            = link_to("/en/blog/get_your_messy_shelves_in_shape", :class => "about-button hp-button hp-button-inverted") do
-              Read how
-
-

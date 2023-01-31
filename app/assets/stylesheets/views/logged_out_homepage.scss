@@ -486,13 +486,18 @@ article.page-content.no-padding-bottom {
 
                         margin-bottom: 0.5em;
                         @media (min-width: 660px) {
-                            margin-bottom: 1.25em;
                         }
                     }
 
                     p { 
                         font-size: 1.25em;
                         margin-bottom: auto;
+                    }
+
+                    p.step-number {
+                        margin-bottom: 1em;
+                        font-size: 1.5em;
+                        font-weight: bolder;
                     }
 
                     img {
@@ -534,7 +539,10 @@ article.page-content.no-padding-bottom {
 
                     h3.seasonal-articles-title {
                         min-height: 48px;
-                        margin-bottom: 5px;
+                    }
+
+                    p.step-number {
+                        margin-bottom: 1em;
                     }
 
                     p.seasonal-articles-text {
