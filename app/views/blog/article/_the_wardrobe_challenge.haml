@@ -2,12 +2,8 @@
 -# TODO: Do this in a more elegant way to aviod duplication with controller and view
 - content_for :meta_article_id, 'the_wardrobe_challenge'
 - content_for :meta_article_headline, 'The Wardrobe Challenge'
-- content_for :meta_article_image_1, image_path("blog/wardrobe-challenge/full-wardrobe.jpg")
-- content_for :meta_article_image_2, image_path("blog/wardrobe-challenge/clock.jpg")
-- content_for :meta_article_image_3, image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
-- content_for :meta_article_image_4, image_path("blog/wardrobe-challenge/bin-bags.jpg")
-- content_for :meta_article_image_5, image_path("blog/wardrobe-challenge/fizz.jpg")
-- content_for :meta_article_image_6, image_path("blog/wardrobe-challenge/globe.jpg")
+- content_for :meta_article_image_1, image_path("blog/wardrobe-challenge/declutter-and-sustainable-fashion.jpg")
+- content_for :meta_article_image_2, image_path("blog/wardrobe-challenge/full-wardrobe.jpg")
 - content_for :meta_article_date_published, '2022-11-18T08:00:00+01:00'
 - content_for :meta_article_date_modified, '2022-11-18T08:00:00+01:00'
 
@@ -322,6 +318,11 @@
       %p
         Good luck with your wardrobe challenge and starting your new hassle free life.
 
+  .article-section
+    .article-image.article-image-centred
+      -first_url = image_path("blog/wardrobe-challenge/declutter-and-sustainable-fashion.jpg")
+      =image_tag(first_url, alt: "4 steps to decluttering your wardrobe to support sustainable fashion.")
+
   .article-footer
     %p
       If you take the
@@ -350,4 +351,4 @@
 
     %p.image-credit
       Thanks to Burgess Milner, wilsan u, Loren Biser, and Anthony Delanoix @ Unsplash,
-      and Liza Summer and Nothing Ahead @ Pexels for images
+      Liza Summer and Nothing Ahead @ Pexels, and gstudioimagen at Vecteezy for images
