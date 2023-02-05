@@ -9,5 +9,9 @@
   = social_title
 - content_for :meta_description do
   = social_description
+- content_for :page_og_type do
+  = 'article'
+-content_for :article_category do
+  = article_data[:category]
 - partial_name = "blog/article/" + article_id
 = render :partial => partial_name

@@ -18,8 +18,12 @@
   - if font_path.present?
     = render partial: "layouts/fonts", locals: { font_path: font_path }
 
+  -if content_for?(:page_og_type)
+    - og_type = (yield :page_og_type).strip
+  -else
+    - og_type = "website"
   %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-  %meta{ :property => "og:type", :content =>"website"}
+  %meta{ :property => "og:type", :content =>og_type}
   %meta{:"http-equiv" => "content-language", content: "#{I18n.locale}"}
   - if @current_community.social_logo&.image&.present?
     %meta{name: "twitter:card", content: "summary_large_image"}

@@ -27,3 +27,16 @@
       }
     }
 
+
+-article_id = content_for(:meta_article_id)
+-see_also = related_articles(article_id)
+-see_also.each do |related_article|
+  %meta{ :name => "og:see_also", :content => article_url(related_article)}
+
+-tags = article_tags(article_id)
+-tags.each do |tag|
+  %meta{ :name => "article:tag", :content => tag}
+
+%meta{ :name => "article:modified_time", :content => content_for(:meta_article_date_modified)}
+%meta{ :name => "article:published_time", :content => content_for(:meta_article_date_published)}
+%meta{ :name => "article:section", :content => content_for(:article_category).strip}
