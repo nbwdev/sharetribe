@@ -16,7 +16,7 @@ module LoggedOutHomepageHelper
             "Take a quick look at your wardrobe".html_safe,
             "Identify one clutter hot spot".html_safe,
             "Pick one thing you could fix in 5&nbsp;mins".html_safe,
-            "Fix it".html_safe
+            "Fix it now".html_safe
         ]
       },
       {
@@ -101,7 +101,7 @@ module LoggedOutHomepageHelper
         :card_type => TITLE_AND_TEXT,
         :item_class => "carousel-hide",
         :card_title => "Try this one new habit to reduce your fast fashion",
-        :tip_text => "Everyday wear gets worn and washed regularly so it should be of good quality to stay looking good and last longer".html_safe
+        :tip_text => "Everyday items get worn and washed more often. Buying better quality will keep them looking good and supporting you for longer".html_safe
       }
     ]
   end
