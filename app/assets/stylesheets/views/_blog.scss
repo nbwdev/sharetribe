@@ -366,15 +366,32 @@
         }
     }
 
-    .quick-guide-container.quick-guide-scarves {
+    .quick-guide-container.quick-guide-wellness {
+        .quick-guide {
+            color: #413D75;
+            background: linear-gradient(180deg, #EAE7E2 0%, #D7E2E8 100%);
+            
+            a, h4, p {
+                color: #413D75;
+            }
+        }
+    }
+
+    .quick-guide-container.quick-guide-decluttering {
+        .quick-guide {
+            color: #413D75;
+            background: linear-gradient(180deg, #D2ED68 0%, #3DC01C 100%);
+            
+            a, h4, p {
+                color: #413D75;
+            }
+        }
+    }
+
+    .quick-guide-container.quick-guide-wellness, .quick-guide-container.quick-guide-decluttering {
         .quick-guide {
             width: 50%;
-            color: #ffffff;
-            background: #697b84;
 
-            a, h4, p {
-                color: #fff;
-            }
             h4.quick-guide-title {
                 font-size: 1.5em;
                 margin-bottom: 0.5em;
@@ -406,7 +423,7 @@
         }
     }
 
-    .quick-guide-container.quick-guide-scarves.qg-left {
+    .quick-guide-container.quick-guide-decluttering.qg-left {
         text-align: left;
         margin-right: 20px;
     }
