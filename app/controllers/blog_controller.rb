@@ -2,14 +2,19 @@ class BlogController < ApplicationController
 
     ARTICLES = 
     {
-        # You can have up to 6 related articles, they will show in og:see_also which hopefully hints Pinterest
+        # :related - You can have up to 6 related articles, they will show in og:see_also which hopefully hints Pinterest
+        # :main_article_image - The image shown on blog homepage and included in the meta_image and the json-ld image metadata - should be square
+        # :second_article_image - The image included in the json-ld image metadata - should be square
         'why_we_started_neverbeenworn' => {
             :id => 'why_we_started_neverbeenworn',
             :title => "Why we started NeverBeenWorn",
             :description => "We want to help all you lovely ladies out there clear out your wardrobe and find a great new home for all your stylish unworn items",
             :created => Date.new(2022,7,5),
             :category => "Biography",
-            :tags => ['sustainable fashion', 'entrepreneur', 'style']
+            :tags => ['sustainable fashion', 'entrepreneur', 'style'],
+            :main_article_image => "blog/lady-in-poppy-field.jpg",
+            :main_image_alt_text => "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.",
+            :second_article_image => "blog/globe-in-park.jpg"
         },
         'sustainability_in_autumn' => {
             :id => 'sustainability_in_autumn',
@@ -18,7 +23,10 @@ class BlogController < ApplicationController
             :created => Date.new(2022,10,9),
             :related => ['sustainability_the_right_choice'],
             :category => 'Sustainability',
-            :tags => ['sustainable fashion']
+            :tags => ['sustainable fashion'],
+            :main_article_image => "blog/autumn-leaves-sunlight.jpg",
+            :main_image_alt_text => "Bright afternoon sun shines through the autumn leaves of a young maple tree.",
+            :second_article_image => "blog/lady-autumn-blue-coat.jpg"
         },
         'big_boots_how_to_wear_them' => {
             :id => 'big_boots_how_to_wear_them',
@@ -26,7 +34,10 @@ class BlogController < ApplicationController
             :description => "Big boots are here for another autumn and winter season. Here's how to choose the right pair for you",
             :created => Date.new(2022,11,15),
             :category => "Fashion",
-            :tags => ['fashion', 'fashion advice', 'boots']
+            :tags => ['fashion', 'fashion advice', 'boots'],
+            :main_article_image => "blog/black-boots-stepping.jpg",
+            :main_image_alt_text => "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.",
+            :second_article_image => "blog/white-boots-sitting.jpg"
         },
         'the_wardrobe_challenge' => {
             :id => 'the_wardrobe_challenge',
@@ -35,7 +46,10 @@ class BlogController < ApplicationController
             :created => Date.new(2022,11,19),
             :related => ['fix_your_drawers_forever', 'too_many_scarves', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
-            :tags => ['decluttering', 'wardrobe', 'storage', 'simple life', 'home organisation', 'organising', 'making habits']
+            :tags => ['decluttering', 'wardrobe', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
+            :main_article_image => "blog/wardrobe-challenge/choosing-clothes.jpg",
+            :main_image_alt_text => "Choosing between a plain white shirt and a white and green striped top.",
+            :second_article_image => "blog/wardrobe-challenge/full-wardrobe.jpg"
         },
         'too_many_scarves' => {
             :id => 'too_many_scarves',
@@ -44,7 +58,10 @@ class BlogController < ApplicationController
             :created => Date.new(2022,12,14),
             :related => ['fix_your_drawers_forever', 'the_wardrobe_challenge', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
-            :tags => ['decluttering', 'scarves', 'storage', 'simple life', 'home organisation', 'organising', 'making habits']
+            :tags => ['decluttering', 'scarves', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
+            :main_article_image => "blog/too-many-scarves/knitted-cosy-scarves.jpg",
+            :main_image_alt_text => "Three cozy and soft woolen scarves in a pile.",
+            :second_article_image => "blog/too-many-scarves/scarves-white-green-grey.jpg"
         },
         'fix_your_drawers_forever' => {
             :id => 'fix_your_drawers_forever',
@@ -53,7 +70,10 @@ class BlogController < ApplicationController
             :created => Date.new(2022,12,16),
             :related => ['too_many_scarves', 'the_wardrobe_challenge', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
-            :tags => ['decluttering', 'drawers', 'storage', 'simple life', 'home organisation', 'organising', 'making habits']
+            :tags => ['decluttering', 'drawers', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
+            :main_article_image => "blog/fix-your-drawers-forever/overflowing-drawers.jpg",
+            :main_image_alt_text => "Clothes overflow from all three drawers of a chest of drawers.",
+            :second_article_image => "blog/fix-your-drawers-forever/piling-clothes-neatly.jpg"
         },
         'me_time' => {
             :id => 'me_time',
@@ -61,7 +81,10 @@ class BlogController < ApplicationController
             :description => "Kick start your new year with my relaxing Just For Me day. It is the best way to unwind, make new plans and get yourself ready for a great year ahead.",
             :created => Date.new(2023,01,10),
             :category => 'Wellness',
-            :tags => ['relax', 'goals', 'resolutions', 'spa', 'mental health']
+            :tags => ['relax', 'goals', 'resolutions', 'spa', 'mental health'],
+            :main_article_image => "blog/me-time/relaxing-bath.jpg",
+            :main_image_alt_text => "A relaxing bath surrounded by candles, a good book and a hot drink.",
+            :second_article_image => "blog/me-time/holding-cup.jpg"
         },
         'sustainability_the_right_choice' => {
             :id => 'sustainability_the_right_choice',
@@ -69,25 +92,35 @@ class BlogController < ApplicationController
             :description => "These days we are all aware of the urgent need to change how and why we have a need to buy more and more stuff. It raises the question: Why do we feel the need to buy so much?",
             :created => Date.new(2023,01,10),
             :related => ['sustainability_in_autumn'],
-            :category => 'Sustainability'
+            :category => 'Sustainability',
+            :tags => ['sustainabile fashion'],
+            :main_article_image => "blog/sustainability/globe-in-field.jpg",
+            :main_image_alt_text => "A brightly-coloured child's globe sits in a field with daisies and other plants growing around it.",
+            :second_article_image => "blog/sustainability/recycling-boxes.jpg"
         },
         'get_your_messy_shelves_in_shape' => {
             :id => 'get_your_messy_shelves_in_shape',
             :title => "Get Your Messy Shelves In Shape",
-            :description => "Are your shelves always in a mess? Make a fresh start and fix that mess",
+            :description => "My shelves are always a mess! Here's how to make a new start and fix that mess",
             :created => Date.new(2023,01,10),
             :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','declutter_after_christmas'],
             :category => 'Decluttering',
-            :tags => ['decluttering', 'shelves', 'storage', 'simple life', 'home organisation', 'organising', 'making habits']
+            :tags => ['decluttering', 'shelves', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
+            :main_article_image => "blog/messy-shelves/messy-shelf-tops-and-jeans.jpg",
+            :main_image_alt_text => "A messy bedroom shelf holds a jumble of tops, jeans, and t-shirts.",
+            :second_article_image => "blog/messy-shelves/holding-crumpled-clothes-on-floor.jpg"
         },
         'declutter_after_christmas' => {
             :id => 'declutter_after_christmas',
             :title => "Declutter After Christmas",
-            :description => "Declutter – for your head, your home and your wallet.",
+            :description => "Christmas delutter – for your head, your home, and your wallet",
             :created => Date.new(2023,01,26),
             :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape'],
             :category => 'Decluttering',
-            :tags => ['decluttering', 'christmas', 'buying presents', 'gift giving', 'money saving', 'money management', 'unwanted gifts', 'top tips', 'friends']
+            :tags => ['decluttering', 'christmas', 'buying presents', 'gift giving', 'money saving', 'money management', 'unwanted gifts', 'top tips', 'friends'],
+            :main_article_image => "blog/christmas/too-many-gifts.jpg",
+            :main_image_alt_text => "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.",
+            :second_article_image => "blog/christmas/opening-gifts.jpg"
         }
     }
 

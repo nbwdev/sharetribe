@@ -40,3 +40,11 @@
 %meta{ :name => "article:modified_time", :content => content_for(:meta_article_date_modified)}
 %meta{ :name => "article:published_time", :content => content_for(:meta_article_date_published)}
 %meta{ :name => "article:section", :content => content_for(:article_category).strip}
+
+- content_for :meta_article_id, 'the_wardrobe_challenge'
+- content_for :meta_article_headline, 'The Wardrobe Challenge'
+- content_for :meta_image, image_path("blog/wardrobe-challenge/declutter-and-sustainable-fashion.jpg")
+- content_for :meta_article_image_1, image_path("blog/wardrobe-challenge/declutter-and-sustainable-fashion.jpg")
+- content_for :meta_article_image_2, image_path("blog/wardrobe-challenge/full-wardrobe.jpg")
+- content_for :meta_article_date_published, '2022-11-18T08:00:00+01:00'
+- content_for :meta_article_date_modified, '2022-11-18T08:00:00+01:00'

@@ -7,11 +7,23 @@
 
 - content_for :title do
   = social_title
+
+/ SEO meta data
 - content_for :meta_description do
   = social_description
 - content_for :page_og_type do
   = 'article'
 -content_for :article_category do
   = article_data[:category]
+- content_for :meta_article_id, article_id
+- content_for :meta_article_headline, article_data[:title]
+- content_for :meta_image, image_url(article_data[:main_article_image])
+- content_for :meta_image_width, "750"
+- content_for :meta_image_height, "750"
+- content_for :meta_article_image_1, image_url(article_data[:main_article_image])
+- content_for :meta_article_image_2, image_url(article_data[:second_article_image])
+- content_for :meta_article_date_published, article_data[:created].strftime("%FT%T")
+- content_for :meta_article_date_modified, article_data[:created].strftime("%FT%T")
+
 - partial_name = "blog/article/" + article_id
 = render :partial => partial_name
