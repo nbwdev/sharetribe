@@ -16,6 +16,23 @@
   .articles-grid
     %ul.blog-articles
     
+      -article = articles['declutter_your_handbags']
+      -image_url = image_path("blog/declutter-handbags/luxury-handbag-on-armchair.jpg")
+      %li.article-card{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "A luxury handbag sits on a plush grey armchair.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            Declutter your handbags and save money
+            
       -article = articles['declutter_after_christmas']
       -image_url = image_path("blog/christmas/too-many-gifts.jpg")
       %li.article-card{:role => "article"}

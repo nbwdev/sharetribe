@@ -44,7 +44,7 @@ class BlogController < ApplicationController
             :title => 'The Wardrobe Challenge',
             :description => "Take on your wardrobe, take back your time and banish that mess for good",
             :created => Date.new(2022,11,19),
-            :related => ['fix_your_drawers_forever', 'too_many_scarves', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
+            :related => ['fix_your_drawers_forever', 'too_many_scarves', 'get_your_messy_shelves_in_shape','declutter_after_christmas','declutter_your_handbags'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'wardrobe', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
             :main_article_image => "blog/wardrobe-challenge/choosing-clothes.jpg",
@@ -103,7 +103,7 @@ class BlogController < ApplicationController
             :title => "Get Your Messy Shelves In Shape",
             :description => "My shelves are always a mess! Here's how to make a new start and fix that mess",
             :created => Date.new(2023,01,10),
-            :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','declutter_after_christmas'],
+            :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','declutter_after_christmas','declutter_your_handbags'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'shelves', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
             :main_article_image => "blog/messy-shelves/messy-shelf-tops-and-jeans.jpg",
@@ -115,12 +115,24 @@ class BlogController < ApplicationController
             :title => "Declutter After Christmas",
             :description => "Christmas delutter – for your head, your home, and your wallet",
             :created => Date.new(2023,01,26),
-            :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape'],
+            :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_your_handbags'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'christmas', 'buying presents', 'gift giving', 'money saving', 'money management', 'unwanted gifts', 'top tips', 'friends'],
             :main_article_image => "blog/christmas/too-many-gifts.jpg",
             :main_image_alt_text => "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.",
             :second_article_image => "blog/christmas/opening-gifts.jpg"
+        },
+        'declutter_your_handbags' => {
+            :id => 'declutter_your_handbags',
+            :title => "How to declutter your handbags",
+            :description => "Christmas delutter – for your head, your home, and your wallet",
+            :created => Date.new(2023,01,26),
+            :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
+            :category => 'Decluttering',
+            :tags => ['decluttering', 'christmas', 'buying presents', 'gift giving', 'money saving', 'money management', 'unwanted gifts', 'top tips', 'friends'],
+            :main_article_image => "blog/declutter-handbags/luxury-handbag-on-armchair.jpg",
+            :main_image_alt_text => "A luxury handbag sits on a plush grey armchair.",
+            :second_article_image => "blog/declutter-handbags/beach-bags.jpg"
         }
     }
 

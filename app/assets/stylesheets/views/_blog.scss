@@ -345,6 +345,19 @@
         }
     }
 
+    ol {
+        padding-left: 1.75em;
+    }
+
+    math {
+        margin-bottom: 0.75em;
+        padding-left: 1.75em;
+
+        mfrac {
+          font-size: 1.25em;
+        }
+    }
+
     .quick-guide-container {
         margin-top: 30px;
         text-align: center;
