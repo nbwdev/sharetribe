@@ -11,11 +11,33 @@
         flex-direction: row;
         gap: 20px;
 
+        @media #{$mobile} {
+            flex-direction: column;
+        }
+
         .title-section {
 
             flex: 1 2 auto;
             min-width: 250px;
 
+            @media #{$mobile} {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                p.title-subtext {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 650px) {
+                flex-direction: column;
+
+                .heading {
+                    width: 66%;
+                }
+            }
+    
             h3, p {
                 font-size: 35px;
                 font-weight: bold;
