@@ -1,0 +1,56 @@
+/# Changes the Pinterest button text from "Save" to "Save for later", include once per button
+/#
+/# Parameters:
+/#   pin-container-ids: Array of IDs of the .pinit divs that hold the pinterest button
+/#   image-url: The URL to tell Pinterest to save instead of making a general pin for the page
+/#   pin-id: The ID of the pin on Pinterest
+/#           This will be data-pin-id and is found by going to the pin and use the number from the URL like
+/#           https://www.pinterest.co.uk/pin/50102614593021520/ gives that long number at the end as the ID
+:javascript
+
+  function updatePinButton(selector) {
+      const pinContainer = document.getElementById(selector);
+      // This will be a link if I set buttonPin and a span if I set buttonFollow
+      const pinSpans = pinContainer.getElementsByTagName('a');
+
+      if (pinSpans.length > 0) {
+          const pinButton = pinSpans[0];
+
+          if (pinButton.getAttribute("to-be-replaced") === "true") {
+            return false;
+          } else {
+            pinButton.textContent = 'Save for later'
+            return true;
+          }
+      } else {
+          return false;
+      }
+  }
+
+  function updatePinButtonWhenAvailable(selector) {
+    return new Promise((resolve, reject) => {
+      // first try if element is available right now
+      const updatedPinButton = updatePinButton(selector);
+      if(updatedPinButton) {
+        resolve(true);
+        return;
+      }
+
+      const observer = new MutationObserver(()=>{
+        const updatedPinButton = updatePinButton(selector);
+        if(updatedPinButton) {
+          observer.disconnect();
+          resolve(true);
+        }
+      });
+      observer.observe(document.getElementById(selector), { childList: true, subtree: true });
+    })
+  }
+
+  (async () => {
+    const selectors = #{raw pin_button_ids};
+
+    for (const selector of selectors) {
+      const updated = await updatePinButtonWhenAvailable(selector);
+    }
+  })();

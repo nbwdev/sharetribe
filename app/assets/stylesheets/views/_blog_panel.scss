@@ -11,8 +11,11 @@
         flex-direction: row;
         gap: 20px;
 
+        position: relative;
+
         @media #{$mobile} {
             flex-direction: column;
+            padding-bottom: 40px;
         }
 
         .title-section {
@@ -37,7 +40,13 @@
                     width: 66%;
                 }
             }
-    
+
+            @media (max-width: 500px) {
+                .heading {
+                    width: 100%;
+                }
+            }
+
             h3, p {
                 font-size: 35px;
                 font-weight: bold;
@@ -115,6 +124,17 @@
             }
             .tip.green-box-4-of-4 {
                 background: linear-gradient(180deg, #52C627 0%, #3DC01C 100%);
+            }
+        }
+
+        .pinit {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            span {
+                font-size: 18px;
+                line-height: 30px;
             }
         }
     }

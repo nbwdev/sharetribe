@@ -1,3 +1,8 @@
+- content_for :extra_javascript do
+  =javascript_include_tag "//assets.pinterest.com/js/pinit.js", defer: true
+  =render :partial => "blog/components/update_pinterest_button_text",
+    :locals => { :"pin_button_ids" => ["pinit-4-handbag-styles","pinit-4-tips-declutter"] }
+
 .blog-article
   %h2.article-title="How to declutter your handbags and save money"
   %p.published-date
@@ -200,13 +205,23 @@
       .title-section
         .heading
           %h3
-            4 tips for an extreme handbag declutter
+            4 tips for extreme handbag declutter
           %p.title-subtext
             Where are you wasting money?
         .subhead
           %p.sub-title
-            Declutter and reduce your handbag collection and save money
-
+            Declutter and save money on your handbag collection
+        .pinit#pinit-4-tips-declutter
+          %a.pinterest-share-button{ :"data-pin-do" => "buttonPin",
+            :"data-pin-tall" => "true",
+            :"data-pin-media" => image_path("blog/declutter-handbags/handbags-4-tips.jpg"),
+            :title => "Pin It",
+            :class => "pin-it-button",
+            :href => "http://pinterest.com/pin/create/button/",
+            :rel => "nofollow",
+            :target => "_blank",
+            "count-layout" => "horizontal",
+            :"to-be-replaced" => "true"} 
       .tips-section
         .tip.green-box-1-of-4
           .tip-number
@@ -214,7 +229,7 @@
               1
           .tip-content
             %p.tip-heading
-              Step 1 - Collect all your handbags
+              Collect all your handbags
             %p.tip-text
               Take out all your handbags and place them on your bed or on a flat surface in front of you.
 
@@ -224,7 +239,7 @@
               2
           .tip-content
             %p.tip-heading
-              Step 2 - Divide into these 3 categories 
+              Divide into these 3 categories 
             %p.tip-text
               %ol
                 %li
@@ -240,7 +255,7 @@
               3
           .tip-content
             %p.tip-heading
-              Step 3 - Decide what you do and don’t use
+              Decide what you do and don’t use
  
             %p.tip-text
               %ol
@@ -257,7 +272,7 @@
               4
           .tip-content
             %p.tip-heading
-              Step 4 - Better buying habits 
+              Better buying habits 
             %p.tip-text
               %ol
                 %li
@@ -334,6 +349,17 @@
         .subhead
           %p.sub-title
             How to declutter and reduce your handbag collection
+        .pinit#pinit-4-handbag-styles
+          %a.pinterest-share-button{ :"data-pin-do" => "buttonPin",
+            :"data-pin-tall" => "true",
+            :"data-pin-media" => image_path("blog/declutter-handbags/handbags-4-tips.jpg"),
+            :title => "Pin It",
+            :class => "pin-it-button",
+            :href => "http://pinterest.com/pin/create/button/",
+            :rel => "nofollow",
+            :target => "_blank",
+            "count-layout" => "horizontal",
+            :"to-be-replaced" => "true"} 
 
       .tips-section
         .tip.green-box-1-of-4
