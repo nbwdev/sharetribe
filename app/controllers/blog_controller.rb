@@ -113,7 +113,7 @@ class BlogController < ApplicationController
         'declutter_after_christmas' => {
             :id => 'declutter_after_christmas',
             :title => "Declutter After Christmas",
-            :description => "Christmas delutter – for your head, your home, and your wallet",
+            :description => "Christmas declutter – for your head, your home, and your wallet",
             :created => Date.new(2023,01,26),
             :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_your_handbags'],
             :category => 'Decluttering',
@@ -125,8 +125,8 @@ class BlogController < ApplicationController
         'declutter_your_handbags' => {
             :id => 'declutter_your_handbags',
             :title => "How to declutter your handbags",
-            :description => "Christmas delutter – for your head, your home, and your wallet",
-            :created => Date.new(2023,01,26),
+            :description => "How to declutter your handbags and save more money in the future",
+            :created => Date.new(2023,02,10),
             :related => ['too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'christmas', 'buying presents', 'gift giving', 'money saving', 'money management', 'unwanted gifts', 'top tips', 'friends'],
