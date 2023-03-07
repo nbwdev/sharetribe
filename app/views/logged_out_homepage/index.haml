@@ -1,6 +1,6 @@
 - content_for :title_header do
   %h1.logged-out-homepage
-    Support Sustainable Fashion
+    Sell and Support Sustainable Fashion
 
 - content_for :footer_attribution do
   Images by
@@ -31,7 +31,7 @@
 - content_for :title do
   = "Welcome to NeverBeenWorn"
 - content_for :meta_description do
-  = "Never Worn It? Why Keep It? Declutter, make money, and elevate your life"
+  = "Never Worn It? Why Keep It? Declutter, re-sell, repurpose"
 
 - content_for :extra_javascript do
   %script{:type => "text/javascript", :src => "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
@@ -48,8 +48,11 @@
 
   .banner
     .caption
-      %h2.banner-title
-        Never Worn It?
+      %h2.banner-title<
+        Never
+        %span.hardlyEver>
+          &nbsp;
+        Worn It?
         <br>
         Why Keep It?
         <br>
@@ -133,7 +136,7 @@
   .seasonal-articles-container
     .seasonal-articles
       %h2
-        Declutter 1-2-3
+        Declutter repurpose resell with our declutter 1&nbsp;-&nbsp;2&nbsp;-&nbsp;3
       .seasonal-articles-columns
         .seasonal-articles-column
           %h3.seasonal-articles-title

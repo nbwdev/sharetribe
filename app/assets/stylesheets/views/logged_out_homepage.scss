@@ -9,6 +9,7 @@
     $mobile: 400px;
 */ 
 @font-face { font-family: Fifita; src: url('Fifita_Regular_free.ttf'); } 
+@font-face { font-family: Courgette; src: url('Courgette-Regular.ttf'); } 
 
 $mini-tablet: "(min-width: 660px)";
 $homepage-text-colour: #4a4a4a;
@@ -96,19 +97,55 @@ article.page-content.no-padding-bottom {
                 font-size: 3em;
 
                 @media (min-width: 660px) {
-                    font-size: 2em;
+                    font-size: 1.5em;
                 }
 
                 @media (min-width: 769px) {
-                    font-size: 2.5em;
+                    font-size: 2em;
                 }
             
+                @media (min-width: 900px) {
+                    font-size: 2.5em;
+                }
+
                 @media #{$desktop} {
+                    font-size: 3em;
+                }
+
+                @media (min-width: 1200px) {
                     font-size: 4em;
                 }
             
                 line-height: 1.15em;
                 margin-bottom: 10px;
+
+                span.hardlyEver::before {
+                    content: "or hardly ever";
+                    top: -1.4em;
+                    left: -1em;
+                    transform: rotate(-5deg);
+                    width: max-content;
+                }
+                
+                span.hardlyEver::before, span.hardlyEver::after {
+                    display: block;
+                    position: absolute;
+                    color: red;
+                    font-weight: 700;
+                    font-size: 0.6em;
+                    font-family: 'Courgette', sans-serif;
+                }
+
+                span.hardlyEver {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                span.hardlyEver::after {
+                    content: "^";
+                    bottom: -0.9em;
+                    left: -0.1em;
+                }
             }
             .banner-text {
                 @media #{$desktop} {
@@ -145,7 +182,7 @@ article.page-content.no-padding-bottom {
                 width: 100%;
                 overflow: hidden;
                 position: unset;
-                padding-top: 1em;
+                padding-top: 2.5em;
                 padding-bottom: 2em;
             }
             img {
@@ -212,6 +249,10 @@ article.page-content.no-padding-bottom {
                     @media #{$desktop} {
                         font-size: 3em;
                     }
+
+                    @media (max-width: 1200px) {
+                        font-size: 2.5em;
+                    }            
                 
                     line-height: 1.15em;
                     margin-bottom: 10px;
