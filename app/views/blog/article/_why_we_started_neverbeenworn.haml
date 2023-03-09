@@ -65,5 +65,8 @@
     The fashion and sustainability team
     =link_to('neverbeenworn.co.uk', s_path)
 
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+  
   %p.image-credits
     Thanks to Monica Turlui and Nothing Ahead @ Pexels for images

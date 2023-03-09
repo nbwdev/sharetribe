@@ -354,6 +354,9 @@
           %li
             Do I really need to keep it?
 
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+  
   .article-footer
 
     %p

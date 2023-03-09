@@ -314,6 +314,9 @@
       -first_url = image_path("blog/wardrobe-challenge/declutter-and-sustainable-fashion.jpg")
       =image_tag(first_url, alt: "4 steps to decluttering your wardrobe to support sustainable fashion.")
 
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+  
   .article-footer
     %p
       If you take the

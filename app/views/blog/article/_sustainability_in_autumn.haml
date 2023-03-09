@@ -58,7 +58,9 @@
         -second_url = image_path("blog/lady-autumn-blue-coat.jpg")
         =image_tag(second_url, class: 'article_col6_image', alt: "A lady takes a walk in a forest in autumn.")
 
-
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+  
 
   %p
     Thanks to Marcel Strauss and Raychan Tobu @ Unsplash for images

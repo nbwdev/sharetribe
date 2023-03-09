@@ -265,6 +265,9 @@
       -image_url = image_path("blog/too-many-scarves/scarf-hoard.png")
       =image_tag(image_url, alt: "The breakdown of my scarf hoard into different categories and showing which scarves I kept. I started with 18 scarves and kept 4: one for winter, one dressy, one for spring/summer and one for sentimental reasons.")
 
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+  
   .article-footer
     %p
       We would love to hear from you if you found this article useful

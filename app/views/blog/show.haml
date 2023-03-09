@@ -26,4 +26,4 @@
 - content_for :meta_article_date_modified, article_data[:created].strftime("%FT%T")
 
 - partial_name = "blog/article/" + article_id
-= render :partial => partial_name
+= render :partial => partial_name, :locals => { :"article_id" => article_id }

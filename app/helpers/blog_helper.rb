@@ -1,10 +1,10 @@
 module BlogHelper
 
-    def related_articles(id)
+    def related_articles(id, how_many = 99)
         article = BlogController::ARTICLES[id]
 
         if article.present? && article[:related].present?
-            article[:related]
+            article[:related].first(how_many)
         else
             []
         end
@@ -18,5 +18,11 @@ module BlogHelper
         else
             []
         end
+    end
+
+    def article(id)
+        article = BlogController::ARTICLES[id]
+
+        article
     end
 end

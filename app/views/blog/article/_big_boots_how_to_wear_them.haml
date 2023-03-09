@@ -92,7 +92,9 @@
         %li
           Make the right choice and you, your boots, and your wardrobe will have a great few seasons together
 
-
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+  
   .article-footer
     %p
       If you found this article useful do let us know. We would love to hear from you
