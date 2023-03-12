@@ -18,8 +18,11 @@
 - content_for :page_wrapper_class do
   = "no-min-width"
 - content_for :page_specific_css do
-  %link{:rel => "stylesheet", :href => "/assets/thirdparty/slick-slider/slick.css", :media => "print", :onload => "this.media='all'"}
-  %link{:rel => "stylesheet", :href => "/assets/thirdparty/slick-slider/slick-theme.css", :media => "print", :onload => "this.media='all'"}
+  /%link{:rel => "stylesheet", :href => "/assets/thirdparty/slick-slider/slick.css", :media => "print", :onload => "this.media='all'"}
+  /%link{:rel => "stylesheet", :href => "/assets/thirdparty/slick-slider/slick-theme.css", :media => "print", :onload => "this.media='all'"}
+
+  %link{:rel => "stylesheet", :type => "text/css", :href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
+  %link{:rel => "stylesheet", :type => "text/css", :href => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"}
 
   / temp
   :css
