@@ -6,6 +6,7 @@
 
 .logoImage {
   height: 100%;
+  aspect-ratio: 21/5;
 }
 
 .logoText {
