@@ -4,15 +4,15 @@
 .logged_out_homepage {
 
     /* Define colours at the top so we can mess about with them more easily */
-    $title-panel-text-colour: 	#F94A29;
-    $text-panel-text-colour: #F94A29;
+    $title-panel-text-colour: 	#ffffff;
+    $text-panel-text-colour: #ffffff;
     
-    $title-panel-light-shade: #FFB805;
-    $title-panel-dark-shade: 	#F94A29;
-    $text-panel-light-shade: #FFB805;
-    $text-panel-dark-shade: 	#F94A29;
+    $title-panel-light-shade: #298D37;
+    $title-panel-dark-shade: 	#298D37;
+    $text-panel-light-shade: #298D37;
+    $text-panel-dark-shade: 	#298D37;
 
-    $find-us-on-instagram-colour: #F94A29;
+    $find-us-on-instagram-colour: #298D37;
 
 
     .tips-container {
@@ -217,12 +217,13 @@
         .title-card {
 
             border-width: 11px;
-            border-color: #F94A29;
+            border-color: #298D37;
             border-style: solid;
 
-            /* double border*/
+            background-color: #298D37;
+            
             margin: 17px;
-            box-shadow: 0 0 0 11px #FFB805;
+            box-shadow: #10511a 3px 3px 6px 0px inset;
 
             .text-container {
                 width: 60%;
