@@ -24,9 +24,9 @@ class BlogController < ApplicationController
             :related => ['sustainability_the_right_choice'],
             :category => 'Sustainability',
             :tags => ['sustainable fashion'],
-            :main_article_image => "blog/autumn-leaves-sunlight.jpg",
+            :main_article_image => "blog/sustainability-in-autumn/autumn-leaves-sunlight.jpg",
             :main_image_alt_text => "Bright afternoon sun shines through the autumn leaves of a young maple tree.",
-            :second_article_image => "blog/lady-autumn-blue-coat.jpg"
+            :second_article_image => "blog/sustainability-in-autumn/lady-autumn-blue-coat.jpg"
         },
         'big_boots_how_to_wear_them' => {
             :id => 'big_boots_how_to_wear_them',
@@ -35,9 +35,9 @@ class BlogController < ApplicationController
             :created => Date.new(2022,11,15),
             :category => "Fashion",
             :tags => ['fashion', 'fashion advice', 'boots'],
-            :main_article_image => "blog/black-boots-stepping.jpg",
+            :main_article_image => "blog/big-boots/sitting-on-plinth-square.jpg",
             :main_image_alt_text => "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.",
-            :second_article_image => "blog/white-boots-sitting.jpg"
+            :second_article_image => "blog/big-boots/white-boots-sitting.jpg"
         },
         'the_wardrobe_challenge' => {
             :id => 'the_wardrobe_challenge',
