@@ -106,19 +106,19 @@
   position: relative;
   margin-bottom: lines(0.5);
   border-bottom: 1px solid $border;
-  min-height: lines(3.5);
+  min-height: lines(5.5);
 
   @include media(tablet) {
     padding-bottom: lines(1);
     margin-bottom: lines(1);
-    height: lines(6);
+    height: lines(7.5);
   }
 }
 
-$image-width: lines(7.5); // FIXME
+$image-width: lines(10); // FIXME
 $image-height: image-height($image-width);
 $image-padding: lines(1);
-$home-list-image-size-mobile: lines(3);
+$home-list-image-size-mobile: lines(5);
 $home-list-image-padding-mobile: lines(0.5);
 .home-list-image-container {
   position: absolute;
@@ -129,7 +129,8 @@ $home-list-image-padding-mobile: lines(0.5);
 .home-list-image-container-desktop {
   @extend .home-list-image-container;
   height: $image-height;
-  width: $image-width;
+  aspect-ratio: 1;
+  background-color: #f0f0f0;
   display: none;
 
   @include media(tablet) {
@@ -139,8 +140,9 @@ $home-list-image-padding-mobile: lines(0.5);
 
 .home-list-image-container-mobile {
   @extend .home-list-image-container;
-  width: $home-list-image-size-mobile;
   height: $home-list-image-size-mobile;
+  aspect-ratio: 1;
+  background-color: #f0f0f0;
   display: block;
 
   @include media(tablet) {
@@ -153,6 +155,7 @@ $home-list-image-padding-mobile: lines(0.5);
   height: 100%;
   display: block;
   @include border-radius($default-border-radius);
+  object-fit: contain;
 }
 
 .home-no-image {
@@ -442,7 +445,7 @@ $home-list-avatar-padding: lines(0.25);
   padding-bottom: lines(0.5);
   margin-bottom: lines(0.5);
   border-bottom: 1px solid $border;
-  min-height: lines(3.5);
+  min-height: lines(5.5);
 
   @include media(tablet) {
     padding-bottom: lines(1);
