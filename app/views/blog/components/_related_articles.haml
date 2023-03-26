@@ -17,11 +17,12 @@
         -related_articles.each do |related_article_title|
           -article_data = article(related_article_title)
           -image_url = image_path(article_data[:main_article_image])
+          -background_colour = article_data[:main_image_placeholder_colour]
 
           %li.article-card{:role => "article"}
             = link_to(article_path(id=article_data[:id]), :class => "article-link") do
               .article-image-container
-                =image_tag(image_url, class: 'article_card_image', alt: article_data[:main_image_alt_text])
+                =image_tag(image_url, class: 'article_card_image', alt: article_data[:main_image_alt_text], loading: "lazy", style: background_colour ? "background-color: "+background_colour : "")
                 .article-card-image-overlay
                 .article-title-cta-container
                   .cta-left
