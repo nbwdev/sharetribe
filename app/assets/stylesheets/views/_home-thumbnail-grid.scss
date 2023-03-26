@@ -10,7 +10,7 @@ $home-thumbnail-grid-author: $home-thumbnail-grid-avatar + ($home-thumbnail-grid
 
 .home-fluid-thumbnail-grid {
   display: grid;
-  grid-template-columns: unquote("repeat(auto-fill, minmax(max(220px, 100%/3), 1fr))");
+  grid-template-columns: repeat(auto-fill, Minmax(Max(220px, 100%/3), 1fr));
 
 }
 
