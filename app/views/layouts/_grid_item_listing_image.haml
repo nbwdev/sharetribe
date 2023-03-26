@@ -12,8 +12,20 @@
     - with_first_listing_image(listing) do |first_image_url|
       = image_tag first_image_url, {:alt => listed_listing_title(listing), :class => "#{modifier_class} fluid-thumbnail-grid-image-image"}
 
-    - if Transaction.unfinished_for_listing(listing).any?
+    - if Transaction.unfinished_for_listing(listing).any? || modifier_class == "people-listings"
       .fluid-thumbnail-grid-image-price-container{:class => "#{modifier_class}"}
         - if Transaction.unfinished_for_listing(listing).any?
           %span.fluid-thumbnail-grid-image-status
             = t("listings.transaction_status.reserved")
+        - elsif listing.price
+          %span.fluid-thumbnail-grid-image-price
+            = MoneyViewUtils.to_humanized(listing.price)
+            - price_unit = price_quantity_slash_unit(listing)
+          - if !price_unit.blank?
+            - price_text = " " + price_unit
+            %span.fluid-thumbnail-grid-image-quantity{:title => price_text}
+              = price_text
+        - else
+          %span.fluid-thumbnail-grid-image-type{:class => "#{modifier_class}"}
+            = shape_name(listing)
+
