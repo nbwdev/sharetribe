@@ -6,10 +6,6 @@
 
 a { color: #C458C1; }
   
-.marketplace-lander h1.marketplace-lander-content-title {
-    font-size: 60px;
-    font-weight: 60;
-}
 
 .marketplace-lander .marketplace-lander-content-description {
     background-color: #FFD9FE;
@@ -30,21 +26,6 @@ div.left-navi-section.about-section h2, div.left-navi-section.about-section h3 {
   font-weight: bold;
 }
   
-/* Banner */
-.marketplace-lander h1.marketplace-lander-content-title {
-    display:none;
-}
-.marketplace-lander div.marketplace-lander-content {
-  padding-right: 0px;
-  padding-left: 0px;
-  padding-top: 200px;
-  padding-bottom: 0px;
-}
-.marketplace-lander p.marketplace-lander-content-description {
-    margin-bottom: 0px;
-    text-transform: uppercase;
-}
-
 /* Footer (on normal pages not landing page) */
 svg.footer__social-media-icon path {
     fill: #ffffff;

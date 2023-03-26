@@ -18,10 +18,6 @@
 - content_for :title_header do
   - is_homepage = params[:controller] == "homepage" && params[:action] == "index"
   - if @big_cover_photo
-    - if @current_community.show_slogan?
-      %h1.marketplace-lander-content-title= community_slogan.html_safe
-    - else
-      %h1.marketplace-lander-content-title.hidden_title_part &nbsp;
     - if @current_community.show_description?
       %p.marketplace-lander-content-description#after-banner= community_description.html_safe
     - else

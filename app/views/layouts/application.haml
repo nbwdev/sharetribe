@@ -46,9 +46,8 @@
       %section.marketplace-lander
         - if @big_cover_photo
           .coverimage
-            %figure.marketplace-cover.fluidratio
-              .lander-content.marketplace-lander-content
-                = yield :title_header
+            .lander-content.marketplace-lander-content
+              = yield :title_header
         - elsif !(is_homepage && FeatureFlagHelper.feature_enabled?(:topbar_v1))
           .coverimage
             %figure.marketplace-cover-small.fluidratio

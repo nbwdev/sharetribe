@@ -2016,26 +2016,8 @@ figure.fluidratio {
   }
 
   .marketplace-lander-content {
-    padding: 5em 1em;
+    padding: 0px;
     text-align: center;
-  }
-
-  .marketplace-lander-content-title {
-    margin-bottom: 0;
-    margin-top: 0;
-    position: relative;
-    padding: 0;
-    color: $slogancolor;
-    @include larger-type;
-    line-height: em(18);
-    @include media(tablet) {
-      padding: 0 lines(1);
-      @include huge-type;
-      line-height: em(15);
-    }
-    &.hidden-title-part {
-      opacity: 0 !important;
-    }
   }
 
   .marketplace-lander-content-description {
@@ -2043,6 +2025,9 @@ figure.fluidratio {
       &.hidden-title-part {
         opacity: 0 !important;
       }
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-transform: uppercase;  
   }
 
   .title-container {
@@ -2174,13 +2159,6 @@ figure.fluidratio {
   @include media(tablet) {
 
 
-    .marketplace-lander-content-title {
-      margin-bottom: 0;
-      margin-top: 0;
-      @include huge-type;
-      line-height: em(13);
-    }
-
     p {
       @include large-type;
       margin: lines(0.5) auto;
@@ -2224,14 +2202,6 @@ figure.fluidratio {
 
   }
 
-  @include media(desktop) {
-    .marketplace-lander-content-title {
-      margin-bottom: 0;
-      margin-top: 0;
-      @include mega-type;
-      line-height: em(15);
-    }
-  }
 }
 .text-center {
   text-align: center;
@@ -2257,3 +2227,25 @@ figure.fluidratio {
 .recaptcha {
   margin-top: 8px;
 }
+
+
+/* debug */
+/*
+* { outline: 2px dotted red }
+* * { outline: 2px dotted green }
+* * * { outline: 2px dotted orange }
+* * * * { outline: 2px dotted blue }
+* * * * * { outline: 1px solid red }
+* * * * * * { outline: 1px solid green }
+* * * * * * * { outline: 1px solid orange }
+* * * * * * * * { outline: 1px solid blue }
+
+* *:hover { border:2px solid #89A81E }                   
+* * *:hover { border:2px solid #F34607 }                 
+* * * *:hover { border:2px solid #5984C3 }              
+* * * * *:hover { border:2px solid #CD1821 }            
+* * * * * *:hover { border:2px dotted #89A81E }          
+* * * * * * *:hover { border:2px dotted #F34607 }   
+* * * * * * * *:hover { border:2px dotted #5984C3 }   
+* * * * * * * * *:hover { border:2px dotted #CD1821 } 
+*/
