@@ -11,11 +11,24 @@ $home-thumbnail-grid-author: $home-thumbnail-grid-avatar + ($home-thumbnail-grid
 .home-fluid-thumbnail-grid {
   display: grid;
   grid-template-columns: unquote("repeat(auto-fill, minmax(max(220px, 100%/3), 1fr))");
+
 }
 
 .home-fluid-thumbnail-grid-item {
   float: left;
   margin: 0.5em;
+  @include border-bottom-radius($default-border-radius);
+}
+
+.home-fluid-thumbnail-grid-item:hover {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  transform: scale(1.011);
+  @include prefix-prop(transition, all 50ms ease-in-out);
+}
+
+.home-fluid-thumbnail-grid-item:hover .fluid-thumbnail-grid-image-image-container {
+  @include border-top-radius($default-border-radius);
+  @include border-bottom-radius(0);
 }
 
 .home-fluid-thumbnail-grid-title {
@@ -23,6 +36,14 @@ $home-thumbnail-grid-author: $home-thumbnail-grid-avatar + ($home-thumbnail-grid
   position: relative;
   padding: 0.75em;
   line-height: 1.2em;
+  color: #4a4a4a;
+
+  p.price {
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #3c3c3c;
+  }
 }
 
 .home-fluid-thumbnail-grid-author {

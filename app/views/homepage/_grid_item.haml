@@ -5,5 +5,23 @@
       = render :partial => "layouts/grid_item_listing_image", :locals => {:listing => listing, :modifier_class => ""}
 
       -# Listing description
-      .home-fluid-thumbnail-grid-title
-        = listing.title
+      = link_to(listing_path(listing.url)) do
+        .home-fluid-thumbnail-grid-title
+          %p.price
+            - if Transaction.unfinished_for_listing(listing).any?
+              %span.status
+                = t("listings.transaction_status.reserved")
+            - elsif listing.price
+              %span.fluid-thumbnail-grid-image-price
+                = MoneyViewUtils.to_humanized(listing.price)
+                - price_unit = price_quantity_slash_unit(listing)
+              - if !price_unit.blank?
+                - price_text = " " + price_unit
+                %span.fluid-thumbnail-grid-image-quantity{:title => price_text}
+                  = price_text
+            - else
+              %span.fluid-thumbnail-grid-image-type{:class => "#{modifier_class}"}
+                = shape_name(listing)
+
+          %p.title
+            = listing.title
