@@ -16,6 +16,23 @@
   .articles-grid
     %ul.blog-articles
     
+      -article = articles['declutter_me_happy']
+      -image_url = image_path("blog/declutter-me-happy/sitting-white-chair-no-clutter.jpg")
+      %li.article-card{:role => "article"}
+        = link_to(article_path(id=article[:id]), :class => "article-link") do
+          .article-image-container
+            =image_tag(image_url, class: 'article_card_image', alt: "A lady listens to music while sitting on a suspended white chair in her bedroom. The room is tidy and uncluttered but not not minimalist, with healthy pot plants and a collection of pillows on the bed.")
+            .article-card-image-overlay
+            .article-title-cta-container
+              .cta-left
+                %h2.article-title
+                  =article[:title]
+              .cta-right
+                %p.article-read
+                  Read
+          %p.article-summary
+            Quick helpful tricks to start to get rid of all the unhappy clutter in your life
+            
       -article = articles['declutter_your_handbags']
       -image_url = image_path("blog/declutter-handbags/luxury-handbag-on-armchair.jpg")
       %li.article-card{:role => "article"}

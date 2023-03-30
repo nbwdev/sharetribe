@@ -588,4 +588,14 @@
     span.big-question::after{
         content: '';
       }
+
+    span.big-question.in-column {
+        display: inline-block;
+        width: 50%;
+
+        @media #{$mobile} {
+            display: block;
+            width: 70%;
+        }
+    }
 }
