@@ -570,6 +570,11 @@
         background: #697b84;
     }
 
+    span.big-question.purple {
+        border-left-color: #CC7FE7;
+        background: #DDAAEE;
+    }
+
     span.big-question::before{
         font-family:Arial;
         content: "\201C";
