@@ -63,7 +63,7 @@
           = t(".filter")
 
     - if show_horizontal_filters
-      #filters-horizontal
+      %nav#filters-horizontal
         = render :partial => "horizontal_filters", :locals => { show_price_filter: show_price_filter, show_custom_fields: @show_custom_fields, filters: filters }
 
     .home-toolbar-button-group{:class => listing_shape_menu_enabled || @category_menu_enabled ? "filters-enabled" : ""}
