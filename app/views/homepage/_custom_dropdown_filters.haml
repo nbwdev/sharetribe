@@ -16,7 +16,10 @@
               - make_scrollable = field.options.size > 10
               .custom-filter-options{:class => make_scrollable ? "scrollable" : ""}
                 - field.options.sort.each do |option|
-                  .custom-filter-checkbox-container
+                  - is_colour = field_name == "Colour"
+                  .custom-filter-checkbox-container{:class => is_colour ? "colour-checkbox-container" : ""}
+                    - if is_colour
+                      %div{:class => "colour-swatch colour-" + option.title(I18n.locale).parameterize}
                     %label.custom-filter-checkbox-label
                       - param_name = type == :dropdown ? CustomFieldSearchParams.dropdown_param_name(option.id) : CustomFieldSearchParams.checkbox_param_name(option.id)
                       %span.custom-filter-checkbox-label-text
@@ -60,5 +63,5 @@
 
       .update
         %button{type: 'submit'}
-          Update
+          Apply filter
 

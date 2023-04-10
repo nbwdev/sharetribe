@@ -46,7 +46,7 @@
             min-width: 100%;
             padding: 5px;
             background-color: white;
-            border-radius: 6px;
+            @include border-radius(6px);
             display: block;
             box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
             transition: all 200ms linear;
@@ -82,6 +82,72 @@
                 label.custom-filter-checkbox-label:hover {
                     background-color: #ddd;
                 }
+
+            }
+
+            .colour-checkbox-container {
+                display: flex;
+
+                .colour-swatch {
+                    width: 1.1em;
+                    height: 1.1em;
+                    margin-right: 2px;
+                    display: inline-block;
+                    align-self: center;
+                    @include border-radius(4px);
+                }
+
+                .colour-black {
+                    background-color: black;
+                }
+
+                .colour-blue {
+                    background-color: #006ee6;
+                }
+
+                .colour-brown {
+                    background-color: #765341;
+                }
+
+                .colour-green {
+                    background-color: green;
+                }
+
+                .colour-grey {
+                    background-color: grey;
+                }
+
+                .colour-orange {
+                    background-color: orange;
+                }
+
+                .colour-pink {
+                    background-color: pink;
+                }
+
+                .colour-purple {
+                    background-color: purple;
+                }
+
+                .colour-red {
+                    background-color: red;
+                }
+
+                .colour-white {
+                    background-color: white;
+                    border-width: 1px;
+                    border-color: black;
+                    border-style: solid;
+                }
+
+                .colour-yellow {
+                    background-color: yellow;
+                }
+
+                .colour-multi {
+                    background: conic-gradient(cyan, magenta, yellow, cyan);
+                }
+
             }
         }
 
