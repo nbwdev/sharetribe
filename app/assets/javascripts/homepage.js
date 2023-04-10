@@ -10,6 +10,12 @@ $(function() {
   $showFiltersButton.click(function() {
     $showFiltersButton.toggleClass("selected");
     $filtersContainer.toggleClass("home-toolbar-filters-mobile-hidden");
+
+    if ($showFiltersButton.hasClass("selected")) {
+      $showFiltersButton.text("Hide filters");
+    } else {
+      $showFiltersButton.text("Filter");
+    }
   });
 
   // Relocate filters

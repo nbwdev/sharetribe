@@ -23,6 +23,7 @@ class HomepageController < ApplicationController
     selected_category = m_selected_category.or_nil
     relevant_filters = select_relevant_filters(m_selected_category.own_and_subcategory_ids.or_nil)
     @seo_service.category = selected_category
+    show_horizontal_filters = selected_category.present?
 
     if FeatureFlagHelper.feature_enabled?(:searchpage_v1)
       @view_type = "grid"
@@ -116,6 +117,7 @@ class HomepageController < ApplicationController
         shapes: all_shapes,
         filters: relevant_filters,
         show_price_filter: show_price_filter,
+        show_horizontal_filters: show_horizontal_filters,
         selected_category: selected_category,
         selected_shape: selected_shape,
         shape_name_map: shape_name_map,

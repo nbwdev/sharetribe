@@ -1,0 +1,29 @@
+.filter-dropdown
+  %button.filter-button#price-filter-button{'aria-label' => 'Show price filter', 'aria-controls' => 'price-filter-popout',
+  'aria-expanded' => 'false', type: :button}
+    Price
+    %span.expand-symbol
+      ▶
+
+  .filter-popout#price-filter-popout{class: 'hidden'}
+    - min = MoneyUtil.to_units(MoneyUtil.to_money(@current_community.price_filter_min, @current_community.currency))
+    - max = MoneyUtil.to_units(MoneyUtil.to_money(@current_community.price_filter_max, @current_community.currency))
+    - min_start = params["price_min"] || min
+    - max_start = params["price_max"] || max
+
+    .price-range
+      .min
+        %label.min-price{for: "price_min"}
+          Min
+        %input.price-field#price_min{type: :text, :maxlength => "10", :placeholder => "0", :value => min_start, :name => "price_min", :inputmode => "decimal"}
+      .dash-container
+        %span.dash
+          \—
+      .max
+        %label.max-price{for: "price_max"}
+          Max
+        %input.price-field#price_max{type: :text, :maxlength => "10", :placeholder => "Any", :value => max_start, :name => "price_max", :inputmode => "decimal"}
+    .update
+      %button{type: 'submit'}
+        Update
+

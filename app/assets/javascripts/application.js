@@ -59,6 +59,7 @@
 //= require googlemaps
 //= require map_label
 //= require homepage
+//= require filters_horizontal
 //= require order_manager
 //= require ajax_status
 //= require admin/expiration_notice

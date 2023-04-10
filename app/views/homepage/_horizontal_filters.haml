@@ -1,0 +1,8 @@
+- if show_price_filter || show_custom_fields
+  %p.filter-by
+    Filter by
+  - if show_price_filter
+    = render :partial => "price_dropdown_filter"
+
+  - if show_custom_fields
+    = render :partial => "custom_dropdown_filters", locals: { filters: filters }

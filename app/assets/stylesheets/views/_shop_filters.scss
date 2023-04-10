@@ -1,0 +1,206 @@
+@import "mixins/all";
+@import "../landing_page/mixins/all";
+@import "compass/css3/border-radius";
+@import "compass/utilities/general/clearfix";
+
+.with-horizontal-filters {
+
+}
+
+#filters-horizontal {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2em;
+
+    .filter-by {
+        margin-bottom: 0px;
+        align-self: center;
+        margin-right: 1em;
+    }
+
+    .filter-dropdown {
+        position: relative;
+        margin-left: 5px;
+        margin-right: 5px;
+    
+        .filter-button {
+            padding-right: 1em;
+            color: $nbw-dark;
+            background-color: #FFF;
+            border-color: $nbw-dark;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .filter-button:hover {
+            color: #ffffff;
+            background-color: $nbw-dark;
+            border-color: $nbw-dark;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .filter-button.active {
+            font-weight: bold;
+        }
+
+        .filter-popout {
+            position: absolute;
+            z-index: 100;
+            min-width: 100%;
+            padding: 5px;
+            background-color: white;
+            border-radius: 6px;
+            display: block;
+            box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
+            transition: all 200ms linear;
+
+            .update {
+                button {
+                    margin-bottom: 2px;
+                    width: 100%;
+                }
+            }
+
+            .custom-filter-checkbox-container {
+                label.custom-filter-checkbox-label {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    padding-right: 5px;
+
+                    span.custom-filter-checkbox-label-text {
+                        display: inline-block;
+                        font-size: 1.25em;
+                        padding-right: 1.5em;
+                    }
+
+                    input {
+                        width: 1.1em;
+                        height: 1.1em;
+                        align-self: center;
+                    }
+                }
+
+                label.custom-filter-checkbox-label:hover {
+                    background-color: #ddd;
+                }
+            }
+        }
+
+        .filter-popout.hidden {
+            display: none;
+        }
+
+        span.expand-symbol {
+            margin-left: 0.5em;
+            width: 1em;
+            display: inline-block;
+        }
+
+        #price-filter-popout {
+            .price-range {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 1.5em;
+
+                .max, .min {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    min-width: 5em;
+                    position: relative;
+
+                    label {
+                        position: absolute;
+                        top: -1.75em;
+                    }
+                }
+
+                .dash-container {
+                    display: flex;
+                    align-items: center;
+                }
+
+                span.dash {
+                    width: 2em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* hiding original sharetribe styles on desktop, reenable on tablet */
+.home-toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8px;
+
+    .home-toolbar-show-filters-button-container {
+        width: auto;
+        display: none; 
+    }
+
+    .home-toolbar-filters-mobile-hidden {
+        display: none; 
+    }
+
+    @media(max-width: 47.99em) {
+        display: block;
+
+        .home-toolbar-show-filters-button-container {
+            width: 50%;
+            display: block; 
+        }
+
+        .home-toolbar-filters-mobile-hidden {
+            display: none; 
+        }
+    }
+}
+
+@media(max-width: 47.99em) {
+    #filters-horizontal {
+        display: none;
+    }
+}
+
+/* hiding the original filters on desktop, reenable for mobile & tablet */
+#desktop-filters {
+    display: none;
+
+    @media(max-width: 47.99em) {
+        display: block;
+    }
+}
+
+
+.home-toolbar:after {
+    display: none;
+    @media(max-width: 47.99em) {
+        display: table;
+    }
+}
+
+.home-toolbar-button-group {
+    margin-bottom: 0px;
+    align-self: center;
+
+    @media (max-width: 1023px) {
+        .home-toolbar-button-group-button {
+            min-width: auto;
+        }
+
+        span.home-toolbar-button-text {
+            display: none;
+        }
+    }
+
+    @media(max-width: 47.99em) {
+        margin-bottom: 12px;
+    }
+}
+
+
+
