@@ -40,7 +40,7 @@ module HomepageHelper
       else
         nil
       end
-    elsif (valid_float(price_min))
+    elsif (valid_float(price_min) && min > 0)
       "£" + price_min + " and up"
     elsif (valid_float(price_max))
       "up to £" + price_max
