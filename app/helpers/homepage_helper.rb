@@ -23,4 +23,33 @@ module HomepageHelper
     precision = (distance < 1) ? 1 : 2
     (distance < 0.1) ? "< #{number_with_delimiter(0.1, locale: locale)}" : number_with_precision(distance, precision: precision, significant: true, locale: locale)
   end
+
+  def applied_price_filter_text(price_min, price_max)
+
+    min = price_min ? MoneyUtil.parse_str_to_money(price_min, @current_community.currency) : nil
+    max = price_max ? MoneyUtil.parse_str_to_money(price_max, @current_community.currency) : nil
+
+    if (valid_float(price_min) && valid_float(price_max))
+      min = MoneyUtil.parse_str_to_money(price_min, @current_community.currency)
+      max = MoneyUtil.parse_str_to_money(price_max, @current_community.currency)
+
+      if min == 0
+        "up to £" + price_max
+      elsif max >= min
+        "£" + price_min + " to £" + price_max
+      else
+        nil
+      end
+    elsif (valid_float(price_min))
+      "£" + price_min + " and up"
+    elsif (valid_float(price_max))
+      "up to £" + price_max
+    else
+      nil
+    end
+  end
+
+  def valid_float(str)
+    !!Float(str) rescue false
+  end
 end

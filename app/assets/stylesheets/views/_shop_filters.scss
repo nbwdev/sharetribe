@@ -3,10 +3,6 @@
 @import "compass/css3/border-radius";
 @import "compass/utilities/general/clearfix";
 
-.with-horizontal-filters {
-
-}
-
 #filters-horizontal {
     display: flex;
     flex-direction: row;
@@ -133,9 +129,16 @@
 
 /* hiding original sharetribe styles on desktop, reenable on tablet */
 .home-toolbar {
-    display: flex;
-    justify-content: space-between;
+
     margin-right: 8px;
+
+    .filters-row {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 47.99em) {
+            display: block;
+        }
+    }
 
     .home-toolbar-show-filters-button-container {
         width: auto;

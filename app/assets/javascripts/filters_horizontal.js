@@ -19,7 +19,7 @@ $(function() {
     var targetPopout = getTargetPopout(button);
     targetPopout.classList.add("hidden");
     button.classList.remove("expanded");
-    symbol.textContent = "▶";
+    symbol.textContent = "▼";
   }
 
   // Open a menu

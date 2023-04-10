@@ -11,8 +11,6 @@ class HomepageController < ApplicationController
   def index
     params = unsafe_params_hash.select{|k, v| v.present? }
 
-    fix_invalid_price_params(params)
-
     redirect_to landing_page_path and return if no_current_user_in_private_clp_enabled_marketplace?
 
     all_shapes = @current_community.shapes
@@ -119,7 +117,7 @@ class HomepageController < ApplicationController
         shapes: all_shapes,
         filters: relevant_filters,
         show_price_filter: show_price_filter,
-        price_filter_applied: true,
+        price_filter_applied: is_price_filter_applied(params),
         show_horizontal_filters: show_horizontal_filters,
         selected_category: selected_category,
         selected_shape: selected_shape,
@@ -286,9 +284,9 @@ class HomepageController < ApplicationController
   end
 
   def filter_range(price_min, price_max)
-    if (price_min && price_max)
-      min = MoneyUtil.parse_str_to_money(price_min, @current_community.currency).cents
-      max = MoneyUtil.parse_str_to_money(price_max, @current_community.currency).cents
+    if (price_min || price_max)
+      min = price_min ? MoneyUtil.parse_str_to_money(price_min, @current_community.currency).cents : 0
+      max = price_max ? MoneyUtil.parse_str_to_money(price_max, @current_community.currency).cents : 9999999999
 
       if ((@current_community.price_filter_min..@current_community.price_filter_max) != (min..max) && max > min)
         (min..max)
@@ -296,33 +294,6 @@ class HomepageController < ApplicationController
         nil
       end
     end
-  end
-
-  def fix_invalid_price_params(params)
-    price_min = params[:price_min]
-    price_max = params[:price_max]
-    invalid = false
-
-    if (price_min && !valid_float(price_min))
-      params.delete("price_min")
-    end
-
-    if (price_max && !valid_float(price_max))
-      params.delete("price_max")
-    end   
-
-    if params[:price_min] && !params[:price_max]
-      params[:price_max] = "9999999"
-    end
-
-    if params[:price_max] && !params[:price_min]
-      params[:price_min] = "0"
-    end
-
-  end
-
-  def valid_float(str)
-    !!Float(str) rescue false
   end
 
   def search_coordinates(latlng)
@@ -416,6 +387,11 @@ class HomepageController < ApplicationController
       end
 
     relevant_filters.sort
+  end
+
+  # Check if the customer is using the price filter, so it can be shown in active filters list
+  def is_price_filter_applied(params)
+    return params[:price_min] || params[:price_max]
   end
 
   def unsafe_params_hash

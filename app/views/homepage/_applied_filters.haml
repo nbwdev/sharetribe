@@ -1,0 +1,32 @@
+- filters_applied = false
+- if (price_filter_applied)
+  - filters_applied = true
+  - label_text = applied_price_filter_text(params["price_min"], params["price_max"])
+  - remove_filter_link = url_for(search_params.except(:price_min, :price_max))
+  - if (label_text)
+    = link_to(remove_filter_link, :class => "button applied-filter-button", 'aria-label' => 'Price filtered to ' + label_text + '. Click to remove the price filter',
+    'title' => 'Remove the price filter') do
+      =label_text
+      %span.close-symbol
+        ✕
+
+- filters.each do |field|
+  - field_name = field.name(I18n.locale)
+  - field_class = field_name.parameterize
+
+  - field.with_type do |type|
+    - if [:dropdown, :checkbox].include?(type)
+      - field.options.sort.each do |option|
+        - param_name = type == :dropdown ? CustomFieldSearchParams.dropdown_param_name(option.id) : CustomFieldSearchParams.checkbox_param_name(option.id)
+        - if params[param_name]
+          - filters_applied = true
+          - remove_filter_link = url_for(search_params.except(param_name))
+          - label_text = option.title(I18n.locale)
+          = link_to(remove_filter_link, :class => "button applied-filter-button", 'aria-label' => field_name + ' filtered to ' + label_text + '. Click to remove the filter',
+          'title' => 'Remove this filter') do
+            =label_text
+            %span.close-symbol
+              ✕
+
+- if filters_applied
+  =link_to("Clear all ✕", "#{search_path({category: params["category"]})}", :class => "clear-all-filters")
