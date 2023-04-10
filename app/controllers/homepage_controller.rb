@@ -11,6 +11,8 @@ class HomepageController < ApplicationController
   def index
     params = unsafe_params_hash.select{|k, v| v.present? }
 
+    fix_invalid_price_params(params)
+
     redirect_to landing_page_path and return if no_current_user_in_private_clp_enabled_marketplace?
 
     all_shapes = @current_community.shapes
@@ -117,6 +119,7 @@ class HomepageController < ApplicationController
         shapes: all_shapes,
         filters: relevant_filters,
         show_price_filter: show_price_filter,
+        price_filter_applied: true,
         show_horizontal_filters: show_horizontal_filters,
         selected_category: selected_category,
         selected_shape: selected_shape,
@@ -287,12 +290,39 @@ class HomepageController < ApplicationController
       min = MoneyUtil.parse_str_to_money(price_min, @current_community.currency).cents
       max = MoneyUtil.parse_str_to_money(price_max, @current_community.currency).cents
 
-      if ((@current_community.price_filter_min..@current_community.price_filter_max) != (min..max))
+      if ((@current_community.price_filter_min..@current_community.price_filter_max) != (min..max) && max > min)
         (min..max)
       else
         nil
       end
     end
+  end
+
+  def fix_invalid_price_params(params)
+    price_min = params[:price_min]
+    price_max = params[:price_max]
+    invalid = false
+
+    if (price_min && !valid_float(price_min))
+      params.delete("price_min")
+    end
+
+    if (price_max && !valid_float(price_max))
+      params.delete("price_max")
+    end   
+
+    if params[:price_min] && !params[:price_max]
+      params[:price_max] = "9999999"
+    end
+
+    if params[:price_max] && !params[:price_min]
+      params[:price_min] = "0"
+    end
+
+  end
+
+  def valid_float(str)
+    !!Float(str) rescue false
   end
 
   def search_coordinates(latlng)
