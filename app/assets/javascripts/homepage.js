@@ -25,4 +25,21 @@ $(function() {
 
   relocate(768, $("#header-menu-mobile-anchor"), $("#header-menu-desktop-anchor").get(0));
   relocate(768, $("#header-user-mobile-anchor"), $("#header-user-desktop-anchor").get(0));
+
+  // Add callbacks for when the filters are relocated so only one set is enabled at a time
+  var enableTabletFilters = function() {
+    // enable the original tablet filters, disable the popout ones
+    console.log("enableTabletFilters");
+
+    $("#filters :input").attr("disabled", false);
+    $("#filters-horizontal :input").attr("disabled", true);
+  }
+
+  var enableDesktopFilters = function() {
+    console.log("enableDesktopFilters");
+    $("#desktop-filters :input").attr("disabled", true);
+    $("#filters-horizontal :input").attr("disabled", false);
+  }
+
+  minwidth(768, enableDesktopFilters, enableTabletFilters);
 });

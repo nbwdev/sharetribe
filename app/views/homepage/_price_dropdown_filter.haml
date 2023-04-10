@@ -13,16 +13,16 @@
 
     .price-range
       .min
-        %label.min-price{for: "price_min"}
+        %label.min-price{for: "price_min_popout"}
           Min
-        %input.price-field#price_min{type: :text, :maxlength => "10", :placeholder => "0", :value => min_start, :name => "price_min", :inputmode => "decimal"}
+        %input.price-field#price_min_popout{type: :text, :maxlength => "10", :placeholder => "0", :value => min_start, :name => "price_min", :inputmode => "decimal"}
       .dash-container
         %span.dash
           \—
       .max
-        %label.max-price{for: "price_max"}
+        %label.max-price{for: "price_max_popout"}
           Max
-        %input.price-field#price_max{type: :text, :maxlength => "10", :placeholder => "Any", :value => max_start, :name => "price_max", :inputmode => "decimal"}
+        %input.price-field#price_max_popout{type: :text, :maxlength => "10", :placeholder => "Any", :value => max_start, :name => "price_max", :inputmode => "decimal"}
     .update
       %button{type: 'submit'}
         Update

@@ -3,7 +3,7 @@
   - field_class = field_name.parameterize
   .filter-dropdown
     %button.filter-button{'aria-label' => 'Show '+field_name+' filter', 'aria-controls' => field_class+'-filter-popout',
-    'aria-expanded' => 'false', type: :button, 'id' => field_class+"-filter-button"}
+    'aria-expanded' => 'false', type: :button, 'id' => field_class+"-filter-button-popout"}
       = field_name
       %span.expand-symbol
         ▶
@@ -21,7 +21,7 @@
                       - param_name = type == :dropdown ? CustomFieldSearchParams.dropdown_param_name(option.id) : CustomFieldSearchParams.checkbox_param_name(option.id)
                       %span.custom-filter-checkbox-label-text
                         = option.title(I18n.locale)
-                      = check_box_tag param_name, "#{option.id}", params[param_name]
+                      = check_box_tag param_name, "#{option.id}", params[param_name], :id => param_name+"_popout"
 
       - field.with(:numeric) do
         - min_param = CustomFieldSearchParams.numeric_min_param_name(field.id)
@@ -36,7 +36,7 @@
         .row
           .col-12
             .custom-filter-options
-              - id = ["range-slider", field.id].join("-")
+              - id = ["range-slider", field.id, "popout"].join("-")
               .range-slider{id: id}
                 - range = [field.min, field.max]
                 - start = [min_value || field.min, max_value || field.max]
@@ -51,12 +51,12 @@
           .col-12
             .left
               %span.custom-filter-min-max-title= t(".min")
-              %span{id: "custom-filter-min-value-#{id}"}
-              %input{type: "hidden", id: "nf_min_#{id}", name: min_param, value: min_value}
+              %span{id: "custom-filter-min-value-#{id}-popout"}
+              %input{type: "hidden", id: "nf_min_#{id}-popout", name: min_param, value: min_value}
             .right
               %span.custom-filter-min-max-title= t(".max")
-              %span{id: "custom-filter-max-value-#{id}"}
-              %input{type: "hidden", id: "nf_max_#{id}", name: max_param, value: max_value}
+              %span{id: "custom-filter-max-value-#{id}-popout"}
+              %input{type: "hidden", id: "nf_max_#{id}-popout", name: max_param, value: max_value}
 
       .update
         %button{type: 'submit'}
