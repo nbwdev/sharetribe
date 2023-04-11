@@ -1,0 +1,24 @@
+- min = MoneyUtil.to_units(MoneyUtil.to_money(@current_community.price_filter_min, @current_community.currency))
+- min_start = params["price_min"] || min
+- max_start = params["price_max"] || nil
+
+- min_price_field_attributes = {:id => "price_min_" + class_suffix, type: :text, :maxlength => "10", :placeholder => "0", :value => min_start,
+:name => "price_min", :inputmode => "decimal", :autocomplete => "off"}
+- max_price_field_attributes = {:id => "price_max_" + class_suffix, type: :text, :maxlength => "10", :placeholder => "Any", :value => max_start,
+:name => "price_max", :inputmode => "decimal", :autocomplete => "off"}
+- if start_disabled
+  - min_price_field_attributes = min_price_field_attributes.merge({:disabled => "disabled"})
+  - max_price_field_attributes = max_price_field_attributes.merge({:disabled => "disabled"})
+
+.price-range
+  .min
+    %label.min-price{for: "price_min_" + class_suffix}
+      Min
+    %input.price-field{min_price_field_attributes}
+  .dash-container
+    %span.dash
+      \—
+  .max
+    %label.max-price{for: "price_max_" + class_suffix}
+      Max
+    %input.price-field{max_price_field_attributes}

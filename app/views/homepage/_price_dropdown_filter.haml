@@ -6,24 +6,7 @@
       ▼
 
   .filter-popout#price-filter-popout{class: 'hidden'}
-    - min = MoneyUtil.to_units(MoneyUtil.to_money(@current_community.price_filter_min, @current_community.currency))
-    - min_start = params["price_min"] || min
-    - max_start = params["price_max"] || nil
-
-    .price-range
-      .min
-        %label.min-price{for: "price_min_popout"}
-          Min
-        %input.price-field#price_min_popout{type: :text, :maxlength => "10", :placeholder => "0", :value => min_start,
-        :name => "price_min", :inputmode => "decimal", :autocomplete => "off"}
-      .dash-container
-        %span.dash
-          \—
-      .max
-        %label.max-price{for: "price_max_popout"}
-          Max
-        %input.price-field#price_max_popout{type: :text, :maxlength => "10", :placeholder => "Any", :value => max_start,
-        :name => "price_max", :inputmode => "decimal", :autocomplete => "off"}
+    = render :partial => "price_filter_inputs", locals: { class_suffix: "popout", start_disabled: true}
     .update
       %button{type: 'submit'}
         Apply filter

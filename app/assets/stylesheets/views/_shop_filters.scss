@@ -160,38 +160,37 @@
             width: 1em;
             display: inline-block;
         }
-
-        #price-filter-popout {
-            .price-range {
-                display: flex;
-                justify-content: space-between;
-                padding-top: 1.5em;
-
-                .max, .min {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    min-width: 5em;
-                    position: relative;
-
-                    label {
-                        position: absolute;
-                        top: -1.75em;
-                    }
-                }
-
-                .dash-container {
-                    display: flex;
-                    align-items: center;
-                }
-
-                span.dash {
-                    width: 2em;
-                    text-align: center;
-                }
-            }
-        }
     }
 }
+
+.price-range {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5em;
+
+    .max, .min {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        min-width: 5em;
+        position: relative;
+
+        label {
+            position: absolute;
+            top: -1.75em;
+        }
+    }
+
+    .dash-container {
+        display: flex;
+        align-items: center;
+    }
+
+    span.dash {
+        width: 2em;
+        text-align: center;
+    }
+}
+
 
 /* hiding original sharetribe styles on desktop, reenable on tablet */
 .home-toolbar {
