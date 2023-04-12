@@ -57,104 +57,6 @@
                     width: 100%;
                 }
             }
-
-            .custom-filter-checkbox-container {
-                label.custom-filter-checkbox-label {
-                    display: flex;
-                    justify-content: space-between;
-                    padding-top: 3px;
-                    padding-bottom: 3px;
-                    padding-right: 5px;
-                    border-bottom: 1px solid #e0e0e0;
-
-                    span.custom-filter-checkbox-label-text {
-                        display: inline-block;
-                        font-size: 1.25em;
-                        padding-right: 1.5em;
-                    }
-
-                    input {
-                        width: 1.1em;
-                        height: 1.1em;
-                        align-self: center;
-                    }
-                }
-
-                label.custom-filter-checkbox-label:hover {
-                    background-color: #ddd;
-                }
-            }
-
-            .custom-filter-checkbox-container:last-of-type {
-                label.custom-filter-checkbox-label {
-                    border-bottom: none;
-                }
-            }
-
-            .colour-checkbox-container {
-                display: flex;
-
-                .colour-swatch {
-                    width: 1.1em;
-                    height: 1.1em;
-                    margin-right: 2px;
-                    display: inline-block;
-                    align-self: center;
-                    @include border-radius(4px);
-                }
-
-                .colour-black {
-                    background-color: black;
-                }
-
-                .colour-blue {
-                    background-color: #006ee6;
-                }
-
-                .colour-brown {
-                    background-color: #765341;
-                }
-
-                .colour-green {
-                    background-color: green;
-                }
-
-                .colour-grey {
-                    background-color: grey;
-                }
-
-                .colour-orange {
-                    background-color: orange;
-                }
-
-                .colour-pink {
-                    background-color: pink;
-                }
-
-                .colour-purple {
-                    background-color: purple;
-                }
-
-                .colour-red {
-                    background-color: red;
-                }
-
-                .colour-white {
-                    background-color: white;
-                    border-width: 1px;
-                    border-color: black;
-                    border-style: solid;
-                }
-
-                .colour-yellow {
-                    background-color: yellow;
-                }
-
-                .colour-multi {
-                    background: conic-gradient(cyan, magenta, yellow, cyan);
-                }
-
-            }
         }
 
         .filter-popout.hidden {
@@ -168,6 +70,121 @@
         }
     }
 }
+
+#filters-horizontal, .custom-filter-options {
+    .custom-filter-checkbox-container {
+        label.custom-filter-checkbox-label {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-right: 5px;
+            border-bottom: 1px solid #e0e0e0;
+
+            span.custom-filter-checkbox-label-text {
+                display: inline-block;
+                font-size: 1.25em;
+                padding-right: 1.5em;
+            }
+
+            input {
+                width: 1.1em;
+                height: 1.1em;
+                align-self: center;
+            }
+
+            @media(max-width: 47.99em) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                span.custom-filter-checkbox-label-text {
+                    font-size: 1.5em;
+                }
+
+                input {
+                    width: 1.5em;
+                    height: 1.5em;
+                }
+            }
+        }
+
+        label.custom-filter-checkbox-label:hover {
+            background-color: #ddd;
+        }
+    }
+
+    .custom-filter-checkbox-container:last-of-type {
+        label.custom-filter-checkbox-label {
+            border-bottom: none;
+        }
+    }
+
+    .colour-checkbox-container {
+        display: flex;
+
+        .colour-swatch {
+            width: 1.1em;
+            height: 1.1em;
+            margin-right: 2px;
+            display: inline-block;
+            align-self: center;
+            @include border-radius(4px);
+        }
+
+        .colour-black {
+            background-color: black;
+        }
+
+        .colour-blue {
+            background-color: #006ee6;
+        }
+
+        .colour-brown {
+            background-color: #765341;
+        }
+
+        .colour-green {
+            background-color: green;
+        }
+
+        .colour-grey {
+            background-color: grey;
+        }
+
+        .colour-orange {
+            background-color: orange;
+        }
+
+        .colour-pink {
+            background-color: pink;
+        }
+
+        .colour-purple {
+            background-color: purple;
+        }
+
+        .colour-red {
+            background-color: red;
+        }
+
+        .colour-white {
+            background-color: white;
+            border-width: 1px;
+            border-color: black;
+            border-style: solid;
+        }
+
+        .colour-yellow {
+            background-color: yellow;
+        }
+
+        .colour-multi {
+            background: conic-gradient(cyan, magenta, yellow, cyan);
+        }
+
+    }
+}
+
 
 .price-range {
     display: flex;
@@ -276,5 +293,25 @@
     }
 }
 
+.custom-filter-options {
+    &.scrollable {
+        scrollbar-color: lighten($nbw-dark, 15%) lighten($nbw-dark, 45%);
+        scrollbar-width: thin;
+    }
 
+    &.scrollable::-webkit-scrollbar {
+        width: 10px;
+    }
+          
+    &.scrollable::-webkit-scrollbar-track {
+        background-color: lighten($nbw-dark, 45%);
+        border-radius: 20px;
+    }
+          
+    &.scrollable::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(180deg, lighten($nbw-dark, 20%) 0%, lighten($nbw-dark, 30%) 50%, lighten($nbw-dark, 20%) 99%);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    }
+}
 
