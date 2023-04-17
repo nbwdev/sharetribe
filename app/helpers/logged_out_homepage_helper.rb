@@ -10,22 +10,11 @@ module LoggedOutHomepageHelper
     [
       {
         :card_type => TITLE_AND_LIST,
-        :item_class => "",
-        :card_title => "5 minute wardrobe fix",
-        :tip_list => [
-            "Take a quick look at your wardrobe".html_safe,
-            "Identify one clutter hot spot".html_safe,
-            "Pick one thing you could fix in 5&nbsp;mins".html_safe,
-            "Fix it now".html_safe
-        ]
-      },
-      {
-        :card_type => TITLE_AND_LIST,
         :item_class => "carousel-hide",
         :card_title => "Top 4 questions to help you declutter",
         :tip_list => [
             "Do I wear it now?".html_safe,
-            "Does it need repairing?".html_safe,
+            "Will I repair it?".html_safe,
             "Does it fit?".html_safe,
             "Is it in good condition?".html_safe
         ]
@@ -33,12 +22,12 @@ module LoggedOutHomepageHelper
       {
         :card_type => TITLE_AND_LIST,
         :item_class => "carousel-hide",
-        :card_title => "How to identify your clutter in 4 quick steps",
+        :card_title => "4 quick questions to confirm you have clutter",
         :tip_list => [
-            "You wardrobe is completely full".html_safe,
-            "You have extra stuff in other rooms".html_safe,
-            "You have extra stuff in boxes".html_safe,
-            "It’s always a mess".html_safe
+            "Is your wardrobe full?".html_safe,
+            "Is it hard to find things?".html_safe,
+            "Is it hard to put things in?".html_safe,
+            "Is it always in a mess?".html_safe
         ]
       },
       {
@@ -55,23 +44,23 @@ module LoggedOutHomepageHelper
       {
         :card_type => TITLE_AND_LIST,
         :item_class => "carousel-hide",
-        :card_title => "Your wardrobe is no longer working for you when…",
+        :card_title => "Your wardrobe is no longer your friend&nbsp;if…".html_safe,
         :tip_list => [
-            "You can't find anything to wear".html_safe,
-            "Nothing fits".html_safe,
-            "You can’t find what you are looking for".html_safe,
-            "It takes you a long time to get ready".html_safe
+            "You have nothing to wear".html_safe,
+            "Most things don’t fit".html_safe,
+            "You can’t find anything".html_safe,
+            "You hate getting ready".html_safe
         ]
       },
       {
         :card_type => TITLE_AND_LIST,
         :item_class => "carousel-hide",
-        :card_title => "Top 5 clothing categories to organise your wardrobe",
+        :card_title => "Top 5 clothing categories to reorganise your wardrobe",
         :tip_list => [
             "Wear every day".html_safe,
-            "Winter".html_safe,
+            "Winter wear".html_safe,
             "Spring/Autumn".html_safe,
-            "Summer".html_safe,
+            "Summer wear".html_safe,
             "Special occasions".html_safe
         ]
       },
@@ -92,16 +81,28 @@ module LoggedOutHomepageHelper
         :card_title => "Top 4 categories to help you declutter",
         :tip_list => [
             "Keep it & wear it".html_safe,
-            "Recycle it".html_safe,
-            "Sell it".html_safe,
-            "Donate it".html_safe
-        ]
+            "Re-sell it".html_safe,
+            "Donate it".html_safe,
+            "Recycle it".html_safe
+        ],
+        :font_size_bigger => "20px"
       },
       {
         :card_type => TITLE_AND_TEXT,
         :item_class => "carousel-hide",
         :card_title => "Try this one new habit to reduce your fast fashion",
-        :tip_text => "Everyday items get worn and washed more often. Buying better quality will keep them looking good and supporting you for longer".html_safe
+        :tip_text => "Everyday items get worn and washed more often. Buying better quality, when you are ready to replace them, will mean they last longer and support you for longer".html_safe
+      },
+      {
+        :card_type => TITLE_AND_LIST,
+        :item_class => "",
+        :card_title => "5 minute wardrobe fix",
+        :tip_list => [
+            "Go look in your wardrobe".html_safe,
+            "Find a clutter hot spot".html_safe,
+            "Pick one thing to fix".html_safe,
+            "Fix it in less than 5&nbsp;mins".html_safe
+        ]
       }
     ]
   end

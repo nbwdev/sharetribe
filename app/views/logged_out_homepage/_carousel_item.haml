@@ -45,6 +45,6 @@
       .text-container{ :class => gradient_class }
         %ul
           - tip_list.each do |tip|
-            %li
+            %li{ :class => (defined? font_size_bigger) ? "bigger" : ""}
               =tip
 

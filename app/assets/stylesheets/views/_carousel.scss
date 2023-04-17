@@ -137,10 +137,18 @@
                     font-size: 18px;
                 }
 
+                li.bigger {
+                    font-size: 20px;
+                }
+
                 @media #{$desktop} {
 
                     li {
                         font-size: 24px;
+                    }
+
+                    li.bigger {
+                        font-size: 28px;
                     }
                 }
 
@@ -149,7 +157,7 @@
                     margin-left: 5px;
                     margin-right: 5px;
                         
-                    li {
+                    li, li.bigger {
                         font-size: 18px;
                     }
                 }
