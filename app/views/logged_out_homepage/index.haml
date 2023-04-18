@@ -66,7 +66,7 @@
     -image_url = image_path("logged_out_homepage/holding-orange-red-dresses.jpg")
     =image_tag(image_url, class: 'intro-image', alt: "A lady holds two new dresses as if choosing which to wear.")
 
-  .quick-guide-container
+  .quick-guide-container#quick-guide
     .quick-guide
       %h2.so-simple
         It's simple to sell
@@ -179,7 +179,7 @@
             = link_to("/en/blog/get_your_messy_shelves_in_shape", :class => "about-button hp-button hp-button-inverted") do
               Read how
 
-  .tips-container
+  .tips-container#quick-tips
     %h2
       Quick tips to declutter faster
     =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}
