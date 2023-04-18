@@ -2020,7 +2020,7 @@ figure.fluidratio {
     text-align: center;
   }
 
-  .marketplace-lander-content-description {
+  .marketplace-lander-content-description#after-banner {
       color: $descriptioncolor;
       &.hidden-title-part {
         opacity: 0 !important;
@@ -2028,6 +2028,8 @@ figure.fluidratio {
       margin-top: 0px;
       margin-bottom: 0px;
       text-transform: uppercase;  
+      background-color: $nbw-dark;
+      max-width: unset;
   }
 
   .title-container {
@@ -2054,7 +2056,7 @@ figure.fluidratio {
     display: table;
 
     h1 {
-      color: $light-body;
+      color: $nbw-dark;
       @include normal-type;
       font-weight: bold;
       line-height: lines(0.8);
