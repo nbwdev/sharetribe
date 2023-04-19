@@ -43,10 +43,10 @@ $(function() {
   var filterButtonsSelector = ".filter-button";
 
   var filterButtonsList = document.querySelectorAll(filterButtonsSelector);
-  var filterButtonsArray = [...filterButtonsList];
+  var filterButtonsArray = Array.prototype.slice.class(filterButtonsList, 0);
   filterButtons = filterButtonsArray;
 
-  filterButtonsArray.forEach(filterButton => {
+  filterButtonsArray.forEach(function(filterButton) {
 
     filterButton.onclick = function(event) {
 
