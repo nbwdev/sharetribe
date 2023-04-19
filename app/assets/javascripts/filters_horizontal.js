@@ -33,9 +33,9 @@ $(function() {
 
   // Hide all the popout menus
   function closeAllPopouts() {
-    filterButtons.forEach(function(filterButton) {
-      closePopout(filterButton);
-    });
+    for (i = 0; i < filterButtons.length; ++i) {
+      closePopout(filterButtons[i]);
+    }
   }
 
 
@@ -43,12 +43,11 @@ $(function() {
   var filterButtonsSelector = ".filter-button";
 
   var filterButtonsList = document.querySelectorAll(filterButtonsSelector);
-  var filterButtonsArray = Array.prototype.slice.class(filterButtonsList, 0);
-  filterButtons = filterButtonsArray;
+  filterButtons = filterButtonsList;
 
-  filterButtonsArray.forEach(function(filterButton) {
+  for (i = 0; i < filterButtons.length; ++i) {
 
-    filterButton.onclick = function(event) {
+    filterButtons[i].onclick = function(event) {
 
       var expanded = this.classList.contains("expanded");
       var symbol = this.getElementsByClassName("expand-symbol")[0];
@@ -67,11 +66,11 @@ $(function() {
     }
 
     // Don't propagate the click when using a menu or the document onclick will close the menu
-    var popout = getTargetPopout(filterButton);
+    var popout = getTargetPopout(filterButtons[i]);
     popout.onclick = function(event) {
       event.stopPropagation();
     }
-  });
+  };
 
 
   // Close all the dropdowns when clicking outside dropdown area
