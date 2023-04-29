@@ -44,7 +44,9 @@ class FeedbacksController < ApplicationController
                                     email: email
                                   }))
 
-    MailCarrier.deliver_later(PersonMailer.new_feedback(feedback, @current_community))
+    unless mute_email?(feedback.email)
+      MailCarrier.deliver_later(PersonMailer.new_feedback(feedback, @current_community))
+    end
 
     flash[:notice] = t("layouts.notifications.feedback_saved")
     redirect_to search_path
@@ -90,5 +92,9 @@ class FeedbacksController < ApplicationController
   # Detect most usual spam messages
   def spam?(content, honeypot)
     honeypot.present? || link_tags?(content) || too_many_urls?(content)
+  end
+
+  def mute_email?(email)
+    ['ericjonesmyemail@gmail.com'].include?(email)
   end
 end
