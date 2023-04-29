@@ -1931,7 +1931,7 @@ en:
     error_404:
       if_you_believe: "If you believe that the address is correct and it should be working, please help us locate the error by letting us know what address caused the error and what should be seen on the page with the form below."
       page_can_not_be_found: "Page not found!"
-      page_you_requested_can_not_be_found: "The page you requested cannot be found. Are you sure you spelled the address correctly?"
+      page_you_requested_can_not_be_found: "The page you requested cannot be found. If you typed the URL in directly then please check you spelled it correctly. Otherwise if you followed a link inside the website then we are sorry to give you a duff link. We will fix it as soon as possible."
     error_404_title: "page not found"
     error_410:
       page_removed: "Page removed"
