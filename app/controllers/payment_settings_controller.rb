@@ -18,7 +18,7 @@ class PaymentSettingsController < ApplicationController
     flash.now[:error] = @service.stripe_error_message
 
     # notify watchers that they can buy this customer's items as long as payments were set up successfully
-    if StripeHelper.user_and_community_ready_for_payments(@current_user.id, @current_community.id)
+    if StripeHelper.user_and_community_ready_for_payments?(@current_user.id, @current_community.id)
       @current_user.notify_watchers_after_payment_setup(@current_community)
     end
 
