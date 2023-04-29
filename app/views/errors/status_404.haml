@@ -1,6 +1,12 @@
-%h2= t('error_pages.error_404.page_can_not_be_found')
+%h1= t('error_pages.error_404.page_can_not_be_found')
+%p.tagline
+  = t('error_pages.error_404.tagline')
 %p
   = t('error_pages.error_404.page_you_requested_can_not_be_found')
+%p
+  = t('error_pages.error_404.page_you_requested_can_not_be_found_2')
+  %a{href: '/user_feedbacks/new'} contact us
+  = t('error_pages.error_404.page_you_requested_can_not_be_found_3')
 
   %br/
   %br/
