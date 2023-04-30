@@ -124,51 +124,6 @@
           = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
             Take the challenge now
 
-  .seasonal-articles-container
-    .seasonal-articles
-      %h2
-        Declutter repurpose resell with our declutter 1&nbsp;-&nbsp;2&nbsp;-&nbsp;3
-      .seasonal-articles-columns
-        .seasonal-articles-column
-          %p.step-number
-            1
-          %h3.seasonal-articles-title
-            Wardrobe
-          = link_to("/en/blog/the_wardrobe_challenge") do
-            -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
-            =image_tag(image_url, alt: "Read how to take the wardrobe challenge.")
-          %p.seasonal-articles-text
-            From wardrobe nightmare to declutter heaven
-          .story-button-container
-            = link_to("/en/blog/the_wardrobe_challenge", :class => "about-button hp-button hp-button-inverted") do
-              Read how
-        .seasonal-articles-column
-          %p.step-number
-            2
-          %h3.seasonal-articles-title
-            Drawers
-          = link_to("/en/blog/fix_your_drawers_forever") do
-            -image_url = image_path("logged_out_homepage/overflowing-drawers-square.jpg")
-            =image_tag(image_url, alt: "Read how to fix your overflowing drawers.")
-          %p.seasonal-articles-text
-            Nightmare drawers no more
-          .story-button-container
-            = link_to("/en/blog/fix_your_drawers_forever", :class => "about-button hp-button hp-button-inverted") do
-              Read how
-        .seasonal-articles-column
-          %p.step-number
-            3
-          %h3.seasonal-articles-title
-            Shelves
-          = link_to("/en/blog/get_your_messy_shelves_in_shape") do
-            -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
-            =image_tag(image_url, alt: "Read how to organise your messy shelves.")
-          %p.seasonal-articles-text
-            Get your shelves in shape
-          .story-button-container
-            = link_to("/en/blog/get_your_messy_shelves_in_shape", :class => "about-button hp-button hp-button-inverted") do
-              Read how
-
   .tips-container#quick-tips
     %h2
       Quick tips to declutter faster
@@ -180,3 +135,49 @@
       %span.instagram
         = render 'layouts/footer/social_icons', social_service: "instagram"
         neverbeenwornuk
+
+  .seasonal-articles-container
+    .seasonal-articles
+      %h2
+        Declutter repurpose resell with our declutter 1&nbsp;-&nbsp;2&nbsp;-&nbsp;3
+      .seasonal-articles-columns
+        .seasonal-articles-column
+          %p.step-number
+            Step 1
+          = link_to("/en/blog/the_wardrobe_challenge") do
+            -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
+            =image_tag(image_url, alt: "Read how to take the wardrobe challenge.")
+          %h3.seasonal-articles-title
+            Fix your wardrobe
+          %p.seasonal-articles-text
+            From wardrobe nightmare to declutter heaven
+          .story-button-container
+            = link_to("/en/blog/the_wardrobe_challenge", :class => "about-button hp-button hp-button-inverted") do
+              Start now
+        .seasonal-articles-column
+          %p.step-number
+            Step 2
+          = link_to("/en/blog/fix_your_drawers_forever") do
+            -image_url = image_path("logged_out_homepage/overflowing-drawers-square.jpg")
+            =image_tag(image_url, alt: "Read how to fix your overflowing drawers.")
+          %h3.seasonal-articles-title
+            Fix your drawers
+          %p.seasonal-articles-text
+            No more nightmare drawers
+          .story-button-container
+            = link_to("/en/blog/fix_your_drawers_forever", :class => "about-button hp-button hp-button-inverted") do
+              Start now
+        .seasonal-articles-column
+          %p.step-number
+            Step 3
+          = link_to("/en/blog/get_your_messy_shelves_in_shape") do
+            -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
+            =image_tag(image_url, alt: "Read how to organise your messy shelves.")
+          %h3.seasonal-articles-title
+            Fix your shelves
+          %p.seasonal-articles-text
+            Get your shelves in shape
+          .story-button-container
+            = link_to("/en/blog/get_your_messy_shelves_in_shape", :class => "about-button hp-button hp-button-inverted") do
+              Start now
+
