@@ -47,58 +47,45 @@
 
 .logged_out_homepage 
 
-  .banner
-    .caption
-      %h2.banner-title<
-        Never
-        %span.hardlyEver>
-          &nbsp;
-        Worn It?
-        <br>
-        Why Keep It?
-        <br>
-        Sell It.
-      %p.banner-text
-        Declutter, make money, and elevate your life
-      .button-container
-        = link_to("/signup", :class => "hp-button hp-banner-button") do
-          Join for free
-    -image_url = image_path("logged_out_homepage/holding-orange-red-dresses.jpg")
-    =image_tag(image_url, class: 'intro-image', alt: "A lady holds two new dresses as if choosing which to wear.")
-
   .quick-guide-container#quick-guide
     .quick-guide
-      %h2.so-simple
-        It's simple to sell
-      
       .guide-columns
         .guide-column
           .guide-column-content
-            -image_url = image_path("logged_out_homepage/taking-photo-of-jumper.jpg")
-            =image_tag(image_url, class: 'step_img', alt: "Person with a smartphone taking a photo of a cosy grey v-necked jumper.")
             %p.step-number
-              1
+              Step 1
+            -image_url = image_path("logged_out_homepage/holding-red-dress.jpg")
+            =image_tag(image_url, class: 'step_img', alt: "A lady holds a red dress triumphantly having chosen to sell it because she never wears it.")
+            %p.step-title
+              Declutter your wardrobe
             %p.step-description
-              list your item for free
+              If you have never worn it, why keep it?
+          = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-inverted guide-button") do
+            How to delutter
         .guide-column
           .guide-column-content
+            %p.step-number
+              Step 2
             -image_url = image_path("logged_out_homepage/unboxing.jpg")
             =image_tag(image_url, class: 'step_img', alt: "A lady sits on a sofa opening a cardboard box. She is looking into the box and smiling.")
-            %p.step-number
-              2
+            %p.step-title
+              Repurpose and resell
             %p.step-description
-              sell it and send it
+              Put it back out into the world for others to buy
+          = link_to("/blog/sustainability_the_right_choice", :class => "hp-button hp-button-inverted guide-button") do
+            Why Sustainability
         .guide-column
           .guide-column-content
-            -image_url = image_path("logged_out_homepage/make-it-rain.jpg")
-            =image_tag(image_url, class: 'step_img', alt: "A lady smiles as she holds a stack of bank notes in each hand while more bank notes rain down from above.")
             %p.step-number
-              3
+              Step 3
+            -image_url = image_path("logged_out_homepage/capsule-wardrobe.jpg")
+            =image_tag(image_url, class: 'step_img', alt: "A capsule wardrobe consisting of a few colourful pieces of clothing that could be worn in different combinations with each other.")
+            %p.step-title
+              Build a capsule wardrobe
             %p.step-description
-              and bank the cash!
-    
-      = link_to("/signup", :class => "hp-button hp-button-inverted") do
-        Join for free
+              Buy what you need and live a simpler life
+          = link_to("/s", :class => "hp-button hp-button-inverted guide-button") do
+            Buy sustainable
 
   .sustainability-banner
     .caption

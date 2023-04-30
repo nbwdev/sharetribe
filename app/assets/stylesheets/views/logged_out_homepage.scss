@@ -322,10 +322,17 @@ article.page-content.no-padding-bottom {
                 display: flex;
                 flex-direction: column;
                 flex: 1 1 0;
+                position: relative;
+                padding-bottom: 120px;
 
                 &:hover {
                     transform: scale(1.011);
                     @include prefix-prop(transition, all 50ms ease-in-out);
+                }
+
+                .guide-column-content {
+                    text-align: center;
+                    text-align: -webkit-center;
                 }
 
                 img {
@@ -356,10 +363,23 @@ article.page-content.no-padding-bottom {
                     }        
                 }
 
+                p.step-title {
+                    width: 80%;
+                    font-weight: bolder;
+                }
+
                 p.step-description {
+                    width: 80%;
                     @media (max-width: 660px) {
                         margin-bottom: 1em;
                     }        
+                }
+
+                a.guide-button {
+                    width: max-content;
+                    align-self: center;
+                    position: absolute;
+                    bottom: 0;
                 }
             }
         }
