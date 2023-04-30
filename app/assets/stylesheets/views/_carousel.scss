@@ -7,12 +7,12 @@
     $title-panel-text-colour: 	#ffffff;
     $text-panel-text-colour: #ffffff;
     
-    $title-panel-light-shade: #298D37;
-    $title-panel-dark-shade: 	#298D37;
-    $text-panel-light-shade: #298D37;
-    $text-panel-dark-shade: 	#298D37;
+    $title-panel-light-shade: $nbw-dark;
+    $title-panel-dark-shade: 	$nbw-dark;
+    $text-panel-light-shade: $nbw-dark;
+    $text-panel-dark-shade: 	$nbw-dark;
 
-    $find-us-on-instagram-colour: #298D37;
+    $find-us-on-instagram-colour: $nbw-dark;
 
 
     .tips-container {
@@ -225,13 +225,13 @@
         .title-card {
 
             border-width: 11px;
-            border-color: #298D37;
+            border-color: $nbw-dark;
             border-style: solid;
 
-            background-color: #298D37;
+            background-color: $nbw-dark;
             
             margin: 17px;
-            box-shadow: #10511a 3px 3px 6px 0px inset;
+            box-shadow: #42581e 3px 3px 6px 0px inset;
 
             .text-container {
                 width: 60%;
