@@ -1,7 +1,8 @@
+@import "mixins/all";
 @import "../landing_page/mixins/all";
 
 .footer__container--dark {
-  background-color: #525961;
+  background-color: $nbw-dark;
 }
 
 .footer__container--light {
@@ -163,7 +164,7 @@ $footer__link-margin-tablet: 16px;
   text-align: center;
 
   .footer__container--dark & {
-    color: #7A7D80;
+    color: #CECED0;
   }
 
   .footer__container--light & {
