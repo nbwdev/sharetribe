@@ -51,39 +51,42 @@
     .quick-guide
       .guide-columns
         .guide-column
-          .guide-column-content
-            %p.step-number
-              Step 1
-            -image_url = image_path("logged_out_homepage/holding-red-dress.jpg")
-            =image_tag(image_url, class: 'step_img', alt: "A lady holds a red dress triumphantly having chosen to sell it because she never wears it.")
-            %p.step-title
-              Declutter your wardrobe
-            %p.step-description
-              If you have never worn it, why keep it?
+          = link_to("/blog/the_wardrobe_challenge") do
+            .guide-column-content
+              %p.step-number
+                Step 1
+              -image_url = image_path("logged_out_homepage/holding-red-dress.jpg")
+              =image_tag(image_url, class: 'step_img', alt: "A lady holds a red dress triumphantly having chosen to sell it because she never wears it.")
+              %p.step-title
+                Declutter your wardrobe
+              %p.step-description
+                If you have never worn it, why keep it?
           = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-inverted guide-button") do
             How to delutter
         .guide-column
-          .guide-column-content
-            %p.step-number
-              Step 2
-            -image_url = image_path("logged_out_homepage/unboxing.jpg")
-            =image_tag(image_url, class: 'step_img', alt: "A lady sits on a sofa opening a cardboard box. She is looking into the box and smiling.")
-            %p.step-title
-              Repurpose and resell
-            %p.step-description
-              Put it back out into the world for others to buy
+          = link_to("/blog/sustainability_the_right_choice") do
+            .guide-column-content
+              %p.step-number
+                Step 2
+              -image_url = image_path("logged_out_homepage/unboxing.jpg")
+              =image_tag(image_url, class: 'step_img', alt: "A lady sits on a sofa opening a cardboard box. She is looking into the box and smiling.")
+              %p.step-title
+                Repurpose and resell
+              %p.step-description
+                Put it back out into the world for others to buy
           = link_to("/blog/sustainability_the_right_choice", :class => "hp-button hp-button-inverted guide-button") do
             Why Sustainability
         .guide-column
-          .guide-column-content
-            %p.step-number
-              Step 3
-            -image_url = image_path("logged_out_homepage/capsule-wardrobe.jpg")
-            =image_tag(image_url, class: 'step_img', alt: "A capsule wardrobe consisting of a few colourful pieces of clothing that could be worn in different combinations with each other.")
-            %p.step-title
-              Build a capsule wardrobe
-            %p.step-description
-              Buy what you need and live a simpler life
+          = link_to("/s") do
+            .guide-column-content
+              %p.step-number
+                Step 3
+              -image_url = image_path("logged_out_homepage/capsule-wardrobe.jpg")
+              =image_tag(image_url, class: 'step_img', alt: "A capsule wardrobe consisting of a few colourful pieces of clothing that could be worn in different combinations with each other.")
+              %p.step-title
+                Build a capsule wardrobe
+              %p.step-description
+                Buy what you need and live a simpler life
           = link_to("/s", :class => "hp-button hp-button-inverted guide-button") do
             Buy sustainable
 
