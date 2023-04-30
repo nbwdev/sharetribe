@@ -27,20 +27,28 @@ article.page-content.no-padding-bottom {
 }
 
 .marketplace-lander .title-container {
-    background-color: white;
+    background-color: $nbw-dark;
 }
 
 .marketplace-lander .marketplace-title-header h1.logged-out-homepage {
     
     text-align: center;
-    color: $nbw-dark;
+    color: white;
 
     @media (min-width: 769px) {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     @media #{$desktop} {
-        font-size: 3em;
+        font-size: 2em;
+    }
+}
+
+.marketplace-lander {
+    .coverimage {
+        figure.marketplace-cover-small-fade, figure.marketplace-cover-small {
+            height: 3em;
+        }
     }
 }
 
