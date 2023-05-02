@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS `active_sessions`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `active_sessions` (
   `id` binary(16) NOT NULL,
-  `person_id` varchar(22) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
+  `person_id` varchar(22) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `community_id` int NOT NULL,
   `refreshed_at` datetime NOT NULL,
   `created_at` datetime NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE `active_sessions` (
   KEY `index_active_sessions_on_person_id` (`person_id`),
   KEY `index_active_sessions_on_community_id` (`community_id`),
   KEY `index_active_sessions_on_refreshed_at` (`refreshed_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `active_storage_attachments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -1096,6 +1096,19 @@ CREATE TABLE `messages` (
   PRIMARY KEY (`id`),
   KEY `index_messages_on_conversation_id` (`conversation_id`) USING BTREE,
   KEY `index_messages_on_sender_id` (`sender_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `muted_contacts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `muted_contacts` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `email_address` varchar(255) NOT NULL,
+  `emails_blocked` int NOT NULL DEFAULT '0',
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `index_muted_contacts_on_email_address` (`email_address`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `order_permissions`;
@@ -2509,6 +2522,7 @@ INSERT INTO `schema_migrations` (version) VALUES
 ('20211124070123'),
 ('20220604094352'),
 ('20220621180736'),
-('20220625160017');
+('20220625160017'),
+('20230430001910');
 
 

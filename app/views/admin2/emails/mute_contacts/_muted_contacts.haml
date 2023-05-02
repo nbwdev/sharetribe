@@ -1,0 +1,10 @@
+%tr{class: "muted_contact-row-#{muted_contact.id}"}
+  %td.muted_contact_email_address
+    = muted_contact.email_address
+  %td
+    = l(muted_contact.created_at, format: :short_date)
+  %td
+    = muted_contact.emails_blocked
+  %td
+    = link_to delete_admin2_emails_mute_contact_path(muted_contact.id), method: :delete do
+      %span.remove

@@ -44,7 +44,9 @@ class FeedbacksController < ApplicationController
                                     email: email
                                   }))
 
-    unless mute_email?(feedback.email)
+    if mute_email?(feedback.email)
+      increase_muted_count(feedback.email)
+    else
       MailCarrier.deliver_later(PersonMailer.new_feedback(feedback, @current_community))
     end
 
@@ -95,6 +97,18 @@ class FeedbacksController < ApplicationController
   end
 
   def mute_email?(email)
-    ['ericjonesmyemail@gmail.com'].include?(email)
+    service.is_muted?(email)
+  end
+
+  def increase_muted_count(email)
+    service.increment_mail_count(email)
+  rescue StandardError => e
+    #ignore, dont care
+  end
+
+  def service
+    @service = @service || Admin::MuteContactsService.new(
+      community: @current_community,
+      params: params)
   end
 end

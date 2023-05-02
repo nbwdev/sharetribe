@@ -11859,6 +11859,23 @@ form.content-card-section-form {
   .content-card-terminal > .btn {
     width: auto; } }
 
+button.mute-contact-button {
+  margin-left: 0;
+  margin-top: 10px;
+  width: fit-content;
+}
+table#muted_contacts_list {
+  td {
+    vertical-align: middle;
+  }
+  td:nth-child(3), th:nth-child(3) {
+    text-align: center;
+  }
+  span.remove {
+    float: none;
+  }
+}
+    
 .content-card-text {
   margin-left: 20px; }
 @media (min-width: 1023px) {

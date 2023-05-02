@@ -160,6 +160,8 @@
           = link_to t('admin2.sidebar.emails.automatic_newsletter'), admin2_emails_newsletters_path
         %li#customoutgoingaddress{class: active_li('outgoing_emails')}
           = link_to t('admin2.sidebar.emails.custom_outgoing_address'), admin2_emails_outgoing_emails_path
+        %li#mutecontact{class: active_li('mute_contacts')}
+          = link_to t('admin2.sidebar.emails.mute_contact'), admin2_emails_mute_contacts_path
       / Search & Location
       - if FeatureFlagHelper.location_search_available
         %ul.category-title

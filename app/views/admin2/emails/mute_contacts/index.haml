@@ -1,0 +1,45 @@
+- content_for :title do
+  = t('admin2.sidebar.emails.mute_contact')
+
+.content-card-header
+  %h1.content-card-header-title
+    = t('admin2.sidebar.emails.mute_contact')
+
+.content-card-section-container{style: 'padding-bottom: 0; max-width: none;'}
+  %p
+    This page lets you mute the SEO bots and other spam that is sent through the contact us page.
+  %p
+    If someone was added to this page by mistake then click the 'Unblock' x button next to their name and their messages will start coming through again.
+    If you want to block someone then you can do it from the bottom of this page or by clicking the link in the contact us email.
+
+  %p
+    This only affects "contact us" and it does not stop someone with this email address from registering an account on the website.
+
+.content-card-section-container{style: 'padding: 0; max-width: none;'}
+  .table-responsive
+    %table.table.table-hover.manageusers#muted_contacts_list
+      %thead
+        %tr
+          %th{scope: :col}
+            = 'Email'
+          %th{scope: :col}
+            = 'Muted Date'
+          %th{scope: :col}
+            = 'Count of Blocked Emails'
+          %th{scope: :col}
+            = 'Unblock'
+      %tbody
+        = render partial: 'admin2/emails/mute_contacts/muted_contacts', collection: @service.muted_contacts, as: :muted_contact
+
+.content-card-section-container{style: 'max-width: none;'}
+  = form_with :url => admin2_emails_mute_contacts_path, html: {class: 'content-card-section-form'} do |form|
+    %h2
+      Add a new email address
+    
+    %p
+      Ignore contact us messages from this email address:
+
+    = form.label :email_address
+    = form.text_field :email_address, placeholder: 'spammer@example.com', required: true
+
+    = button_tag 'Submit', type: 'submit', class: 'btn btn-primary mute-contact-button'

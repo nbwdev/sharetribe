@@ -419,6 +419,15 @@ Rails.application.routes.draw do
             patch :update_newsletter
           end
         end
+        resources :mute_contacts, path: 'mute-contacts', only: %i[index] do
+          collection do
+            post :create
+            get :mute_contact_email, as: :mute_contact_email
+          end
+          member do
+            delete :delete
+          end
+        end
       end
 
       namespace :search_location, path: 'search-and-location' do

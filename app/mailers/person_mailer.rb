@@ -313,6 +313,7 @@ class PersonMailer < ActionMailer::Base # rubocop:disable Metrics/ClassLength
         format.html {
           render locals: {
                    author_name_and_email: feedback_author_name_and_email(feedback.author, feedback.email, community),
+                   author_email: feedback.email,
                    community_name: community.name(I18n.locale),
                    content: feedback.content
                  }

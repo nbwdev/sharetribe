@@ -4,3 +4,17 @@
       = t("feedback.feedback_body", author_name_and_email: author_name_and_email, service_name: community_name)
 
 = render :partial => "quote", :locals => { :quote => content }
+
+%tr
+  %td{:align => "left", :style => "padding-top: 15px;"}
+    %h2
+      Block this sender
+    %font{body_font}
+      = t("feedback.mute_sender", email: author_email)
+      = link_to "block this sender", mute_contact_email_admin2_emails_mute_contacts_url(:host => "https://neverbeenworn.co.uk", :email_address => author_email)
+
+%tr
+  %td{:align => "left", :style => "padding-top: 8px;"}
+    %font{body_font}
+      If the link does not work then copy this into your browser:
+      = mute_contact_email_admin2_emails_mute_contacts_url(:host => "https://neverbeenworn.co.uk", :email_address => author_email)

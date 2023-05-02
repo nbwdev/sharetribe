@@ -1501,6 +1501,7 @@ en:
   feedback:
     feedback_subject: "New contact form entry on %{service_name}"
     feedback_body: "%{author_name_and_email} has submitted the following entry on the %{service_name} contact form. This notification is sent to all %{service_name} admins."
+    mute_sender: "If you want to block Contact Us messages from %{email} then click this link: "
     unlogged_user: "An unlogged user"
     anonymous_user: "An anonymous user"
   community_memberships:

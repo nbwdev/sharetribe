@@ -96,6 +96,7 @@ en:
         automatic_newsletter: "Automatic newsletter"
         welcome_email: "Welcome email"
         custom_outgoing_address: "Custom outgoing address"
+        mute_contact: "Mute spammy contacts"
       search_location:
         search: Search
         location: Location
@@ -1445,6 +1446,9 @@ en:
       transaction_size_updated: "Minimum listing price settings were updated"
       file_was_deleted: "File was successfully deleted"
       custom_script_disabled: "Custom script is disabled. Please upgrade to a paid plan."
+      mute_contact_create_failed: "Failed to add this email address"
+      muted_email_address: "Muted this email address. Their 'contact us' messages will be ignored."
+      unmuted_email_address: "Unmuted this email address. Their 'contact us' messages will come through again."
     seo:
       title: "%{title} | %{service_name} Go Admin panel"
       description: "Manage the %{title} settings of your %{service_name} Sharetribe Go marketplace"
