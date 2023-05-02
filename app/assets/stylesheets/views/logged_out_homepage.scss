@@ -27,10 +27,14 @@ article.page-content.no-padding-bottom {
 }
 
 .marketplace-lander .title-container {
+    background-color: #ffffff;
+}
+
+.marketplace-lander .logged-out-homepage.title-container {
     background-color: $nbw-dark;
 }
 
-.marketplace-lander .marketplace-title-header h1.logged-out-homepage {
+.marketplace-lander .logged-out-homepage .marketplace-title-header h1.logged-out-homepage {
     
     text-align: center;
     color: white;
