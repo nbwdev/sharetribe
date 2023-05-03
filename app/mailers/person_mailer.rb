@@ -309,7 +309,7 @@ class PersonMailer < ActionMailer::Base # rubocop:disable Metrics/ClassLength
       :to => mail_feedback_to(community, APP_CONFIG.feedback_mailer_recipients),
       :from => community_specific_sender(community),
       :subject => subject,
-      :reply_to => feedback.email) do |format|
+      :reply_to => community_specific_sender(community)) do |format|
         format.html {
           render locals: {
                    author_name_and_email: feedback_author_name_and_email(feedback.author, feedback.email, community),
