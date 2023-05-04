@@ -417,10 +417,12 @@ article.page-content.no-padding-bottom {
         }
     }
 
+    $sustainability_banner_colour: #5BC92B;
+
     .sustainability-banner {
         position: relative;
         overflow: hidden;
-        background-color: #418632;
+        background-color: $sustainability_banner_colour;
 
         display: flex;
         flex-direction: row-reverse;
@@ -452,7 +454,7 @@ article.page-content.no-padding-bottom {
             }
 
             p, h2 {
-                color: #B7F89C;
+                color: #FFFFFF;
             }
 
             h2 {
@@ -491,7 +493,7 @@ article.page-content.no-padding-bottom {
             }
 
             .hp-banner-button {
-                color: #298D37;
+                color: $sustainability_banner_colour;
                 background-color: #B7F89C;
                 border-radius: 0;
                 border-color: #B7F89C;
