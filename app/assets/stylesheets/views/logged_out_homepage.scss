@@ -31,27 +31,28 @@ article.page-content.no-padding-bottom {
 }
 
 .marketplace-lander .logged-out-homepage.title-container {
-    background-color: $nbw-dark;
+    background-color: #ffffff;
 }
 
 .marketplace-lander .logged-out-homepage .marketplace-title-header h1.logged-out-homepage {
     
     text-align: center;
-    color: white;
+    color: $nbw-dark;
+    padding-top: 0.25em;
 
     @media (min-width: 769px) {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     @media #{$desktop} {
-        font-size: 2em;
+        font-size: 3em;
     }
 }
 
 .marketplace-lander {
     .coverimage {
         figure.marketplace-cover-small-fade, figure.marketplace-cover-small {
-            height: 3em;
+            height: 4em;
         }
     }
 }
@@ -317,7 +318,7 @@ article.page-content.no-padding-bottom {
         padding-top: 2em;
 
         p, h2 {
-            color: $homepage-text-colour;
+            color: $nbw-dark;
         }
 
         h2 {
@@ -401,6 +402,13 @@ article.page-content.no-padding-bottom {
                     align-self: center;
                     position: absolute;
                     bottom: 0;
+                    background-color: $nbw-dark;
+                }
+
+                a.guide-button:hover {
+                    border-color: $nbw-dark;
+                    color: $nbw-dark;
+                    background-color: #ffffff;
                 }
             }
         }
