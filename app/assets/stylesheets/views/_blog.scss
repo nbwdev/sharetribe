@@ -60,6 +60,53 @@
                 @include absolutely-all;
             }
 
+            .article-title {
+                align-items: center;
+                padding: 0.75em 0.75em 0 0.75em;
+                line-height: 1.2em;
+                margin-bottom: 0;
+                font-size: 1.375em;
+            }
+
+            .button-holder {
+                text-align: center;
+                margin-bottom: 1em;
+            }
+
+            a.article-link {
+                display: inline-block;
+                height: 100%;
+                position: relative;
+                padding-bottom: 60px; /* enough for the button */
+            }
+
+            .button-holder {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+
+            span.read-button {
+                text-align:center;
+                font-weight: 600;
+                font-size: 16px;
+                letter-spacing: 0.2px;
+                padding: 14px 30px;
+                display: inline-block;
+                border-radius: 0;
+                border-width: 2px;
+                border-style: solid;        
+                background-color: $nbw-dark;
+                color: white;
+                border-radius: 5.25px;
+            }
+
+            span.read-button:hover {
+                background: none;
+                color: $nbw-dark;
+                border-color: $nbw-dark;
+            }        
+
             .article-title-cta-container {
                 position: absolute;
                 bottom: 0;
