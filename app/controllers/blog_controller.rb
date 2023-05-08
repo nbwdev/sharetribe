@@ -8,7 +8,7 @@ class BlogController < ApplicationController
         'why_we_started_neverbeenworn' => {
             :id => 'why_we_started_neverbeenworn',
             :title => "Why we started NeverBeenWorn",
-            :description => "We want to help all you lovely ladies out there clear out your wardrobe and find a great new home for all your stylish unworn items",
+            :description => "We all have clothes in our wardrobe that we never quite got around to wearing and can't bring ourselves to get rid of. We want to help you to find a great home for them and start a little change on the way",
             :created => Date.new(2022,7,5),
             :updated => Date.new(2022,7,5),
             :category => "Biography",
@@ -90,7 +90,7 @@ class BlogController < ApplicationController
         'me_time' => {
             :id => 'me_time',
             :title => 'Me Time',
-            :description => "Kick start your new year with my relaxing Just For Me day. It is the best way to unwind, make new plans and get yourself ready for a great year ahead.",
+            :description => "Kick start your new year with my relaxing 'just for me' day. It's the best way to unwind, make new plans and get yourself ready for a great year ahead.",
             :created => Date.new(2023,1,10),
             :updated => Date.new(2023,1,10),
             :related => ['declutter_me_happy'],

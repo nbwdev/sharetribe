@@ -15,212 +15,39 @@
 .blog
   .articles-grid
     %ul.blog-articles
-    
-      -article = articles['declutter_me_happy']
-      -image_url = image_path("blog/declutter-me-happy/sitting-white-chair-no-clutter.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "A lady listens to music while sitting on a suspended white chair in her bedroom. The room is tidy and uncluttered but not not minimalist, with healthy pot plants and a collection of pillows on the bed.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            Quick helpful tricks to start to get rid of all the unhappy clutter in your life
+
+      - article = articles['declutter_me_happy']
+      = render :partial => "blog/components/article_card", :locals => {:article => article}    
             
       -article = articles['declutter_your_handbags']
-      -image_url = image_path("blog/declutter-handbags/luxury-handbag-on-armchair.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "A luxury handbag sits on a plush grey armchair.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            How to declutter your handbags and save more money in the future
+      = render :partial => "blog/components/article_card", :locals => {:article => article}    
             
       -article = articles['declutter_after_christmas']
-      -image_url = image_path("blog/christmas/too-many-gifts.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            Christmas declutter – for your head, your home and your wallet.
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['get_your_messy_shelves_in_shape']
-      -image_url = image_path("blog/messy-shelves/messy-shelf-tops-and-jeans.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "A messy bedroom shelf holds a jumble of tops, jeans, and t-shirts.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            My shelves are always a mess! Here's how to make a new start and fix that mess
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['sustainability_the_right_choice']
-      -image_url = image_path("blog/sustainability/globe-in-field.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "A brightly-coloured child's globe sits in a field with daisies and other plants growing around it.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            These days we are all aware of the urgent need to change how and why we have a need to buy more and more stuff. It raises the question: Why do we feel the need to buy so much?
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['me_time']
-      -image_url = image_path("blog/me-time/relaxing-bath.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "A relaxing bath surrounded by candles, a good book and a hot drink.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            Kick start your new year with my relaxing ‘just for me’&nbsp;day. It’s the best way to unwind, make new plans and get yourself ready for a great year&nbsp;ahead.
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['fix_your_drawers_forever']
-      -image_url = image_path("blog/fix-your-drawers-forever/overflowing-drawers.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "Clothes overflow from all three drawers of a chest of drawers.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            From nightmare drawers to no&nbsp;more&nbsp;trouble
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['too_many_scarves']
-      -image_url = image_path("blog/too-many-scarves/knitted-cosy-scarves.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "Three cozy and soft woolen scarves in a pile.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            How I went from 18 scarves to just&nbsp;4
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['the_wardrobe_challenge']
-      -image_url = image_path("blog/wardrobe-challenge/choosing-clothes.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "Choosing between a plain white shirt and a white and green striped top.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            Take on your wardrobe, take back your time and banish that mess for good
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['big_boots_how_to_wear_them']
-      -image_url = image_path("blog/big-boots/sitting-on-plinth-square.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            Big boots are here for another autumn and winter season.
-            <br>
-            Here's how to choose the right pair for you
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['sustainability_in_autumn']
-      -image_url = image_path("blog/sustainability-in-autumn/autumn-leaves-square.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "Bright afternoon sun shines through the autumn leaves of a young maple tree.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            As NeverBeenWorn goes into its first autumn, we are taking a quick moment to reflect on how far we have come
-            and looking forward to the next steps in our journey through more sustainable fashion
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
 
       -article = articles['why_we_started_neverbeenworn']
-      -image_url = image_path("blog/lady-in-poppy-field-square.jpg")
-      %li.article-card{:role => "article"}
-        = link_to(article_path(id=article[:id]), :class => "article-link") do
-          .article-image-container
-            =image_tag(image_url, class: 'article_card_image', alt: "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.")
-            .article-card-image-overlay
-            .article-title-cta-container
-              .cta-left
-                %h2.article-title
-                  =article[:title]
-              .cta-right
-                %p.article-read
-                  Read
-          %p.article-summary
-            We all have clothes in our wardrobe that we never quite got around to wearing and can't bring ourselves to get rid of.
-            <br>
-            We want to help you to find a great home for them and start a little change on the way
+      = render :partial => "blog/components/article_card", :locals => {:article => article}

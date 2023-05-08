@@ -1,0 +1,15 @@
+-image_url = image_path(article[:main_article_image])
+%li.article-card{:role => "article"}
+  = link_to(article_path(id=article[:id]), :class => "article-link") do
+    .article-image-container
+      =image_tag(image_url, class: 'article_card_image', alt: article[:main_image_alt_text])
+      .article-card-image-overlay
+      .article-title-cta-container
+        .cta-left
+          %h2.article-title
+            =article[:title]
+        .cta-right
+          %p.article-read
+            Read
+    %p.article-summary
+      = article[:description]
