@@ -8,7 +8,7 @@ class BlogController < ApplicationController
         'why_we_started_neverbeenworn' => {
             :id => 'why_we_started_neverbeenworn',
             :title => "Why we started NeverBeenWorn",
-            :description => "We all have clothes in our wardrobe that we never quite got around to wearing and can't bring ourselves to get rid of. We want to help you to find a great home for them and start a little change on the way",
+            :description => "Why we want to be an advocate of change and help you find a home for all the things you have that have never been worn",
             :created => Date.new(2022,7,5),
             :updated => Date.new(2022,7,5),
             :category => "Biography",
@@ -21,7 +21,7 @@ class BlogController < ApplicationController
         'sustainability_in_autumn' => {
             :id => 'sustainability_in_autumn',
             :title => 'Sustainability in autumn',
-            :description => "As NeverBeenWorn goes into its first autumn, we are taking a quick moment to reflect on how far we have come and looking forward to the next steps in our journey through more sustainable fashion",
+            :description => "As NeverBeenWorn goes into its first autumn, we are taking a quick moment to reflect on how far we have come and looking forward to the next steps on our journey to support sustainable fashion",
             :created => Date.new(2022,10,9),
             :updated => Date.new(2022,10,9),
             :related => ['sustainability_the_right_choice'],
@@ -48,7 +48,7 @@ class BlogController < ApplicationController
         'the_wardrobe_challenge' => {
             :id => 'the_wardrobe_challenge',
             :title => 'The Wardrobe Challenge',
-            :description => "Take on your wardrobe, take back your time and banish that mess for good",
+            :description => "Take back your wardrobe and banish that mess for good",
             :created => Date.new(2022,11,19),
             :updated => Date.new(2022,11,19),
             :related => ['declutter_me_happy','declutter_your_handbags','fix_your_drawers_forever', 'too_many_scarves', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
@@ -62,7 +62,7 @@ class BlogController < ApplicationController
         'too_many_scarves' => {
             :id => 'too_many_scarves',
             :title => 'Too Many Scarves',
-            :description => "How I went from 18 scarves to just 4",
+            :description => "How I decluttered and went from hoarding 18 scarves to needing just 4",
             :created => Date.new(2022,12,14),
             :updated => Date.new(2022,12,14),
             :related => ['declutter_me_happy','declutter_your_handbags','fix_your_drawers_forever', 'the_wardrobe_challenge', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
@@ -76,7 +76,7 @@ class BlogController < ApplicationController
         'fix_your_drawers_forever' => {
             :id => 'fix_your_drawers_forever',
             :title => 'Fix your drawers forever',
-            :description => "From nightmare drawers to no more trouble",
+            :description => "How to fix your nightmare drawers forever",
             :created => Date.new(2022,12,16),
             :updated => Date.new(2022,12,16),
             :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
@@ -90,7 +90,7 @@ class BlogController < ApplicationController
         'me_time' => {
             :id => 'me_time',
             :title => 'Me Time',
-            :description => "Kick start your new year with my relaxing 'just for me' day. It's the best way to unwind, make new plans and get yourself ready for a great year ahead.",
+            :description => "Get truly focused with my relaxing 'just for me' day. It's the best way to unwind, make new plans and get yourself ready for a great year ahead.",
             :created => Date.new(2023,1,10),
             :updated => Date.new(2023,1,10),
             :related => ['declutter_me_happy'],
@@ -104,7 +104,7 @@ class BlogController < ApplicationController
         'sustainability_the_right_choice' => {
             :id => 'sustainability_the_right_choice',
             :title => "Sustainability - It's The Right Choice",
-            :description => "These days we are all aware of the urgent need to change how and why we have a need to buy more and more stuff. It raises the question: Why do we feel the need to buy so much?",
+            :description => "Our never-ending consumption has caused some severe environmental damage. Here’s why sustainability is the right choice",
             :created => Date.new(2023,1,10),
             :updated => Date.new(2023,1,10),
             :related => ['sustainability_in_autumn'],
@@ -118,7 +118,7 @@ class BlogController < ApplicationController
         'get_your_messy_shelves_in_shape' => {
             :id => 'get_your_messy_shelves_in_shape',
             :title => "Get Your Messy Shelves In Shape",
-            :description => "My shelves are always a mess! Here's how to make a new start and fix that mess",
+            :description => "Are your shelves always a mess? Here’s how I fixed that mess for good",
             :created => Date.new(2023,1,10),
             :updated => Date.new(2023,1,10),
             :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','declutter_after_christmas'],
@@ -132,7 +132,7 @@ class BlogController < ApplicationController
         'declutter_after_christmas' => {
             :id => 'declutter_after_christmas',
             :title => "Declutter After Christmas",
-            :description => "Christmas declutter – for your head, your home, and your wallet",
+            :description => "Christmas declutter – less stress on your head, your home and your wallet",
             :created => Date.new(2023,1,26),
             :updated => Date.new(2023,1,26),
             :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape'],
@@ -146,7 +146,7 @@ class BlogController < ApplicationController
         'declutter_your_handbags' => {
             :id => 'declutter_your_handbags',
             :title => "How to declutter your handbags",
-            :description => "How to declutter your handbags and save more money in the future",
+            :description => "How to declutter your handbags and save money in the future",
             :created => Date.new(2023,2,10),
             :updated => Date.new(2023,4,8),
             :related => ['declutter_me_happy','too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
