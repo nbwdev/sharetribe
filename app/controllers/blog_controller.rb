@@ -62,7 +62,7 @@ class BlogController < ApplicationController
         'too_many_scarves' => {
             :id => 'too_many_scarves',
             :title => 'Too Many Scarves',
-            :description => "How I decluttered and went from hoarding 18 scarves to needing just 4",
+            :description => "How I decluttered and went from hoarding 18 scarves to only needing 4",
             :created => Date.new(2022,12,14),
             :updated => Date.new(2022,12,14),
             :related => ['declutter_me_happy','declutter_your_handbags','fix_your_drawers_forever', 'the_wardrobe_challenge', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
@@ -90,7 +90,7 @@ class BlogController < ApplicationController
         'me_time' => {
             :id => 'me_time',
             :title => 'Me Time',
-            :description => "Get truly focused with my relaxing 'just for me' day. It's the best way to unwind, make new plans and get yourself ready for a great year ahead.",
+            :description => "Get truly focused with my relaxing 'just for me' day. It's the best way to unwind, make new plans and get yourself ready for anything",
             :created => Date.new(2023,1,10),
             :updated => Date.new(2023,1,10),
             :related => ['declutter_me_happy'],
@@ -118,7 +118,7 @@ class BlogController < ApplicationController
         'get_your_messy_shelves_in_shape' => {
             :id => 'get_your_messy_shelves_in_shape',
             :title => "Get Your Messy Shelves In Shape",
-            :description => "Are your shelves always a mess? Here’s how I fixed that mess for good",
+            :description => "Are your shelves always a mess? Here’s how to fix that mess for good",
             :created => Date.new(2023,1,10),
             :updated => Date.new(2023,1,10),
             :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','declutter_after_christmas'],
@@ -160,7 +160,7 @@ class BlogController < ApplicationController
         'declutter_me_happy' => {
             :id => 'declutter_me_happy',
             :title => "Will decluttering make me happy?",
-            :description => "Quick helpful tricks to start to get rid of all the unhappy clutter in your life",
+            :description => "Quick helpful tricks to get rid of all the unhappy clutter in your life",
             :created => Date.new(2023,3,30),
             :updated => Date.new(2023,3,30),
             :related => ['too_many_scarves', 'the_wardrobe_challenge', 'me_time', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
