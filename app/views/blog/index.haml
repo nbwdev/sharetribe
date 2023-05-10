@@ -16,6 +16,9 @@
   .articles-grid
     %ul.blog-articles
 
+      - article = articles['my_wardrobe_challenge']
+      = render :partial => "blog/components/article_card", :locals => {:article => article}    
+            
       - article = articles['declutter_me_happy']
       = render :partial => "blog/components/article_card", :locals => {:article => article}    
             

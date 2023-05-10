@@ -170,6 +170,20 @@ class BlogController < ApplicationController
             :main_image_alt_text => "A lady listens to music while sitting on a suspended white chair in her bedroom. The room is tidy and uncluttered but not not minimalist, with healthy pot plants and a collection of pillows on the bed.",
             :main_image_placeholder_colour => "#e2e5ec",
             :second_article_image => "blog/declutter-me-happy/standing-by-dresser-with-drink.jpg"
+        },
+        'my_wardrobe_challenge' => {
+            :id => 'my_wardrobe_challenge',
+            :title => "My wardrobe challenge",
+            :description => "My wardrobe nightmare and how I fixed it",
+            :created => Date.new(2023,5,10),
+            :updated => Date.new(2023,5,10),
+            :related => ['the_wardrobe_challenge', 'too_many_scarves', 'me_time', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
+            :category => 'Decluttering',
+            :tags => ['decluttering', 'mind-health', 'top tips', 'happiness', 'home organisation'],
+            :main_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-rail.jpg",
+            :main_image_alt_text => "A crowded hanging rail in a wardrobe, crammed with dresses, shirts and assorted tops.",
+            :main_image_placeholder_colour => "#b3d7f7",
+            :second_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-drawers.jpg"
         }
     }
 
