@@ -18,7 +18,7 @@
     font-style: normal;
     font-weight: bold;
     background: $link;
-    @include border-radius($default-border-radius);
+    border-radius: $default-border-radius;
     margin-right: lines(0.25);
     padding: em(5) em(15);
     color: white; }
@@ -27,7 +27,7 @@
     padding: em(5) em(15);
     background: $highlight;
     display: inline-block;
-    @include border-radius($default-border-radius);
+    border-radius: $default-border-radius;
     margin-right: lines(0.25);
     text-decoration: none;
     color: $link; }

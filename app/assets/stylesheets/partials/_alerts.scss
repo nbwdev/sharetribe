@@ -11,7 +11,7 @@ $warning-text-color: #8a6d3b;
 }
 
 .alert-box-danger {
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
 
   background-color: $danger-bg-color;
   padding: lines(0.75) lines(0.8);
@@ -20,7 +20,7 @@ $warning-text-color: #8a6d3b;
 }
 
 .alert-box-warning {
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
 
   background-color: $warning-bg-color;
   padding: lines(0.75) lines(0.8);

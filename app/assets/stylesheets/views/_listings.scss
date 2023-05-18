@@ -1,5 +1,3 @@
-@import "compass/utilities/general/clearfix";
-@import "compass/css3/box-sizing";
 @import "mixins/all";
 
 .listing-details-container {
@@ -134,7 +132,7 @@ $listing-author-avatar-height: 108;
 }
 
 .listing-author-avatar-image {
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
   display: block;
   width: 100%;
   height: 100%;
@@ -319,7 +317,7 @@ $listing-author-avatar-height: 108;
   }
   position: relative;
   padding: em(8) em(20) em(8) em(20);
-  @include border-radius(em(5));
+  border-radius: em(5);
   .ajax-icon, .flash-icon {
     position: absolute;
     top: em(10);

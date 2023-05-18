@@ -1,8 +1,6 @@
 // Home page styles
 
 @import "mixins/all";
-@import "compass/css3/border-radius";
-@import "compass/utilities/general/clearfix";
 
 .home-toolbar {
   @include pie-clearfix;
@@ -154,7 +152,7 @@ $home-list-image-padding-mobile: lines(0.5);
   width: 100%;
   height: 100%;
   display: block;
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
   object-fit: contain;
 }
 
@@ -235,7 +233,7 @@ $home-list-avatar-padding: lines(0.25);
   width: $home-list-avatar-size;
 
   img {
-    @include border-radius($default-border-radius);
+    border-radius: $default-border-radius;
     display: block;
     width: 100%;
   }
@@ -370,7 +368,7 @@ $home-list-avatar-padding: lines(0.25);
 }
 
 .home-no-listings {
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
   padding: lines(0.5) lines(1);
   background: $highlight;
 }

@@ -29,7 +29,7 @@
 
 .design-component {
   border: 1px solid #CCC;
-  @include border-radius(5px);
+  border-radius: 5px;
 }
 
 .design-example {

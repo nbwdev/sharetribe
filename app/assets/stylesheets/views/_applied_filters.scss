@@ -1,6 +1,4 @@
 @import "mixins/all";
-@import "compass/css3/border-radius";
-@import "compass/utilities/general/clearfix";
 
 .applied-filters-row {
     display: flex;
@@ -12,7 +10,7 @@
         margin: 5px;
         min-width: -moz-fit-content;
         min-width: fit-content;
-        @include border-radius(15px);
+        border-radius: 15px;
         height: 1.2em;
         line-height: 1.2em;
         color: $nbw-dark;

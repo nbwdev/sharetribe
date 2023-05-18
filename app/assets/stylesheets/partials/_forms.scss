@@ -1,11 +1,10 @@
 @import "mixins/all";
-@import "compass/css3/border-radius";
 
 input[type=text],
 input[type=password],
 input[type=number],
 textarea {
-  @include border-radius(em(5));
+  border-radius: em(5);
   border: 2px solid $border;
   min-height: 42px;
   width: 100%;
@@ -18,7 +17,7 @@ textarea {
 }
 
 select {
-  @include border-radius(em(5));
+  border-radius: em(5);
   border: 2px solid $border;
   min-height: 42px;
   padding: em(4) em(8);

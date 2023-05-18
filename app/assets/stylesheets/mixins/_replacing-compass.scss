@@ -1,0 +1,46 @@
+/*
+ because compass won't work with sassc which alchemy needs and is no longer maintained
+ and to be honest these may only be needed for ie7 but including them just in case for now
+ */
+
+/* clearfix replacement */
+@mixin clearfix {
+    overflow: hidden;
+  }
+
+@mixin pie-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* border-radius is supported everywhere I care about so return the normal declaration with the compass default value */
+@mixin border-top-radius($radius: 5px) {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius: 5px) {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-left-radius($radius: 5px) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-right-radius($radius: 5px) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin prefix-prop($property, $value) {
+  #{'-webkit-' + $property}: $value;
+  #{'-moz-' + $property}: $value;
+  #{'-ms-' + $property}: $value;
+  #{'-o-' + $property}: $value;
+  $property: all 50ms ease-in-out
+}

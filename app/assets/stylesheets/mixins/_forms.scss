@@ -33,7 +33,7 @@
 
   // Borders
   @include button-group-borders(0);
-  @include border-radius(0);
+  border-radius: 0;
 
   // Border radius
   $radius: lines(0.25);
@@ -94,7 +94,7 @@
 
 // Form button or a link that looks like a button
 @mixin button($bg-color) {
-  @include border-radius(em(5));
+  border-radius: em(5);
   background: $bg-color;
   color: $background;
   text-align: center;
@@ -142,7 +142,7 @@
 
 // Button on top of cover photo
 @mixin cover-photo-button($color) {
-  @include border-radius(em(5));
+  border-radius: em(5);
   @include normal-type;
 
   color: $background;

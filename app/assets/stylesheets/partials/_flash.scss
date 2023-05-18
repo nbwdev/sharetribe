@@ -14,7 +14,7 @@
   }
   position: relative;
   padding: em(8) em(20) em(12) em(20);
-  @include border-radius(em(5));
+  border-radius: em(5);
   .ajax-icon, .flash-icon {
     position: absolute;
     top: em(10);

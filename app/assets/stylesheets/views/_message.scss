@@ -35,7 +35,7 @@ $message-time-margin: lines(0.25);
 }
 
 .message-avatar-image {
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
   width: 100%;
 }
 
@@ -71,7 +71,7 @@ $message-time-margin: lines(0.25);
 .message-bubble {
   position: relative;
   min-height: $avatar-size;
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
 
   // No bottom padding, it comes from the <p> tag
   padding: lines(0.5) lines(0.5) lines(0) lines(0.5);

@@ -1,4 +1,4 @@
-@import "compass/css3/border-radius";
+@import "mixins/replacing-compass";
 
 $listing-image-aspect-ratio: 3/2;
 
@@ -25,5 +25,5 @@ $listing-image-aspect-ratio: 3/2;
 
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95);
-  @include border-bottom-left-radius(lines(0.25));
+  border-bottom-left-radius: lines(0.25);
 }

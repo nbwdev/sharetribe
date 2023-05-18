@@ -1,5 +1,4 @@
 @import "mixins/all";
-@import "compass/css3/user-interface";
 
 .admin-sort-button {
   outline: none;
@@ -24,7 +23,7 @@
 .locale-selection__input-widget.selectize-control {
   .selectize-input {
     border: em(2) solid $border;
-    @include border-radius(em(5));
+    border-radius: em(5);
     font-size: em(16);
     min-height: em(42);
     div.item {
@@ -70,7 +69,7 @@ select#locale-selection {
 .status-select-button {
   position: relative;
   padding: em(4) em(8) 0;
-  @include border-radius(em(5));
+  border-radius: em(5);
   border: 2px solid $border;
    @include media(tablet) {
     margin: 0;
@@ -93,7 +92,7 @@ select#locale-selection {
 }
 .status-select-dropdown {
   position: absolute;
-  @include border-radius(em(5));
+  border-radius: em(5);
   border: 2px solid $border;
   left: 0;
   right: 0;

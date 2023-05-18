@@ -9,7 +9,7 @@
   overflow: hidden;
   width: 100%;
   background: $background;
-  @include border-radius(em(5));
+  border-radius: em(5);
 }
 .expiration-head-panel {
   width: 90%;
@@ -38,12 +38,12 @@
   @include clearfix();
   background-color: $sharetribe-color;
   border: solid 1px $sharetribe-color;
-  @include border-radius(em(5));
+  border-radius: em(5);
   color: white;
 }
 
 .expiration-plan-biannual {
-  @include border-radius(em(5));
+  border-radius: em(5);
   background-color: white;
   color: black;
   padding: 30px 0;
@@ -65,7 +65,7 @@
 }
 
 .contact-owner {
-  @include border-radius(em(5));
+  border-radius: em(5);
   max-width: 300px;
   margin: 0 auto 30px auto;
   padding: 30px 0;

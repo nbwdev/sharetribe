@@ -122,7 +122,8 @@
 
 class Community < ApplicationRecord
 
-  require 'compass'
+  # trying to remove the compass dependency see what breaks
+  #require 'compass'
   require 'sass/plugin'
 
   include EmailHelper

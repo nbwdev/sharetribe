@@ -6,7 +6,7 @@
   position: relative;
   display: block;
   width: 100%;
-  @include border-radius(em(5));
+  border-radius: em(5);
   border: 2px solid $border;
   &:hover { background: $highlight; }
   margin-bottom: lines(0.25);

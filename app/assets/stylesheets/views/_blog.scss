@@ -44,7 +44,7 @@
 
             padding-right: 0;
             padding-left: 0;
-            @include border-radius($card-border-radius);
+            border-radius: $card-border-radius;
             background-color: white;
 
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;

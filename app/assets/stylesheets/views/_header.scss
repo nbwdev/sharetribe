@@ -1,5 +1,4 @@
 @import "mixins/all";
-@import "compass/css3/background-size";
 
 /* Height of the whole header bar */
 $headerHeight: lines(2.5);
@@ -126,7 +125,7 @@ $elementSpacing: lines(0.5);
 }
 
 .header-user-avatar {
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
   @include header-block;
 }
 
@@ -231,7 +230,7 @@ $elementSpacing: lines(0.5);
 
   // Highres image
   background-repeat: no-repeat;
-  @include background-size(em(168) auto);
+  background-size: em(168) auto;
 
   display: inline-block;
 }
@@ -248,7 +247,7 @@ $elementSpacing: lines(0.5);
 
   // Highres image
   background-repeat: no-repeat;
-  @include background-size(em(40) auto);
+  background-size: em(40) auto;
 
   display: inline-block;
 }

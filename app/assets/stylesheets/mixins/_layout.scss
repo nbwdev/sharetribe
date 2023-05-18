@@ -1,11 +1,14 @@
-@import "compass/css3/images";
 
 @mixin overlay {
   $overlay-start-color: rgba(0, 0, 0, 0);
   $overlay-end-color: rgba(0, 0, 0, 0.6);
   $overlay-start-color-ie: ie-hex-str($overlay-start-color);
   $overlay-end-color-ie: ie-hex-str($overlay-end-color);
-  @include background-image(linear-gradient($overlay-start-color, $overlay-end-color));
+  /*replace compass background-image mixin with hardcoded styles*/
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $overlay-start-color), color-stop(100%, $overlay-end-color));
+  background-image: -moz-linear-gradient($overlay-start-color, $overlay-end-color);
+  background-image: -webkit-linear-gradient($overlay-start-color, $overlay-end-color);
+  background-image: linear-gradient($overlay-start-color, $overlay-end-color);
   /*For IE7-8-9*/
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$overlay-start-color-ie}', endColorstr='#{$overlay-end-color-ie}');
 }
@@ -18,7 +21,7 @@
   white-space: nowrap;
   background: $highlight;
   color: $body;
-  @include border-radius(em(5));
+  border-radius: em(5);
   &:hover {
     background: $aside;
     color: $background;

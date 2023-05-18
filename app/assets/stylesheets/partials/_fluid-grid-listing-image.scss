@@ -8,7 +8,7 @@
   position: relative;
   color: $background;
   background-color: #f0f0f0;
-  @include border-radius($default-border-radius);
+  border-radius: $default-border-radius;
 
   &:hover {
     color: $highlight;

@@ -419,7 +419,9 @@ class LandingPageController < ActionController::Metal
     if Rails.configuration.assets.compile
       Rails.application.assets.find_asset(asset_name)
     else
-      CompassRails.sprockets.find_asset(asset_name)
+      #Getting rid of compass
+      #CompassRails.sprockets.find_asset(asset_name)
+      (Rails.application.assets || ::Sprockets::Railtie.build_environment(Rails.application)).find_asset(logical_file_path).to_s
     end.to_s.html_safe
   end
 

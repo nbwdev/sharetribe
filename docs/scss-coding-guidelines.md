@@ -36,7 +36,6 @@ Rules:
 * Files under `mixins` folder should NEVER output any CSS (i.e. they can contain only variables, mixins etc.)
 * Files under `partials` and `views` should NEVER `@import` files under `partials` and `views` (otherwise the CSS is compiled and written to the output twice)
 * Files under `partials` and `views` can freely `@import` as many files under `mixins` as they want.
-* Never `@import "compass"` instead, import the Compass mixins you need (e.g. `@import "compass/css3/border-radius"`)
 
 Additional reading:
 
