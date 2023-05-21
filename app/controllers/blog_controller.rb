@@ -32,6 +32,20 @@ class BlogController < ApplicationController
             :main_image_placeholder_colour => "#e94f53",
             :second_article_image => "blog/sustainability-in-autumn/lady-autumn-blue-coat.jpg"
         },
+        'declutter_after_christmas' => {
+            :id => 'declutter_after_christmas',
+            :title => "Declutter After Christmas",
+            :description => "Christmas declutter – less stress on your head, your home and your wallet",
+            :created => Date.new(2023,1,26),
+            :updated => Date.new(2023,1,26),
+            :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape'],
+            :category => 'Decluttering',
+            :tags => ['decluttering', 'christmas', 'buying presents', 'gift giving', 'money saving', 'money management', 'unwanted gifts', 'top tips', 'friends'],
+            :main_article_image => "blog/christmas/too-many-gifts.jpg",
+            :main_image_alt_text => "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.",
+            :main_image_placeholder_colour => "#eb0104",
+            :second_article_image => "blog/christmas/opening-gifts.jpg"
+        },
         'big_boots_how_to_wear_them' => {
             :id => 'big_boots_how_to_wear_them',
             :title => 'Big Boots - How to Wear Them',
@@ -128,20 +142,6 @@ class BlogController < ApplicationController
             :main_image_alt_text => "A messy bedroom shelf holds a jumble of tops, jeans, and t-shirts.",
             :main_image_placeholder_colour => "#fcdde6",
             :second_article_image => "blog/messy-shelves/holding-crumpled-clothes-on-floor.jpg"
-        },
-        'declutter_after_christmas' => {
-            :id => 'declutter_after_christmas',
-            :title => "Declutter After Christmas",
-            :description => "Christmas declutter – less stress on your head, your home and your wallet",
-            :created => Date.new(2023,1,26),
-            :updated => Date.new(2023,1,26),
-            :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape'],
-            :category => 'Decluttering',
-            :tags => ['decluttering', 'christmas', 'buying presents', 'gift giving', 'money saving', 'money management', 'unwanted gifts', 'top tips', 'friends'],
-            :main_article_image => "blog/christmas/too-many-gifts.jpg",
-            :main_image_alt_text => "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.",
-            :main_image_placeholder_colour => "#eb0104",
-            :second_article_image => "blog/christmas/opening-gifts.jpg"
         },
         'declutter_your_handbags' => {
             :id => 'declutter_your_handbags',
