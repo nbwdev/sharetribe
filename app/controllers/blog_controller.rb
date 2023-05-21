@@ -180,10 +180,10 @@ class BlogController < ApplicationController
             :related => ['the_wardrobe_challenge', 'too_many_scarves', 'me_time', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'mind-health', 'top tips', 'happiness', 'home organisation'],
-            :main_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-rail.jpg",
-            :main_image_alt_text => "A crowded hanging rail in a wardrobe, crammed with dresses, shirts and assorted tops.",
+            :main_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-drawers.jpg",
+            :main_image_alt_text => "Messy wardrobe drawers with shoes on top of them and clothes rammed into the drawers.",
             :main_image_placeholder_colour => "#b3d7f7",
-            :second_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-drawers.jpg"
+            :second_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-rail.jpg"
         }
     }
 
