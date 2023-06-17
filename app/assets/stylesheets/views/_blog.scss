@@ -348,6 +348,32 @@
         }
     }
 
+    .pin-for-later-image {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        border-color: #cfeefa;
+        border-width: 20px;
+        border-style: solid;
+        margin-right: 20px;
+
+        background-repeat: no-repeat;
+        width: 33.333333%;
+        background-size: cover;
+        
+        img {
+            width: 100%;
+            vertical-align: middle;
+            aspect-ratio: 2/3;
+        }
+
+        @media #{$mobile} {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+    }
+
     .article-section-right-image.text-first {
         .article-image {
             float: right;
@@ -507,7 +533,19 @@
         }
     }
 
-    .quick-guide-container.quick-guide-wellness, .quick-guide-container.quick-guide-decluttering {
+    .quick-guide-container.quick-guide-beach {
+        .quick-guide {
+            color: #413D75;
+            background: linear-gradient(180deg, #cfeefa 0%, #a9e5f9 100%);
+            
+            a, h4, p {
+                color: #413D75;
+            }
+        }
+    }
+
+    .quick-guide-container.quick-guide-wellness, .quick-guide-container.quick-guide-decluttering,
+    .quick-guide-container.quick-guide-beach {
         .quick-guide {
             width: 50%;
 
@@ -584,6 +622,9 @@
     }
     .article-footer.purple {
         background-color: #F6E9FA;
+    }
+    .article-footer.blue {
+        background-color: #cfeefa;
     }
 
     p.image-credit {

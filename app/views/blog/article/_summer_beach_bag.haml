@@ -1,0 +1,422 @@
+- content_for :extra_javascript do
+  =javascript_include_tag "//assets.pinterest.com/js/pinit.js", defer: true
+  =render :partial => "blog/components/update_pinterest_button_text",
+    :locals => { :"pin_button_ids" => ["pinit-6-basic-needs"] }
+
+.blog-article
+  %h2.article-title="How to pick your summer beach bag for less fuss and more beach time"
+  %p.published-date
+    June 2023
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image-floated
+
+    .article-text
+      .article-image.aspect-1
+        -image_url = image_path("blog/summer-beach-bag/summer-beach-bag.jpg")
+        =image_tag(image_url, alt: "A woven straw beach bag with some essential items poking out of it - sun screen, sunglasses, camera, and notebook.")
+        %figcaption
+          Photo by
+          =link_to('Freepik', 'https://www.freepik.com/free-photo/travel-concept-with-bag_14308212.htm')
+          on Freepik
+
+      %p
+        Is your summer holiday getting closer?
+        Have you begun to finalise all your must have items that will accompany you on this very important and much needed vacation?
+        Expectations can be high once you have made it to your holiday destination, so you really need to know that you made all the right choices when packing.
+        Are we really thinking it through before we jet off to enjoy our fun filled time in the sun?
+        For instance, I can’t help wondering how many people give enough attention to their summer beach bag.
+        This is the bag that will possibly support you for the entire holiday
+        so why is it often forgotten about, or why do we reach for anything that will do and squeeze it into our suitcases right at the last minute?
+        So, I am here to help you.
+
+  .article-section
+    .quick-guide-container.quick-guide-beach
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Top 6 basic requirements for a beach bag
+        %ol
+          %li
+            %span.strong
+              Strong 
+            \– able to hold everything
+          %li
+            %span.strong
+              Good handles
+            \– no time for breakages
+          %li
+            %span.strong
+              Compartments
+            \– no time for rummaging
+          %li
+            %span.strong
+              The right size
+            \– fits everything I need nicely
+          %li
+            %span.strong
+              Easy to keep clean
+            \– no sand in my bag please
+          %li
+            %span.strong
+              How it looks
+            \– must have a great summer vibe
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3
+        The basic requirements of a summer beach bag
+
+      .article-image.aspect-1
+        -image_url = image_path("blog/summer-beach-bag/bag-on-beach.jpg")
+        =image_tag(image_url, alt: "A woven straw bag sits on a white sandy beach with a wide-brimmed hat resting against it and the sea in the background. The bag holds suncream, flip-flops, and a colourful beach towel.")
+        %figcaption
+          Photo by
+          =link_to('awesomecontent', 'https://www.freepik.com/free-photo/bag-with-beach-accessories-kept-sand_991183.htm')
+          on Freepik
+
+      %p
+        Once again, expectations can be high once you have reached your chosen destination and why not?
+        You have spent your hard earned cash on booking some quality down time and you want it to be filled with more fun and less hassle and to go smoothly, so it’s important to do a little ‘thinking ahead’ before you leave.
+        So, let's take a quick look at what it is that we expect from our hard working beach bag on our annual summer vay-cay?
+        Here are some key essential components for any holiday beach bag.
+        Taking a minute to look at these now will save you from bad choices or forgotten items whilst you are away so your time in the sun is hassle free and all you dreamed of.
+
+  .article-section
+    .article-tips-panel
+      .title-section
+        .heading
+          %h3
+            6 basic needs
+          %p.title-subtext
+            &nbsp;
+        .subhead
+          %p.sub-title
+            Why these are my basic requirements for any summer beach bag
+        .pinit#pinit-6-basic-needs
+          %a.pinterest-share-button{ :"data-pin-do" => "buttonPin",
+            :"data-pin-hover" => "true",
+            :"data-pin-tall" => "true",
+            :"data-pin-media" => image_path("blog/summer-beach-bag/beach-bag-6-basic-needs.jpg"),
+            :"data-pin-description" => "6 basic requirements for any summer beach bag. Quick tips to help you choose the perfect stylish bag to fit everything you need for a summer beach holiday.",
+            :title => "Pin It",
+            :class => "pin-it-button",
+            :href => "http://pinterest.com/pin/create/button/",
+            :rel => "nofollow",
+            :target => "_blank",
+            "count-layout" => "horizontal",
+            :"to-be-replaced" => "true"} 
+      .tips-section
+        .tip.blue-box-1-of-6
+          .tip-number
+            %p
+              1
+          .tip-content
+            %p.tip-heading
+              Strong – able to hold everything
+            %p.tip-text
+              If I know myself well in any way, I would say that strength is always a key factor for my beach bag.
+              I need to know that it is going to hold up on holiday and take any heavy stuff like my 10 litre bottle of sun screen.
+
+        .tip.blue-box-2-of-6
+          .tip-number
+            %p
+              2
+          .tip-content
+            %p.tip-heading
+              Good handles – no time for breakages
+            %p.tip-text
+              Yes! That’s right I want to be too busy enjoying myself to think about whether my beach bag's handles are going to last the holiday or not.
+
+        .tip.blue-box-3-of-6
+          .tip-number
+            %p
+              3
+          .tip-content
+            %p.tip-heading
+              Compartments
+ 
+            %p.tip-text
+              There is absolutely no time for rummaging in my beach bag.
+              I want to be able to find what I need really quick and get back to enjoying my beach time.
+
+        .tip.blue-box-4-of-6
+          .tip-number
+            %p
+              4
+          .tip-content
+            %p.tip-heading
+              The right size
+            %p.tip-text
+              My beach bag has definitely got to be adaptable and it has to fit everything I need for the beach, like my beach towel that is big enough for 3 people, and I want room to spare.
+
+        .tip.blue-box-5-of-6
+          .tip-number
+            %p
+              5
+          .tip-content
+            %p.tip-heading
+              Easy to keep clean
+            %p.tip-text
+              Beaches are messy and let’s face it there is sand everywhere, so being able to keep everything inside 100% sand free and clean is a non-negotiable for sure.
+
+        .tip.blue-box-6-of-6
+          .tip-number
+            %p
+              6
+          .tip-content
+            %p.tip-heading
+              How does it look
+            %p.tip-text
+              Does it has a good summer vibe? The last thing any girl wants is shame on the beach. My beach bag had to be beach ready too. No shame in my beach game.
+
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3
+        Size is definitely important
+
+      .article-image.aspect-1
+        -image_url = image_path("blog/summer-beach-bag/beach-bags-on-bench.jpg")
+        =image_tag(image_url, alt: "A collection of beach bags stacked on a wooden bench in front of a wooden building. The bench and building are painted in a pale blue and the overall image has a casual beach vibe.")
+        %figcaption
+          Photo by
+          =link_to('Sanddollar', 'https://www.pexels.com/photo/six-assorted-colors-tote-bags-on-white-wooden-cabinet-634538')
+          on Pexels
+
+    .article-text
+      %p
+        There is probably nothing worse when it comes to beach bags, than dealing with an overstuffed beach bag sat right there in the sand like a sack of potatoes.
+        If it will not close then there is a good chance it will remain sand free and there is rarely a safe clean space to empty your beach bag out as you go looking for things and need to repack.
+        In my experience there is a good chance that everything is going to get covered in sand and I may even lose something important right there on the beach whilst repacking for the millionth time.
+        My advice is to take a good look at all the items you think you will want on the beach and pick a bag that will easily accommodate these from the start.
+        Be honest with yourself about what you need and you will find it easier to pick the right bag.
+
+      %h3
+        Style versus practicality
+
+      %p
+        Picking a good bag can be difficult and there can be many angles to look at.
+        I always have a 50/50 split on this subject.
+        Yes I want my beach bag to look good but wait, I need it to be super practical too.
+        Some beach items (like towels for instance) can be big and cumbersome, and what if you are the donkey for your beach party and you have to get more than one towel to fit in?
+        One beach towel alone can fill any unsuspecting beach bag right to the top.
+        Who wants a tiny tea-towel sized beach towel to sit on all day?
+
+
+      .quick-guide-container.quick-guide-beach
+        .quick-guide.quick-guide-wide
+          %h4.quick-guide-title
+            Handy tip
+          %p
+            I once tested a shoe bag for my towel and found it a great idea.
+            Because they fold down to nothing and are extremely lightweight it was so practical.
+            Also, it meant that I could have a smaller beach bag and I never had to put my wet or sandy towel in with my dry clothes or other things. 
+
+      %br
+      %p
+        So, whether you go for practicality or for style, or you want some of both, there is an ideal beach bag for you.
+
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3 
+        Your essential items – know what they all are
+
+      .article-image.aspect-1
+        -image_url = image_path("blog/summer-beach-bag/what-to-pack.jpg")
+        =image_tag(image_url, alt: "An exploded photo of a beach bag with some essential items to pack: watch, headphones, flip flops, singlasses, mask, bikini, suncream, camera, notebook and pen.")
+        %figcaption
+          Photo by
+          =link_to('Freepik', 'https://www.freepik.com/free-photo/travel-still-life-pack-top-view_12242440.htm')
+          on Freepik
+
+    .article-text
+
+      %p
+        Knowing your essential items is going to ensure that your day on the beach runs smoothly.
+        You do not want to be walking around in the hot sun looking for a shop to buy more sun cream and being faced with beach front prices because you have no other option.
+        And you do not want to be getting burnt whilst you wander around trying to find some.
+        To save on forgetting things I try to have a list of essential items that I need and would be a little bit stuck abroad without them.
+        Here are my top 5 essential items that I never go without:
+
+  .article-section
+    .quick-guide-container.quick-guide-beach
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          Top 6 key essential items for your holiday beach bag
+        %ol
+          %li
+            %span.strong
+              Towel 
+            \– the larger the better
+          %li
+            %span.strong
+              Sun cream
+            \– enough for all day
+          %li
+            %span.strong
+              Sunglasses
+            \– protect the retinas at all times, also look cool
+          %li
+            %span.strong
+              Valuables
+            \– safely in the side pockets or at the bottom
+          %li
+            %span.strong
+              Water
+            \– it gets hot on the beach so stay hydrated
+          %li
+            %span.strong
+              Footwear
+            \– to protect your feet from the hot sand
+  
+  .article-section
+    .article-text
+      %p
+        Don’t forget your unique key items too.
+        These are the things that you personally cannot do without, during your time on the beach.
+        As well as your key essentials we all have different and personal needs unique to us, so these are those key personal items just for you. 
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3 
+        How to pack your beach bag for a carefree day
+
+      .article-image.aspect-1
+        -image_url = image_path("blog/summer-beach-bag/beach-bag-with-clothes.jpg")
+        =image_tag(image_url, alt: "A beach bag with the essential clothes for the beach: sunglasses, bikini, beach shoes, denim cutoffs, a necklace, and a copy of Vogue for some summer reading.")
+        %figcaption
+          Photo by
+          =link_to('Julia Kicova', 'https://unsplash.com/photos/tr6uUyHOUJ0')
+          on Unsplash
+
+    .article-text
+
+      %p
+        When the sun is up you want to be out there making the most of it.
+        Constantly unpacking and repacking your beach bag and searching for that essential item when all you want to do is enjoy the beach can be frustrating.
+        To save wasting time I use a quick list stored on my phone to check I have placed everything I need in my beach bag before I go.
+        Now I can go ahead and relax knowing I have it all covered.
+        Here is my quick list to help you get started:
+
+  .article-section
+    .quick-guide-container.quick-guide-beach
+      .quick-guide.quick-guide-wide
+        %h4.quick-guide-title
+          How to fill your beach bag for a care free day on the beach
+        %ol
+          %li
+            %span.strong
+              Dry clothes
+            \– to cover up when walking about
+          %li
+            %span.strong
+              Tissues
+            \– you never know what might happen
+          %li
+            %span.strong
+              Plastic bag
+            \– to keep wet or sandy things separate
+          %li
+            %span.strong
+              Hat
+            \– in case your head gets a bit too hot
+          %li
+            %span.strong
+              Waterproof phone case
+            \– in case you need to take it into the sea
+
+
+  .article-section
+    .article-text
+      %h3
+        Beach bag hacks
+      
+      %p
+        These are my essential beach bag hacks.
+
+      %p
+        I regularly amend and upgrade this list with new ideas and items, but this is essentially my skeleton list that I adapt to wherever I am going and whatever type of trip I am on.
+        These have never failed me yet.
+        If you have any great hacks to share do let me know.
+        I would love to share these on the blog and the best ones will get a top hack mention too. 
+
+      %h4
+        Plastic bag hack
+      %p
+        First I use this to keep my clothes clean and dry, and then I switch it out at the end of the day and use it for any rubbish I might have or my wet or sandy things like my beach towel.
+
+      %h4
+        Tissues
+      %p
+        Tissues can be an optional item, but I always remind myself that sometimes things get spilled or covered in stuff on the beach.
+        So, a little handbag-sized pack is really good to have on standby.
+        If you spill something in the sand it’s usually okay, but if you spill it on yourself, you are probably going to appreciate having a tissue in your bag.
+        Let’s not forget the ice creams and soft drinks throughout the day.
+        These are definitely sticky and messy in the sun.
+        So, a small pack of tissues is going to save you from sun baked stickiness every time.
+
+      %p
+        Do you have some great hacks too?
+        Share your hacks for our ‘great wall of hacks’.
+        Label your email ‘Beach bag hacks’ and send it in to
+        =link_to('info@neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Beach Bag Hacks')
+
+  .article-footer.blue
+    %h2
+      Amazing Beach bags
+    %p
+      Have you got an amazing beach bag that has never let you down? Send in a picture for my
+      %span.strong
+        summer wall of happiness.
+      It can be of your amazing bag on the beach or even a nice picture of you and your bag together enjoying the fabulous sun.
+
+    %p
+      Label your email ‘Beach bag of joy’ and send it in to
+      =link_to('info@neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Beach bag of joy')
+
+    %p
+      If you don’t have a ‘beach bag of joy’ just yet, then don’t panic.
+      With my advice you will have no trouble finding the right beach bag for you.
+      I hope you and your chosen beach bag have an amazing holiday and it works for you like a dream!
+
+
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+
+  .article-section
+    .article-text
+      %br
+      %h3
+        Pin this article for later!
+
+      %a.pin-for-later-image.pinit#perfect-beach-bag{ :"data-pin-do" => "buttonPin",
+                :"data-pin-media" => image_path("blog/summer-beach-bag/perfect-beach-bag-pin.jpg"),
+                :"data-pin-description" => "6 top requirements for the perfect no hassle beach bag",
+                :title => "Pin This Article",
+                :class => "pin-it-button",
+                :href => "http://pinterest.com/pin/create/button/",
+                :rel => "nofollow",
+                :target => "_blank",
+                "count-layout" => "horizontal",
+                :"data-pin-custom" => "true",
+                :"to-be-replaced" => "true"}
+        -image_url = image_path("blog/summer-beach-bag/perfect-beach-bag-pin.jpg")
+        =image_tag(image_url, alt: "Pin this article with the image: 6 top requirements for the perfect no hassle beach bag.")
+
+      %a.pin-for-later-image#perfect-packing{ :"data-pin-do" => "buttonPin",
+                :"data-pin-media" => image_path("blog/summer-beach-bag/perfect-packing-pin.jpg"),
+                :"data-pin-description" => "Perfect packing for a no-hassle day at the beach",
+                :title => "Pin This Article",
+                :class => "pin-it-button",
+                :href => "http://pinterest.com/pin/create/button/",
+                :rel => "nofollow",
+                :target => "_blank",
+                "count-layout" => "horizontal",
+                :"data-pin-custom" => "true",
+                :"to-be-replaced" => "true"}
+        -image_url = image_path("blog/summer-beach-bag/perfect-packing-pin.jpg")
+        =image_tag(image_url, alt: "Pin this article with the image: Perfect packing for a no-hassle day at the beach.")
+
+      
+
+
+  

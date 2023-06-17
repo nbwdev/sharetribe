@@ -184,6 +184,20 @@ class BlogController < ApplicationController
             :main_image_alt_text => "Messy wardrobe drawers with shoes on top of them and clothes rammed into the drawers.",
             :main_image_placeholder_colour => "#b3d7f7",
             :second_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-rail.jpg"
+        },
+        'summer_beach_bag' => {
+            :id => 'summer_beach_bag',
+            :title => "Perfect summer beach bag",
+            :description => "How to pick your summer beach bag for less fuss and more beach time",
+            :created => Date.new(2023,6,14),
+            :updated => Date.new(2023,6,14),
+            #:related => ['the_wardrobe_challenge', 'too_many_scarves', 'me_time', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
+            :category => 'Summer',
+            :tags => ['summer', 'beach', 'happiness', 'home organisation'],
+            :main_article_image => "blog/summer-beach-bag/summer-beach-bag.jpg",
+            :main_image_alt_text => "A woven straw beach bag with some essential items poking out of it - sun screen, sunglasses, camera, and notebook.",
+            :main_image_placeholder_colour => "#ffe96f",
+            :second_article_image => "blog/summer-beach-bag/bag-on-beach.jpg"
         }
     }
 
