@@ -330,7 +330,6 @@
 
   .article-section.pin-for-later
     .article-text
-      %br
       %h2
         Pin this article for later!
 
@@ -375,6 +374,13 @@
                 :"to-be-replaced" => "true"}
         -image_url = image_path("blog/summer-beach-bag/perfect-packing-pin.jpg")
         =image_tag(image_url, alt: "Pin this article with the image: Perfect packing for a no-hassle day at the beach.")
+
+      %figcaption
+        Pin photos by
+        =link_to('macrovector', 'https://www.freepik.com/free-vector/three-colored-realistic-drawstring-bags-with-print-white-background-isolated-vector-illustration_31977502.htm')
+        and
+        =link_to('awesomecontent', 'https://www.freepik.com/author/awesomecontent')
+        on Freepik
 
       
 

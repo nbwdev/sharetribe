@@ -207,6 +207,11 @@
         color: #4a4a4a;
     }
 
+    h2 {
+        font-size: 1.5em;
+        line-height: 1.3em;
+    }
+
     h3 {
         font-size: 1.1em;
     }
@@ -350,11 +355,35 @@
 
     .pin-for-later {
         text-align: center;
+        margin-top: 16px;
 
         h2 {
             text-align: center;
             font-size: 1.5em;
             font-weight: bold;
+        }
+
+        figcaption {
+            margin-top: 6px;
+            text-align: right;
+            font-size: 0.8em;
+            font-style: italic;
+            padding-right: 25px;
+
+            a {
+                color: #4a4a4a;
+            }
+        }
+
+        @media #{$mobile} {
+
+            h2 {
+                margin-bottom: 0;
+                margin-top: 12px;
+            }
+            figcaption {
+                padding-right: 0;
+            }
         }
     }
     
@@ -381,6 +410,8 @@
         @media #{$mobile} {
             width: 100%;
             margin-top: 20px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 
