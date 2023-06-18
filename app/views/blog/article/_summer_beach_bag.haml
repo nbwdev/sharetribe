@@ -1,5 +1,5 @@
 - content_for :extra_javascript do
-  =javascript_include_tag "//assets.pinterest.com/js/pinit.js", defer: true
+  =javascript_include_tag "//assets.pinterest.com/js/pinit.js", defer: true, "data-pin-hover": true
   =render :partial => "blog/components/update_pinterest_button_text",
     :locals => { :"pin_button_ids" => ["pinit-6-basic-needs"] }
 
@@ -88,7 +88,17 @@
   .article-section.article-section-right-image.text-first.article-half-page-image-floated
     .article-text
 
-      .article-image.aspect-1-2
+      %a.article-image.aspect-1-2#6-basic-needs{ :"data-pin-do" => "buttonPin",
+                :"data-pin-media" => image_url("blog/summer-beach-bag/beach-bag-6-basic-needs-hires.jpg"),
+                :"data-pin-description" => "6 basic needs for a perfect beach bag",
+                :title => "Pin This",
+                :class => "pin-it-button",
+                :href => "http://pinterest.com/pin/create/button/",
+                :rel => "nofollow",
+                :target => "_blank",
+                "count-layout" => "horizontal",
+                :"data-pin-custom" => "true",
+                :"to-be-replaced" => "true"}
         -image_url = image_path("blog/summer-beach-bag/beach-bag-6-basic-needs.jpg")
         =image_tag(image_url, alt: "A beach bag with the essential clothes for the beach: sunglasses, bikini, beach shoes, denim cutoffs, a necklace, and a copy of Vogue for some summer reading.")
         %figcaption
