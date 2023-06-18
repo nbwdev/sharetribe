@@ -328,10 +328,10 @@
   =render :partial => "blog/components/related_articles",
     :locals => { :"article_id" => article_id }
 
-  .article-section
+  .article-section.pin-for-later
     .article-text
       %br
-      %h3
+      %h2
         Pin this article for later!
 
       %a.pin-for-later-image.pinit#perfect-beach-bag{ :"data-pin-do" => "buttonPin",
@@ -347,6 +347,20 @@
                 :"to-be-replaced" => "true"}
         -image_url = image_path("blog/summer-beach-bag/perfect-beach-bag-pin.jpg")
         =image_tag(image_url, alt: "Pin this article with the image: 6 top requirements for the perfect no hassle beach bag.")
+
+      %a.pin-for-later-image.pinit#perfect-beach-bag{ :"data-pin-do" => "buttonPin",
+                :"data-pin-media" => image_url("blog/summer-beach-bag/drawstring-bag-tip-pin.jpg"),
+                :"data-pin-description" => "Tip: take a light drawstring bag to separate your wet or sandy beach towel from everything else in your beach bag",
+                :title => "Pin This Article",
+                :class => "pin-it-button",
+                :href => "http://pinterest.com/pin/create/button/",
+                :rel => "nofollow",
+                :target => "_blank",
+                "count-layout" => "horizontal",
+                :"data-pin-custom" => "true",
+                :"to-be-replaced" => "true"}
+        -image_url = image_path("blog/summer-beach-bag/drawstring-bag-tip-pin.jpg")
+        =image_tag(image_url, alt: "Pin this article with the image: Tip for the beach: take a drawstring shoe bag to keep your wet or sandy towel separate from everything else.")
 
       %a.pin-for-later-image#perfect-packing{ :"data-pin-do" => "buttonPin",
                 :"data-pin-media" => image_url("blog/summer-beach-bag/perfect-packing-pin.jpg"),
