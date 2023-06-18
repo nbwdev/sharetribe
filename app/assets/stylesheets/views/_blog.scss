@@ -309,6 +309,12 @@
         }
     }
 
+    .article-image.aspect-1-2 {
+        img {
+            aspect-ratio: 1/2;
+        }
+    }
+
     .article-image.aspect-2 {
         img {
             aspect-ratio: 2;
@@ -740,6 +746,12 @@
         @media #{$mobile} {
             display: block;
             width: 70%;
+        }
+    }
+
+    .hide-mobile {
+        @media #{$mobile} {
+            display: none;
         }
     }
 }
