@@ -191,13 +191,27 @@ class BlogController < ApplicationController
             :description => "How to pick your summer beach bag for less fuss and more beach time",
             :created => Date.new(2023,6,14),
             :updated => Date.new(2023,6,14),
-            #:related => ['the_wardrobe_challenge', 'too_many_scarves', 'me_time', 'fix_your_drawers_forever','get_your_messy_shelves_in_shape','declutter_after_christmas'],
+            :related => ['white_trainers'],
             :category => 'Summer',
             :tags => ['summer', 'beach', 'happiness', 'home organisation'],
             :main_article_image => "blog/summer-beach-bag/summer-beach-bag.jpg",
             :main_image_alt_text => "A woven straw beach bag with some essential items poking out of it - sun screen, sunglasses, camera, and notebook.",
             :main_image_placeholder_colour => "#ffe96f",
             :second_article_image => "blog/summer-beach-bag/bag-on-beach.jpg"
+        },
+        'white_trainers' => {
+            :id => 'white_trainers',
+            :title => "White trainers",
+            :description => "Why I am still wearing mine",
+            :created => Date.new(2023,6,20),
+            :updated => Date.new(2023,6,20),
+            :related => ['summer_beach_bag'],
+            :category => 'Summer',
+            :tags => ['summer', 'white', 'trainers', 'fashion'],
+            :main_article_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
+            :main_image_alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
+            :main_image_placeholder_colour => "#ffffff",
+            :second_article_image => "blog/white-trainers/white-trainers-jeans.jpg"
         }
     }
 
