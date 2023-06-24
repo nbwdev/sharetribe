@@ -305,6 +305,18 @@
         }
     }
 
+    figcaption {
+        text-align: right;
+        font-size: 0.8em;
+        font-style: italic;
+        padding-right: 20px;
+
+        a {
+            color: #4a4a4a;
+        }
+    }
+
+
     .article-image.aspect-1 {
         img {
             aspect-ratio: 1;

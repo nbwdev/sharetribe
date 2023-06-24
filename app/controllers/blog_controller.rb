@@ -202,9 +202,9 @@ class BlogController < ApplicationController
         'white_trainers' => {
             :id => 'white_trainers',
             :title => "White trainers",
-            :description => "Why I am still wearing mine this summer",
+            :description => "Should you still be wearing your white trainers?",
             :created => Date.new(2023,6,20),
-            :updated => Date.new(2023,6,20),
+            :updated => Date.new(2023,6,24),
             :related => ['summer_beach_bag'],
             :category => 'Summer',
             :tags => ['summer', 'white', 'trainers', 'fashion'],
