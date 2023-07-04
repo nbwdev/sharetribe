@@ -64,8 +64,10 @@
                 Never worn it?
               %p.step-description
                 Why keep it?
-          = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button") do
-            Register
+                %br
+                Sell It
+          = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button mobile-only") do
+            Register and sell
         .guide-column
           = link_to("/blog/sustainability_the_right_choice") do
             .guide-column-content
@@ -78,7 +80,7 @@
               %p.step-description
                 Put it back out into the world for others to buy
           = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button") do
-            Sell it
+            Register and sell
         .guide-column
           = link_to("/s") do
             .guide-column-content
@@ -87,11 +89,11 @@
               -image_url = image_path("logged_out_homepage/capsule-wardrobe.jpg")
               =image_tag(image_url, class: 'step_img', alt: "A capsule wardrobe consisting of a few colourful pieces of clothing that could be worn in different combinations with each other.")
               %p.step-title
-                Build a better wardrobe
+                Money in your pocket
               %p.step-description
-                Buy what you need and live a simpler life
-          = link_to("/s", :class => "hp-button hp-button-inverted guide-button") do
-            Buy better
+                More space in your wardrobe
+          = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button mobile-only") do
+            Register and sell
 
   .sustainability-banner
     .caption
