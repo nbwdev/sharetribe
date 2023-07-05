@@ -430,6 +430,10 @@ Rails.application.routes.draw do
         end
       end
 
+      namespace :blog_articles do 
+        resources :edit_articles, path: 'edit-articles', only: %i[index]
+      end
+
       namespace :search_location, path: 'search-and-location' do
         resources :search, only: %i[index] do
           collection do
@@ -806,6 +810,8 @@ Rails.application.routes.draw do
     
     # standalone "My Story" page replaces the about page
     resources :my_story, only: [:index]
+
+    resources :how_it_works, :path => "/how-it-works", only: [:index]
 
     # request a cheat sheet by email
     resources :cheat_sheet, only: [] do

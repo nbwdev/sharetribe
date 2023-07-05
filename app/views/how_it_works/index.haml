@@ -1,0 +1,116 @@
+- content_for :title do
+  = "How It Works - NeverBeenWorn"
+- content_for :meta_description do
+  = "How to register and sell your Never Been Worn clothesWelcome to Never Been Worn – where we like to live with better purpose"
+
+- content_for :title_header do
+  %h1
+    How It Works
+
+%p
+  At neverbeenworn we want to make it easy for you to register and sell your items.
+%p
+  Follow these simple steps to get started:
+
+.how-it-works
+  .how-it-works-section#register
+    %h2
+      Quick And Easy Steps To Register
+
+    %h3
+      %span.text
+        1 - How to register
+
+    %p
+      %ul
+        - registered_class = is_logged_in ? "done" : ""
+        %li{class: registered_class}
+          Click on
+          %span.strong
+            sign-up
+          in the top right hand corner to go to the
+          =link_to('sign up page', "/en/listings/new") 
+
+        %li{class: registered_class}
+          On the sign up page add your
+          %span.strong
+            name
+          and
+          %span.strong
+            email address
+
+        %li{class: registered_class}
+          Next confirm
+          %span.strong
+            T’s & C’s
+          and click on
+          %span.strong
+            create account
+
+    %h3
+      %span.text
+        2 - Activate your account
+
+    %p
+      %ul
+        - verified_class = is_verified ? "done" : " "
+        %li{class: verified_class}
+          Check your in-box for your confirmation email
+
+        %li{class: verified_class}
+          Click on confirm and activate your new account
+
+        %li{class: verified_class}
+          Go to the website and log-in to your new account
+
+    %h3
+      %span.text
+        3 - Registration is now complete
+
+
+  .how-it-works-section#posting
+    %h2
+      Quick Post Guide
+
+    %h3
+      %span.text
+        Take some really good pictures of your items
+
+    %p
+      %ul
+        %li
+          We recommend at least 3 pics per item
+
+        %li
+          Take photos in good light
+
+        %li
+          Use a plain background that shows off your clothes to their best effect - for example hung against a door or laid neatly on your bed
+
+    %h3
+      %span.text
+        Create your listing
+    %p
+      %ul
+        %li
+          Click on
+          %span.strong
+            Post a new listing
+          in the top right hand corner to go to the
+          =link_to('new listing page', "/en/listings/new") 
+
+        %li
+          Select a few details like size, type, colour, using our select tools
+
+        %li
+          Add your selling price
+
+        %li
+          Confirm it has never been worn
+
+        %li
+          You can add more details if you want using the blank box at the bottom of your listing
+    
+    %h3
+      %span.text
+        Hit Post And It’s Live!
