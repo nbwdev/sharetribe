@@ -38,7 +38,7 @@ Feature: Admin edits text instructions with WYWISYG editor
     Then I should see "Verification info"
     When "kassi_testperson2" is authorized to post a new listing
     And I follow "Post a new listing"
-    Then I should see "Select category"
+    Then I should see "Select a category"
 
   Scenario: Admin edits signup information
     Then I should see "Signup info"

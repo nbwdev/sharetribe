@@ -18,4 +18,4 @@ Feature: Admin edits user rights page
     Then I should see "Verification info"
     When "kassi_testperson2" is authorized to post a new listing
     And I follow "Post a new listing"
-    Then I should see "Select category"
+    Then I should see "Select a category"
