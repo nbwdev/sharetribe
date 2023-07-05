@@ -11,13 +11,27 @@
     }
     
     h3 {
+        font-size: 1.25em;
+        color: #fff;
+
         span.text {
-            font-size: 1.25em;
             background-color: $nbw-dark;
-            color: #fff;
             padding: 0.25em 1em;
             border-radius: 5px;
             overflow: hidden;    
+        }
+
+        @media (max-width: 500px) {
+            background-color: $nbw-dark;
+            padding: 0.25em 1em;
+            border-radius: 5px;
+            overflow: hidden;    
+
+            span.text {
+                background: none;
+                padding: 0;
+                border-radius: 0;
+            }
         }
     }
 
