@@ -95,20 +95,6 @@
           = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button mobile-only") do
             Register and sell
 
-  .sustainability-banner
-    .caption
-      %h2.banner-title
-        We are an ethical marketplace supporting sustainable fashion
-      %p.banner-text
-        Putting your clothes back out into the world will help support the planet
-      %p.banner-text
-        Declutter and support sustainable fashion
-      .button-container
-        = link_to("/blog/sustainability_the_right_choice", :class => "hp-button hp-banner-button") do
-          Why sustainable fashion
-    -image_url = image_path("logged_out_homepage/declutter-cycle.jpg")
-    =image_tag(image_url, class: 'intro-image', alt: "A simplistic landscape scene with rolling hills, trees and wind turbines drawn with childlike shapes.")
-
   .wardrobe-challenge-section
     .wardrobe-challenge-image
       .image-container
@@ -183,4 +169,16 @@
           .story-button-container
             = link_to("/en/blog/get_your_messy_shelves_in_shape", :class => "about-button hp-button hp-button-inverted") do
               Start now
+
+  .sustainability-banner
+    = link_to("/blog/sustainability_the_right_choice", :class => "sustainability-banner-link") do
+      .caption
+        %h2.banner-title
+          We are an ethical marketplace supporting&nbsp;sustainable fashion
+        -# .button-container
+        -#   = link_to("/blog/sustainability_the_right_choice", :class => "hp-button hp-banner-button") do
+        -#     Why sustainable fashion
+      -image_url = image_path("logged_out_homepage/declutter-cycle.jpg")
+      =image_tag(image_url, class: 'intro-image', alt: "A simplistic landscape scene with rolling hills, trees and wind turbines drawn with childlike shapes.")
+
 
