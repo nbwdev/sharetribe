@@ -191,7 +191,7 @@ class BlogController < ApplicationController
             :description => "How to pick your summer beach bag for less fuss and more beach time",
             :created => Date.new(2023,6,14),
             :updated => Date.new(2023,6,14),
-            :related => ['white_trainers','declutter_your_handbags'],
+            :related => ['white_trainers','declutter_your_handbags','summer_hat_for_protection'],
             :category => 'Summer',
             :tags => ['summer', 'beach', 'happiness', 'home organisation'],
             :main_article_image => "blog/summer-beach-bag/summer-beach-bag.jpg",
