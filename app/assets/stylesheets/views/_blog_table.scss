@@ -1,0 +1,187 @@
+@import "mixins/all";
+@import "../landing_page/mixins/all";
+
+.blog-article {
+
+    $header-background: #f38701;
+    $header-text: $nbw-pale;
+
+    table.summer-hats-coverage-columns, table.summer-hats-rating-bars, table.summer-hats-simple {
+
+        th {
+            background-color: $header-background;
+            color: $header-text;
+        }
+
+        thead {
+            tr:first-child {
+                th:first-child {
+                    border-top-left-radius: 5px;
+                }
+    
+                th:last-child {
+                    border-top-right-radius: 5px;
+                }
+            }
+        }
+
+        tbody {
+            tr:first-child {
+                td:first-child {
+                    border-top-left-radius: 0;
+                }
+
+                td:last-child {
+                    border-top-right-radius: 0;
+                }
+            }
+
+
+            tr:nth-child(odd) {
+            background-color: #fef3e6;
+            }
+        }
+
+    }
+
+    table.summer-hats-simple {
+
+        tbody {
+            tr {
+                td:first-child {
+                    font-weight: bold;
+                }
+
+                td:last-child {
+                    font-weight: bold;
+                    font-size: 1.25em;
+                }
+            }
+        }
+
+
+    }
+
+    table.summer-hats-rating-bars, table.summer-hats-coverage-columns {
+
+        tbody {
+            td.rating {
+                // https://codepen.io/roxy225/pen/zvKByN
+                span.score {
+                    display: inline-block;
+                    text-align: right;
+                    font-size: 1.25em;
+                    width: 1em;
+                    font-weight: bold;
+                }
+
+                span.total {
+
+                }
+            }
+        }
+    }
+
+    table.summer-hats-coverage-columns {
+
+        th.coverage, th.material, th.coverage-overall {
+            text-align: center;
+        }
+
+        tr.coverage-heading {
+            th {
+                text-align: center;
+            }
+        }
+
+        tbody {
+            td.coverage {
+                text-align: center;
+
+                font-size: 0;
+
+                &:before  { 
+                    // font-family: FontAwesome; 
+                    // font-size: 30px; 
+                    display: inline-block; 
+                    
+                    font-size: 20px;
+                }
+    
+                // https://codepen.io/antoniasymeonidou/pen/WNGdvvQ
+                &.none:before {
+                    // ☆☆☆
+                    content: '-';
+                }
+
+                &.ok:before {
+                    content: '★';
+                }
+
+                &.good:before {
+                    content: '★★';
+                }
+
+                &.great:before {
+                    content: '★★★';
+                }
+            }
+        }
+
+        @media(max-width: 700px) {
+
+            thead {
+                th.coverage-overall {
+                    display: table-cell;
+                }
+                th.coverage, tr.coverage-heading {
+                    display: none;
+                }
+            }
+
+            tbody {
+                td.coverage.head, td.coverage.face, td.coverage.ears, td.coverage.neck, td.coverage.shoulders {
+                    display: none;
+                }
+                td.coverage.overall {
+                    display: table-cell;
+                }
+            }
+        }
+
+        @media(min-width: 700.01px) {
+            thead {
+                th.coverage-overall {
+                    display: none;
+                }
+                th.coverage {
+                    display: table-cell;
+                }
+                tr.coverage-heading {
+                    display: table-row;
+                }
+            }
+
+            tbody {
+                td.coverage.head, td.coverage.face, td.coverage.ears, td.coverage.neck, td.coverage.shoulders {
+                    display: table-cell;
+                }
+                td.coverage.overall {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 400px) {
+        font-size: 12px;
+
+        table.summer-hats-coverage-columns {
+            tbody {
+                td.coverage:before {
+                    font-size: 14px;
+                }
+            }    
+        }
+    }
+}

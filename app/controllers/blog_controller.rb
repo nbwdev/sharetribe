@@ -212,6 +212,20 @@ class BlogController < ApplicationController
             :main_image_alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
             :main_image_placeholder_colour => "#ffffff",
             :second_article_image => "blog/white-trainers/white-trainers-jeans.jpg"
+        },
+        'summer_hat_for_protection' => {
+            :id => 'summer_hat_for_protection',
+            :title => "Protective summer hats",
+            :description => "How to buy a summer hat to protect yourself from the sun",
+            :created => Date.new(2023,7,30),
+            :updated => Date.new(2023,7,30),
+            :related => ['summer_beach_bag'],
+            :category => 'Summer',
+            :tags => ['summer', 'hat', 'sun', 'fashion'],
+            :main_article_image => "blog/summer-hat-for-protection/bucket-hat.jpg",
+            :main_image_alt_text => "A woman wearing a bucket hat to protect herself from the sun, along with an aztec-patterned summer shirt over a white vest top, looks pensively into the middle distance.",
+            :main_image_placeholder_colour => "#e23d4d",
+            :second_article_image => "blog/summer-hat-for-protection/straw-hat-poolside.jpg"
         }
     }
 

@@ -352,7 +352,13 @@
             aspect-ratio: 3/4;
         }
     }
-    
+
+    .article-image.aspect-4-5 {
+        img {
+            aspect-ratio: 4/5;
+        }
+    }
+
     /* should fix the edge cases to sane aspect ratios */
     .article-image.aspect-0-77 {
         img {
@@ -648,6 +654,80 @@
         margin-right: 20px;
     }
 
+    .quick-guide-container.quick-guide-infographic {
+
+        h3 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        ul {
+            list-style: none;
+            display: grid;
+            // grid-auto-flow: column;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 230px));
+            // gap: 1rem;
+            margin-bottom: 20px;
+            padding-left: 0;
+            place-content: center;
+
+            li {
+                display: inline-block;
+                position: relative;
+                height: 300px;
+                border: #f38701 1px solid;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 15px 25px rgba(243,135,1,0.2);
+                margin: 20px;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            
+                h4 {
+                    // https://github.com/crmcguire74/CSS-Responsive-Card/tree/master
+                    font-size: 24px;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                
+                    background-color: yellow;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+
+                    padding: 32px 18px 18px 18px;
+
+                    clip-path: ellipse(60% 40% at center 0);
+
+                }
+
+                p {
+                    font-size: 20px;
+                    position: absolute;
+                    top: 120px;
+                    padding: 20px;
+                    width: 100%;
+                }
+            }
+
+            @media(max-width: 970px) {
+                grid-template-columns: repeat(2, minmax(300px, 300px));
+
+            }
+
+            @media(max-width: 660px) {
+                grid-template-columns: repeat(1, 0.8fr);
+
+                li {
+                    height: 250px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+
     .get-cheat-sheet-container {
         display: none;
         margin-top: 30px;
@@ -688,6 +768,9 @@
     }
     .article-footer.blue {
         background-color: #cfeefa;
+    }
+    .article-footer.orange {
+        background-color: #fef3e6;
     }
 
     p.image-credit {
