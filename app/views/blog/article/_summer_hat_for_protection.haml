@@ -23,12 +23,16 @@
 
       // change the icon between up and down
       // toggle is flaky on my phone so do it the hard way
+      // in fact don't do it at all it won't work
+
+      let iconElem = (e.target.nodeName === "BUTTON") ? e.target.querySelector("i") : e.target;
+
       if (wasHidden) {
-        e.target.classList.remove('icon-caret-down');
-        e.target.classList.add('icon-caret-up');
+        iconElem.classList.remove('icon-caret-down');
+        iconElem.classList.add('icon-caret-up');
       } else {
-        e.target.classList.remove('icon-caret-up');
-        e.target.classList.add('icon-caret-down');
+        iconElem.classList.remove('icon-caret-up');
+        iconElem.classList.add('icon-caret-down');
       }
     }));
 
