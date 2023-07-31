@@ -13,6 +13,11 @@
 
     // click event for the buttons
     document.querySelectorAll('button').forEach(bttn=>bttn.addEventListener('click',function(e){
+      // change the icon between up and down
+      e.target.classList.toggle('icon-caret-down');
+      e.target.classList.toggle('icon-caret-up');
+
+      // show or hide the row below (or 2 below because of my hidden row hack for styling)
       let col=[...document.querySelectorAll('tr')];
       let tr=this.parentNode.parentNode;
       let index=col.indexOf( tr ) + 2;
