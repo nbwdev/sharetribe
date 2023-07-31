@@ -22,9 +22,8 @@
       col[index].classList.toggle('hidden');
 
       // change the icon between up and down
-      // toggle is flaky on my phone so do it the hard way
-      // in fact don't do it at all it won't work
-
+      // toggle is flaky on my phone because the target could be the button or icon
+      // so do it the hard way
       let iconElem = (e.target.nodeName === "BUTTON") ? e.target.querySelector("i") : e.target;
 
       if (wasHidden) {
