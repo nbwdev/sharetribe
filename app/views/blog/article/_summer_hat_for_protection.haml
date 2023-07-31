@@ -3,6 +3,22 @@
 -#   =render :partial => "blog/components/update_pinterest_button_text",
 -#     :locals => { :"pin_button_ids" => ["pinit-6-basic-needs"] }
 
+- content_for :extra_javascript do
+  :javascript
+    // show the info icons only when this script is initiated
+    var elems = document.querySelectorAll("button.hidden");
+    [].forEach.call(elems, function(el) {
+        el.classList.remove("hidden");
+    });
+
+    // click event for the buttons
+    document.querySelectorAll('button').forEach(bttn=>bttn.addEventListener('click',function(e){
+      let col=[...document.querySelectorAll('tr')];
+      let tr=this.parentNode.parentNode;
+      let index=col.indexOf( tr ) + 2;
+      col[index].classList.toggle('hidden');
+    }));
+
 .blog-article
   %h2.article-title="How to buy a protective summer hat"
   %p.published-date
@@ -27,13 +43,13 @@
         Summer hats are now becoming more and more important as a vital piece of protection for your head and delicate face area,
         especially in increased heat on holiday.
         So why are many still regarding it as an after-thought or something to be avoided completely.
-        Do you leave checking if you have a summer hat to the last-minute or do even avoid it altogether?
+        Do you leave checking if you have a summer hat to the last-minute or do you even avoid it altogether?
         Why is it that a summer hat is always such an afterthought for most people or even an absolute no-go area for others?
 
       %p
-        Do you feel confident enough to choose the right summer hat and wear it or not?
-        If you don’t then there is no need to panic or give up looking for your perfect summer hat just yet.
-        So, before you give up altogether, lets take a look at how to fix that.
+        Do you feel confident enough to choose the right summer hat and wear it?
+        If you don’t then there is no need to panic or give up looking for your perfect hat just yet.
+        So, lets take a look at how to fix that, before you give up altogether.
   
 
   .article-section.article-section-right-image.text-first.article-half-page-image-floated
@@ -54,12 +70,12 @@
         The perfect summer hat can offer you the right amount of protection and instantly take your wardrobe up a level, but only if you choose the right one for you.
         Choose the wrong hat and you could end up looking more flustered in the hot sun than looking summer cool.
         A bad summer hat can leave you with little or no protection at all and be a real flop at the beach altogether.
-        Some hats can even leave you thinking you are fully UV protected when you are actually not.
+        For example, some hats can leave you thinking you are fully UV protected when you are actually not.
 
       %p
         If you are looking for a hat with the right amount of protection for you and your needs,
-        then it’s a good idea to think about investing in a good quality summer hat from the start.
-        As a general rule the more cover and shade you need over your body, the bigger the brim of the hat should be. 
+        then it’s a good idea to think about investing in a good quality summer hat from the start,
+        as a general rule the more cover and shade you need over your body, the bigger the brim of the hat should be. 
 
       %h3
         Key body areas to cover
@@ -137,10 +153,12 @@
 
       %p
         To ensure you have optimum protection, the brim of your hat should block out the sun completely and let no light pass through its material.
+        Try holding it up to the light to be sure.
+        There should be no light coming through.
         The right size brim will also cast enough shade on the areas that you most want to protect from the sun.
-        So always check that the circumference of shade extends to incorporate the areas in need of coverage.
+        So always check that the circumference of shade extends to incorporate those key areas in need of coverage.
         If you want to cover just your face, ears and neck then you may only need a small to medium sized brim,
-        but if you need to cover your shoulders and lower back as well, then you will need a larger brim that expands outwards past your shoulder width and upper back.
+        but if you need to cover your shoulders and upper back as well, then you will need a larger brim that expands outwards past your shoulder width and upper back.
 
       %h3 
         Material and weave
@@ -148,7 +166,8 @@
       %p
         One of the important factors to consider when choosing a good summer hat is the material.
         The amount of protection you receive is dependent on the type of material and the quality of the fabric that it is made of. 
-        If you are planning to go away the weather is likely to be much hotter, so the material needs to be of a tightly woven fabric for optimum protection from these stronger rays.
+        If you are planning to go away the weather is likely to be much hotter,
+        so the material needs to be of a tightly woven fabric for optimum protection from those stronger rays.
         A breathable fabric is also important so you don't overheat in the hotter sun.
         The material should be light enough to keep you cool but thick enough to keep you protected.
         You might want to reconsider anything made of wool or felt here.
@@ -198,100 +217,237 @@
         %tbody
           %tr
             %td.hat-style Fedora
-            %td.coverage.head.good Good
-            %td.coverage.face.good Good
-            %td.coverage.ears.good Good
-            %td.coverage.neck.good Good
-            %td.coverage.shoulders.none None
-            %td.coverage.overall.good Good
-            %td.coverage.material.good Good
+            %td.coverage.head.good ★★
+            %td.coverage.face.good ★★
+            %td.coverage.ears.good ★★
+            %td.coverage.neck.good ★★
+            %td.coverage.shoulders.none -
+            %td.coverage.overall.good
+              ★★
+            %td.coverage.material.good ★★
             %td.rating
               %span.score 7
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★
+                %span.score
+                  Face: ★★
+                %span.score
+                  Ears: ★★
+                %span.score
+                  Neck: ★★
+                %span.score
+                  Shoulders: none
           %tr
             %td.hat-style Bucket hat
-            %td.coverage.head.good Good
-            %td.coverage.face.good Good
-            %td.coverage.ears.good Good
-            %td.coverage.neck.ok Medium
-            %td.coverage.shoulders.none None
-            %td.coverage.overall.good Good
-            %td.coverage.material.great Great
+            %td.coverage.head.good ★★
+            %td.coverage.face.good ★★
+            %td.coverage.ears.good ★★
+            %td.coverage.neck.ok ★
+            %td.coverage.shoulders.none -
+            %td.coverage.overall.good ★★
+            %td.coverage.material.great ★★★
             %td.rating
               %span.score 7
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★
+                %span.score
+                  Face: ★★
+                %span.score
+                  Ears: ★★
+                %span.score
+                  Neck: ★
+                %span.score
+                  Shoulders: none
           %tr
             %td.hat-style Baseball
-            %td.coverage.head.good Good
-            %td.coverage.face.great Great
-            %td.coverage.ears.none None
-            %td.coverage.neck.none None
-            %td.coverage.shoulders.none None
-            %td.coverage.overall.ok Medium
-            %td.coverage.material.good Good
+            %td.coverage.head.good ★★
+            %td.coverage.face.great ★★★
+            %td.coverage.ears.none -
+            %td.coverage.neck.none -
+            %td.coverage.shoulders.none -
+            %td.coverage.overall.ok ★
+            %td.coverage.material.good ★★
             %td.rating
               %span.score 5
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★
+                %span.score
+                  Face: ★★★
+                %span.score
+                  Ears: none
+                %span.score
+                  Neck: none
+                %span.score
+                  Shoulders: none
           %tr
             %td.hat-style Boater
-            %td.coverage.head.good Good
-            %td.coverage.face.good Good
-            %td.coverage.ears.good Good
-            %td.coverage.neck.ok Medium
-            %td.coverage.shoulders.none None
-            %td.coverage.overall.good Good
-            %td.coverage.material.good Good
+            %td.coverage.head.good ★★
+            %td.coverage.face.good ★★
+            %td.coverage.ears.good ★★
+            %td.coverage.neck.ok ★
+            %td.coverage.shoulders.none -
+            %td.coverage.overall.good ★★
+            %td.coverage.material.good ★★
             %td.rating
               %span.score 7
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★
+                %span.score
+                  Face: ★★
+                %span.score
+                  Ears: ★★
+                %span.score
+                  Neck: ★
+                %span.score
+                  Shoulders: none
           %tr
             %td.hat-style Kettle brim
-            %td.coverage.head.great Great
-            %td.coverage.face.great Great
-            %td.coverage.ears.great Great
-            %td.coverage.neck.great Great
-            %td.coverage.shoulders.good Good
-            %td.coverage.overall.great Great
-            %td.coverage.material.great Great
+            %td.coverage.head.great ★★★
+            %td.coverage.face.great ★★★
+            %td.coverage.ears.great ★★★
+            %td.coverage.neck.great ★★★
+            %td.coverage.shoulders.good ★★
+            %td.coverage.overall.great ★★★
+            %td.coverage.material.great ★★★
             %td.rating
               %span.score 10
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★★
+                %span.score
+                  Face: ★★★
+                %span.score
+                  Ears: ★★★
+                %span.score
+                  Neck: ★★★
+                %span.score
+                  Shoulders: ★★
           %tr
             %td.hat-style Panama
-            %td.coverage.head.good Good
-            %td.coverage.face.good Good
-            %td.coverage.ears.good Good
-            %td.coverage.neck.ok Medium
-            %td.coverage.shoulders.none None
-            %td.coverage.overall.good Good
-            %td.coverage.material.great Great
+            %td.coverage.head.good ★★
+            %td.coverage.face.good ★★
+            %td.coverage.ears.good ★★
+            %td.coverage.neck.ok ★
+            %td.coverage.shoulders.none -
+            %td.coverage.overall.good ★★
+            %td.coverage.material.great ★★★
             %td.rating
               %span.score 7
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★
+                %span.score
+                  Face: ★★
+                %span.score
+                  Ears: ★★
+                %span.score
+                  Neck: ★
+                %span.score
+                  Shoulders: none
           %tr
             %td.hat-style Cowboy
-            %td.coverage.head.good Good
-            %td.coverage.face.good Good
-            %td.coverage.ears.good Good
-            %td.coverage.neck.good Good
-            %td.coverage.shoulders.ok Medium
-            %td.coverage.overall.good Good
-            %td.coverage.material.good Good
+            %td.coverage.head.good ★★
+            %td.coverage.face.good ★★
+            %td.coverage.ears.good ★★
+            %td.coverage.neck.good ★★
+            %td.coverage.shoulders.ok ★
+            %td.coverage.overall.good ★★
+            %td.coverage.material.good ★★
             %td.rating
               %span.score 8
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★
+                %span.score
+                  Face: ★★
+                %span.score
+                  Ears: ★★
+                %span.score
+                  Neck: ★★
+                %span.score
+                  Shoulders: ★
           %tr
             %td.hat-style Boonie
-            %td.coverage.head.great Great
-            %td.coverage.face.great Great
-            %td.coverage.ears.great Great
-            %td.coverage.neck.great Great
-            %td.coverage.shoulders.good Good
-            %td.coverage.overall.great Great
-            %td.coverage.material.great Great
+            %td.coverage.head.great ★★★
+            %td.coverage.face.great ★★★
+            %td.coverage.ears.great ★★★
+            %td.coverage.neck.great ★★★
+            %td.coverage.shoulders.good ★★
+            %td.coverage.overall.great ★★★
+            %td.coverage.material.great ★★
             %td.rating
               %span.score 10
               %span.total /10
+              %button.show-more.hidden{:type => "button", :title => "show the breakdown of ratings", :'aria-label' => "show the breakdown of ratings"} 🛈
+          %tr.empty-so-the-odd-even-still-works{:style=>"display:none"}
+          %tr.coverage-details.hidden
+            %td{:colspan => "4", :style => "border-top-right-radius: 0px; border-top-left-radius: 0;"}
+              %p
+                🛈 Protection rating is based on the material and the coverage scores of these areas:
+              %div.mobile-coverage-scores
+                %span.score
+                  Head: ★★★
+                %span.score
+                  Face: ★★★
+                %span.score
+                  Ears: ★★★
+                %span.score
+                  Neck: ★★★
+                %span.score
+                  Shoulders: ★★
 
   .article-section.article-section-right-image.text-first.article-half-page-image-floated
     .article-text

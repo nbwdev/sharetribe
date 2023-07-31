@@ -78,6 +78,10 @@
                 span.total {
 
                 }
+
+                button.show-more {
+                    display: none;
+                }
             }
         }
     }
@@ -97,34 +101,30 @@
         tbody {
             td.coverage {
                 text-align: center;
+                font-size: 20px;
+            }
 
-                font-size: 0;
+            tr.coverage-details {
+                display:none;
+                border-top-right-radius: 0px;
+                border-top-left-radius: 0;
 
-                &:before  { 
-                    // font-family: FontAwesome; 
-                    // font-size: 30px; 
-                    display: inline-block; 
-                    
-                    font-size: 20px;
-                }
-    
-                // https://codepen.io/antoniasymeonidou/pen/WNGdvvQ
-                &.none:before {
-                    // ☆☆☆
-                    content: '-';
-                }
+                .mobile-coverage-scores {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-left: 3em;
+                    margin-bottom: 1em;
 
-                &.ok:before {
-                    content: '★';
-                }
+                    span.score {
+                        flex-basis: 33.3%;
+                        display: inline-block;
 
-                &.good:before {
-                    content: '★★';
+                    }
                 }
+            }
 
-                &.great:before {
-                    content: '★★★';
-                }
+            tr.coverage-details.hidden {
+                display: none;
             }
         }
 
@@ -133,9 +133,13 @@
             thead {
                 th.coverage-overall {
                     display: table-cell;
+                    padding-right: 1em;
                 }
                 th.coverage, tr.coverage-heading {
                     display: none;
+                }
+                th.rating {
+                    padding-left: 1.5em;
                 }
             }
 
@@ -144,7 +148,35 @@
                     display: none;
                 }
                 td.coverage.overall {
+                }
+
+                tr.coverage-details {
+                    // display it when javascript removes the 'hidden' class
+                    display: table-row;
+                }
+
+                td.rating {
                     display: table-cell;
+                    padding-right: 1em;
+                    span.show-more {
+                        padding-left: 0.25em;
+                    }
+                    button.show-more {
+                        // want to style it like a span so get rid of all the nbw styling
+                        border-radius: 0;
+                        background: none;
+                        color: #3c3c3c;
+                        margin: 0;
+                        padding: 0 0 0 0.25em;
+                        border: 0;
+                        display: inline;
+                        line-height: 1.5em;
+                    }
+                    button.show-more.hidden {
+                        // so it hides until the js runs to attach the onclick method
+                        // make it transparent instead of display:none to avoid layout shift in the table
+                        color: rgba(0,0,0,0);
+                    }    
                 }
             }
         }
