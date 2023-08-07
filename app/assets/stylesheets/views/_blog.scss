@@ -728,6 +728,21 @@
         }
     }
 
+    .quick-guide-container.quick-guide-infographic.long-titles {
+
+        ul {
+            li {
+                h4 {
+                    clip-path: ellipse(75% 50% at center 0);
+                }
+
+                p {
+                    top: 150px;
+                }
+            }
+        }
+    }
+
     .get-cheat-sheet-container {
         display: none;
         margin-top: 30px;
