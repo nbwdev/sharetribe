@@ -16,6 +16,10 @@
         font-weight: bold;
     }
 
+    ul {
+        margin-bottom: 0.75em;
+    }
+
     span.nbw-dark {
         color: $nbw-dark;
     }
@@ -57,7 +61,4 @@
         overflow: hidden;
     }
 
-    li {
-        list-style: none;
-    }
 }
