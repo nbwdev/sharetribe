@@ -1,4 +1,3 @@
-import r from 'r-dom';
 import { Provider } from 'react-redux';
 import middleware from 'redux-thunk';
 import { combineReducers, applyMiddleware, createStore } from 'redux';
