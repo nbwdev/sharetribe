@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import { div, span } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import css from './Menu.css';
 import hamburgerIcon from './images/hamburgerIcon.svg';
 
@@ -8,11 +8,11 @@ class MenuLabel extends Component {
   render() {
     const extraClasses = this.props.extraClasses ? this.props.extraClasses : '';
     return (
-      div({
+      React.createElement('div', {
         className: `MenuLabel ${css.menuLabel} ${extraClasses}`,
         ref: this.props.menuLabelRef,
       }, [
-        span({
+        React.createElement('span', {
           className: css.menuLabelIcon,
           dangerouslySetInnerHTML: {
             __html: hamburgerIcon,

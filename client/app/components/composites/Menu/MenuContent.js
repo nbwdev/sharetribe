@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { className } from '../../../utils/PropTypes';
@@ -25,22 +25,22 @@ class MenuContent extends Component {
 
   render() {
     return (
-      div(
+      React.createElement('div', 
         {
           className: classNames('MenuContent', css.menuContent, this.props.className),
         }, [
-          div({
+          React.createElement('div', {
             className: css.menuContentArrowBelow,
             style: { left: this.props.arrowPosition },
           }),
-          div({
+          React.createElement('div', {
             className: css.menuContentArrowTop,
             style: { left: this.props.arrowPosition },
           }),
         ].concat(
           this.props.content.map((v, i) => {
             const elemData = this.resolveElement(v, i);
-            return r(elemData.ContentComponent, elemData.props);
+            return React.createElement(elemData.ContentComponent, elemData.props);
           })
         )
       )

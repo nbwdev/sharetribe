@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import css from './MenuMobile.css';
 import MenuItem from '../../elements/MenuItem/MenuItem';
@@ -25,15 +25,15 @@ class MenuSection extends Component {
     const links = this.props.links ?
       this.props.links.map((v, i) => {
         const elemData = this.resolveElement(v, i, this.props.color);
-        return r(elemData.ContentComponent, elemData.props);
+        return React.createElement(elemData.ContentComponent, elemData.props);
       }) :
       [];
 
     return links.length > 0 ?
-      div({
+      React.createElement('div', {
         className: `MenuSection ${css.menuSection}`,
       }, [
-        div({ className: `MenuSection_title ${css.menuSectionTitle}` }, this.props.name),
+        React.createElement('div', { className: `MenuSection_title ${css.menuSectionTitle}` }, this.props.name),
       ].concat(links)) :
       null;
   }

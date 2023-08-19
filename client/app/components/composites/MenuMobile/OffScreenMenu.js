@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import * as variables from '../../../assets/styles/variables';
@@ -20,44 +20,44 @@ class OffScreenMenu extends Component {
     const buttonExtrasNewPost = { className: css.offScreenHeaderNewListingButtonMobile, customColor: this.props.color };
     const buttonExtrasShop = { className: css.offScreenHeaderShopButtonMobile, customColor: this.props.color };
     const header = this.props.avatar ? [
-      this.props.avatar ? div({ className: css.avatarSpacer }, r(Avatar, { ...this.props.avatar, ...avatarExtras })) : null,
+      this.props.avatar ? React.createElement('div', { className: css.avatarSpacer }, React.createElement(Avatar, { ...this.props.avatar, ...avatarExtras })) : null,
     ] : [
-      r(LoginLinks, this.props.loginLinks),
+      React.createElement(LoginLinks, this.props.loginLinks),
     ];
-    const newButton = this.props.newListingButton ? r(AddNewListingButton, { ...this.props.newListingButton, ...buttonExtrasNewPost }) : null;
-    const shopButton = this.props.shopButton ? r(ShopButton, { ...this.props.shopButton, ...buttonExtrasShop }) : null;
+    const newButton = this.props.newListingButton ? React.createElement(AddNewListingButton, { ...this.props.newListingButton, ...buttonExtrasNewPost }) : null;
+    const shopButton = this.props.shopButton ? React.createElement(ShopButton, { ...this.props.shopButton, ...buttonExtrasShop }) : null;
     const languagesMobile = this.props.languages ?
-      r(LanguagesMobile, this.props.languages) : null;
+    React.createElement(LanguagesMobile, this.props.languages) : null;
 
-    return div({
+    return React.createElement('div', {
       className: classNames('OffScreenMenu', css.offScreenMenu),
-    }, div({
+    }, React.createElement('div', {
       className: classNames('OffScreenMenu_scrollpane', css.scrollPane),
     }, [
-      div({
+      React.createElement('div', {
         className: classNames('OffScreenMenu_header', css.offScreenHeader),
       }, header),
-      div({
+      React.createElement('div', {
         className: classNames('OffScreenMenu_header', css.offScreenHeader),
       }, newButton, shopButton),
-      div({
+      React.createElement('div', {
         className: classNames('OffScreenMenu_header', css.offScreenHeader),
       }, shopButton),
-      div({
+      React.createElement('div', {
         className: classNames('OffScreenMenu_main', css.offScreenMain),
       }, [
-        r(MenuSection, {
+        React.createElement(MenuSection, {
           name: this.props.menuLinksTitle,
           color: this.props.color,
           links: this.props.menuLinks,
         }),
-        r(MenuSection, {
+        React.createElement(MenuSection, {
           name: this.props.userLinksTitle,
           color: this.props.color,
           links: this.props.userLinks,
         }),
       ]),
-      div({
+      React.createElement('div', {
         className: classNames('OffScreenMenu_footer', css.offScreenFooter),
       }, languagesMobile),
     ]));

@@ -1,5 +1,5 @@
-import r from 'r-dom';
 import _ from 'lodash';
+import React from 'react';
 
 import { initialize as initializeI18n } from '../utils/i18n';
 import Topbar from '../components/sections/Topbar/Topbar';
@@ -33,5 +33,5 @@ export default (props) => {
   _.set(props, 'avatarDropdown.avatar.image', avatarImageRecord);
 
   const combinedProps = Object.assign({}, props, { routes });
-  return r(Topbar, combinedProps);
+  return React.createElement(Topbar, combinedProps);
 };

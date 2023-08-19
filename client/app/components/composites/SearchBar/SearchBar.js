@@ -1,7 +1,8 @@
 /* eslint-disable react/no-set-state */
 
-import { Component, PropTypes } from 'react';
-import { form, input, button, span, div } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as placesUtils from '../../../utils/places';
 import variables from '../../../assets/styles/variables';
 
@@ -143,7 +144,7 @@ class SearchBar extends Component {
     const bgColor = '#34495E';
     const bgColorDarkened = '#2C3E50 ';
 
-    const keywordInput = input({
+    const keywordInput = React.createElement('input', {
       type: 'search',
       className: css.keywordInput,
       placeholder: keywordPlaceholder,
@@ -152,7 +153,7 @@ class SearchBar extends Component {
         this.keywordInput = c;
       },
     });
-    const locationInput = input({
+    const locationInput = React.createElement('input', {
       type: 'search',
       className: css.locationInput,
       placeholder: locationPlaceholder,
@@ -185,31 +186,32 @@ class SearchBar extends Component {
       }
     }
 
-    return div({
-      className: css.root,
-      classSet: {
-        [css.root]: true,
-        [css.mobileSearchOpen]: this.state.mobileSearchOpen,
-      },
+    return React.createElement('div', {
+      className: classNames({[css.root]: true, [css.mobileSearchOpen]: this.state.mobileSearchOpen})
+      // className: css.root,
+      // classSet: {
+      //   [css.root]: true,
+      //   [css.mobileSearchOpen]: this.state.mobileSearchOpen,
+      // },
     }, [
-      button({
+      React.createElement('button', {
         className: css.mobileToggle,
         'aria-label': 'Show the search box',
         title: 'Show the search box',
         onClick: () => this.setState({ mobileSearchOpen: !this.state.mobileSearchOpen }),
       }, [
-        div({
+        React.createElement('div', {
           dangerouslySetInnerHTML: { __html: icon },
         }),
-        span({
+        React.createElement('span', {
           className: css.mobileToggleArrow,
           style: {
             borderBottomColor: this.state.mobileSearchOpen ? bgColor : 'transparent',
           },
         }),
       ]),
-      form({
-        classSet: { [css.form]: true },
+      React.createElement('form', {
+        className: classNames({ [css.form]: true }),
         onSubmit: (e) => {
           e.preventDefault();
           this.handleSubmit();
@@ -220,7 +222,7 @@ class SearchBar extends Component {
       }, [
         hasKeywordInput ? keywordInput : null,
         hasLocationInput ? locationInput : null,
-        button({
+        React.createElement('button', {
           type: 'submit',
           className: css.searchButton,
           'aria-label': 'Search',
@@ -230,7 +232,7 @@ class SearchBar extends Component {
             backgroundColor: this.state.mobileSearchOpen ? bgColorDarkened : 'transparent',
           },
         }),
-        span({ className: css.focusContainer }),
+        React.createElement('span', { className: css.focusContainer }),
       ]),
     ]);
   }

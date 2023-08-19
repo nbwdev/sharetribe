@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import { div, a, span } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import css from './MenuItem.css';
 import variables from '../../../assets/styles/variables';
@@ -23,14 +23,14 @@ class MenuItem extends Component {
       rel: this.props.external ? 'noopener noreferrer' : null,
     }, inlineStyling);
 
-    return div({ className: `MenuItem ${css.menuitem}  ${extraClasses}` }, [
+    return React.createElement('div', { className: `MenuItem ${css.menuitem}  ${extraClasses}` }, [
       this.props.active ?
-        span({
+        React.createElement('span', {
           className: css.activeIndicator,
           style: { backgroundColor: this.activeColor },
         }) :
         null,
-      a(
+      React.createElement('a', 
         linkProps,
         this.props.content),
     ]);

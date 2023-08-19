@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { className } from '../../../utils/PropTypes';
@@ -80,7 +80,7 @@ class Menu extends Component {
     const transitionDelayClass = this.state.isMounted ? '' : css.transitionDelay;
     const openClass = this.state.isOpen ? css.openMenu : '';
 
-    return div({
+    return React.createElement('div', {
       className: classNames(this.props.className, 'Menu', css.menu, openOnHoverClass, openClass),
       onMouseOver: this.handleMouseover,
       onMouseOut: this.handleMouseout,
@@ -91,7 +91,7 @@ class Menu extends Component {
         this.menu = c;
       },
     }, [
-      r(LabelComponent,
+      React.createElement(LabelComponent,
         {
           key: `${this.props.identifier}_menulabel`,
           name: this.props.name,
@@ -101,7 +101,7 @@ class Menu extends Component {
           },
         }
       ),
-      r(MenuContent,
+      React.createElement(MenuContent,
         {
           className: transitionDelayClass,
           key: `${this.props.identifier}_menucontent`,

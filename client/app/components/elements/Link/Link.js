@@ -1,17 +1,17 @@
-import { PropTypes } from 'react';
-import { a } from 'r-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import * as propTypeUtils from '../../../utils/PropTypes';
 import * as variables from '../../../assets/styles/variables';
 
 import css from './Link.css';
+import classNames from 'classnames';
 
 export default function Link({ href, className, customColor, openInNewTab, children }) {
   const color = customColor || variables['--customColorFallback'];
 
-  return a({
-    className: className || '',
-    classSet: { [css.link]: true },
+  return React.createElement('a', {
+    className: classNames(className, { [css.link]: true }),
     href,
     style: { color },
     ...(openInNewTab ? { target: '_blank', rel: 'noreferrer' } : null),

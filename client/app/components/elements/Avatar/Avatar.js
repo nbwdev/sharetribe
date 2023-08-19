@@ -1,5 +1,5 @@
-import { PropTypes } from 'react';
-import { a, div, img } from 'r-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as propTypeUtils from '../../../utils/PropTypes';
 import { Image } from '../../../models/ImageModel';
@@ -12,14 +12,14 @@ export default function Avatar({ image, imageHeight, className, url, givenName, 
     .map((n) => n.substring(0, 1))
     .join('');
   const height = imageHeight ? imageHeight : '100%';
-  const imageEl = (image && image.url) ? img({
+  const imageEl = (image && image.url) ? React.createElement('img', {
     src: image.url,
     className: classNames('Avatar', className, css.avatar),
     style: { height },
     title: displayName,
     alt: displayName,
   }) : null;
-  const textEl = div({
+  const textEl = React.createElement('div', {
     className: classNames('Avatar', className, css.textAvatar),
     style: { height, width: height, backgroundColor: color },
     title: displayName,
@@ -27,7 +27,7 @@ export default function Avatar({ image, imageHeight, className, url, givenName, 
 
   const displayEl = imageEl ? imageEl : textEl;
 
-  return url ? a({ href: url, className: css.link }, [displayEl]) : displayEl;
+  return url ? React.createElement('a', { href: url, className: css.link }, [displayEl]) : displayEl;
 }
 
 const { string, instanceOf } = PropTypes;

@@ -41,3 +41,6 @@
 //= require codemirror/modes/css
 //= require codemirror/modes/xml
 //= require codemirror/modes/htmlmixed
+//= require admin2/edit_articles
+//= require vendor-bundle
+//= require app-bundle

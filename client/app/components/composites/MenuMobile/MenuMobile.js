@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { className } from '../../../utils/PropTypes';
@@ -45,22 +45,22 @@ class MenuMobile extends Component {
     const openClass = this.state.isOpen ? css.canvasOpen : '';
     const extraClasses = this.props.extraClasses ? this.props.extraClasses : '';
     const notificationBadgeInArray = this.props.notificationCount > 0 ?
-      [r(NotificationBadge, { className: css.notificationBadge }, this.props.notificationCount)] :
+      [React.createElement(NotificationBadge, { className: css.notificationBadge }, this.props.notificationCount)] :
       [];
-    return div({
+    return React.createElement('div', {
       className: classNames(this.props.className, 'MenuMobile', css.menuMobile, extraClasses, openClass),
       tabIndex: 0,
     }, [
-      div({
+      React.createElement('div', {
         style: { backgroundColor: overlayColor },
         onClick: this.closeMenu,
         className: `MenuMobile_overlay ${css.overlay}`,
       }),
-      r(MenuLabelMobile, {
+      React.createElement(MenuLabelMobile, {
         name: this.props.name,
         handleClick: this.handleClick,
       }, notificationBadgeInArray),
-      r(OffScreenMenu, {
+      React.createElement(OffScreenMenu, {
         toggleOpen: this.closeMenu,
         isOpen: this.state.isOpen,
         color: overlayColor,

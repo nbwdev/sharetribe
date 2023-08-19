@@ -1,5 +1,6 @@
-import { Component, PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as placesUtils from '../../../utils/places';
 import * as urlUtils from '../../../utils/url';
@@ -69,7 +70,7 @@ const avatarDropdownProps = (avatarDropdown, customColor, username, isAdmin, not
 const mobileProfileLinks = function mobileProfileLinks(username, isAdmin, router, location, customColor, unReadMessagesCount) {
   if (username) {
     const notificationBadgeInArray = unReadMessagesCount > 0 ?
-      [r(NotificationBadge, { className: css.notificationBadge, countClassName: css.notificationBadgeCount }, unReadMessagesCount)] :
+      [React.createElement(NotificationBadge, { className: css.notificationBadge, countClassName: css.notificationBadgeCount }, unReadMessagesCount)] :
       [];
 
     const profilePaths = profileActions(router, username);
@@ -246,12 +247,12 @@ class Topbar extends Component {
     const searchPlaceholder = this.props.search ? this.props.search.search_placeholder : null;
     const textLogo = this.props.logo.image ? '' : css.textLogo;
 
-    return div({ className: classNames('Topbar', css.topbar) }, [
-      hasMenuProps ? r(MenuMobile, { ...mobileMenuProps, className: css.topbarMobileMenu }) : null,
-      r(Logo, { ...this.props.logo, className: classNames(css.topbarLogo, textLogo), color: marketplaceColor1 }),
-      div({ className: css.topbarMediumSpacer }),
+    return React.createElement('div', { className: classNames('Topbar', css.topbar) }, [
+      hasMenuProps ? React.createElement(MenuMobile, { ...mobileMenuProps, className: css.topbarMobileMenu }) : null,
+      React.createElement(Logo, { ...this.props.logo, className: classNames(css.topbarLogo, textLogo), color: marketplaceColor1 }),
+      React.createElement('div', { className: css.topbarMediumSpacer }),
       this.props.search ?
-        r(SearchBar, {
+        React.createElement(SearchBar, {
           mode: this.props.search.mode,
           keywordPlaceholder: searchPlaceholder || t('web.topbar.search_placeholder'),
           locationPlaceholder: searchPlaceholder == null || this.props.search.mode === 'keyword_and_location' ? t('web.topbar.search_location_placeholder') : searchPlaceholder,
@@ -271,17 +272,17 @@ class Topbar extends Component {
             window.location.assign(searchUrl);
           },
         }) :
-        div({ className: css.topbarMobileSearchPlaceholder }),
-      div({ className: css.topbarMenuSpacer }, hasMenuProps ?
-        r(MenuPriority, menuProps) :
+        React.createElement('div', { className: css.topbarMobileSearchPlaceholder }),
+        React.createElement('div', { className: css.topbarMenuSpacer }, hasMenuProps ?
+        React.createElement(MenuPriority, menuProps) :
         null),
-      hasMultipleLanguages ? r(Menu, {
+      hasMultipleLanguages ? React.createElement(Menu, {
         ...languageMenuProps,
         className: {
           [css.topbarMenu]: true,
         } }) : null,
       this.props.shopButton ?
-        r(ShopButton, {
+        React.createElement(ShopButton, {
           ...this.props.shopButton,
           className: css.topbarListingButton,
           url: shopRoute,
@@ -289,19 +290,20 @@ class Topbar extends Component {
         }) :
       null,
       this.props.avatarDropdown && loggedInUsername ?
-        r(AvatarDropdown, {
+        React.createElement(AvatarDropdown, {
           ...avatarDropdownProps(this.props.avatarDropdown, marketplaceColor1,
                                  loggedInUsername, isAdmin, this.props.unReadMessagesCount, this.props.routes),
-          classSet: css.topbarAvatarDropdown,
+          // classSet: css.topbarAvatarDropdown,
+          className: css.topbarAvatarDropdown,
         }) :
-        r(LoginLinks, {
+        React.createElement(LoginLinks, {
           loginUrl: loginRoute,
           signupUrl: signupRoute,
           customColor: marketplaceColor1,
           className: css.topbarLinks,
         }),
       this.props.newListingButton ?
-        r(AddNewListingButton, {
+        React.createElement(AddNewListingButton, {
           ...this.props.newListingButton,
           className: css.topbarListingButton,
           url: newListingRoute,

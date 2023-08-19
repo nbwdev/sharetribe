@@ -92,6 +92,7 @@
 }
 
 /* ReactCSSTransitionGroup styles for container */
+/* This package has been deleted. Migrate to TransitionGroup instead */
 .enterRight {
   opacity: 0;
   transform: translate3d(110%, 0, 0);

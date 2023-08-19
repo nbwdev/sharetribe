@@ -1,6 +1,6 @@
-import { PropTypes } from 'react';
-import { a, span } from 'r-dom';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import React from 'react';
 
 import { className as classNameProp } from '../../../utils/PropTypes';
 import { brightness } from '../../../utils/colors';
@@ -20,7 +20,7 @@ export default function AddNewListingButton({ text, url, customColor, className,
   // Since this better solution has already been written let's keep it.
   const hoverColor = brightness(color, HOVER_COLOR_BRIGHTNESS);
 
-  return a({
+  return React.createElement('a', {
     className: classNames(className, 'AddNewListingButton', css.button, { [css.responsiveLayout]: !mobileLayoutOnly }),
     href: url,
     title: text,
@@ -41,20 +41,20 @@ export default function AddNewListingButton({ text, url, customColor, className,
     // change the brightness of the dynamic background color, we have
     // to create a separate background container to avoid changing the
     // brightness of the text on top of the button.
-    span({
-      className: 'AddNewListingButton_background',
-      classSet: { [css.backgroundContainer]: true },
+    React.createElement('span', {
+      className: classNames('AddNewListingButton_background',
+      { [css.backgroundContainer]: true }),
       style: { backgroundColor: color },
     }),
 
-    span({
-      className: 'AddNewListingButton_mobile',
-      classSet: { [css.mobile]: true },
+    React.createElement('span', {
+      className: classNames('AddNewListingButton_mobile',
+      { [css.mobile]: true }),
       style: { color },
     }, buttonText),
-    span({
-      className: 'AddNewListingButton_desktop',
-      classSet: { [css.desktop]: true },
+    React.createElement('span', {
+      className: classNames('AddNewListingButton_desktop',
+      { [css.desktop]: true }),
     }, buttonText),
   ]);
 }

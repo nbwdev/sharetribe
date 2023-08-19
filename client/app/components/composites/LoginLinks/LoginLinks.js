@@ -1,5 +1,5 @@
-import { PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { t } from '../../../utils/i18n';
 import classNames from 'classnames';
 
@@ -8,15 +8,15 @@ import Link from '../../elements/Link/Link';
 import css from './LoginLinks.css';
 
 export default function LoginLinks({ loginUrl, signupUrl, customColor, className }) {
-  return div({
+  return React.createElement('div', {
     className: classNames('LoginLinks', css.links, className),
   }, [
-    r(Link, {
+    React.createElement(Link, {
       className: css.link,
       href: signupUrl,
       customColor,
     }, t('web.topbar.signup')),
-    r(Link, {
+    React.createElement(Link, {
       className: css.link,
       href: loginUrl,
       customColor,

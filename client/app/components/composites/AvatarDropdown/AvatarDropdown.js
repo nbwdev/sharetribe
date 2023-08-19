@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { div } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { className } from '../../../utils/PropTypes';
@@ -71,9 +71,9 @@ class AvatarDropdown extends Component {
     const openClass = this.state.isOpen ? css.openDropdown : '';
     const notificationsClass = this.props.notificationCount > 0 ? css.hasNotifications : null;
     const notificationBadgeInArray = this.props.notificationCount > 0 ?
-      [r(NotificationBadge, { className: css.notificationBadge }, this.props.notificationCount)] :
+      [React.createElement(NotificationBadge, { className: css.notificationBadge }, this.props.notificationCount)] :
       [];
-    return div({
+    return React.createElement('div', {
       onMouseOver: this.handleMouseOver,
       onMouseLeave: this.handleMouseLeave,
       onClick: this.handleClick,
@@ -81,10 +81,10 @@ class AvatarDropdown extends Component {
       tabIndex: 0,
       className: classNames('AvatarDropdown', this.props.className, openOnHoverClass, openClass, css.avatarDropdown, notificationsClass),
     }, [
-      div({ className: css.avatarWithNotifications }, [
-        r(Avatar, this.props.avatar),
+      React.createElement('div', { className: css.avatarWithNotifications }, [
+        React.createElement(Avatar, this.props.avatar),
       ].concat(notificationBadgeInArray)),
-      r(ProfileDropdown, {
+      React.createElement(ProfileDropdown, {
         classNames: [css.avatarProfileDropdown, transitionDelayClass],
         customColor: this.props.customColor,
         actions: this.props.actions,

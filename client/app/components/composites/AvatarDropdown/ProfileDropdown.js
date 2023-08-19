@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { a, div, span } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import css from './ProfileDropdown.css';
@@ -16,12 +16,12 @@ const actionProps = function actionProps(action) {
 };
 
 const ProfileActionCard = function ProfileActionCard({ icon, label, action, notificationCount }) {
-  const notificationCountInArray = notificationCount > 0 ? [span({ className: css.notificationCount }, notificationCount)] : [];
-  return a({ ...actionProps(action), className: css.profileAction }, [
-    div({ className: css.profileActionIconWrapper }, [
-      div({ className: css.profileActionIcon, dangerouslySetInnerHTML: { __html: icon } }),
+  const notificationCountInArray = notificationCount > 0 ? [React.createElement('span', { className: css.notificationCount }, notificationCount)] : [];
+  return React.createElement('a', { ...actionProps(action), className: css.profileAction }, [
+    React.createElement('div', { className: css.profileActionIconWrapper }, [
+      React.createElement('div', { className: css.profileActionIcon, dangerouslySetInnerHTML: { __html: icon } }),
     ].concat(notificationCountInArray)),
-    div({ className: css.profileActionLabel }, label),
+    React.createElement('div', { className: css.profileActionLabel }, label),
   ]);
 };
 
@@ -39,26 +39,26 @@ ProfileActionCard.propTypes = {
 
 class ProfileDropdown extends Component {
   render() {
-    return div({
+    return React.createElement('div', {
       className: classNames(this.props.classNames),
       ref: this.props.profileDropdownRef,
     }, [
-      div({ className: css.rootArrowTop }),
-      div({ className: css.rootArrowBelow }),
-      div({ className: css.box }, [
-        div({ className: css.profileActions }, [
-          r(ProfileActionCard, { label: this.props.translations.inbox, icon: inboxEmptyIcon, action: this.props.actions.inboxAction, notificationCount: this.props.notificationCount }),
-          r(ProfileActionCard, { label: this.props.translations.listings, icon: listingsIcon, action: this.props.actions.listingsAction }),
-          r(ProfileActionCard, { label: this.props.translations.profile, icon: profileIcon, action: this.props.actions.profileAction }),
-          r(ProfileActionCard, { label: this.props.translations.settings, icon: settingsIcon, action: this.props.actions.settingsAction }),
+      React.createElement('div', { className: css.rootArrowTop }),
+      React.createElement('div', { className: css.rootArrowBelow }),
+      React.createElement('div', { className: css.box }, [
+        React.createElement('div', { className: css.profileActions }, [
+          React.createElement(ProfileActionCard, { label: this.props.translations.inbox, icon: inboxEmptyIcon, action: this.props.actions.inboxAction, notificationCount: this.props.notificationCount }),
+          React.createElement(ProfileActionCard, { label: this.props.translations.listings, icon: listingsIcon, action: this.props.actions.listingsAction }),
+          React.createElement(ProfileActionCard, { label: this.props.translations.profile, icon: profileIcon, action: this.props.actions.profileAction }),
+          React.createElement(ProfileActionCard, { label: this.props.translations.settings, icon: settingsIcon, action: this.props.actions.settingsAction }),
         ]),
-        div({ className: css.logoutArea }, [
-          this.props.isAdmin ? a({
+        React.createElement('div', { className: css.logoutArea }, [
+          this.props.isAdmin ? React.createElement('a', {
             className: css.adminLink,
             style: { color: this.props.customColor },
             ...actionProps(this.props.actions.adminDashboardAction),
           }, this.props.translations.adminDashboard) : null,
-          a({
+          React.createElement('a', {
             className: css.logoutLink,
             ...actionProps(this.props.actions.logoutAction),
           }, this.props.translations.logout),

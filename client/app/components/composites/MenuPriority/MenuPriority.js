@@ -1,6 +1,6 @@
-import { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import r, { div, a } from 'r-dom';
 import _ from 'lodash';
 import classNames from 'classnames';
 import { canUseDOM } from '../../../utils/featureDetection';
@@ -140,20 +140,20 @@ class MenuPriority extends Component {
     }, fallbackLabel);
     const menuProps = Object.assign(Object.assign({}, this.props, extraMenuProps));
 
-    return div({
+    return React.createElement('div', {
       className: classNames('MenuPriority', css.menuPriority, { [css.isMeasured]: isMeasured, [css.noPriorityLinks]: useFallback }),
       ref: (c) => {
         this.menuPriorityMounted = c;
       },
     }, [
-      div({
+      React.createElement('div', {
         className: css.priorityLinks,
         style,
         ref: (c) => {
           this.priorityLinksMounted = c;
         },
       }, this.state.priorityLinks.map((l) => (
-        a({
+        React.createElement('a', {
           'data-pid': `${l.content} ${l.priority}`,
           className: css.priorityLink,
           href: l.href,
@@ -162,7 +162,7 @@ class MenuPriority extends Component {
         }, l.content)
       ))),
       this.state.hiddenLinks.length > 0 ?
-        r(Menu, menuProps) :
+        React.createElement(Menu, menuProps) :
         null,
     ]);
   }

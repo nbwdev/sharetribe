@@ -176,6 +176,19 @@
             = link_to t('admin2.sidebar.search_location.search'), admin2_search_location_search_index_path
           %li#location{class: active_li('locations')}
             = link_to t('admin2.sidebar.search_location.location'), admin2_search_location_locations_path
+      / Blog articles
+      %ul.category-title
+        %li
+          %svg{:height => "17", :width => "17", :xmlns => "http://www.w3.org/2000/svg"}
+            %g{:fill => "none", "fill-rule" => "evenodd"}
+              %g{:stroke => "#484B4A", "stroke-linecap" => "round", "stroke-linejoin" => "round", :transform => "translate(.059 .53)"}
+                %rect{:fill => "#D8DCE6", :height => "13.765", :rx => "1.5", :width => "13.765", :x => "2.647", :y => ".527"}
+                %path{:d => "M14.294 16.409H4.075c-2.676 0-3.546-.913-3.546-2.978V2.644"}
+                %path{:d => "M5.824 4.762h7.411M5.824 6.88h7.411M5.824 8.997h5.294", :fill => "#D8DCE6"}
+          = link_to "Blog articles", '#blogarticles', class: %i[dropdown-toggle], 'aria-controls' => 'blogarticles', 'aria-expanded' => 'false', 'data-toggle' => 'collapse', role: :button
+      %ul#blogarticles.collapse.subtitle{class: expand_ul('blog_articles')}
+        %li#imagetags{class: active_li('edit_articles')}
+          = link_to t('admin2.sidebar.blog.edit_articles'), admin2_blog_articles_edit_articles_path
       / Social media
       %ul.category-title
         %li

@@ -19,9 +19,9 @@ config.module = config.module || {};
 config.module.rules = config.module.rules || [];
 config.module.rules.push(
   {
-    test: /\.js$/,
+    test: /\.(?:js|mjs|cjs)$/,
     loader: 'babel-loader',
-    exclude: [/node_modules/, /routes\/routes.js/],
+    exclude: [/node_modules(?!\/@editorjs)/, /routes\/routes.js/], // include node_modules so it transpiles editorjs.mjs file
   },
   {
     test: /\.css$/,

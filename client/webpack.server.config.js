@@ -35,9 +35,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(?:js|mjs|cjs)$/,
         loader: 'babel-loader',
-        exclude: [/node_modules/, /i18n\/all.js/, /routes\/routes.js/],
+        exclude: [/node_modules(?!\/@editorjs)/, /i18n\/all.js/, /routes\/routes.js/], // include node_modules so it transpiles editorjs.mjs file
       },
       {
         test: /\.css$/,

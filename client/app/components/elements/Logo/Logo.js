@@ -1,5 +1,5 @@
-import { Component, PropTypes } from 'react';
-import r, { a } from 'r-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { className } from '../../../utils/PropTypes';
 
@@ -9,7 +9,7 @@ const logoContent = function logoContent(image, imageHighRes, text) {
   const higherRes = imageHighRes != null ? { srcSet: `${imageHighRes} 2x` } : null;
 
   if (image) {
-    return r.img(Object.assign({}, {
+    return React.createElement('img', Object.assign({}, {
       src: image,
       alt: text,
       className: css.logoImage,
@@ -21,7 +21,7 @@ const logoContent = function logoContent(image, imageHighRes, text) {
 
 class Logo extends Component {
   render() {
-    return a({
+    return React.createElement('a', {
       className: classNames('Logo', this.props.className, css.logo),
       href: this.props.href,
       style: this.props.color ? { color: this.props.color } : null,

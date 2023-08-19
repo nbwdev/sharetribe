@@ -17,6 +17,7 @@ module Admin2Helper
       transactions_reviews: %w[config_transactions manage_transactions conversations manage_reviews],
       payment_system: %w[country_currencies transaction_size stripe paypal],
       emails: %w[newsletters email_users welcome_emails outgoing_emails mute_contact],
+      blog: %w[edit_articles],
       search_location: %w[search locations],
       social_media: %w[image_tags twitter],
       seo: %w[sitemap landing_pages search_pages listing_pages category_pages profile_pages google_console],
