@@ -199,7 +199,7 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.6)
     erubi (1.10.0)
-    execjs (2.7.0)
+    execjs (2.8.1)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.8.0)
@@ -592,7 +592,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2018.9)
       tzinfo (>= 1.0.0)
-    uglifier (3.2.0)
+    uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -742,7 +742,7 @@ DEPENDENCIES
   ts-delayed-delta (= 2.1.0)
   twitter_cldr
   tzinfo-data (~> 1.2017, >= 1.2017.2)
-  uglifier (~> 3.2.0)
+  uglifier (>= 4.2)
   unicorn
   uuidtools (~> 2.1.5)
   web-console (~> 3.7.0)
