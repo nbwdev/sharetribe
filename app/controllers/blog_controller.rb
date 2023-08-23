@@ -205,7 +205,7 @@ class BlogController < ApplicationController
             :description => "Why they are still good for your summer wardrobe and your wallet",
             :created => Date.new(2023,6,20),
             :updated => Date.new(2023,7,4),
-            :related => ['summer_beach_bag','summer_hat_for_protection','summer_hat_for_style'],
+            :related => ['summer_beach_bag','summer_hat_for_style','summer_hat_for_protection'],
             :category => 'Summer',
             :tags => ['summer', 'white', 'trainers', 'fashion'],
             :main_article_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
@@ -216,7 +216,7 @@ class BlogController < ApplicationController
         'summer_hat_for_protection' => {
             :id => 'summer_hat_for_protection',
             :title => "Protective summer hats",
-            :description => "How to buy the right summer hat to protect yourself from the sun",
+            :description => "How to buy the right summer hat to protect yourself in the sun",
             :created => Date.new(2023,7,30),
             :updated => Date.new(2023,7,30),
             :related => ['summer_hat_for_style','summer_beach_bag','white_trainers'],
