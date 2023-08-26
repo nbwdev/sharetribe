@@ -218,7 +218,7 @@ class BlogController < ApplicationController
             :title => "Protective summer hats",
             :description => "How to buy the right summer hat to protect yourself in the sun",
             :created => Date.new(2023,7,30),
-            :updated => Date.new(2023,7,30),
+            :updated => Date.new(2023,8,23),
             :related => ['summer_hat_for_style','summer_beach_bag','white_trainers'],
             :category => 'Summer',
             :tags => ['summer', 'hat', 'sun', 'fashion'],
@@ -232,7 +232,7 @@ class BlogController < ApplicationController
             :title => "Stylish summer hats",
             :description => "How to buy a summer hat to suit your entire summer wardrobe",
             :created => Date.new(2023,8,7),
-            :updated => Date.new(2023,8,7),
+            :updated => Date.new(2023,8,23),
             :related => ['summer_hat_for_protection','summer_beach_bag','white_trainers'],
             :category => 'Summer',
             :tags => ['summer', 'hat', 'sun', 'fashion'],
@@ -240,6 +240,20 @@ class BlogController < ApplicationController
             :main_image_alt_text => "A stylish woman stands near a swimming pool wearing a white sun hat with a black ribbon and a pale yellow summer halter top",
             :main_image_placeholder_colour => "#efe3a7",
             :second_article_image => "blog/summer-hat-for-style/green-cream-natural-summer-outfit-with-palette.jpg"
+        },
+        'baggy_suit' => {
+            :id => 'baggy_suit',
+            :title => "The baggy suit",
+            :description => "A must have item for your hybrid wardrobe?",
+            :created => Date.new(2023,8,25),
+            :updated => Date.new(2023,8,25),
+            :related => ['declutter_your_handbags','white_trainers','big_boots_how_to_wear_them'],
+            :category => 'Fashion',
+            :tags => ['suit', 'fashion', 'business', 'office','hybrid working'],
+            :main_article_image => "blog/baggy-suit/three-women-blazers-square.jpg",
+            :main_image_alt_text => "Two women mean business in baggy blazers",
+            :main_image_placeholder_colour => "#d33a35",
+            :second_article_image => "blog/baggy-suit/suit-office-steps.jpg"
         }
     }
 
