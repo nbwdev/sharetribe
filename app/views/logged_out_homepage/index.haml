@@ -113,17 +113,11 @@
           = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
             Take the challenge now
 
-  .tips-container#quick-tips
-    %h2
-      Quick tips to declutter faster and start building a more sustainable wardrobe
-    =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}
-
-    %p
-    = link_to("https://instagram.com/neverbeenwornuk", :class => "follow-insta", :target => "_blank") do
-      Find us on instagram 
-      %span.instagram
-        = render 'layouts/footer/social_icons', social_service: "instagram"
-        neverbeenwornuk
+  .tips-container
+    .tips
+      %h2
+        Quick tips to declutter faster and start building a more sustainable wardrobe
+      =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}
 
   .seasonal-articles-container
     .seasonal-articles

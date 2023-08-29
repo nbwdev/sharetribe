@@ -5,7 +5,63 @@ module LoggedOutHomepageHelper
   IMAGE_AND_TEXT = "IMAGE_AND_TEXT" # Image in left pane, paragraph of text in right pane
   TITLE_AND_TEXT = "TITLE_AND_TEXT" # Title in left pane, paragraph of text in right pane
   TITLE_AND_LIST = "TITLE_AND_LIST" # Title in left pane, bullet point list in right pane
+  ARTICLE_LINK = "ARTICLE_LINK" # Pinterest-style title card for an article
 
+  ORANGE = "orange"
+  PURPLE = "purple"
+
+  # new version of the carousel with article links
+  # tidy up one or the other list when happy
+  def get_carousel_article_cards()
+    [
+      {
+        :card_type => ARTICLE_LINK,
+        :item_class => "", # don't hide the first one
+        :card_title => "Find your perfect hat for the perfect summer",
+        :card_image => "blog/summer-hat-for-style/white-sun-hat.jpg",
+        :alt_text => "A stylish woman stands near a swimming pool wearing a white sun hat with a black ribbon and a pale yellow summer halter top",
+        :article_id => "summer_hat_for_style",
+        :button_cta => "READ MORE",
+        :card_text => "",
+        :colour => PURPLE
+      },
+      {
+        :card_type => ARTICLE_LINK,
+        :item_class => "carousel-hide",
+        :card_title => "Why I am not giving up on my white trainers",
+        :card_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
+        :alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
+        :article_id => "white_trainers",
+        :button_cta => "READ MORE",
+        :card_text => "",
+        :colour => ORANGE
+      },
+      {
+        :card_type => ARTICLE_LINK,
+        :item_class => "carousel-hide",
+        :card_title => "The best summer hats for great sun protection",
+        :card_image => "blog/summer-hat-for-protection/bucket-hat-square.jpg",
+        :alt_text => "A woman wearing a bucket hat to protect herself from the sun, along with an aztec-patterned summer shirt over a white vest top, looks pensively into the middle distance.",
+        :article_id => "summer_hat_for_protection",
+        :button_cta => "READ MORE",
+        :card_text => "",
+        :colour => PURPLE
+      },
+      {
+        :card_type => ARTICLE_LINK,
+        :item_class => "carousel-hide",
+        :card_title => "Perfect packing for a no hassle day at the beach",
+        :card_image => "blog/summer-beach-bag/summer-beach-bag.jpg",
+        :alt_text => "A woven straw beach bag with some essential items poking out of it - sun screen, sunglasses, camera, and notebook.",
+        :article_id => "summer_beach_bag",
+        :button_cta => "READ MORE",
+        :card_text => "",
+        :colour => ORANGE
+      },
+    ]
+  end
+
+  # the old version of the carousel with the tips
   def get_carousel_cards()
     [
       {

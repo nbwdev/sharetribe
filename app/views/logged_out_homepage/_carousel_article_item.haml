@@ -1,0 +1,28 @@
+-# Variables:
+-# card_type - always ARTICLE_LINK
+-# item_class: class to set on the carousel item (for example to hide it on initial display before the javascript loads)
+-# card_image - path to the card's image (square and probably shared with the blog homepage)
+-# alt_text - image alt text
+-# card_title: the title of the card
+-# article_id: will link to this article
+-# colour - main font colour for the card
+-# second_colour - second font colour for the card
+
+.carousel-item.carousel-article{ :class => item_class}
+  .article-card
+    .text-container
+      .title
+        %h3
+          =card_title
+      .cta
+        .button
+          %span.read-button
+            READ MORE
+    .image-container
+      -image_url = image_path(card_image)
+      =image_tag(image_url, class: 'carousel-img', alt: alt_text)
+
+
+
+
+

@@ -549,18 +549,6 @@ article.page-content.no-padding-bottom {
         }
     }
 
-    .tips-container {
-        h2 {
-            font-size: 3em;
-            font-weight: 600;
-            color: #5E7D2B;
-
-            @media (max-width: 660px) {
-                font-size: 2em;
-            }
-        }
-    }
-
     .seasonal-articles-container {
         $seasonal-articles-bg: #FFF5c3;
         background-color: $seasonal-articles-bg;

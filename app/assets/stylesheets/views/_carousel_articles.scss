@@ -1,0 +1,277 @@
+@import "mixins/all";
+@import "../landing_page/mixins/all";
+
+.logged_out_homepage {
+
+    /* Define colours at the top so we can mess about with them more easily */
+    $article-orange-colour: #EF9712;
+    $article-grey-colour: #625F5B;
+    $article-purple-colour: #B182CE;
+    $article-pink-colour: #F16DBC;
+
+    /* orange panel with white cards */
+    /*
+    $panel-background-colour: #fef3e6;
+    $panel-background-zero-pc: #fef3e600;
+    $panel-background-forty-pc: #fef3e666;
+    $panel-background-sixty-pc: #fef3e699;
+    $panel-background-hundred-pc: #fef3e6ff;
+
+    $card-background-colour: #ffffff;
+    $panel-text-colour: $article-orange-colour;
+    */
+
+    /* white panel with orange cards */
+    $panel-background-colour: #ffffff;
+    $panel-background-zero-pc: #ffffff00;
+    $panel-background-forty-pc: #ffffff66;
+    $panel-background-sixty-pc: #ffffff99;
+    $panel-background-hundred-pc: #ffffffff;
+
+    $card-background-colour: #fef3e6;
+    $panel-text-colour: $article-orange-colour;
+
+    $panel-border-radius: 10px;
+
+
+    .tips-container {
+
+        padding-top: 3em;
+        padding-bottom: 2.5em;
+        background-color: $panel-background-colour;
+
+        .tips {
+
+            margin: auto;
+
+            h2 {
+                font-size: 3em;
+                font-weight: 600;
+                color: $panel-text-colour;
+    
+                @media (max-width: 660px) {
+                    font-size: 2em;
+                }
+            }
+    
+            .button {
+                background-color: $panel-text-colour;
+                color: $card-background-colour;
+            }
+
+            @media (max-width: 660px) {
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+
+            max-width: 1024px;
+
+            .carousel-hide {
+                display: none;
+            }
+
+            .carousel-item {
+                display: flex;
+                justify-content: center;
+            }
+
+            .article-card {
+                margin-left: 10px;
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                border-radius: $panel-border-radius;
+                max-width: -moz-fit-content;
+                max-width: fit-content;
+                background-color: $card-background-colour;
+
+                width: 400px;
+                height: 250px;
+                @media #{$desktop} {
+                    width:600px;
+                    height: 300px;
+                }
+
+                @media (max-width: 660px) {
+                    width: 200px;
+                    height: 400px;
+                }
+
+                .image-container, .text-container {
+                    width: 50%;
+                }
+    
+                @media #{$desktop} {
+                    .image-container, .text-container, .title-container {
+                        width: 300px;
+                        height: 300px;
+                    }
+                }
+                @media (max-width: 660px) {
+                    .image-container, .text-container, .title-container {
+                        width: 100%;
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+
+                img {
+                    border-bottom-right-radius: $panel-border-radius;
+                    border-top-right-radius: $panel-border-radius;
+                    max-width: 100%;
+                    margin: 0;
+                }
+
+                .text-container {
+                    border-top-left-radius: $panel-border-radius;
+                    border-bottom-left-radius: $panel-border-radius;
+
+                    .title {
+                        h3 {
+                            color: $panel-text-colour;
+                            font-size: 1.7em;
+                            padding-left: 1em;
+                            padding-right: 1em;
+                            line-height: 1.1em;
+                        }
+                    }
+
+                    .cta {
+                        align-self: center;
+                    }
+
+                }
+
+                .text-container, .title-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+
+                .tip-title {
+                    margin-top: 15px;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+
+                .tip-text {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 20px;
+                    margin-top: 10px;
+                }
+
+                @media (max-width: 660px) {
+                    flex-direction: column;
+
+                    img.carousel-img {
+                        border-radius: $panel-border-radius $panel-border-radius 0 0;
+                    }
+
+                    div.text-container {
+                        border-radius: 0 0 $panel-border-radius $panel-border-radius;
+                    }
+                }
+
+                @media #{$desktop} {
+                    .tip-title {
+                        font-size: 34px;
+                    }
+        
+                    .tip-text {
+                        font-size: 28px;
+                        min-height: 220px;
+                        margin-top: 20px;
+                    }
+                    .tip-text.no-title {
+                        min-height: 0;
+                        margin-bottom: 20px;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+
+            /*
+            Slick list - styling of the carousel elements
+            */
+
+            .slick-list{padding:0 20% 0 20% !important;}
+            button.slick-prev:before, button.slick-next:before {
+                color: $panel-text-colour;
+            }
+            .slick-slide {
+                margin: 0;
+            }
+
+            button.slick-next, button.slick-prev {
+                display: block;
+                z-index: 100;
+                padding-top: 121px;
+                padding-bottom: 157px;
+            }
+
+            button.slick-next {
+                right: -1px;
+                padding-left: 170px;
+                background: linear-gradient(90deg, $panel-background-zero-pc 0%, $panel-background-sixty-pc 50%, $panel-background-hundred-pc 100%);
+            }
+
+            button.slick-next:before {
+                margin-left: -45px;
+                font-size: 40px;
+            }
+
+            button.slick-prev {
+                left: -1px;
+                padding-right: 170px;
+                background: linear-gradient(90deg, $panel-background-hundred-pc 0%, $panel-background-forty-pc 50%, $panel-background-zero-pc 100%);
+            }
+
+            button.slick-prev:before {
+                margin-left: 0px;
+                font-size: 40px;
+            }
+
+            ul.slick-dots {
+
+                li.slick-active > button:before {
+                    opacity: 1;
+                }
+
+                button:before {
+                    font-size:25px;
+                    margin-top: 10px;
+                    color: $panel-text-colour;
+                }
+            }
+
+            .slick-dotted.slick-slider {
+                margin-bottom: 50px;
+            }    
+
+            @media #{$desktop} {
+                button.slick-next, button.slick-prev {
+                    display: block;
+                    z-index: 100;
+                    padding-top: 151px;
+                    padding-bottom: 187px;
+                }    
+            }
+
+            @media (max-width: 660px) {
+                button.slick-next, button.slick-prev {
+                    padding-top: 191px;
+                    padding-bottom: 227px;
+                }
+
+                button.slick-next {
+                    padding-left: 60px;
+                }
+
+                button.slick-prev {
+                    padding-right: 60px;
+                }
+            }
+        }
+    }
+}

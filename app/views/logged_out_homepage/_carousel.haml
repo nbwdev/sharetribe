@@ -1,4 +1,7 @@
 .tips-carousel 
 
-  - LoggedOutHomepageHelper.get_carousel_cards.each do |card|
-    = render :partial => "carousel_item", :locals => card
+  -# - LoggedOutHomepageHelper.get_carousel_cards.each do |card|
+  -#   = render :partial => "carousel_item", :locals => card
+
+  - LoggedOutHomepageHelper.get_carousel_article_cards.each do |card|
+    = render :partial => "carousel_article_item", :locals => card
