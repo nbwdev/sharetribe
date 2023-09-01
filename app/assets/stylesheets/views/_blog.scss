@@ -230,7 +230,7 @@
         margin-bottom: 0.75em;
     }
 
-    .strong {
+    a, .strong {
         font-weight: bold;
     }
 
@@ -301,6 +301,7 @@
 
             a {
                 color: #4a4a4a;
+                font-weight: normal;
             }
         }
     }
@@ -310,9 +311,11 @@
         font-size: 0.8em;
         font-style: italic;
         padding-right: 20px;
+        font-weight: normal;
 
         a {
             color: #4a4a4a;
+            font-weight: normal;
         }
     }
 
@@ -398,6 +401,7 @@
 
             a {
                 color: #4a4a4a;
+                font-weight: normal;
             }
         }
 
@@ -411,6 +415,7 @@
             }
             figcaption {
                 padding-right: 0;
+                font-weight: normal;
             }
         }
     }
