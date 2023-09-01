@@ -229,7 +229,7 @@ class BlogController < ApplicationController
         },
         'summer_hat_for_style' => {
             :id => 'summer_hat_for_style',
-            :title => "Stylish summer hats",
+            :title => "Find your summer hat",
             :description => "How to buy a summer hat to suit your entire summer wardrobe",
             :created => Date.new(2023,8,7),
             :updated => Date.new(2023,8,23),
