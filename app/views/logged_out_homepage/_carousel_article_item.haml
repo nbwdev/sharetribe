@@ -14,13 +14,14 @@
       .title
         %h3
           =card_title
+    .image-container
+      -image_url = image_path(card_image)
+      =image_tag(image_url, class: 'carousel-img', alt: alt_text)
+    .text-container
       .cta
         .button
           %span.read-button
             READ MORE
-    .image-container
-      -image_url = image_path(card_image)
-      =image_tag(image_url, class: 'carousel-img', alt: alt_text)
 
 
 

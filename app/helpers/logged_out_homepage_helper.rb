@@ -28,7 +28,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "Why I am not giving up on my white trainers",
+        :card_title => "White trainers: why they are still great for summer and your wallet",
         :card_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
         :alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
         :article_id => "white_trainers",
@@ -39,7 +39,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "The best summer hats for great sun protection",
+        :card_title => "Which hats give the best sun protection",
         :card_image => "blog/summer-hat-for-protection/bucket-hat-square.jpg",
         :alt_text => "A woman wearing a bucket hat to protect herself from the sun, along with an aztec-patterned summer shirt over a white vest top, looks pensively into the middle distance.",
         :article_id => "summer_hat_for_protection",
@@ -50,7 +50,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "Perfect packing for a no hassle day at the beach",
+        :card_title => "Beach bag essentials for a hassle free day at the beach",
         :card_image => "blog/summer-beach-bag/summer-beach-bag.jpg",
         :alt_text => "A woven straw beach bag with some essential items poking out of it - sun screen, sunglasses, camera, and notebook.",
         :article_id => "summer_beach_bag",
