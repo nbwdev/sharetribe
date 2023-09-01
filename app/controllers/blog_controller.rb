@@ -244,7 +244,7 @@ class BlogController < ApplicationController
         'baggy_suit' => {
             :id => 'baggy_suit',
             :title => "The baggy suit",
-            :description => "A must have item for your hybrid wardrobe?",
+            :description => "A must have item for your hybrid wardrobe this autumn/winter?",
             :created => Date.new(2023,8,25),
             :updated => Date.new(2023,8,25),
             :related => ['declutter_your_handbags','white_trainers','big_boots_how_to_wear_them'],
