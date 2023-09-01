@@ -312,6 +312,12 @@ article.page-content.no-padding-bottom {
 
     .quick-guide-container {
         background-color: none;
+
+        h2 {
+            color: $nbw-dark;
+            font-size: 2em;
+            padding-top: 0.25em;
+        }
     }
 
     .quick-guide {

@@ -3,7 +3,7 @@
 
 - content_for :title_header do
   %h1.logged-out-homepage
-    Sell and Buy Never Been Worn Fashion
+    Buy and Sell Never Been Worn Fashion
 
 - content_for :footer_attribution do
   Images by
@@ -51,6 +51,8 @@
 .logged_out_homepage 
 
   .quick-guide-container#quick-guide
+    %h2.logged-out-homepage
+      Give your wardrobe better purpose
     .quick-guide
       .guide-columns
         .guide-column
@@ -76,7 +78,7 @@
               -image_url = image_path("logged_out_homepage/unboxing.jpg")
               =image_tag(image_url, class: 'step_img', alt: "A lady sits on a sofa opening a cardboard box. She is looking into the box and smiling.")
               %p.step-title
-                Repurpose and resell
+                Resell it
               %p.step-description
                 Put it back out into the world for others to buy
           = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button") do
@@ -89,9 +91,9 @@
               -image_url = image_path("logged_out_homepage/capsule-wardrobe.jpg")
               =image_tag(image_url, class: 'step_img', alt: "A capsule wardrobe consisting of a few colourful pieces of clothing that could be worn in different combinations with each other.")
               %p.step-title
-                Money in your pocket
+                Get more space
               %p.step-description
-                More space in your wardrobe
+                Build a better wardrobe
           = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button mobile-only") do
             Register and sell
 
