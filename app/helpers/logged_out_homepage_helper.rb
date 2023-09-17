@@ -17,7 +17,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "", # don't hide the first one
-        :card_title => "Find your perfect hat for the perfect summer",
+        :card_title => "Find your perfect hat for a perfect day in the sun",
         :card_image => "blog/summer-hat-for-style/white-sun-hat.jpg",
         :alt_text => "A stylish woman stands near a swimming pool wearing a white sun hat with a black ribbon and a pale yellow summer halter top",
         :article_id => "summer_hat_for_style",
@@ -28,7 +28,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "White trainers: why they are still great for summer and your wallet",
+        :card_title => "White trainers: why they are still great for you and your wallet",
         :card_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
         :alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
         :article_id => "white_trainers",
@@ -39,7 +39,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "Which hats give the best sun protection",
+        :card_title => "Which hats give the best protection in the sun",
         :card_image => "blog/summer-hat-for-protection/bucket-hat-square.jpg",
         :alt_text => "A woman wearing a bucket hat to protect herself from the sun, along with an aztec-patterned summer shirt over a white vest top, looks pensively into the middle distance.",
         :article_id => "summer_hat_for_protection",
