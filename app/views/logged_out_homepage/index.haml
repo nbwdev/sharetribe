@@ -100,16 +100,16 @@
   .wardrobe-challenge-section
     .wardrobe-challenge-image
       .image-container
-        -image_url = image_path("logged_out_homepage/looking-through-clothes.jpg")
+        -image_url = image_path("logged_out_homepage/stylish-on-staircase.jpg")
         =image_tag(image_url, class: 'intro-image', alt: "A lady peeks through her messy clothes rail with a happy expression on her face, perhaps looking forward to a good decluttering session.")
     .caption
       .caption-container
         %h2.banner-title
-          Still struggling to declutter?
-          <br>
-          Take my wardrobe challenge
+          Problematic Wardrobe?
         %p.banner-text
-          Fix your problematic wardrobe in time for autumn/winter
+          Fix your wardrobe in time for autumn/winter
+        %p.banner-text
+          Take my wardrobe challenge
         .button-container
           = link_to("/blog/the_wardrobe_challenge", :class => "hp-button hp-button-standard") do
             Take the challenge now
