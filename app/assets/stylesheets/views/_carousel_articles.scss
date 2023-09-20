@@ -58,6 +58,24 @@
                 }
             }
 
+            h3.banner-category {
+                font-size: 1.25em;
+                font-weight: 600;
+                color: $panel-text-colour;
+                text-transform: uppercase;
+                margin-bottom: 1.5em;
+    
+                @media (max-width: 660px) {
+                    font-size: 1.10em;
+                    margin-bottom: 1.5em;
+                }
+
+                @media #{$desktop} {
+                    font-size: 1.75em;
+                    margin-bottom: 21px;
+                }
+            }
+
             .button {
                 background-color: $panel-text-colour;
                 color: $card-background-colour;

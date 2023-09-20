@@ -91,7 +91,7 @@
               -image_url = image_path("logged_out_homepage/capsule-wardrobe.jpg")
               =image_tag(image_url, class: 'step_img', alt: "A capsule wardrobe consisting of a few colourful pieces of clothing that could be worn in different combinations with each other.")
               %p.step-title
-                Rebuild
+                Build better
               %p.step-description
                 Give your wardrobe and your life greater purpose
           = link_to("/en/listings/new", :class => "hp-button hp-button-inverted guide-button mobile-only") do
@@ -116,6 +116,8 @@
 
   .tips-container
     .tips
+      %h3.banner-category
+        Build better
       %h2
         Winter sun guides - to keep you stylish and organised no matter where you go
       =render :partial => "logged_out_homepage/carousel", :locals => {carousel_id: "tips"}
