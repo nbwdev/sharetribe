@@ -48,14 +48,14 @@ class BlogController < ApplicationController
         },
         'big_boots_how_to_wear_them' => {
             :id => 'big_boots_how_to_wear_them',
-            :title => 'Big Boots - How to Wear Them',
+            :title => 'Big Boots - Are Back This Season',
             :description => "Big boots are here for another autumn and winter season. Here's how to choose the right pair for you",
             :created => Date.new(2022,11,15),
-            :updated => Date.new(2022,11,15),
+            :updated => Date.new(2023,9,23),
             :category => "Fashion",
             :tags => ['fashion', 'fashion advice', 'boots'],
-            :main_article_image => "blog/big-boots/sitting-on-plinth-square.jpg",
-            :main_image_alt_text => "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.",
+            :main_article_image => "blog/big-boots/big-boots-long-coat-square.jpg",
+            :main_image_alt_text => "Standing confidently on stone steps, wearing black knee-high boots, a black fedora, black and white thigh-length dress and a long black and white coat.",
             :main_image_placeholder_colour => "#e1dfd9",
             :second_article_image => "blog/big-boots/white-boots-sitting.jpg"
         },

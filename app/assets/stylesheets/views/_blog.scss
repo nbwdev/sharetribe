@@ -234,6 +234,10 @@
         font-weight: bold;
     }
 
+    .italic {
+        font-style: italic;
+    }
+
     h2.article-title {
         margin-bottom: 0;
         @media #{$mobile} {
@@ -800,7 +804,6 @@
     }
 
     ul.boots-text {
-        padding-left: 0;
 
         li {
             list-style: none;

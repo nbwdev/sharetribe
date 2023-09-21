@@ -16,6 +16,9 @@
   .articles-grid
     %ul.blog-articles
 
+      -article = articles['big_boots_how_to_wear_them']
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
+            
       - article = articles['summer_hat_for_style']
       = render :partial => "blog/components/article_card", :locals => {:article => article}    
 
@@ -53,9 +56,6 @@
       = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['the_wardrobe_challenge']
-      = render :partial => "blog/components/article_card", :locals => {:article => article}
-            
-      -article = articles['big_boots_how_to_wear_them']
       = render :partial => "blog/components/article_card", :locals => {:article => article}
             
       -article = articles['declutter_after_christmas']
