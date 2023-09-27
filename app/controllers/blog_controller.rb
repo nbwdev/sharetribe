@@ -52,6 +52,7 @@ class BlogController < ApplicationController
             :description => "Big boots are here for another autumn and winter season. Here's how to choose the right pair for you",
             :created => Date.new(2022,11,15),
             :updated => Date.new(2023,9,28),
+            :related => ['top_5_fixes_for_autumn','too_many_scarves','baggy_suit'],
             :category => "Fashion",
             :tags => ['fashion', 'fashion advice', 'boots'],
             :main_article_image => "blog/big-boots/big-boots-long-coat-square.jpg",
