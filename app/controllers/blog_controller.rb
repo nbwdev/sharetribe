@@ -51,7 +51,7 @@ class BlogController < ApplicationController
             :title => 'Big Boots - Are Back This Season',
             :description => "Big boots are here for another autumn and winter season. Here's how to choose the right pair for you",
             :created => Date.new(2022,11,15),
-            :updated => Date.new(2023,9,23),
+            :updated => Date.new(2023,9,28),
             :category => "Fashion",
             :tags => ['fashion', 'fashion advice', 'boots'],
             :main_article_image => "blog/big-boots/big-boots-long-coat-square.jpg",
@@ -254,6 +254,20 @@ class BlogController < ApplicationController
             :main_image_alt_text => "Two women mean business in baggy blazers",
             :main_image_placeholder_colour => "#d33a35",
             :second_article_image => "blog/baggy-suit/suit-office-steps.jpg"
+        },
+        'top_5_fixes_for_autumn' => {
+            :id => 'top_5_fixes_for_autumn',
+            :title => "Top 5 fixes for autumn",
+            :description => "Fixes for your autumn wardrobe that you can do right away",
+            :created => Date.new(2023,9,27),
+            :updated => Date.new(2023,9,27),
+            :related => ['big_boots_how_to_wear_them','too_many_scarves','baggy_suit'],
+            :category => 'Fashion',
+            :tags => ['suit', 'fashion', 'business', 'office','hybrid working'],
+            :main_article_image => "blog/top-5-fixes-for-autumn/red-jumper-shopping-square.jpg",
+            :main_image_alt_text => "A woman wearing a long red jumper accessorised with a black belt and carrying a few bags from the high-end stores in the street behind her.",
+            :main_image_placeholder_colour => "#a83443",
+            :second_article_image => "blog/top-5-fixes-for-autumn/long-coat-boots-in-park.jpg"
         }
     }
 

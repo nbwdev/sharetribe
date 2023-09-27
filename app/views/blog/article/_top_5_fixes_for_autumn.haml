@@ -1,0 +1,171 @@
+-# - content_for :extra_javascript do
+-#   =javascript_include_tag "//assets.pinterest.com/js/pinit.js", defer: true, "data-pin-hover": true
+-#   =render :partial => "blog/components/update_pinterest_button_text",
+-#     :locals => { :"pin_button_ids" => ["pinit-6-basic-needs"] }
+
+
+.blog-article
+  %h2.article-title="Top 5 fixes for autumn"
+  %p.published-date
+    September 2023
+
+  .article-section
+
+    .article-text
+
+      %h2.centred
+        1. Dresses and skirts
+
+      .article-image.article-image-centred.aspect-2-3
+        -image_url = image_path("blog/top-5-fixes-for-autumn/red-jumper-shopping.jpg")
+        =image_tag(image_url, alt: "A woman wearing a long red jumper accessorised with a black belt and carrying a few bags from the high-end stores in the street behind her.")
+        %figcaption
+          Photo by
+          =link_to('garetsvisual', 'https://www.freepik.com/free-photo/pretty-stylish-blond-girl-knitted-sweater-with-shopping-bags-happily-looking-camera-walking-through-city-street_23329604.htm')
+          on Freepik
+
+      %p
+        Separate your summer dresses and skirts into two categories:
+
+        %ol
+          %li
+            only for summer 
+          %li
+            still okay to wear
+        
+      %p
+        Category 2 are the summer dresses and skirts that you love so much and could easily wear match up with a pair of tights or a jumper. 
+
+
+  .article-section
+
+    .article-text
+
+      %h2.centred
+        2. Footwear
+
+      .article-image.article-image-centred.aspect-2-3
+        -image_url = image_path("blog/top-5-fixes-for-autumn/long-coat-boots-in-park.jpg")
+        =image_tag(image_url, alt: "A woman walks in the park on a sunny autumn day, wearing a pale calf-length coat, tight-knit white woolen jumper with flared sleeves, slim dark indigo jeans tucked into knee-high brown leather boots, and carrying an oversized leather handbag.")
+        %figcaption
+          Photo by
+          =link_to('senivpetro', 'https://www.freepik.com/free-photo/young-woman-autumn-park_3389776.htm')
+          on Freepik
+
+      %p
+        It’s time for your autumn/winter shoes.
+        Check what you have and that they are in good order for the change in season.
+
+      %p
+        Check out my guide to
+        =link_to('big boots', article_path(id='big_boots_how_to_wear_them'))
+        because they are definitely back in season. 
+
+  .article-section
+    .article-text
+
+      %h2.centred
+        3. Accessories
+
+      .article-image.article-image-centred.aspect-2-3
+        -image_url = image_path("blog/top-5-fixes-for-autumn/gloves.jpg")
+        =image_tag(image_url, alt: "FIXME.")
+        %figcaption
+          Photo by
+          =link_to('someone', 'https://www.freepik.com')
+          on Freepik
+
+      %p
+        Get your accessories in order and ready to go.
+        As soon as the weather changes, you will be glad you did.
+        Don’t get caught out and catch a chill just when you don’t need one.
+        
+      %p
+        Here is in checklist to get you started:
+
+        %ul
+          %li
+            Scarf
+          %li
+            Gloves
+          %li
+            Hat
+          %li
+            Wool socks
+
+
+
+  .article-section
+    .article-text
+
+      %h2.centred
+        4. Jumpers
+
+      .article-image.article-image-centred.aspect-2-3
+        -image_url = image_path("blog/top-5-fixes-for-autumn/jumpers-pile.jpg")
+        =image_tag(image_url, alt: "A pile of warm winter woolen jumpers.")
+        %figcaption
+          Photo by
+          =link_to('Freepik', 'https://www.freepik.com/free-photo/close-up-cozy-texture-detail_25714565.htm')
+
+      %p
+        Now is the time to get your scarves out and see what you have.
+        You want a good selection of reliable scarves ready, for when the weather change comes.
+        Make sure that they are in good order and not falling apart anywhere.
+        If you find that you have too many, take a look at my
+        =link_to('guide to reducing your scarf collection', article_path(id='too_many_scarves'))
+        and keeping the only best and essential scarves in your wardrobe this autumn/winter.
+
+
+
+  .article-section
+
+    .article-text
+
+      %h2.centred
+        5. Jackets
+
+      .article-image.article-image-centred.aspect-2-3
+        -image_url = image_path("blog/top-5-fixes-for-autumn/long-coat-scarf.jpg")
+        =image_tag(image_url, alt: "A woman waits by a festive shop window wearing a long pale coat over a thin knitted jumper, scarf, and black jeans.")
+        %figcaption
+          Photo by
+          =link_to('senivpetro', 'https://www.freepik.com/free-photo/woman-coat-standing-outside-cafe-winter-street_3964062.htm')
+          on Freepik
+
+      %p
+        Finally check your autumn jacket is ready and waiting to keep you all wrapped up.
+        Autumn jackets are usually longer and of more substantial material to keep you warm in the fresh autumn air.
+        Checking now means you will be all ready for autumn.
+
+
+  .article-footer.orange
+    %h2
+      Stay connected
+    %p
+      Stay connected and ahead of fashion with our ‘Newsflash’. [will be a link to the newsflash promotional page]
+      If there is something on the fashion high street, a must have essential for the season, then we will bring you the breaking news and how to wear it.
+
+  .article-section
+
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+
+  -# .article-section.pin-for-later
+  -#   .article-text
+  -#     %h2
+  -#       Pin this article for later!
+
+  -#     %a.pin-for-later-image.pinit#perfect-beach-bag{ :"data-pin-do" => "buttonPin",
+  -#               :"data-pin-media" => image_url("blog/white-trainers/5-reasons-white-trainers-hires.jpg"),
+  -#               :"data-pin-description" => "5 reasons why we still love white trainers",
+  -#               :title => "Pin This Article",
+  -#               :class => "pin-it-button",
+  -#               :href => "http://pinterest.com/pin/create/button/",
+  -#               :rel => "nofollow",
+  -#               :target => "_blank",
+  -#               "count-layout" => "horizontal",
+  -#               :"data-pin-custom" => "true",
+  -#               :"to-be-replaced" => "true"}
+  -#       -image_url = image_path("blog/white-trainers/5-reasons-white-trainers.jpg")
+  -#       =image_tag(image_url, alt: "Pin this article with the image: 5 reasons why we still love our white trainers.")
