@@ -885,3 +885,31 @@
         cursor: pointer;
     }
 }
+
+/* Top tips style articles with heading-photo-short paragraph/s */
+.blog-article.quick-sections {
+
+    h2, h3.larger {
+        margin-top: 0.75em;
+    }
+
+    .article-text p, .article-text li {
+        font-size: 1.25em;
+    }
+
+    @media #{$desktop}, #{$mobile-landscape}, #{$tablet} {
+        .article-section {
+
+            width: 60%;
+            margin: auto;
+
+            .article-image-centred {
+                width: 100%;
+            }
+
+        }
+    }
+
+
+
+}
