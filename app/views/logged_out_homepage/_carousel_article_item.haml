@@ -18,7 +18,7 @@
       -image_url = image_path(card_image)
       =image_tag(image_url, class: 'carousel-img', alt: alt_text)
     .text-container
-      = link_to(article_path(id=article_id), :class => "sustainability-banner-link") do
+      = link_to(article_path(id=article_id), :class => "carousel-article-card-link") do
         .cta
           .button
             %span.read-button
