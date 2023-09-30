@@ -889,12 +889,14 @@
 /* Top tips style articles with heading-photo-short paragraph/s */
 .blog-article.quick-sections {
 
-    h2, h3.larger {
-        margin-top: 0.75em;
-    }
+    .article-section {
+        h2, h3.larger {
+            margin-top: 0.75em;
+        }
 
-    .article-text p, .article-text li {
-        font-size: 1.25em;
+        .article-text p, .article-text li {
+            font-size: 1.25em;
+        }
     }
 
     @media #{$desktop}, #{$mobile-landscape}, #{$tablet} {
@@ -909,12 +911,14 @@
 
         }
 
-        h2.article-title, p.published-date {
-            width: 60%;
-            margin: auto;
-        }
+        // h2.article-title, p.published-date {
+        //     width: 60%;
+        //     margin: auto;
+        // }
     }
+}
 
-
-
+.blog-article.quick-sections > h2.article-title, .blog-article.quick-sections > p.published-date  {
+    width: 60%;
+    margin: auto;
 }
