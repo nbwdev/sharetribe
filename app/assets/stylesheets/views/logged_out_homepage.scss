@@ -568,6 +568,7 @@ article.page-content.no-padding-bottom {
     .seasonal-articles-container {
         $seasonal-articles-bg: #FFF5c3;
         background-color: $seasonal-articles-bg;
+        padding-top: 3em;
 
         .seasonal-articles {
             p, h2, h3 {
@@ -584,10 +585,26 @@ article.page-content.no-padding-bottom {
 
             h2 {
                 font-size: 3em;
-                padding-top: 1em;
 
                 @media (min-width: 660px) {
                     margin-bottom: 1em;
+                }
+            }
+
+            h3.banner-category {
+                font-size: 1.25em;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 1.5em;
+    
+                @media (max-width: 660px) {
+                    font-size: 1.10em;
+                    margin-bottom: 1.5em;
+                }
+
+                @media #{$desktop} {
+                    font-size: 1.75em;
+                    margin-bottom: 21px;
                 }
             }
 
