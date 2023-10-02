@@ -897,6 +897,12 @@
         .article-text p, .article-text li {
             font-size: 1.25em;
         }
+
+        .article-text {
+            p.opening-paragraph {
+                margin-top: 0.75em;
+            }
+        }
     }
 
     @media #{$desktop}, #{$mobile-landscape}, #{$tablet} {
