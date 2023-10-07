@@ -97,6 +97,7 @@ en:
         welcome_email: "Welcome email"
         custom_outgoing_address: "Custom outgoing address"
         mute_contact: "Mute spammy contacts"
+        newsflash: "Newsflash"
       search_location:
         search: Search
         location: Location

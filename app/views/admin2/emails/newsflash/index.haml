@@ -1,0 +1,30 @@
+- content_for :title do
+  Newsflash
+
+.content-card-header
+  %h1.content-card-header-title
+    Newsflash
+
+=render "hero_image"
+
+.content-card-section-container
+  = form_for :newsflash_mail, url: admin2_emails_newsflash_index_path, html: { multipart: true, class: %i[content-card-section-form] } do |form|
+    %section.content-card-section
+      .form-group
+        = form.label :newsflash_title, "Newsflash title"
+        = form.text_field :newsflash_title, placeholder: "Summer Newsflash", class: %i[form-control], autocomplete: "off"
+
+        = form.label :newsflash_subtitle, "Newsflash sub title"
+        = form.text_field :newsflash_subtitle, placeholder: "Summer is well and truly underway and there is still time to grab that summer fun.", class: %i[form-control], autocomplete: "off"
+
+        = form.label :hero_image_id, "Key image"
+        = form.text_field :hero_image_id, id: "hero-image-picker"
+        = link_to '#', :class => "", :id => "hero-image-picker-launcher", :tabindex => "-1" do
+          choose an image
+
+        %p#mainlogo-help.form-text
+          The key image at the top of the email. This should be 600px wide x 400px high with maximum file size of 80kb
+
+
+    %section.content-card-terminal
+      = render 'admin2/submit_button', caption: t('admin2.email_users.send_to_yourself')

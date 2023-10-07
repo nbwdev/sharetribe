@@ -1,0 +1,15 @@
+#newsflash-hero-picker-modal
+
+  .modal-contents
+    %span.close-modal
+      x
+    %h2
+      Upload an image
+    = form_for :newsflash_hero_image, url: create_hero_image_admin2_emails_newsflash_index_path, html: { multipart: true, class: %i[content-card-section-form] } do |form|
+      .form-group
+        = form.label :hero_image, "Key image"
+        .custom-file
+          = form.file_field :hero_image, accept: 'image/*', class: %i[change-file]
+
+      %section.content-card-button
+        = render 'admin2/submit_button', caption: "Done"

@@ -388,7 +388,8 @@ class PeopleController < Devise::RegistrationsController
         :email_listing_new_comment,
         :email_listing_updated,
         :email_watched_listing_updated,
-        :email_when_someone_wants_to_buy
+        :email_when_someone_wants_to_buy,
+        :email_newsflash
       ]
     ]
   end

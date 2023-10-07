@@ -3000,6 +3000,7 @@ en:
       email_listing_updated: "...a listing I have commented on has been updated"
       email_watched_listing_updated: "...I can now buy a listing I asked to be notified about"
       email_when_someone_wants_to_buy: "...someone wants to buy a listing before I have fully set up my account"
+      email_newsflash: "I agree to receive the seasonal newsflash which is sent once per month at most"
     profile:
       about_you: "About you"
       city: City

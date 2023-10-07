@@ -428,6 +428,11 @@ Rails.application.routes.draw do
             delete :delete
           end
         end
+        resources :newsflash, path: 'newsflash', only: %i[index create] do
+          collection do
+            post :create_hero_image
+          end
+        end
       end
 
       namespace :blog_articles do 

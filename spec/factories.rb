@@ -53,6 +53,14 @@ class FactoryGirl::DefinitionProxy
 end
 
 FactoryGirl.define do
+  factory :newsflash_hero_image do
+    community nil
+    image_file_name "MyString"
+    image_content_type "MyString"
+    image_file_size 1
+    image_updated_at "2023-10-01 13:54:51"
+    image_processing false
+  end
   factory :muted_contact do
     
   end

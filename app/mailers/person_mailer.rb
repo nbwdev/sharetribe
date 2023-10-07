@@ -547,6 +547,55 @@ class PersonMailer < ActionMailer::Base # rubocop:disable Metrics/ClassLength
     end
   end
 
+  # Just returns the newsflash email, need to put the should_receive and test logic somewhere else (the job for now)
+  def newsflash_email(sender, recipient, community, email_content, email_locale, test = false)
+
+    @email_type = "email_newsflash"
+    set_up_layout_variables(recipient, community, @email_type)
+
+    sender_address = EmailService::API::Api.addresses.get_sender(community_id: community.id).data
+    if sender_address[:type] == :default
+      sender_name = sender.name(community)
+      sender_email = sender.confirmed_notification_email_to
+      reply_to = "\"#{sender_name}\"<#{sender_email}>"
+    else
+      reply_to = sender_address[:smtp_format]
+    end
+
+    with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
+      @email_content = email_content
+      @hello_line = "HARDCODED hello_line"
+      @no_recipient_name = true
+      @recipient = recipient
+      @empty_colspan_row = true
+      @unsubscribe_colspan = "2"
+      mail(:to => recipient.confirmed_notification_emails_to,
+           :from => community_specific_sender(community),
+           :subject => "Autumn Newflash - Neverbeenworn",
+          #  :subject => @email_content[:newsflash_title],
+           :reply_to => reply_to) do |format|
+        format.html { render v2_template(community.id, "newsflash"), layout: v2_layout(community.id) }
+      end
+    end
+
+    # test = true
+
+    # if test || (recipient.should_receive?("email_from_admins") && (email_locale.eql?("any") || recipient.locale.eql?(email_locale)))
+    #   subject = "Autumn Newsflash - Neverbeenworn"
+    #   subject = "[TEST] #{subject}" if test
+    #   content_hello = I18n.t('admin.emails.new.hello_firstname_text',
+    #                          :person => PersonViewUtils.person_display_name_for_type(recipient, "first_name_only"),
+    #                          :locale => recipient.locale)
+    #   begin
+    #     MailCarrier.deliver_now(community_member_email(sender, recipient, subject, content_hello, email_content, community))
+    #   rescue StandardError => e
+    #     # Catch the exception and continue sending the emails
+    #     ApplicationHelper.send_error_notification("Error sending email to all the members of community #{community.full_name(email_locale)}: #{e.message}", e.class)
+    #   end
+    # end
+
+  end
+
   def premailer_mail(opts, &block)
     premailer(mail(opts, &block))
   end

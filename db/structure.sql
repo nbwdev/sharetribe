@@ -61,12 +61,12 @@ DROP TABLE IF EXISTS `ar_internal_metadata`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ar_internal_metadata` (
-  `key` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
-  `value` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `value` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `auth_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -396,8 +396,8 @@ DROP TABLE IF EXISTS `community_social_logos`;
 CREATE TABLE `community_social_logos` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `community_id` bigint DEFAULT NULL,
-  `image_file_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `image_content_type` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_file_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `image_content_type` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `image_file_size` int DEFAULT NULL,
   `image_updated_at` datetime DEFAULT NULL,
   `image_processing` tinyint(1) DEFAULT NULL,
@@ -405,7 +405,7 @@ CREATE TABLE `community_social_logos` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_community_social_logos_on_community_id` (`community_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `community_translations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -627,16 +627,16 @@ DROP TABLE IF EXISTS `export_task_results`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `export_task_results` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `status` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `token` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `file_file_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `file_content_type` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `file_file_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `file_content_type` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `file_file_size` int DEFAULT NULL,
   `file_updated_at` datetime DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `feature_flags`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -1111,6 +1111,25 @@ CREATE TABLE `muted_contacts` (
   UNIQUE KEY `index_muted_contacts_on_email_address` (`email_address`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `newsflash_hero_images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `newsflash_hero_images` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `community_id` int DEFAULT NULL,
+  `newsflash_hero_image_file_name` varchar(255) DEFAULT NULL,
+  `newsflash_hero_image_content_type` varchar(255) DEFAULT NULL,
+  `newsflash_hero_image_file_size` int DEFAULT NULL,
+  `newsflash_hero_image_updated_at` datetime DEFAULT NULL,
+  `newsflash_hero_image_processing` tinyint(1) DEFAULT NULL,
+  `alt_text` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_newsflash_hero_images_on_community_id` (`community_id`),
+  CONSTRAINT `fk_rails_188a1215cc` FOREIGN KEY (`community_id`) REFERENCES `communities` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `order_permissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -1421,14 +1440,14 @@ CREATE TABLE `social_links` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `community_id` int DEFAULT NULL,
   `provider` int DEFAULT NULL,
-  `url` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `sort_priority` int DEFAULT '0',
   `enabled` tinyint(1) DEFAULT '0',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_social_links_on_community_id` (`community_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `stripe_accounts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -1507,15 +1526,15 @@ CREATE TABLE `transaction_process_tokens` (
   `community_id` int NOT NULL,
   `transaction_id` int NOT NULL,
   `op_completed` tinyint(1) NOT NULL DEFAULT '0',
-  `op_name` varchar(64) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci NOT NULL,
-  `op_input` text CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci,
-  `op_output` text CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci,
+  `op_name` varchar(64) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `op_input` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `op_output` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `index_paypal_process_tokens_on_transaction` (`transaction_id`,`community_id`,`op_name`),
   UNIQUE KEY `index_transaction_process_tokens_on_process_token` (`process_token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `transaction_processes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -2523,6 +2542,18 @@ INSERT INTO `schema_migrations` (version) VALUES
 ('20220604094352'),
 ('20220621180736'),
 ('20220625160017'),
-('20230430001910');
+('20230430001910'),
+('20230514160736'),
+('20230514160737'),
+('20230514160750'),
+('20230514160751'),
+('20230514160752'),
+('20230514160753'),
+('20230514160754'),
+('20230514160755'),
+('20230514160756'),
+('20230514160757'),
+('20230514160758'),
+('20231001115451');
 
 
