@@ -51,13 +51,13 @@ class BlogController < ApplicationController
             :title => 'Big Boots - Are Back This Season',
             :description => "Big boots are here for another autumn and winter season. Here's how to choose the right pair for you",
             :created => Date.new(2022,11,15),
-            :updated => Date.new(2023,9,28),
+            :updated => Date.new(2023,10,8),
             :related => ['top_5_fixes_for_autumn','baggy_suit','declutter_your_handbags'],
             :category => "Fashion",
             :tags => ['fashion', 'fashion advice', 'boots'],
             :main_article_image => "blog/big-boots/big-boots-long-coat-square.jpg",
             :main_image_alt_text => "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.",
-            :main_image_placeholder_colour => "#e1dfd9",
+            :main_image_placeholder_colour => "#c9ccc0",
             :second_article_image => "blog/big-boots/sitting-on-plinth.jpg"
         },
         'the_wardrobe_challenge' => {
@@ -248,7 +248,7 @@ class BlogController < ApplicationController
             :description => "A must have item for your hybrid wardrobe this autumn/winter?",
             :created => Date.new(2023,8,25),
             :updated => Date.new(2023,8,25),
-            :related => ['big_boots_how_to_wear_them','top_5_fixes_for_autumn','declutter_your_handbags'],
+            :related => ['big_boots_how_to_wear_them','top_5_fixes_for_autumn','white_shirts'],
             :category => 'Fashion',
             :tags => ['suit', 'fashion', 'business', 'office','hybrid working'],
             :main_article_image => "blog/baggy-suit/three-women-blazers-square.jpg",
@@ -269,6 +269,34 @@ class BlogController < ApplicationController
             :main_image_alt_text => "A woman wearing a long red jumper accessorised with a black belt and carrying a few bags from the high-end stores in the street behind her.",
             :main_image_placeholder_colour => "#a83443",
             :second_article_image => "blog/top-5-fixes-for-autumn/long-coat-boots-in-park.jpg"
+        },
+        'white_shirts' => {
+            :id => 'white_shirts',
+            :title => "The perfect white shirt",
+            :description => "How to buy the right white shirt for you",
+            :created => Date.new(2023,10,10),
+            :updated => Date.new(2023,10,10),
+            :related => ['baggy_suit','big_boots_how_to_wear_them','white_shirt_how_to_wear_it'],
+            :category => 'Fashion',
+            :tags => ['shirt','suit', 'fashion', 'business', 'office','hybrid working'],
+            :main_article_image => "blog/white-shirts/white-shirt-on-stool-square.jpg",
+            :main_image_alt_text => "A lady sits on a high stool wearing a balloon-sleeved white shirt and skinny brown trousers",
+            :main_image_placeholder_colour => "#becbd2",
+            :second_article_image => "blog/white-shirts/white-shirt-beige-trenchcoat.jpg"
+        },
+        'white_shirt_how_to_wear_it' => {
+            :id => 'white_shirt_how_to_wear_it',
+            :title => "The white shirt - how to wear it",
+            :description => "A quick guide on how to wear your perfect white shirt",
+            :created => Date.new(2023,10,10),
+            :updated => Date.new(2023,10,10),
+            :related => ['white_shirts','baggy_suit','big_boots_how_to_wear_them'],
+            :category => 'Fashion',
+            :tags => ['shirt','suit', 'fashion', 'business', 'office','hybrid working'],
+            :main_article_image => "blog/white-shirts-quick-guide/white-shirt-hair-square.jpg",
+            :main_image_alt_text => "A lady wearing a crisp white shirt and fitted black trousers.",
+            :main_image_placeholder_colour => "#becbd2",
+            :second_article_image => "blog/white-shirts-quick-guide/white-shirt-accessories.jpg"
         }
     }
 

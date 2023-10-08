@@ -560,6 +560,12 @@
         padding-left: 1.5em;
     }
 
+    ul.no-bullet {
+        li {
+            list-style: none;
+        }
+    }
+
     math {
         margin-bottom: 0.75em;
         padding-left: 1.75em;

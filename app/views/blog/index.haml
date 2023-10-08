@@ -16,6 +16,12 @@
   .articles-grid
     %ul.blog-articles
 
+      -article = articles['white_shirts']
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
+            
+      -article = articles['white_shirt_how_to_wear_it']
+      = render :partial => "blog/components/article_card", :locals => {:article => article}
+            
       -article = articles['top_5_fixes_for_autumn']
       = render :partial => "blog/components/article_card", :locals => {:article => article}
             
