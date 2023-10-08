@@ -280,7 +280,7 @@ class BlogController < ApplicationController
             :category => 'Fashion',
             :tags => ['shirt','suit', 'fashion', 'business', 'office','hybrid working'],
             :main_article_image => "blog/white-shirts/white-shirt-on-stool-square.jpg",
-            :main_image_alt_text => "A lady sits on a high stool wearing a balloon-sleeved white shirt and skinny brown trousers",
+            :main_image_alt_text => "A lady sits on a high stool wearing a balloon-sleeved white shirt and skinny brown trousers.",
             :main_image_placeholder_colour => "#becbd2",
             :second_article_image => "blog/white-shirts/white-shirt-beige-trenchcoat.jpg"
         },
