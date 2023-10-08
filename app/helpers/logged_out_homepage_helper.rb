@@ -28,7 +28,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "White trainers: why they are still great for you and your wallet",
+        :card_title => "White trainers - don’t leave home without them",
         :card_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
         :alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
         :article_id => "white_trainers",

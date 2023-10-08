@@ -260,9 +260,27 @@ article.page-content.no-padding-bottom {
 
                 padding: 20px;
 
-                p, h2 {
+                p, h2, h3 {
                     color: $homepage-text-colour;
                 }
+
+                h3.banner-category {
+                    font-size: 1.25em;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-bottom: 1.5em;
+        
+                    @media (max-width: 660px) {
+                        font-size: 1.10em;
+                        margin-bottom: 1.5em;
+                    }
+    
+                    @media #{$desktop} {
+                        font-size: 1.75em;
+                        margin-bottom: 21px;
+                    }
+                }
+    
                 .banner-title {
 
                     font-size: 2em;
