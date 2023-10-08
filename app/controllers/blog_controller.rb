@@ -55,10 +55,10 @@ class BlogController < ApplicationController
             :related => ['top_5_fixes_for_autumn','baggy_suit','declutter_your_handbags'],
             :category => "Fashion",
             :tags => ['fashion', 'fashion advice', 'boots'],
-            :main_article_image => "blog/big-boots/sitting-on-plinth.jpg",
+            :main_article_image => "blog/big-boots/big-boots-long-coat-square.jpg",
             :main_image_alt_text => "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.",
             :main_image_placeholder_colour => "#e1dfd9",
-            :second_article_image => "blog/big-boots/white-boots-sitting.jpg"
+            :second_article_image => "blog/big-boots/sitting-on-plinth.jpg"
         },
         'the_wardrobe_challenge' => {
             :id => 'the_wardrobe_challenge',
