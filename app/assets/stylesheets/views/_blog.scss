@@ -902,6 +902,7 @@
 
         .article-text p, .article-text li {
             font-size: 1.25em;
+            line-height: 1.25em;
         }
 
         .article-text {
@@ -933,10 +934,12 @@
         margin-top: 3em;
         margin-bottom: 2em;
 
-        background-color: #939697;
+        &.anthracite {
+            background-color: #939697;
 
-        h2, h3, p {
-            color: #EDEDEE;
+            h2, h3, p {
+                color: #EDEDEE;
+            }
         }
     }
 }
