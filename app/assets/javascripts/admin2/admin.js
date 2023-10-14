@@ -3,6 +3,15 @@
 //= require jquery.ui.touch-punch.min.js
 //= require jquery_ujs
 //= require jquery.validate
+
+// Fileupload scripts for the email editor
+//= require load-image.all.min.js
+//= require canvas-to-blob.min.js
+//= require jquery.fileupload
+//= require jquery.fileupload-process
+//= require jquery.fileupload-validate
+//= require jquery.fileupload-image
+
 //= require lodash.min
 //= require sharetribe_common.js
 //= require utils
