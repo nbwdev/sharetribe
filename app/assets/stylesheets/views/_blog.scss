@@ -928,6 +928,17 @@
         //     margin: auto;
         // }
     }
+
+    .article-footer {
+        margin-top: 3em;
+        margin-bottom: 2em;
+
+        background-color: #939697;
+
+        h2, h3, p {
+            color: #EDEDEE;
+        }
+    }
 }
 
 .blog-article.quick-sections > h2.article-title, .blog-article.quick-sections > p.published-date  {
