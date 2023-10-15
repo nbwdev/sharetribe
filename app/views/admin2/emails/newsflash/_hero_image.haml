@@ -10,9 +10,10 @@
         = form.label :hero_image, "Key image"
         .custom-file
           = form.file_field :hero_image, accept: 'image/*', class: %i[change-file]
-        %p#hero-image-upload-status.form-text
+        %p#hero-image-upload-help.form-text
           Choose a file to upload.
           It should be 800px wide x 533px high (3:2 image ratio) with maximum file size of 80kb
+        %p#hero-image-upload-error.form-text
 
 
       %section.content-card-button

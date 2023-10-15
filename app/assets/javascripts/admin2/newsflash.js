@@ -40,7 +40,7 @@ $(function () {
             var fileId = data.result.id;
 
             // update the filename in the modal in case it is reopened
-            var fileStatusSpan = $("#hero-image-upload-status");
+            var fileStatusSpan = $("#hero-image-upload-help");
             fileStatusSpan.text("Uploaded: " + filename + ". To upload another file, hit 'Choose File' again and pick another 800x533 file");
 
             // update the file ID and file info in the main page
@@ -49,8 +49,23 @@ $(function () {
             fileIdField.val(fileId);
             filenameText.text("You uploaded " + filename + ". Click here to choose a different image.");
 
+            // hide the error on the modal in case there was a previous error
+            var errorTextField = $("#hero-image-upload-error");
+            errorTextField.text("");
+            errorTextField.hide();
+
             var modal = document.getElementById("newsflash-hero-picker-modal");
             modal.style.display = "none";
+        },
+        fail: function (e, data) {
+            var resp = data.jqXHR.responseJSON;
+            var resp_message = resp.message;
+            var filename = resp.image_file_name;
+
+            // Update the text to say the upload failed
+            var errorTextField = $("#hero-image-upload-error");
+            errorTextField.text("Failed to upload " + filename + " with this error: " + resp_message);
+            errorTextField.show();
         }
     });
 
@@ -61,7 +76,6 @@ $(function () {
 
     // When the user clicks on the button, open the modal
     sendTestEmailButton.onclick = function (event) {
-        console.log("Clicked the send test email button");
         event.preventDefault();
         var form = $('#newsflash_form');
         var test_email = $('#test_email');
@@ -75,7 +89,6 @@ $(function () {
             url: data.attr('action'),
             data: data.serialize(),
             success: function (data) {
-                console.log("Sent a test email");
                 $('#send-test-email').text('Sent a test email');
             }
         });
@@ -112,7 +125,6 @@ $(function () {
                 url: data.attr('action'),
                 data: data.serialize(),
                 success: function (data) {
-                    console.log("Sent a test email");
                     $('#send-test-email').text('Sent a test email');
                 }
             });
