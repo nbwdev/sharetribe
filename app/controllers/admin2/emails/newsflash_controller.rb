@@ -13,6 +13,7 @@ module Admin2::Emails
       content = params[:newsflash_mail]
       
       content[:hero_image_path] = get_hero_filename(content[:hero_image_id], image_url_base)
+      content[:signature_path] = "https:" + image_path("my_story/rabena-signature.jpg")
 
       # articles: [ { url, thumbnail, alt_text, title, description['parag1','parag2'] } ]
       content[:articles] = [
