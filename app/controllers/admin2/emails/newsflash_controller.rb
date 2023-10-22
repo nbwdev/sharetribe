@@ -8,7 +8,7 @@ module Admin2::Emails
       
       # HACK obviously
       # image_url_base = "http://192.168.178.28:5000/"
-      image_url_base = get_base_url("https://neverbeenworn.co.uk/")
+      image_url_base = get_base_url("https://neverbeenworn.co.uk")
 
       content = params[:newsflash_mail]
       
@@ -99,9 +99,9 @@ module Admin2::Emails
     def get_base_url(default)
       case request.host
       when "localhost"
-        "http://localhost:5000/"
+        "http://localhost:5000"
       when "192.168.178.28"
-        "http://192.168.178.28:5000/"
+        "http://192.168.178.28:5000"
       else
         default
       end
