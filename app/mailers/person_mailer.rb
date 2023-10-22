@@ -548,7 +548,7 @@ class PersonMailer < ActionMailer::Base # rubocop:disable Metrics/ClassLength
   end
 
   # Just returns the newsflash email, need to put the should_receive and test logic somewhere else (the job for now)
-  def newsflash_email(sender, recipient, community, email_content, email_locale, test = false)
+  def self.newsflash_email(sender, recipient, community, email_content, email_locale, test = false)
 
     @email_type = "email_newsflash"
     set_up_layout_variables(recipient, community, @email_type)
