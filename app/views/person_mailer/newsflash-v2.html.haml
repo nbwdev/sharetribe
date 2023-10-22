@@ -48,7 +48,6 @@
       
       %a{href: article_url, target: "_blank", style: article_read_more_style}
         Read more
-
 %tr
   %td{style: "padding:0;", colspan: "2"}
     %p{style: "font-size: 20px; line-height: 23px;"}
@@ -63,7 +62,7 @@
     %p{style: "font-size: 20px; line-height: 23px;"}
       Ciao Ciao for now
 
-    -signature_image_url = image_url("my_story/rabena-signature.jpg")
+    -signature_image_url = "https:" + image_path("my_story/rabena-signature.jpg")
     %img{src: signature_image_url, alt: "Signature of Rabena the founder of neverbeenworn.co.uk", width: "322px", height: "78px", style: "width:231px;height:78px;display:block;"}
     
     %h3
