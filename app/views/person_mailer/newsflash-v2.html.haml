@@ -33,22 +33,21 @@
 
 - @email_content[:articles].each do |article|
   %tr
-    %p
-      %td{style: article_image_cell_style}
-        - article_url = article['url']
+    %td{style: article_image_cell_style}
+      - article_url = article['url']
+      %a{href: article_url}
+        %img{src: article['thumbnail'], alt: article['alt_text'], width: "100%", height: "auto", style: "width:100%;height:auto;display:block;"}
+    %td{style: article_text_cell_style}
+      %h3{style: "margin-top: 0;"}
         %a{href: article_url}
-          %img{src: article['thumbnail'], alt: article['alt_text'], width: "100%", height: "auto", style: "width:100%;height:auto;display:block;"}
-      %td{style: article_text_cell_style}
-        %h3{style: "margin-top: 0;"}
-          %a{href: article_url}
-            =article['title']
+          =article['title']
 
-        - article[:description].each do |description_paragraph|
-          %p
-            = description_paragraph
-        
-        %a{href: article_url, target: "_blank", style: article_read_more_style}
-          Read more
+      - article[:description].each do |description_paragraph|
+        %p
+          = description_paragraph
+      
+      %a{href: article_url, target: "_blank", style: article_read_more_style}
+        Read more
 
 %tr
   %td{style: "padding:0;", colspan: "2"}
