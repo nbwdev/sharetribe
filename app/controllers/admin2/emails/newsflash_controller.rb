@@ -24,15 +24,15 @@ module Admin2::Emails
           :thumbnail => "https:" + image_path("blog/top-5-fixes-for-autumn/red-jumper-shopping-thumb.jpg"),
           :alt_text => "Top 5 Autumn Fixes cover - A woman wears a long red jumper accessorised with a black belt and carries a few bags from the high-end stores in the street behind her",
           :title => '5 top fixes for your autumn wardrobe',
-          :description => ['How to get your autumn wardrobe ready super quick in 5 simple steps','Save time and keep you looking great with less effort']
+          :description => ['How to get your autumn wardrobe ready in 5 simple steps','Look great with less effort']
         },
         {
           :id => "baggy_suit",
           :url => "https://neverbeenworn.co.uk" + article_path(:id => "baggy_suit"),
           :thumbnail => "https:" + image_path("blog/baggy-suit/baggy-suits-thumb.jpg"),
           :alt_text => "Baggy Suit cover - two women mean business in bold-coloured baggy suits",
-          :title => "Baggy Suits – how to wear this season’s wardrobe must have",
-          :description => ["Find out why this item is an effortless essential for your hybrid work from anywhere wardrobe"]
+          :title => "Baggy Suits – this season’s wardrobe must have",
+          :description => ["An effortless essential for your new hybrid working from anywhere wardrobe"]
         },
         {
           :id => "big_boots_how_to_wear_them",
@@ -40,7 +40,7 @@ module Admin2::Emails
           :thumbnail => "https:" + image_path("blog/big-boots/sitting-on-plinth-thumb.jpg"),
           :alt_text => "Big boots cover - sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots",
           :title => "Big boots are back this season",
-          :description => ["How to buy them and why they are great news for your wardrobe and your wallet"]
+          :description => ["How to buy the right ones for your wardrobe and your wallet"]
         },
         {
           :id => "white_shirts",
@@ -48,17 +48,31 @@ module Admin2::Emails
           :thumbnail => "https:" + image_path("blog/white-shirts/white-shirt-on-stool-thumb.jpg"),
           :alt_text => "White shirts cover - sitting on a high stool wearing a balloon-sleeved white shirt and skinny brown trousers",
           :title => "White shirt chic",
-          :description => ["A staple item for your effortless wardrobe and an absolute essential, to looking well styled effortlessly.","How to buy the right one for you and why it is still the best effortless item to have in your autumn wardrobe."]
+          :description => ["A staple item for your effortless wardrobe and an essential for autumn"]
         },
       ]
 
+      recipient_ids_t = ['aV1Rhj_iQ0TDYPfmWSTFnQ', # testrobt = rob
+        'reGeLbQ-QPknfpHnmW9FqQ', # adminr = robblyth77
+        '70F3NSDWE2XiqJR2sK0nxg'  # robf = robtestingfebfirst
+      ]
+      recipient_ids_p = ['jGBRjxC7yaM4cgvx4691JA','MTm9hEqsSahAtVUG1XD32w','olfA-td0k061_-pKha1Stw','yV93WKJfl4bUmq2Yv6kbfw','ZJmULk4EmFEDxiUNfjEH-A']
+
+      recipient_ids = recipient_ids_t
       is_test = true #params[:test_email] == '1'
       if is_test
-        Delayed::Job.enqueue(NewsflashEmailSendJob.new(@current_user.id,
-                                                             @current_user.id,
-                                                             @current_community.id,
-                                                             content,
-                                                             params[:newsflash_mail][:locale], true))
+        # Delayed::Job.enqueue(NewsflashEmailSendJob.new(@current_user.id,
+        #                                                      @current_user.id,
+        #                                                      @current_community.id,
+        #                                                      content,
+        #                                                      params[:newsflash_mail][:locale], true))
+        recipient_ids.each do |recipient|
+          Delayed::Job.enqueue(NewsflashEmailSendJob.new(@current_user.id,
+            @current_user.id,
+            @current_community.id,
+            content,
+            params[:newsflash_mail][:locale], true))
+        end
         render json: { message: t('admin2.notifications.test_email_sent') }
       # else
       #   email_job = CreateMemberEmailBatchJob.new(@current_user.id,
