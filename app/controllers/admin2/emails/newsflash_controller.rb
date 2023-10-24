@@ -56,9 +56,13 @@ module Admin2::Emails
         'reGeLbQ-QPknfpHnmW9FqQ', # adminr = robblyth77
         '70F3NSDWE2XiqJR2sK0nxg'  # robf = robtestingfebfirst
       ]
-      recipient_ids_p = ['jGBRjxC7yaM4cgvx4691JA','MTm9hEqsSahAtVUG1XD32w','olfA-td0k061_-pKha1Stw','yV93WKJfl4bUmq2Yv6kbfw','ZJmULk4EmFEDxiUNfjEH-A']
+      recipient_ids_p = ['jGBRjxC7yaM4cgvx4691JA',
+        'MTm9hEqsSahAtVUG1XD32w',
+        'olfA-td0k061_-pKha1Stw',
+        'yV93WKJfl4bUmq2Yv6kbfw',
+        'ZJmULk4EmFEDxiUNfjEH-A']
 
-      recipient_ids = recipient_ids_t
+      recipient_ids = recipient_ids_p
       is_test = true #params[:test_email] == '1'
       if is_test
         # Delayed::Job.enqueue(NewsflashEmailSendJob.new(@current_user.id,
