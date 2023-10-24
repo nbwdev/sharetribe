@@ -56,11 +56,24 @@ module Admin2::Emails
         'reGeLbQ-QPknfpHnmW9FqQ', # adminr = robblyth77
         '70F3NSDWE2XiqJR2sK0nxg'  # robf = robtestingfebfirst
       ]
-      recipient_ids_p = ['jGBRjxC7yaM4cgvx4691JA',
-        'MTm9hEqsSahAtVUG1XD32w',
+      recipient_ids_p = ['2K5rJ3v03uaPvUP-dssx5A',
+        '5ysED4xbdFfLHMtNF83inA',
+        '7jorN-0kzggg173oQgsBdA',
+        '9EkbnJ5ftE5ObJW65L7MUw',
+        'cVC_v_HNO03Hxgpq1rfODw',
+        'gWH-dqZv1KUwDvzl3YFDTg',
+        'jGBRjxC7yaM4cgvx4691JA',
         'olfA-td0k061_-pKha1Stw',
+        'Rk7o2QoW2SfnafPkATy25w',
+        'RKHMuGULUdTbWtox89UxdA',
+        'U49hF9MJYeQ2_YzNKYB0MQ',
+        'UJFp_VasE_KstK_PBdkSWA',
+        'uuahQgExCvuhBfIlPVy1qQ',
+        'UWf7hdhqDEOddTATLG8WPQ',
+        'wv-gG__RPC_MKHENSbWI6A',
         'yV93WKJfl4bUmq2Yv6kbfw',
-        'ZJmULk4EmFEDxiUNfjEH-A']
+        'ZJmULk4EmFEDxiUNfjEH-A',
+        'zxMgEKJNh71ZbPme_iFTzw']
 
       recipient_ids = recipient_ids_p
       is_test = true #params[:test_email] == '1'
