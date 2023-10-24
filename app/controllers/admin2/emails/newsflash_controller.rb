@@ -68,7 +68,7 @@ module Admin2::Emails
         #                                                      params[:newsflash_mail][:locale], true))
         recipient_ids.each do |recipient|
           Delayed::Job.enqueue(NewsflashEmailSendJob.new(@current_user.id,
-            @current_user.id,
+            recipient,
             @current_community.id,
             content,
             params[:newsflash_mail][:locale], true))
