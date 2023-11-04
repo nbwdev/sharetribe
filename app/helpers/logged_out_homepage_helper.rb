@@ -51,7 +51,7 @@ module LoggedOutHomepageHelper
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
         :card_title => "How I decluttered and went from hoarding 18 scarves to only needing 4",
-        :card_image => "blog/too-many-scarves/knitted-cosy-scarves.jpg",
+        :card_image => "blog/too-many-scarves/scarves-organised.jpg",
         :alt_text => "Three cozy and soft woolen scarves in a pile.",
         :article_id => "too_many_scarves",
         :button_cta => "READ MORE",

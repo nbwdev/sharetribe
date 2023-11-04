@@ -83,10 +83,10 @@ class BlogController < ApplicationController
             :related => ['declutter_me_happy','declutter_your_handbags','fix_your_drawers_forever', 'the_wardrobe_challenge', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'scarves', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
-            :main_article_image => "blog/too-many-scarves/knitted-cosy-scarves.jpg",
-            :main_image_alt_text => "Three cozy and soft woolen scarves in a pile.",
+            :main_article_image => "blog/too-many-scarves/scarves-organised.jpg",
+            :main_image_alt_text => "Five winter scarves neatly organised in a cubby hole.",
             :main_image_placeholder_colour => "#f4f3e9",
-            :second_article_image => "blog/too-many-scarves/scarves-white-green-grey.jpg"
+            :second_article_image => "blog/too-many-scarves/knitted-cosy-scarves.jpg"
         },
         'fix_your_drawers_forever' => {
             :id => 'fix_your_drawers_forever',
