@@ -297,6 +297,48 @@ class BlogController < ApplicationController
             :main_image_alt_text => "A lady wearing a crisp white shirt and fitted black trousers.",
             :main_image_placeholder_colour => "#becbd2",
             :second_article_image => "blog/white-shirts-quick-guide/white-shirt-accessories.jpg"
+        },
+        'winter_scarves' => {
+            :id => 'winter_scarves',
+            :title => "Your perfect winter scarf",
+            :description => "Top 5 key features of buying the perfect scarf to get you through winter",
+            :created => Date.new(2023,11,12),
+            :updated => Date.new(2023,11,12),
+            :related => ['too_many_scarves','winter_jumpers','padded_jackets'],
+            :category => 'Fashion',
+            :tags => ['scarf','winter', 'fashion', 'knitwear'],
+            :main_article_image => "blog/winter-scarves/pale-pink-matching-knits-square.jpg",
+            :main_image_alt_text => "A lady smiles in her chunky soft cable-knit jumper, scarf and hat combo.",
+            :main_image_placeholder_colour => "#e2d7d6",
+            :second_article_image => "blog/winter-scarves/teal-jacket-mustard-scarf.jpg"
+        },
+        'padded_jackets' => {
+            :id => 'padded_jackets',
+            :title => "The padded winter jacket",
+            :description => "How to buy the right jacket and avoid spending too much money",
+            :created => Date.new(2023,11,12),
+            :updated => Date.new(2023,11,12),
+            :related => ['winter_scarves','winter_jumpers','big_boots_how_to_wear_them'],
+            :category => 'Fashion',
+            :tags => ['jacket','warm', 'fashion', 'winter'],
+            :main_article_image => "blog/padded-jackets/grey-padded-jacket-high-street-square.jpg",
+            :main_image_alt_text => "A lady on a snowy shopping street wearing a long grey padded jacket, below-knee tan leather boots and a warm wollen hat matching the jacket.",
+            :main_image_placeholder_colour => "#d9dade",
+            :second_article_image => "blog/padded-jackets/fur-trimmed-white-coat-phone-box.jpg"
+        },
+        'winter_jumpers' => {
+            :id => 'winter_jumpers',
+            :title => "Jumpers: A winter wardrobe essential",
+            :description => "Buying a winter jumper that will last until spring",
+            :created => Date.new(2023,11,12),
+            :updated => Date.new(2023,11,12),
+            :related => ['winter_scarves','padded_jackets','big_boots_how_to_wear_them'],
+            :category => 'Fashion',
+            :tags => ['jumper','winter', 'fashion', 'warm', 'knitwear'],
+            :main_article_image => "blog/winter-jumpers/red-jumper-square.jpg",
+            :main_image_alt_text => "A lady relaxes on a low stool in a dark red jumper.",
+            :main_image_placeholder_colour => "#bd434f",
+            :second_article_image => "blog/winter-jumpers/cream-jumper-cross-legged.jpg"
         }
     }
 

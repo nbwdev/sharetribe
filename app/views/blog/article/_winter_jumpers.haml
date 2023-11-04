@@ -1,0 +1,568 @@
+-# - content_for :extra_javascript do
+-#   =javascript_include_tag "//assets.pinterest.com/js/pinit.js", defer: true, "data-pin-hover": true
+-#   =render :partial => "blog/components/update_pinterest_button_text",
+-#     :locals => { :"pin_button_ids" => ["pinit-6-basic-needs"] }
+
+
+.blog-article
+  %h2.article-title="Jumpers: A Winter Wardrobe Essential"
+  %p.published-date
+    October 2023
+  .article-section.article-section-right-image.text-first.article-section-with-quote.article-half-page-image-floated
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3
+        Buying a winter jumper that will last until spring
+
+      .article-image.aspect-2-3
+        -image_url = image_path("blog/winter-jumpers/red-jumper.jpg")
+        =image_tag(image_url, alt: "A lady relaxes on a low stool in a dark red jumper.")
+        %figcaption
+          Photo by
+          =link_to('Racool_studio', 'https://www.freepik.com/free-photo/beautiful-girl-red-sweater_10012768.htm')
+          on Freepik
+
+      %p
+        The moment you know it's winter is the moment you realise just how much you need a good winter jumper.
+        The signs start to subtly creep up on you over a few short weeks and before you know it, you are reaching for an extra layer to keep that chill off your shoulders.
+
+      %p
+        Have you checked your winter jumper collection lately?
+        Are you finding that your jumper collection looks more misshapen than winter style or only fit for a Sunday couch day?
+        Are you still trying to convince yourself that most of your jumpers are still okay when you know they are not?
+        If this is you then read on.
+
+      %p
+        As part of my
+        %span.strong
+          winter wardrobe essentials
+        I am getting cozy and stylish with buying winter jumpers.
+        I will look at how to buy one that will stay in good shape and keep you warm all winter.
+
+      %h3
+        Top tips and essentials for warm and stylish jumpers
+
+      %p
+        Adding a new winter jumper to your current wardrobe is something you need to get right well before the winter weather kicks in.
+        Do you know why?
+        Because the right jumper will support you and your wardrobe all the way through to spring.
+        So, it’s important to make the right choice now and be sure that any jumper that catches your eye is really up to the job.
+
+      %p
+        So how do you know if a new jumper is going to work for you and your wardrobe and not let you down mid-winter?
+        Where do you start and what do you look for? 
+
+      %h3
+        How to select the best winter jumper
+
+      %p
+        Keeping you warm throughout the colder months is just the start of any jumper-buying process.
+        So when should you really begin?
+        As soon as you see the weather starts to change jumpers suddenly become a new focus.
+        But there is a lot to live up to.
+        It has to also lift your mood when it's dark and cold outside.
+        It has to keep you feeling cozy and comforted whilst you spend more time inside, whilst you wait for all that winter weather to pass.
+
+      %p
+        So, is it a good idea to start early and why do you need more time to pick a good one?
+        Why?
+        Because, if you pick the right one, you can enjoy the cozy winter months together and you know you will feel warm and lovely in it all winter.
+        Let's take a look at how to get started.
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3
+        FABRIC AND KNIT - KNOW YOUR WOOLS
+
+      .article-image.aspect-4-5
+        -image_url = image_path("blog/winter-jumpers/cream-jumper-cross-legged.jpg")
+        =image_tag(image_url, alt: "A lady sits cross-legged on an armchair. She wears a cream cashmere jumper with a high loose neck and sits on a warm knitted throw.")
+        %figcaption
+          Photo by
+          =link_to('ArthurHidden', 'https://www.freepik.com/free-photo/smiling-lady-smart-trendy-wear-is-sitting-armchair-smiling-sitting-relaxing-atmosphere-indoors_13085112.htm')
+          on Freepik
+
+      %p
+        There is one main reason why winter jumpers are made of wool.
+        It keeps you warm.
+        That is literally it! Wool’s natural construction is designed with this one main purpose in mind.
+        Take a look at sheep.
+        Just before they are shorn, they look pretty snug and how do their coats look?
+        Very warm indeed.
+        And this is what is all about.
+
+      %p
+        Wool is so warm naturally, but it is woven in such a way that it traps even more heat and this is basically why we love it in winter.
+        Did you know that there are different grades of wool too?
+        Did you know that there are even different weights of wool?
+        These attributes all go to define the quality of the jumper you will end up with.
+
+      %p
+        So, do you know what wool to look for and what to avoid?
+        Do you know your loose knits from your tight weaves, or your chunky knits from your fine ones?
+        What about those soft and luxurious knits that we all love the feel of?
+        Do you know which fine animal they came from?
+
+      %p
+        Well, to help you understand a little more about wool, I have added a simple chart below.
+        This covers the top and most sought-after wools and the standards that most wools are graded by.
+
+      %p
+        So, let's take a look at what type of wools to look out for.
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+
+      %h4
+        Types of woolen jumpers
+
+      %table.summer-hats-coverage-columns
+        %thead
+          %tr
+            %th
+              Type of jumper
+            %th
+              Animal type
+            %th
+              Grade
+            %th
+              Quality
+            %th
+              Price range
+        %tbody
+          %tr
+            %td
+              Merino
+            %td
+              Australian sheep
+            %td
+              Extremely soft
+            %td
+              Finest
+            %td
+              Luxury
+          %tr
+            %td
+              Mohair
+            %td
+              Angora goat
+            %td
+              Very soft
+            %td
+              Fine
+            %td
+              Mid-range
+          %tr
+            %td
+              Angora
+            %td
+              Angora rabbit
+            %td
+              Extremely soft
+            %td
+              Finest
+            %td
+              Luxury
+          %tr
+            %td
+              Lamb’s wool
+            %td
+              Young lambs
+            %td
+              Soft
+            %td
+              Fine
+            %td
+              Mid-range
+          %tr
+            %td
+              Pashmina
+            %td
+              Goat
+            %td
+              Extremely soft
+            %td
+              Finest
+            %td
+              Mid-range
+          %tr
+            %td
+              Vicuna
+            %td
+              Wild vicuna
+            %td
+              Extremely soft
+            %td
+              Finest
+            %td
+              Luxury
+          %tr
+            %td
+              Sheep’s wool
+            %td
+              Adult sheep
+            %td
+              Slightly coarse
+            %td
+              Fine
+            %td
+              Mid-range
+          %tr
+            %td
+              Cashmere
+            %td
+              Changra goat
+            %td
+              Very soft
+            %td
+              Finest
+            %td
+              Luxury
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3
+        SIZE AND COMFORT - HOW TO GET THE FIT RIGHT
+
+      .article-image.aspect-2-3
+        -image_url = image_path("blog/winter-jumpers/big-cream-jumper-snow.jpg")
+        =image_tag(image_url, alt: "A lady sits on a blanket on the snow-covered steps outside her house. She wears a warm oversized cream jumper with a high neck, long socks to match and warm suede house shoes.")
+        %figcaption
+          Photo by
+          =link_to('prostooleh', 'https://www.freepik.com/free-photo/close-up-portrait-lady-white-sweater-sitting-by-home-terrace_13181721.htm')
+          on Freepik
+
+      %p
+        Jumpers are no longer in the one size fits all category.
+        They have not been for quite some time, so there is no excuse for still trying to get some wear out of that ill-fitting, overstretched one you still have in your wardrobe.
+        Unless it is for Sunday couch day, right?
+        Do you know that jumpers now come in all shapes and flattering sizes and there are many levels of comfort too?
+        If anything, quality has not been reduced in the process, and affordability has improved greatly.
+
+      %p
+        How do you view your current jumper collection?
+        It's important to see your jumpers as more than a reason to cover up and hide in winter.
+        Do you ever think of them as more of an opportunity to be comfortable and stylish like other items in your wardrobe?
+        A good jumper in the right size will give you heaps of confidence and comfort all in one.
+        The key is to know what shape to go for and how to wear it.
+        Do you think you know how to wear the right size jumper for you?
+        Are your jumpers the right size jumper to complement your size and frame best?
+        I have created a mini guide so you can check how you are doing.
+
+      %p
+        So, here are my quick tips on jumpers and shaping:
+
+      %h4
+        Wearing the right size jumper for your shape - a quick guide
+
+      %p
+        %ul
+          %li
+            Small frames - go for more fitted and shorter knits.
+            These will even out your proportions and elongate legs from the waist down.
+            Wear them with jeans or shorter length skirts.
+          %li
+            Medium frames – mid lengths will even out medium frames and comfortably cover a mid-size waist.
+            If you prefer to, wear them with leggings or mid length skirts for a good balance.
+          %li
+            Larger frames – longer lengths will elongate the upper frame proportionally and give more balance overall.
+            Wear them with leggings or over long dresses or skirts.
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %h3
+        COLOUR AND STYLE -  KNOWING WHAT SUITS YOU AND  WHY 
+
+      .article-image.aspect-2-3
+        -image_url = image_path("blog/winter-jumpers/city-knitwear.jpg")
+        =image_tag(image_url, alt: "A lady wears a loose cream jumper with texture coming from the contoured lines of the knit. It is a sunny autumn day so she wears sunglasses and carries her long trenchcoat.")
+        %figcaption
+          Photo by
+          =link_to('standret', 'https://www.freepik.com/free-photo/holds-coat-hand-young-beautiful-girl-warm-clothes-have-walk-city-her-weekends-time_9819579.htm')
+          on Freepik
+
+      %p
+        When it comes to colour we all have our favourite that we go to.
+        I call it the 'safe colour’, and every wardrobe has one.
+        Do you know what your safe colour is?
+
+      %p
+        Take a look at your wardrobe and tell me what you see.
+        It’s the most evident colour in our wardrobe.
+        This is probably your safe colour.
+        Black is the most popular safe colour, for obvious reasons.
+        It goes with everything and it's flattering and kind to any shape or size.
+        But, in the midst of winter, you might feel like you want something a little uplifting, something a little brighter in colour, or with a touch more elegant and style, to give you that soft warm hug that only a good winter jumper can give.
+        You may think that winter colours need to be darker or a bit solemn too, but there are quite a few great winter colours to choose from.
+
+      %p
+        What colours come to mind, when you think of winter colours?
+        How many can you think of?
+        There is burgundy, grey, black, purple, red, pink, cream, blue, green, white and all the different shades in between, so I am sure you can find a lovely colour to suit you.
+        The key is to make sure that it is a colour you are comfortable wearing and it does match up with the rest of your wardrobe.
+        There is no point in buying a colour that you never wear and that does not complement anything you plan on wearing over the winter months.
+        It just will sit at the back of your wardrobe because you don’t know what to wear it with or you don’t like it.
+        So, stick with what you know, what will match and what you like.
+
+      %p
+        Jumpers are not exactly fine tailoring are they?
+        But there is a craft involved so you may as well go for some level of quality.
+        You may think that shape and size are often an afterthought when it comes to jumpers.
+        You might also think that most people go for something big and baggy and leave it at that.
+        But, let me ask you a few quick questions.
+        How often have you seen a well-shaped jumper on someone you passed by?
+        How often have you seen a jumper that looked so soft that you wondered which brand it was from?
+
+      %p
+        Some wools are so fine and soft that they deserve nothing less than a perfect shape and fit.
+        So how do you decide if fine and fitted is for you?
+        The best way to look at this is to think about the type of occasions you often wear a nice top for.
+        A fine jumper is no different. Any special occasion in the winter is the perfect uplifting treat and therefore deserving of a lovely soft knit to go with it.
+        You might not want to go out all night or until the early hours in a fine knit, but a nice family occasion or dinner out are both perfect settings for wearing one.
+        Have you ever considered that before?
+
+      %p
+        Think about when and where you might wear a nice fine jumper and you can start to invest in finding one as soon as possible.
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+
+      %h3
+        CUFFS, NECKLINE AND OTHER EMBELLISHMENTS
+
+      .article-image.aspect-4-5
+        -image_url = image_path("blog/winter-jumpers/grey-knit-sleeves.jpg")
+        =image_tag(image_url, alt: "A lady wears a chunky pale grey woolen jumper with an open-knit jersey texture in the body and richly textured sleeves looking like interlocking tubes of yarn.")
+        %figcaption
+          Photo by
+          =link_to('ansiia', 'https://www.freepik.com/free-photo/inside-portrait-adorable-lovely-lady-with-blond-hair-wearing-knitted-pullover-is-posing-isolated-background-with-romantic-smile-beautiful-lady-is-posing-during-photoshoot_26503032.htm')
+          on Freepik
+
+      %p
+        Details on jumpers are not to be sniffed at.
+        The skill required to coiffure any type of wool into a stylish cuff, or sleeve is something to be appreciated.
+        I have seen sleeves that you would never imagine were made out of a simple ball of wool, and cuffs that do not look knitted at all.
+        There are some really lovely styles that look simply amazing.
+
+      %p
+        So, how do you know what is good detail and what is considered not so good?
+        It's hard not to be impressed by fine elaborate details, but I would always advise to err on the side of caution.
+        Why?
+        Because what might look delightful in the store might not fit quite as well in your life.
+        Let me explain.
+        The level of detail comes partly down to you, your taste and the frequency of wear.
+        Highly embellished jumpers may look pretty in the store, but may not be that practical for everyday wear.
+        So, be realistic and think about what your expected frequency of use and wear is and the level of comfort that you expect from your jumper during that use. 
+
+
+      %p
+        It's time to talk about embellishment now.
+        Have you ever taken the time to think about the subject before? Embellishment has been the route of many wasted purchases for quite some time.
+        Why is this?
+        Depending on the specific locations and amount of embellishment that a jumper has, could determine the level of comfort you have in wearing it.
+        Does this make sense now?
+        A high level of embellishment in inconvenient places may not be that comfortable to wear that often, therefore limiting the amount of use it gets and the value you get from owning the item.
+        So, my advice would be to buy with caution if you're not used to wearing an embellished jumper and don’t be enamoured by over-embellishment or something that looks like nothing you have ever seen before.
+        If you do want a highly embellished knit to wear, then make sure that it is comfortable enough for you can wear often and you can keep it looking as lovely as it did when you saw it in the store.
+        A safe choice would be to start with a good simple and well-made jumper that has little or no embellishment at all.
+        But in case you do see something that you instantly fall in love with, then check the type of embellishment or detail and how intricate it appears to be.
+        You could also look for embellishment that is not overdone.
+        Like a nice embellished cuff area, some interesting sleeves or a nice styled neckline. Less is definitely more here.
+        It’s more manageable for sure.
+        So choose wisely ladies.
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+
+      %h3
+        COST OF CARE – KNOW YOUR CARE CAPABILITIES AND LIMITS
+
+      .article-image.aspect-2-3
+        -image_url = image_path("blog/winter-jumpers/brown-wool-jumper.jpg")
+        =image_tag(image_url, alt: "A lady stands on a pebble beach wearing a pale brown waffled woolen jumper.")
+        %figcaption
+          Photo by
+          =link_to('Holiak', 'https://www.freepik.com/free-photo/pretty-young-lady-cozy-wear-near-sea_27685821.htm')
+          on Freepik
+
+      %p
+        Caring for wool can be a little bit different.
+        It’s quite a delicate and natural fibre at the end of the day, so it sometimes needs a little more care and consideration than a standard 60-degree wash followed by a fast spin cycle.
+        Do you have a jumper that is a bit bothersome when it comes to washing it?
+        Do you find it usually spends anything up to six months at the bottom of the washing basket waiting to be washed and only a month in the wardrobe waiting to be worn?
+
+      %p
+        The true cost of care is not just about money, it's about your time too.
+        If you find yourself putting in more time to keep a jumper clean than time spent wearing it, then this is not the right jumper choice for you.
+
+      %p
+        Do you have a jumper that fits this description? Did you overspend on this jumper?
+        Then you may have found yourself stuck in what I call a ‘guilt cycle’.
+        Do you still have this jumper? Do you wash it, only when you can be bothered?
+        Do you wear it less and less now? The reality and cost of care have lessened the enjoyment of wearing this item.
+        But because you may have spent more money on it than you normally would have done, you have to keep it because of guilt.
+        Are you reminded of that every time you see it sat at the bottom of the washing basket?
+        This is the guilt reminder setting in.
+
+      %p
+        My advice would be to sell it, learn from the lesson and buy better next time, and don’t be fooled by fabulous knitwear that costs the earth but has no realistic way of cleaning and caring for it.
+
+      %p
+        Buying better should always include being able to easily care for an item.
+        Always check the washing instructions before you part with any cash.
+        This is my golden rule.
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+
+      %h3
+        BRANDS AND BUDGETS- HOW MUCH TO SPEND AND WHEN IT’S REALLY WORTH IT
+
+      .article-image.aspect-4-5
+        -image_url = image_path("blog/winter-jumpers/mustard-jumper-fashion.jpg")
+        =image_tag(image_url, alt: "A lady wears a slim fitted mustard jumper under a zipped jacket with a pencil skirt.")
+        %figcaption
+          Photo by
+          =link_to('javi_indy', 'https://www.freepik.com/free-photo/portrait-fashion-girl-cute-outdoors_1069659.htm')
+          on Freepik
+
+      %p
+        I have left this section until last for a very good reason.
+        Do you know what that reason might be?
+        I felt it was important to cover the ‘cost of care’ before covering the subject of ‘brands and budget’.
+        Why? Because care and ‘cost of care’, can determine which brands you might go for.
+
+      %p
+        So how does this work?
+        Some brands always sell ‘easy care’ items and some brands may sell delicate items that you know are going to require more time and effort to keep clean.
+        So, understanding the cost of care first was important to help you understand your brand choices and budget better for extra care if needed.
+        Do you already have a favourite brand? How often do you check the care label before you buy an item from them?
+        It is with every purchase?
+        Is it occasionally or is it never?
+
+      %p
+        Not checking the care label before you buy a wool jumper could cost you dearly later on.
+        Do you remember the item I mentioned in cost of care?
+        The one that is sat at the bottom that is always sat at the bottom of the wash basket that is waiting to be washed with extra care?
+
+      %p
+        This is what can happen when you don't check the wash label first or you don't know the general care guide of your favourite brand.
+        I like to use the following checklist against a brand, so I don’t get carried away and make a bad high-maintenance choice.
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %table.summer-hats-coverage-columns
+        %thead
+          %tr
+            %th
+              Category
+            %th
+              What to look for
+            %th
+              What to avoid
+        %tbody
+          %tr
+            %td
+              Cost
+            %td
+              A comfortable price to pay
+            %td
+              Overpaying
+          %tr
+            %td
+              Shape
+            %td
+              Good for your body shape
+            %td
+              Uncomfortable fits
+          %tr
+            %td
+              Care
+            %td
+              Easy to clean and care for
+            %td
+              Dry clean only
+          %tr
+            %td
+              Styling
+            %td
+              The right amount for you
+            %td
+              Over styled
+          %tr
+            %td
+              Identity
+            %td
+              Fits with your current style
+            %td
+              One off or short lived trends
+          %tr
+            %td
+              Sizing
+            %td
+              Good fit on body and arms
+            %td
+              Too large, or small
+          %tr
+            %td
+              Colour
+            %td
+              Matches well with your clothes
+            %td
+              Experimental combinations
+          %tr
+            %td
+              Quality
+            %td
+              Will last more than one season
+            %td
+              Poor quality that won’t last
+
+  .article-section.article-section-right-image.text-first.article-half-page-image-floated
+    .article-text
+      %p
+        Your brand loyalty is down to your own personal taste and style.
+        Budgets are also going to vary.
+        So, how do you determine where to look?
+        I would stick with your brand loyalty, if it constantly serves you well.
+        But I would also never pass up the chance to take a look at what else is on offer.
+
+      %p
+        Brand styles can change to keep up with trends and designers also move on, as they carve out their designing career and build on their experience.
+        So, don’t get stuck in a rut and always assume that a brand still stacks up for both you and your current needs.
+
+      %p
+        Life is constantly changing and so are brands.
+
+      %p
+        A good idea is to check every now and then on how your favourite brand measures up against other brands and what they are offering for a particular season.
+        If you see something you like elsewhere, there is no harm in taking a closer look.
+
+      %p
+        Remember you are investing in yourself, not the brand. 
+
+
+  .article-section
+
+  =render :partial => "blog/components/related_articles",
+    :locals => { :"article_id" => article_id }
+
+  -# .article-section.pin-for-later
+  -#   .article-text
+  -#     %h2
+  -#       Pin this article for later!
+
+  -#     %a.pin-for-later-image.pinit#perfect-beach-bag{ :"data-pin-do" => "buttonPin",
+  -#               :"data-pin-media" => image_url("blog/white-trainers/5-reasons-white-trainers-hires.jpg"),
+  -#               :"data-pin-description" => "5 reasons why we still love white trainers",
+  -#               :title => "Pin This Article",
+  -#               :class => "pin-it-button",
+  -#               :href => "http://pinterest.com/pin/create/button/",
+  -#               :rel => "nofollow",
+  -#               :target => "_blank",
+  -#               "count-layout" => "horizontal",
+  -#               :"data-pin-custom" => "true",
+  -#               :"to-be-replaced" => "true"}
+  -#       -image_url = image_path("blog/white-trainers/5-reasons-white-trainers.jpg")
+  -#       =image_tag(image_url, alt: "Pin this article with the image: 5 reasons why we still love our white trainers.")
