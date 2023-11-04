@@ -21,15 +21,22 @@
     $panel-text-colour: $article-orange-colour;
     */
 
-    /* white panel with orange cards */
+    /* white panel background */
     $panel-background-colour: #ffffff;
     $panel-background-zero-pc: #ffffff00;
     $panel-background-forty-pc: #ffffff66;
     $panel-background-sixty-pc: #ffffff99;
     $panel-background-hundred-pc: #ffffffff;
 
+    /* orange cards (summer palette) */
+    /*
     $card-background-colour: #fef3e6;
     $panel-text-colour: $article-orange-colour;
+    */
+
+    /* white panel with dusky red cards (winter palette) */
+    $card-background-colour: #F3E8E9;
+    $panel-text-colour: #A04650;
 
     $panel-border-radius: 10px;
 
@@ -111,6 +118,8 @@
                         border-top-right-radius: $panel-border-radius;
                         max-width: 100%;
                         margin: 0;
+                        aspect-ratio: 1;
+                        object-fit: cover;
                     }
                 }
 

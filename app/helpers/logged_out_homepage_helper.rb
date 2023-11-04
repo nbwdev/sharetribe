@@ -17,10 +17,10 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "", # don't hide the first one
-        :card_title => "Find your perfect hat for a perfect day in the sun",
-        :card_image => "blog/summer-hat-for-style/white-sun-hat.jpg",
-        :alt_text => "A stylish woman stands near a swimming pool wearing a white sun hat with a black ribbon and a pale yellow summer halter top",
-        :article_id => "summer_hat_for_style",
+        :card_title => "How to buy a winter jumper that will last until spring",
+        :card_image => "blog/winter-jumpers/red-jumper-square.jpg",
+        :alt_text => "A lady relaxes on a low stool in a dark red jumper.",
+        :article_id => "winter_jumpers",
         :button_cta => "READ MORE",
         :card_text => "",
         :colour => PURPLE
@@ -28,10 +28,10 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "White trainers - don’t leave home without them",
-        :card_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
-        :alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
-        :article_id => "white_trainers",
+        :card_title => "5 things to look for to buy the perfect scarf to get you through winter",
+        :card_image => "blog/winter-scarves/pale-pink-matching-knits-square.jpg",
+        :alt_text => "A lady smiles in her chunky soft cable-knit jumper, scarf and hat combo.",
+        :article_id => "winter_scarves",
         :button_cta => "READ MORE",
         :card_text => "",
         :colour => ORANGE
@@ -39,10 +39,10 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "Which hats give the best protection in the sun",
-        :card_image => "blog/summer-hat-for-protection/bucket-hat-square.jpg",
-        :alt_text => "A woman wearing a bucket hat to protect herself from the sun, along with an aztec-patterned summer shirt over a white vest top, looks pensively into the middle distance.",
-        :article_id => "summer_hat_for_protection",
+        :card_title => "How to buy a padded winter jacket without spending too much",
+        :card_image => "blog/padded-jackets/grey-padded-jacket-high-street-square.jpg",
+        :alt_text => "A lady on a snowy shopping street wearing a long grey padded jacket, below-knee tan leather boots and a warm wollen hat matching the jacket.",
+        :article_id => "padded_jackets",
         :button_cta => "READ MORE",
         :card_text => "",
         :colour => PURPLE
@@ -50,10 +50,10 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "Beach bag essentials for a hassle free day at the beach",
-        :card_image => "blog/summer-beach-bag/summer-beach-bag.jpg",
-        :alt_text => "A woven straw beach bag with some essential items poking out of it - sun screen, sunglasses, camera, and notebook.",
-        :article_id => "summer_beach_bag",
+        :card_title => "How I decluttered and went from hoarding 18 scarves to only needing 4",
+        :card_image => "blog/too-many-scarves/knitted-cosy-scarves.jpg",
+        :alt_text => "Three cozy and soft woolen scarves in a pile.",
+        :article_id => "too_many_scarves",
         :button_cta => "READ MORE",
         :card_text => "",
         :colour => ORANGE
