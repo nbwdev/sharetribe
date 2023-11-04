@@ -6,13 +6,35 @@
     $header-background: #f38701;
     $header-text: $nbw-pale;
 
+    /* Colour theme styles */
     table.summer-hats-coverage-columns, table.summer-hats-rating-bars, table.summer-hats-simple {
-
         th {
             background-color: $header-background;
             color: $header-text;
         }
 
+        tbody {
+            tr:nth-child(odd) {
+                background-color: #fef3e6;
+            }
+        }
+    }
+
+    table.winter-article {
+        th {
+            background-color: #A04650;
+            color: $header-text;
+        }
+
+        tbody {
+            tr:nth-child(odd) {
+                background-color: #F3E8E9;
+            }
+        }
+    }
+
+    /* Common to all tables in the articles */
+    table.summer-hats-coverage-columns, table.summer-hats-rating-bars, table.summer-hats-simple, table.winter-article {
         thead {
             tr:first-child {
                 th:first-child {
@@ -34,11 +56,6 @@
                 td:last-child {
                     border-top-right-radius: 0;
                 }
-            }
-
-
-            tr:nth-child(odd) {
-            background-color: #fef3e6;
             }
         }
 
