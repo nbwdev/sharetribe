@@ -129,7 +129,7 @@
                     width: 50%;
 
                     & .title {
-                        padding-top: 20%;
+                        padding-top: 15%;
 
                         h3 {
                             color: $panel-text-colour;
@@ -199,6 +199,10 @@
                             height: 128px;
                             padding-top: 10%;
                             padding-bottom: 10%;
+
+                            h3 {
+                                font-size: 1.15em;
+                            }
                         }
                         width: 100%;
                     }

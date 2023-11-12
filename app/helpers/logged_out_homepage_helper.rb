@@ -28,7 +28,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "5 things to look for to buy the perfect scarf to get you through winter",
+        :card_title => "Top 5 cheats - for the perfect get you through winter scarf",
         :card_image => "blog/winter-scarves/pale-pink-matching-knits-square.jpg",
         :alt_text => "A lady smiles in her chunky soft cable-knit jumper, scarf and hat combo.",
         :article_id => "winter_scarves",
@@ -39,7 +39,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "How to buy a padded winter jacket without spending too much",
+        :card_title => "Buying a padded winter jacket - how to avoid spending to much",
         :card_image => "blog/padded-jackets/grey-padded-jacket-high-street-square.jpg",
         :alt_text => "A lady on a snowy shopping street wearing a long grey padded jacket, below-knee tan leather boots and a warm wollen hat matching the jacket.",
         :article_id => "padded_jackets",
@@ -50,7 +50,7 @@ module LoggedOutHomepageHelper
       {
         :card_type => ARTICLE_LINK,
         :item_class => "carousel-hide",
-        :card_title => "How I decluttered and went from hoarding 18 scarves to only needing 4",
+        :card_title => "I went from hoarding 18 scruffy scarves to only needing four elegant ones",
         :card_image => "blog/too-many-scarves/scarves-organised.jpg",
         :alt_text => "Three cozy and soft woolen scarves in a pile.",
         :article_id => "too_many_scarves",
