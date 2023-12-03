@@ -9,12 +9,15 @@
 .my_story
   .my-story-section.section-1
 
-    %h2
+    %h2.show-mobile
       Welcome to Never Been Worn – where we like to live with better purpose
 
     .my-story-image 
       -image_url = image_path("my_story/rabena.jpg")
       =image_tag(image_url, alt: "A photograph of Rabena, the author of this website.")
+
+    %h2.show-desktop
+      Welcome to Never Been Worn – where we like to live with better purpose
 
     .my-story-text
       %p
@@ -197,5 +200,5 @@
 
       %p.register-now
         =link_to('Register today', '/signup')
-        for free today. Take my wardrobe challenge and start living with better purpose. 
+        for free. Take my wardrobe challenge and start living with better purpose. 
 

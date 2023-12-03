@@ -29,21 +29,39 @@
         color: $nbw-dark;
     }
 
+    /* make the heading align with the image on desktop, be above it on mobile, can't find an elegant way to do it */
+    h2.show-mobile {
+        display: none;
+    }
+
+    h2.show-desktop {
+        display: block;
+        margin-top: 0;
+    }
+
     @media #{$mobile} {
         h2 {
             font-size: 1.5em;
+        }
+
+        h2.show-mobile {
+            display: block;
+        }
+
+        h2.show-desktop {
+            display: none;
         }
     }
 
     .my-story-image {
         width: 300px;
-        height: 300px;
+        aspect-ratio: 3/2;
         float: right;
         margin-left: 20px;
 
         img {
             width: 100%;
-            border-radius: 50%;
+            border-radius: 10px;
             vertical-align: middle;
         }
     }
@@ -53,8 +71,9 @@
             float: none;
             margin: 0;
             width: 100%;
-            aspect-ratio: 1;
+            aspect-ratio: 3/2;
             height: auto;
+            margin-bottom: 1em;
 
             img {
                 border-radius: 20px;
