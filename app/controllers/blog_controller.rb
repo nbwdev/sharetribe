@@ -69,8 +69,8 @@ class BlogController < ApplicationController
             :related => ['declutter_me_happy','declutter_your_handbags','fix_your_drawers_forever', 'too_many_scarves', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'wardrobe', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
-            :main_article_image => "blog/wardrobe-challenge/choosing-clothes.jpg",
-            :main_image_alt_text => "Choosing between a plain white shirt and a white and green striped top.",
+            :main_article_image => "blog/wardrobe-challenge/tidy-wardrobe-selfie.jpg",
+            :main_image_alt_text => "A woman takes a selfie in front of her tidy and organised wardrobe.",
             :main_image_placeholder_colour => "#e7c5a9",
             :second_article_image => "blog/wardrobe-challenge/full-wardrobe.jpg"
         },
@@ -139,9 +139,9 @@ class BlogController < ApplicationController
             :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'fix_your_drawers_forever','declutter_after_christmas'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'shelves', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
-            :main_article_image => "blog/messy-shelves/messy-shelf-tops-and-jeans.jpg",
-            :main_image_alt_text => "A messy bedroom shelf holds a jumble of tops, jeans, and t-shirts.",
-            :main_image_placeholder_colour => "#fcdde6",
+            :main_article_image => "blog/messy-shelves/tidy-shelves.jpg",
+            :main_image_alt_text => "A woman in the middle of organising her shelves holds a container with neatly folded clothes, ready to add to the tidy wardrobe behind her.",
+            :main_image_placeholder_colour => "#988982",
             :second_article_image => "blog/messy-shelves/holding-crumpled-clothes-on-floor.jpg"
         },
         'declutter_your_handbags' => {
