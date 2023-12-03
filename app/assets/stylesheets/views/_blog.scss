@@ -611,18 +611,18 @@
         }
     }
 
-    .quick-guide-container.quick-guide-decluttering {
-        .quick-guide {
-            color: #413D75;
-            background: linear-gradient(180deg, #D2ED68 0%, #3DC01C 100%);
+    // .quick-guide-container.quick-guide-decluttering {
+    //     .quick-guide {
+    //         color: #413D75;
+    //         background: linear-gradient(180deg, #D2ED68 0%, #3DC01C 100%);
             
-            a, h4, p {
-                color: #413D75;
-            }
-        }
-    }
+    //         a, h4, p {
+    //             color: #413D75;
+    //         }
+    //     }
+    // }
 
-    .quick-guide-container.quick-guide-beach {
+    .quick-guide-container.quick-guide-beach, .quick-guide-container.quick-guide-decluttering {
         .quick-guide {
             color: #413D75;
             background: linear-gradient(180deg, #cfeefa 0%, #a9e5f9 100%);

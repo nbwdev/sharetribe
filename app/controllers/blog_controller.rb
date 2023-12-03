@@ -97,7 +97,7 @@ class BlogController < ApplicationController
             :related => ['declutter_me_happy','declutter_your_handbags','too_many_scarves', 'the_wardrobe_challenge', 'get_your_messy_shelves_in_shape','declutter_after_christmas'],
             :category => 'Decluttering',
             :tags => ['decluttering', 'drawers', 'storage', 'simple life', 'home organisation', 'organising', 'making habits'],
-            :main_article_image => "blog/fix-your-drawers-forever/overflowing-drawers.jpg",
+            :main_article_image => "blog/fix-your-drawers-forever/tidy-drawer.jpg",
             :main_image_alt_text => "Clothes overflow from all three drawers of a chest of drawers.",
             :main_image_placeholder_colour => "#f1f0ec",
             :second_article_image => "blog/fix-your-drawers-forever/piling-clothes-neatly.jpg"
