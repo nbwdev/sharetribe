@@ -132,6 +132,26 @@
         I am living with better direction and greater purpose.
         It all started with my wardrobe and you can do it too. 
 
+    .book-a-consultation-panel
+      .book-a-consultation
+        .consultation-image
+          -image_url = image_path("my_story/rabena-square.jpg")
+          =image_tag(image_url, alt: "A photograph of Rabena, the author of this website.")
+
+        %h2
+          Book a
+          %span.strong
+            free
+          consultation
+        %p
+          If you are struggling to get started then I am here to help.
+        %p
+          Book a free 45 minute one-to-one chat and I will help you live with better purpose.
+        .calendly-cta
+          %button.book-consultation{'aria-label' => 'Book a free consultation', 'aria-controls' => 'book-consultation-popout', 'aria-expanded' => 'false', type: :button, 'id' => 'book-consultation-button'}
+            Book a consultation
+
+    .my-story-text
       %h2
         How can you start living with better purpose?
 
@@ -175,15 +195,6 @@
         =link_to('shelves', article_path(id='get_your_messy_shelves_in_shape'))
         too.
         It's the same path I took, and it worked for me much faster.
-
-      %p
-        If you are struggling to get started then you can register at www.neverbeenworn.co.uk add your photo and send me a short message at
-        = succeed "." do
-          =link_to('info@neverbeenworn.co.uk', 'mailto:info@neverbeenworn.co.uk?subject=Summer hat joy')
-        Label it ‘I need help’  to book a free 45 minute one-to-one chat with me.
-
-      %p
-        Don’t forget to add some (short) details in your email about what you are struggling with in your wardrobe.
 
       %h2
         My new life – more time and greater purpose
