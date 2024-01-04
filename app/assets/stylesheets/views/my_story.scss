@@ -87,7 +87,6 @@
     }
 
     .book-a-consultation-panel {
-        display: none;
         width: 300px;
         float: right;
         margin-left: 20px;
@@ -149,7 +148,7 @@
             .calendly-cta {
                 padding-top: 6px;
 
-                button {
+                button, a.button {
                     margin-left: auto;
                     margin-right: auto;
                 }

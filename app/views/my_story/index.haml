@@ -6,6 +6,13 @@
 - content_for :title_header do
   %h1= t("my_story.my_story")
 
+- content_for :extra_javascript do
+  %script{:type => "text/javascript", :src => "https://assets.calendly.com/assets/external/widget.js"}
+  -# = javascript_include_tag "https://assets.calendly.com/assets/external/widget.js", defer: true
+
+- content_for :page_specific_css do
+  %link{:rel => "stylesheet", :type => "text/css", :href => "https://assets.calendly.com/assets/external/widget.css"}
+
 .my_story
   .my-story-section.section-1
 
@@ -142,14 +149,13 @@
           Book a
           %span.strong
             free
-          consultation
+          chat
         %p
-          If you are struggling to get started then I am here to help.
+          Are you struggling to fix your wardrobe?
         %p
-          Book a free 45 minute one-to-one chat and I will help you live with better purpose.
+          Book a free 45 minute one-to-one chat and I will help you declutter and live with better purpose.
         .calendly-cta
-          %button.book-consultation{'aria-label' => 'Book a free consultation', 'aria-controls' => 'book-consultation-popout', 'aria-expanded' => 'false', type: :button, 'id' => 'book-consultation-button'}
-            Book a consultation
+          =link_to "Book a free chat", "", onclick: "Calendly.initPopupWidget({url: 'https://calendly.com/effectiveandeffortlessliving/effective-and-effortless-living-fix-my-wardrobe'});return false;", class: "button"
 
     .my-story-text
       %h2
