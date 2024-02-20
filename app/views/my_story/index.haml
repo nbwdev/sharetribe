@@ -19,9 +19,25 @@
     %h2.show-mobile
       Welcome to Never Been Worn – where we like to live with better purpose
 
-    .my-story-image 
-      -image_url = image_path("my_story/rabena.jpg")
-      =image_tag(image_url, alt: "A photograph of Rabena, the author of this website.")
+    .my-story-text
+      .book-a-consultation-panel.show-desktop
+        .book-a-consultation
+          .consultation-image
+            -image_url = image_path("my_story/rabena-square.jpg")
+            =image_tag(image_url, alt: "A photograph of Rabena, the author of this website.")
+
+          %h2
+            Book a
+            %span.strong
+              free
+            chat
+          %p
+            Are you struggling to fix your wardrobe?
+          %p
+            Book a free 45 minute one-to-one chat and I will help you declutter and live with better purpose.
+          .calendly-cta
+            =link_to "Book a free chat", "", onclick: "Calendly.initPopupWidget({url: 'https://calendly.com/effectiveandeffortlessliving/effective-and-effortless-living-fix-my-wardrobe'});return false;", class: "button"
+
 
     %h2.show-desktop
       Welcome to Never Been Worn – where we like to live with better purpose
@@ -33,11 +49,11 @@
 
       %p
         How did I get to this point?
-        By living with greater purpose.
+        By living with great purpose.
         This is what NeverBeenWorn is all about.
 
       %h2
-        How I started
+        How it All started
 
       %p
         Let me explain how it all started.
@@ -46,67 +62,45 @@
         My reply went something like this: “I am organising all the pans by how big they are and how much we use them, of course.”
 
       %p
-        Well that seems quite straightforward, but guess what happened next.
-        It became clear to me that we had too many pans.
+        It all sounds quite straightforward, right?
+        But guess what happened next.
+        It became clear to me that we just had too many pans.
         It was obvious to see.
-        We had pans of all sizes and we had pans we never used.
-        They took up too much space and made it difficult to find the only pan you needed.
-        And it was always a mess.
-        All those extra pans - they had no purpose but we still kept them.
-        In a situation like this wouldn't it be better to remove all those unused pans.
-        Wouldn't it be better to find them a new home?
-        Wouldn't it be better to finally be free of them, so you can find the pan you need much quicker and save time?
+        We had pans of all sizes, we had old pans, and we had pans we never used.
+        They all took up too much space and made it difficult to find the one pan you really needed, and it was always a mess.
+        All those extra pans - they had no purpose but we kept them for years.
+        Why?
+        We all fill our lives like this every day.
+
+    .my-story-text
+      .book-a-consultation-panel.show-mobile
+        .book-a-consultation
+          .consultation-image
+            -image_url = image_path("my_story/rabena-square.jpg")
+            =image_tag(image_url, alt: "A photograph of Rabena, the author of this website.")
+
+          %h2
+            Book a
+            %span.strong
+              free
+            chat
+          %p
+            Are you struggling to fix your wardrobe?
+          %p
+            Book a free 45 minute one-to-one chat and I will help you declutter and live with better purpose.
+          .calendly-cta
+            =link_to "Book a free chat", "", onclick: "Calendly.initPopupWidget({url: 'https://calendly.com/effectiveandeffortlessliving/effective-and-effortless-living-fix-my-wardrobe'});return false;", class: "button"
+
 
       %h2
-        How to get your better life
+        Taking your first steps to a better life
 
       %p
-        Let’s take the first steps.
-        Just like my mum’s messy pan cupboard, your wardrobe can be full of things that aren’t really working for you either.
-        It can be full of things you thought were a great idea so you went ahead and bought them.
-        Well did they turn out to be as great as you expected?
-        Do you wear them to this day?
-        If not, then they don't have any true purpose in your life.
-
-      %p
-        So, are you still holding on to them?
-        Have you ever stopped to wonder why?
-        Maybe you think it’s okay to do that, but let's look a little deeper.
-
-      %p
-        Why are you really holding on to them?
-        Why are you filling up your wardrobe with things you don’t wear or need?
-        Did you hope that one day they would finally be useful?
-        Did that day ever come?
-        Or are they still sat in your wardrobe doing nothing?
-        Why are they still taking up space in your life and your wardrobe whilst you wait for them to become useful?
-        How long are you prepared to wait?
-        Are you stuck like this?
-        Do you feel like you can’t move on?
-
-      %p
-        Maybe you feel like you have to hold onto them because you spent your money on them and maybe if you keep them it doesn't feel wasted?
-        If they don’t fit, or you no longer like them, why do you still have them?
-        All these items are really doing is holding you back, taking up time in your life and space in your wardrobe.
-        It’s time to let them go and move on to better things.
-
-      %p
-        If this sounds like you then you probably have a wardrobe filled with clothes that you don’t wear,
-        that you don’t need and that you bought for all the wrong reasons.
-        Do you see these items every time you open your wardrobe?
-        Do they get in the way every time you are looking for something useful to wear?
-        Being surrounded by these things that you don’t wear or that you don’t use is like being stuck with a problem forever and this is no way to live.
-
-      %h2
-        This website is not just about clothes
-
-      %p
-        Part of my purpose in life is to help others to live with their own greater purpose.
+        Part of my purpose in life is to help others to live with their own great purpose.
         This is why I am here.
-        Helping to guide people to make better choices and build a wardrobe that works for them and suits them much better.
-        If the wardrobe in your life is filled with things you don’t want, you don’t wear and that have no real purpose in your life,
-        then it is working against you.
-        It should be filled with things you really need and things that work for you and you wear all the time. 
+        Helping to guide people to make better choices, build a better wardrobe and a better life that works for them and suits them much, much better.
+        If you feel like your life is filled with things that are not really working for you then start with your wardrobe.
+        So let’s do something about that.
 
       %p.strong
         Ask yourself the following questions:
@@ -127,95 +121,71 @@
       %p
         %span.strong
           Why?
-        Because it can free you and give you back great purpose.
-        %span.strong
-          How?
-        If you can make a change in your wardrobe, you can make a change in other things in your life too.
+        If you can make a change in your wardrobe, you can make a change in the rest of your life too.
         How do I know this?
         Because
         %span.strong
-          I already did that.
+          I already did it.
         I am free of things that don’t work for me, I am free of many things that have no real purpose in my life.
-        I am living with better direction and greater purpose.
-        It all started with my wardrobe and you can do it too. 
-
-    .book-a-consultation-panel
-      .book-a-consultation
-        .consultation-image
-          -image_url = image_path("my_story/rabena-square.jpg")
-          =image_tag(image_url, alt: "A photograph of Rabena, the author of this website.")
-
-        %h2
-          Book a
-          %span.strong
-            free
-          chat
-        %p
-          Are you struggling to fix your wardrobe?
-        %p
-          Book a free 45 minute one-to-one chat and I will help you declutter and live with better purpose.
-        .calendly-cta
-          =link_to "Book a free chat", "", onclick: "Calendly.initPopupWidget({url: 'https://calendly.com/effectiveandeffortlessliving/effective-and-effortless-living-fix-my-wardrobe'});return false;", class: "button"
+        I am already living with great purpose, and it all started with my wardrobe. 
 
     .my-story-text
       %h2
-        How can you start living with better purpose?
+        How to get started
 
       %h3
-        Step 1 – How you can get started
-
-      %p
-        You can start striving for better purpose right away, by going through your wardrobe and taking out all the items you had never worn or hardly ever worn.
-        Just like I did.
-        I have even created a
-        =link_to('wardrobe challenge', article_path(id='the_wardrobe_challenge'))
-        in case you are not sure how to get started.
-        It will help you get rid of all the things you no longer need or wear.
-        It will help you focus and get ready quicker and this is how greater purpose begins.
-
-      %h3
-        Step 2 – Repurposing
-
-      %p
-        Finding purpose and repurposing go hand in hand at neverbeenworn. 
-        If you have clothes sat in your wardrobe that you have never worn, then sell them.
-        People want to support the re-purposing of clothes right now and they will buy them.
-        I have cleared out my wardrobe already and sold everything I hadn’t worn.
-        I have repurposed everything.
-        It felt good and now I am free to live with my own greater purpose and less clutter.
-
-      %h3
-        Step 3 – My 1-2-3 guide
+        My 1-2-3 guide
       
       %p
         If you want to start living with much greater purpose there is a full
         =link_to('1-2-3 step guide', "/#quick-guide")
         on my homepage.
-        Not only will it help you to
-        =succeed "," do
-          =link_to('clear out your wardrobe with the wardrobe challenge', article_path(id='the_wardrobe_challenge'))
-        but also your
-        =succeed "," do
-          =link_to('drawers', article_path(id='fix_your_drawers_forever'))
-        and your
-        =link_to('shelves', article_path(id='get_your_messy_shelves_in_shape'))
-        too.
-        It's the same path I took, and it worked for me much faster.
+
+      %p
+        Step 1 - my 
+        =link_to('wardrobe challenge', article_path(id='the_wardrobe_challenge'))
+        will help you get started.
+        
+      %p
+        Step 2 and 3 are for your
+        =link_to('drawers', article_path(id='fix_your_drawers_forever'))
+        and
+        =succeed "." do
+          =link_to('shelves', article_path(id='get_your_messy_shelves_in_shape'))
+        
+      %p
+        It's the same path I took, and it really works.
 
       %h2
         My new life – more time and greater purpose
 
       %p
-        I have already repurposed everything in my wardrobe that I know I didn’t need.
-        It now takes me minutes to get ready in the morning just because of that one thing I did and I use that extra time for better things.
-        Like striving for even greater purpose in life.
-        It also helps me achieve my goals and do more meaningful things.
-        I do less laundry, fewer chores, and more travel,
-        but it all started with my wardrobe and making it have better purpose in my life.
-        You can have that too.
-        Start your better life today.
+        I have repurposed everything in my wardrobe that I know I no longer need.
+        I have put it all back into the world for others to use.
+        Now it takes me minutes to get ready every morning, just because of that one thing I did.
+        So what did I do with all that extra time?
+        I built this website. 
 
-      %p.register-now
-        =link_to('Register today', '/signup')
-        for free. Take my wardrobe challenge and start living with better purpose. 
+        I achieve my goals.
+        I do less laundry and fewer chores, and I travel a lot more,
+        but it all started with me fixing my wardrobe and making it work for me. This gave it better purpose in my life.
+        You can have that too.
+        Start your better life and better living now.
+
+    .my-story-text
+      .book-a-consultation-panel.wide
+        .book-a-consultation
+          .consultation-image
+            -image_url = image_path("my_story/rabena-square.jpg")
+            =image_tag(image_url, alt: "A photograph of Rabena, the author of this website.")
+
+          %h2
+            Change your life today!
+          %p
+            Are you struggling to fix your wardrobe?
+          %p
+            Book a free 45 minute one-to-one chat and I will help you live with greater purpose.
+          .calendly-cta
+            =link_to "I want a free chat", "", onclick: "Calendly.initPopupWidget({url: 'https://calendly.com/effectiveandeffortlessliving/effective-and-effortless-living-fix-my-wardrobe'});return false;", class: "button"
+
 

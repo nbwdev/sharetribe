@@ -95,6 +95,11 @@
         margin-top: 40px;
         margin-bottom: 40px;
 
+        &.wide {
+            width: 100%;
+            margin-left: 0;
+        }
+
         @media #{$mobile} {
             width: 100%;
             margin: 0 0 20px 0;
@@ -154,6 +159,26 @@
                 }
             }
         }
+
+        /* in case I want different placement on desktop and mobile */
+        &.show-mobile {
+            display: none;
+        }
+
+        &.show-desktop {
+            display: block;
+        }
+
+        @media #{$mobile} {
+            &.show-mobile {
+                display: block;
+            }
+
+            &.show-desktop {
+                display: none;
+            }
+        }
+
     }
 
 }
