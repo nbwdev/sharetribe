@@ -268,7 +268,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/top-5-fixes-for-autumn/red-jumper-shopping-square.jpg",
             :main_image_alt_text => "A woman wearing a long red jumper accessorised with a black belt and carrying a few bags from the high-end stores in the street behind her.",
             :main_image_placeholder_colour => "#a83443",
-            :second_article_image => "blog/top-5-fixes-for-autumn/long-coat-boots-in-park.jpg"
+            :second_article_image => "blog/top-5-fixes-for-autumn/long-coat-boots-in-park.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/top-5-fixes-for-autumn/?from_nbw=true"
         },
         'white_shirts' => {
             :id => 'white_shirts',
@@ -296,7 +298,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/white-shirts-quick-guide/white-shirt-hair-square.jpg",
             :main_image_alt_text => "A lady wearing a crisp white shirt and fitted black trousers.",
             :main_image_placeholder_colour => "#becbd2",
-            :second_article_image => "blog/white-shirts-quick-guide/white-shirt-accessories.jpg"
+            :second_article_image => "blog/white-shirts-quick-guide/white-shirt-accessories.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/white-shirt-how-to-style-it/?from_nbw=true"
         },
         'winter_scarves' => {
             :id => 'winter_scarves',
@@ -373,6 +377,12 @@ class BlogController < ApplicationController
         end
 
         article_id = params[:id]
+
+        # redirect to LSJ for migrated articles
+        if ARTICLES[article_id][:migrated]
+            redirect_to ARTICLES[article_id][:migrated_url] and return
+        end
+
         render locals: {
             article_id: article_id,
             article_data: ARTICLES[article_id],
