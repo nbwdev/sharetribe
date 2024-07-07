@@ -284,7 +284,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/white-shirts/white-shirt-on-stool-square.jpg",
             :main_image_alt_text => "A lady sits on a high stool wearing a balloon-sleeved white shirt and skinny brown trousers.",
             :main_image_placeholder_colour => "#becbd2",
-            :second_article_image => "blog/white-shirts/white-shirt-beige-trenchcoat.jpg"
+            :second_article_image => "blog/white-shirts/white-shirt-beige-trenchcoat.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/the-perfect-white-shirt/?from_nbw=true"
         },
         'white_shirt_how_to_wear_it' => {
             :id => 'white_shirt_how_to_wear_it',
