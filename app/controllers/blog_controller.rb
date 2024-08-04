@@ -44,7 +44,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/christmas/too-many-gifts.jpg",
             :main_image_alt_text => "A lady is overwhelmed by the number of spotty and polka-dotted dresses and shirts in her wardrobe.",
             :main_image_placeholder_colour => "#eb0104",
-            :second_article_image => "blog/christmas/opening-gifts.jpg"
+            :second_article_image => "blog/christmas/opening-gifts.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/declutter-after-christmas/?from_nbw=true"
         },
         'big_boots_how_to_wear_them' => {
             :id => 'big_boots_how_to_wear_them',
@@ -58,7 +60,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/big-boots/big-boots-long-coat-square.jpg",
             :main_image_alt_text => "Sitting casually on the plinth of a column, wearing a mid-length brown coat, skinny ripped jeans and big black boots.",
             :main_image_placeholder_colour => "#c9ccc0",
-            :second_article_image => "blog/big-boots/sitting-on-plinth.jpg"
+            :second_article_image => "blog/big-boots/sitting-on-plinth.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/big-boots-are-back-this-season/?from_nbw=true"
         },
         'the_wardrobe_challenge' => {
             :id => 'the_wardrobe_challenge',
@@ -72,7 +76,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/wardrobe-challenge/tidy-wardrobe-selfie.jpg",
             :main_image_alt_text => "A woman takes a selfie in front of her tidy and organised wardrobe.",
             :main_image_placeholder_colour => "#e7c5a9",
-            :second_article_image => "blog/wardrobe-challenge/full-wardrobe.jpg"
+            :second_article_image => "blog/wardrobe-challenge/full-wardrobe.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/the-wardrobe-challenge/?from_nbw=true"
         },
         'too_many_scarves' => {
             :id => 'too_many_scarves',
@@ -86,7 +92,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/too-many-scarves/scarves-organised.jpg",
             :main_image_alt_text => "Five winter scarves neatly organised in a cubby hole.",
             :main_image_placeholder_colour => "#f4f3e9",
-            :second_article_image => "blog/too-many-scarves/knitted-cosy-scarves.jpg"
+            :second_article_image => "blog/too-many-scarves/knitted-cosy-scarves.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/too-many-scarves/?from_nbw=true"
         },
         'fix_your_drawers_forever' => {
             :id => 'fix_your_drawers_forever',
@@ -100,7 +108,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/fix-your-drawers-forever/tidy-drawer.jpg",
             :main_image_alt_text => "Clothes overflow from all three drawers of a chest of drawers.",
             :main_image_placeholder_colour => "#f1f0ec",
-            :second_article_image => "blog/fix-your-drawers-forever/piling-clothes-neatly.jpg"
+            :second_article_image => "blog/fix-your-drawers-forever/piling-clothes-neatly.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/fix-your-drawers-forever/?from_nbw=true"
         },
         'me_time' => {
             :id => 'me_time',
@@ -114,7 +124,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/me-time/relaxing-bath.jpg",
             :main_image_alt_text => "A relaxing bath surrounded by candles, a good book and a hot drink.",
             :main_image_placeholder_colour => "#fdf7e0",
-            :second_article_image => "blog/me-time/holding-cup.jpg"
+            :second_article_image => "blog/me-time/holding-cup.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/me-time/?from_nbw=true"
         },
         'sustainability_the_right_choice' => {
             :id => 'sustainability_the_right_choice',
@@ -142,7 +154,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/messy-shelves/tidy-shelves.jpg",
             :main_image_alt_text => "A woman in the middle of organising her shelves holds a container with neatly folded clothes, ready to add to the tidy wardrobe behind her.",
             :main_image_placeholder_colour => "#988982",
-            :second_article_image => "blog/messy-shelves/holding-crumpled-clothes-on-floor.jpg"
+            :second_article_image => "blog/messy-shelves/holding-crumpled-clothes-on-floor.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/get-your-messy-shelves-in-shape/?from_nbw=true"
         },
         'declutter_your_handbags' => {
             :id => 'declutter_your_handbags',
@@ -156,7 +170,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/declutter-handbags/luxury-handbag-on-armchair.jpg",
             :main_image_alt_text => "A luxury handbag sits on a plush grey armchair.",
             :main_image_placeholder_colour => "#556377",
-            :second_article_image => "blog/declutter-handbags/beach-bags.jpg"
+            :second_article_image => "blog/declutter-handbags/beach-bags.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/declutter-your-handbags/?from_nbw=true"
         },
         'declutter_me_happy' => {
             :id => 'declutter_me_happy',
@@ -170,7 +186,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/declutter-me-happy/sitting-white-chair-no-clutter.jpg",
             :main_image_alt_text => "A lady listens to music while sitting on a suspended white chair in her bedroom. The room is tidy and uncluttered but not not minimalist, with healthy pot plants and a collection of pillows on the bed.",
             :main_image_placeholder_colour => "#e2e5ec",
-            :second_article_image => "blog/declutter-me-happy/standing-by-dresser-with-drink.jpg"
+            :second_article_image => "blog/declutter-me-happy/standing-by-dresser-with-drink.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/declutter-me-happy/?from_nbw=true"
         },
         'my_wardrobe_challenge' => {
             :id => 'my_wardrobe_challenge',
@@ -184,7 +202,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-drawers.jpg",
             :main_image_alt_text => "Messy wardrobe drawers with shoes on top of them and clothes rammed into the drawers.",
             :main_image_placeholder_colour => "#b3d7f7",
-            :second_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-rail.jpg"
+            :second_article_image => "blog/my-wardrobe-challenge/messy-wardrobe-rail.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/my-wardrobe-challenge/?from_nbw=true"
         },
         'summer_beach_bag' => {
             :id => 'summer_beach_bag',
@@ -198,7 +218,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/summer-beach-bag/summer-beach-bag.jpg",
             :main_image_alt_text => "A woven straw beach bag with some essential items poking out of it - sun screen, sunglasses, camera, and notebook.",
             :main_image_placeholder_colour => "#ffe96f",
-            :second_article_image => "blog/summer-beach-bag/bag-on-beach.jpg"
+            :second_article_image => "blog/summer-beach-bag/bag-on-beach.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/summer-beach-bag/?from_nbw=true"
         },
         'white_trainers' => {
             :id => 'white_trainers',
@@ -212,7 +234,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/white-trainers/white-trainers-tying-laces.jpg",
             :main_image_alt_text => "A happy woman in a white hoodie, black leggings, and white trainers ties her shoe lace.",
             :main_image_placeholder_colour => "#ffffff",
-            :second_article_image => "blog/white-trainers/white-trainers-jeans.jpg"
+            :second_article_image => "blog/white-trainers/white-trainers-jeans.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/white-trainers/?from_nbw=true"
         },
         'summer_hat_for_protection' => {
             :id => 'summer_hat_for_protection',
@@ -226,7 +250,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/summer-hat-for-protection/bucket-hat-square.jpg",
             :main_image_alt_text => "A woman wearing a bucket hat to protect herself from the sun, along with an aztec-patterned summer shirt over a white vest top, looks pensively into the middle distance.",
             :main_image_placeholder_colour => "#e23d4d",
-            :second_article_image => "blog/summer-hat-for-protection/straw-hat-poolside.jpg"
+            :second_article_image => "blog/summer-hat-for-protection/straw-hat-poolside.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/summer-hat-for-protection/?from_nbw=true"
         },
         'summer_hat_for_style' => {
             :id => 'summer_hat_for_style',
@@ -240,7 +266,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/summer-hat-for-style/white-sun-hat.jpg",
             :main_image_alt_text => "A stylish woman stands near a swimming pool wearing a white sun hat with a black ribbon and a pale yellow summer halter top",
             :main_image_placeholder_colour => "#efe3a7",
-            :second_article_image => "blog/summer-hat-for-style/green-cream-natural-summer-outfit-with-palette.jpg"
+            :second_article_image => "blog/summer-hat-for-style/green-cream-natural-summer-outfit-with-palette.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/summer-hat-for-style/?from_nbw=true"
         },
         'baggy_suit' => {
             :id => 'baggy_suit',
@@ -254,7 +282,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/baggy-suit/three-women-blazers-square.jpg",
             :main_image_alt_text => "Two women mean business in baggy blazers",
             :main_image_placeholder_colour => "#d33a35",
-            :second_article_image => "blog/baggy-suit/suit-office-steps.jpg"
+            :second_article_image => "blog/baggy-suit/suit-office-steps.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/baggy-suit/?from_nbw=true"
         },
         'top_5_fixes_for_autumn' => {
             :id => 'top_5_fixes_for_autumn',
@@ -316,7 +346,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/winter-scarves/pale-pink-matching-knits-square.jpg",
             :main_image_alt_text => "A lady smiles in her chunky soft cable-knit jumper, scarf and hat combo.",
             :main_image_placeholder_colour => "#e2d7d6",
-            :second_article_image => "blog/winter-scarves/teal-jacket-mustard-scarf.jpg"
+            :second_article_image => "blog/winter-scarves/teal-jacket-mustard-scarf.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/your-perfect-winter-scarf/?from_nbw=true"
         },
         'padded_jackets' => {
             :id => 'padded_jackets',
@@ -330,7 +362,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/padded-jackets/grey-padded-jacket-high-street-square.jpg",
             :main_image_alt_text => "A lady on a snowy shopping street wearing a long grey padded jacket, below-knee tan leather boots and a warm wollen hat matching the jacket.",
             :main_image_placeholder_colour => "#d9dade",
-            :second_article_image => "blog/padded-jackets/fur-trimmed-white-coat-phone-box.jpg"
+            :second_article_image => "blog/padded-jackets/fur-trimmed-white-coat-phone-box.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/the-padded-winter-jacket/?from_nbw=true"
         },
         'winter_jumpers' => {
             :id => 'winter_jumpers',
@@ -344,7 +378,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/winter-jumpers/red-jumper-square.jpg",
             :main_image_alt_text => "A lady relaxes on a low stool in a dark red jumper.",
             :main_image_placeholder_colour => "#bd434f",
-            :second_article_image => "blog/winter-jumpers/cream-jumper-cross-legged.jpg"
+            :second_article_image => "blog/winter-jumpers/cream-jumper-cross-legged.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/jumpers-a-winter-wardrobe-essential/?from_nbw=true"
         },
         'long_coats' => {
             :id => 'long_coats',
