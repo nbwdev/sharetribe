@@ -92,6 +92,8 @@ class ListingsController < ApplicationController
   end
 
   def show
+    redirect_to 'https://lifestyleandjoy.com' and return
+
     @selected_tribe_navi_tab = "home"
     make_onboarding_popup
 

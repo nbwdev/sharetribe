@@ -386,6 +386,7 @@ class BlogController < ApplicationController
 
     # the main page with the index of all articles
     def index
+        redirect_to 'https://lifestyleandjoy.com' and return
         # just show the index
         render locals: {
             articles: ARTICLES

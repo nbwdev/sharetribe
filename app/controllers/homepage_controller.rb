@@ -9,6 +9,8 @@ class HomepageController < ApplicationController
   # rubocop:disable AbcSize
   # rubocop:disable MethodLength
   def index
+    redirect_to 'https://lifestyleandjoy.com' and return
+
     params = unsafe_params_hash.select{|k, v| v.present? }
 
     redirect_to landing_page_path and return if no_current_user_in_private_clp_enabled_marketplace?

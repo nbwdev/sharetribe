@@ -23,6 +23,7 @@ class PeopleController < Devise::RegistrationsController
   helper_method :show_closed?
 
   def show
+    redirect_to 'https://lifestyleandjoy.com' and return
     @service = Person::ShowService.new(community: @current_community, params: params, current_user: @current_user)
     redirect_to landing_page_path and return unless @service.person
     redirect_to landing_page_path and return if @current_community.private? && !@current_user
@@ -31,6 +32,7 @@ class PeopleController < Devise::RegistrationsController
   end
 
   def new
+    redirect_to 'https://lifestyleandjoy.com' and return
     @selected_tribe_navi_tab = "members"
     redirect_to search_path if logged_in?
     session[:invitation_code] = params[:code] if params[:code]

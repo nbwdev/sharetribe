@@ -1,6 +1,8 @@
 class HowItWorksController < ApplicationController
 
     def index
+        redirect_to 'https://lifestyleandjoy.com' and return
+
         # just show the index
         render locals: {
             is_logged_in: @current_user.present?,

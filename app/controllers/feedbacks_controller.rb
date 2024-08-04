@@ -16,10 +16,12 @@ class FeedbacksController < ApplicationController
   }
 
   def new
+    redirect_to 'https://lifestyleandjoy.com' and return
     render_form
   end
 
   def create
+    redirect_to 'https://lifestyleandjoy.com' and return
     feedback_form = FeedbackForm.new(params[:feedback])
 
     unless validate_recaptcha(params['g-recaptcha-response'])
