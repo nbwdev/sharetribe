@@ -404,7 +404,7 @@ class BlogController < ApplicationController
 
         # redirect to LSJ for migrated articles
         if ARTICLES[article_id][:migrated]
-            redirect_to ARTICLES[article_id][:migrated_url] and return
+            redirect_to ARTICLES[article_id][:migrated_url], :status => :moved_permanently and return
         end
 
         render locals: {
