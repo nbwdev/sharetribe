@@ -381,20 +381,6 @@ class BlogController < ApplicationController
             :second_article_image => "blog/winter-jumpers/cream-jumper-cross-legged.jpg",
             :migrated => true,
             :migrated_url => "https://lifestyleandjoy.com/jumpers-a-winter-wardrobe-essential/?from_nbw=true"
-        },
-        'long_coats' => {
-            :id => 'long_coats',
-            :title => "Buying guide: Long coats",
-            :description => "The top 5 long coat styles for spring",
-            :created => Date.new(2024,03,12),
-            :updated => Date.new(2024,03,12),
-            :related => ['baggy_suit','white_shirt_how_to_wear_it','big_boots_how_to_wear_them'],
-            :category => 'Fashion',
-            :tags => ['coat','spring', 'fashion', 'style guide'],
-            :main_article_image => "blog/long-coats/fitted-long-black-coat-square.jpg",
-            :main_image_alt_text => "Woman in a long black fitted coat holding a briefcase, newspaper, and coffee to go.",
-            :main_image_placeholder_colour => "#bd434f",
-            :second_article_image => "blog/long-coats/oversized-black-coat.jpg"
         }
     }
 
