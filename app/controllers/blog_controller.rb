@@ -16,7 +16,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/lady-in-poppy-field.jpg",
             :main_image_alt_text => "A lady stands in a poppy field. She is wearing a white hat and dress, and her arms are outstretched. She is free and at peace.",
             :main_image_placeholder_colour => "#f7f3f0",
-            :second_article_image => "blog/globe-in-park.jpg"
+            :second_article_image => "blog/globe-in-park.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/"
         },
         'sustainability_in_autumn' => {
             :id => 'sustainability_in_autumn',
@@ -30,7 +32,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/sustainability-in-autumn/autumn-leaves-sunlight.jpg",
             :main_image_alt_text => "Bright afternoon sun shines through the autumn leaves of a young maple tree.",
             :main_image_placeholder_colour => "#e94f53",
-            :second_article_image => "blog/sustainability-in-autumn/lady-autumn-blue-coat.jpg"
+            :second_article_image => "blog/sustainability-in-autumn/lady-autumn-blue-coat.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/"
         },
         'declutter_after_christmas' => {
             :id => 'declutter_after_christmas',
@@ -140,7 +144,9 @@ class BlogController < ApplicationController
             :main_article_image => "blog/sustainability/globe-in-field.jpg",
             :main_image_alt_text => "A brightly-coloured child's globe sits in a field with daisies and other plants growing around it.",
             :main_image_placeholder_colour => "#3fd6d9",
-            :second_article_image => "blog/sustainability/recycling-boxes.jpg"
+            :second_article_image => "blog/sustainability/recycling-boxes.jpg",
+            :migrated => true,
+            :migrated_url => "https://lifestyleandjoy.com/"
         },
         'get_your_messy_shelves_in_shape' => {
             :id => 'get_your_messy_shelves_in_shape',
