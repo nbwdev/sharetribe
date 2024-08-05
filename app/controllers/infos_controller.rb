@@ -27,6 +27,7 @@ class InfosController < ApplicationController
   end
 
   def privacy
+    redirect_to 'https://lifestyleandjoy.com/privacy-policy/', :status => :moved_permanently and return
     @selected_tribe_navi_tab = "about"
     @selected_left_navi_link = "privacy"
   end
