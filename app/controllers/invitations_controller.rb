@@ -1,11 +1,11 @@
 class InvitationsController < ApplicationController
 
-  before_action except: :unsubscribe do |controller|
-    # skip this check, always redirecting to LSJ now
-    # controller.ensure_logged_in t("layouts.notifications.you_must_log_in_to_invite_new_users")
-  end
+  # before_action except: :unsubscribe do |controller|
+  #   # skip this check, always redirecting to LSJ now
+  #   # controller.ensure_logged_in t("layouts.notifications.you_must_log_in_to_invite_new_users")
+  # end
 
-  before_action :users_can_invite_new_users, except: :unsubscribe
+  # before_action :users_can_invite_new_users, except: :unsubscribe
 
   def new
     redirect_to 'https://lifestyleandjoy.com', :status => :moved_permanently and return
