@@ -9,7 +9,7 @@ class HomepageController < ApplicationController
   # rubocop:disable AbcSize
   # rubocop:disable MethodLength
   def index
-    redirect_to 'https://lifestyleandjoy.com' and return
+    redirect_to 'https://lifestyleandjoy.com', :status => :moved_permanently and return
 
     params = unsafe_params_hash.select{|k, v| v.present? }
 

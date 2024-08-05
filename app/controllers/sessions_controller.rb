@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   before_action :allow_params_authentication!, :only => :create
 
   def new
-    redirect_to 'https://lifestyleandjoy.com' and return
+    redirect_to 'https://lifestyleandjoy.com', :status => :moved_permanently and return
     redirect_to search_path if logged_in?
     
     if params[:return_to].present?

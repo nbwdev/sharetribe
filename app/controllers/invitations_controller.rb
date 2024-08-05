@@ -7,6 +7,7 @@ class InvitationsController < ApplicationController
   before_action :users_can_invite_new_users, except: :unsubscribe
 
   def new
+    redirect_to 'https://lifestyleandjoy.com', :status => :moved_permanently and return
     @selected_tribe_navi_tab = "members"
     @invitation = Invitation.new
     invitation_limit = @current_community.join_with_invite_only ? Invitation.invite_only_invitation_limit : Invitation.invitation_limit
